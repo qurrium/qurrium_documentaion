@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Top-level documentation for pydata-sphinx theme, with links to the rest of the site.. " lang="en" name="description" xml:lang="en" />
+<meta property="og:title" content="Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/index.html" />
+<meta property="og:site_name" content="Qurrium 📏" />
+<meta property="og:description" content="The python package that makes the randomized measurement easy.: The major function includes the measurement of quantum Renyi Entropy and Wave Function Overlap based on the randomized measurement pr..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_index_69ab7582.png" />
+<meta property="og:image:alt" content="The python package that makes the randomized measurement easy.: The major function includes the measurement of quantum Renyi Entropy and Wave Function Overlap based on the randomized measurement pr..." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap. &#8212; Qurrium 📏  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Usage" href="basic_usage/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-06-04 05:06:26"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="more_info/index.html">
+    Installation and Usage
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="more_info/index.html">
+    Installation and Usage
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="qurrium-the-python-package-for-measuring-quantum-entanglement-entropy-and-wave-function-overlap">
+<h1>Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap.<a class="headerlink" href="#qurrium-the-python-package-for-measuring-quantum-entanglement-entropy-and-wave-function-overlap" title="Link to this heading">#</a></h1>
+<section id="the-python-package-that-makes-the-randomized-measurement-easy">
+<h2><em>The python package that makes the randomized measurement easy.</em><a class="headerlink" href="#the-python-package-that-makes-the-randomized-measurement-easy" title="Link to this heading">#</a></h2>
+<p>The major function includes the measurement of quantum Renyi Entropy and Wave Function Overlap based on the randomized measurement protocol.
+When interfaced with <strong>IBM Qiskit</strong>, the package automates the workflow from creating experiment objects, job submission and recall and postprocessing.<br />
+There are several additional features, such as measurement of magnetization and error mitigation. Please check them out!</p>
+<p><img alt="Available Python Version" src="https://img.shields.io/badge/Python-3.9_%7C_3.10_%7C_3.11_%7C_3.12_%7C_3.13-blue?logo=python&amp;logoColor=white" /> <a class="reference external" href="https://pepy.tech/project/qurrium"><img alt="Downloads" src="https://static.pepy.tech/badge/qurrium" /></a>
+<img alt="Available System" src="https://img.shields.io/badge/Ubuntu-18.04+-purple?logo=Ubuntu&amp;logoColor=white" /> <img alt="Available System" src="https://img.shields.io/badge/Ubuntu_on_WSL-18.04+-purple?logo=Ubuntu&amp;logoColor=white" />
+<img alt="Available System" src="https://img.shields.io/badge/Windows-10_%7C_11-purple?logo=Windows&amp;logoColor=white" /> <img alt="Available System" src="https://img.shields.io/badge/MacOS-11+-purple?logo=Apple&amp;logoColor=white" /></p>
+</section>
+<section id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
+<p>If you use this tool in your research, please cite the following paper in your publication:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevResearch.7.013043</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{Probing entanglement dynamics and topological transitions on noisy intermediate-scale quantum computers}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{Chang, Huai-Chun and Hsu, Hsiu-Chuan and Lin, Yu-Cheng}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">journal</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. Res.}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">volume</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{7}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">issue</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{1}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{013043}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">numpages</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{12}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="s">{2025}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{Jan}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">doi</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevResearch.7.013043}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevResearch.7.013043}</span>
+<span class="p">}</span>
+<span class="nc">@mastersthesis</span><span class="p">{</span><span class="nl">Chang2024</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="s">{Probing Entanglement Entropy on Near-term Quantum Computers}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{Huai-Chun Chang}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">school</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{National Chengchi University}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">department</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Graduate Institute of Applied Physics}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">advisor</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{Hsiu-Chuan Hsu}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">committee</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Yu-Cheng Lin, Ying-Jer Kao, Chiao-Hsuan Wang}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">degree</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{Master&#39;s}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">abstract</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{In this thesis, we explore the quench dynamics of the Su–Schrieffer–Heeger (SSH) model and quantum entanglement using Noisy Intermediate-Scale Quantum (NISQ) computers, specifically on the IBM Quantum platform. We investigate the second-order Renyi entropy through randomized measurements to characterize the entanglement of quantum states. To simulate partial-dimerized quench Hamiltonians, we employ Trotter decomposition with an adaptive step size to reduce circuit depth. In the fully dimerized limit, the time evolution operator is exactly mapped to quantum gates, which minimizes noise. After applying error mitigation techniques, we find that the entanglement entropy oscillations align with theoretical predictions. Additionally, we developed a Python package called Qurry to manage workflows and facilitate parallel post-processing. Finally, we analyze the error scaling of Renyi entropy measurements and discuss the challenges encountered when simulating larger systems.}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">keywords</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Noisy Intermediate-Scale Quantum Device, IBM Quantum, Quench dynamics, Su–Schrieffer–Heeger model, Renyi entropy, Randomized measurement, Error mitigation}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">language</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{zh-TW}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="s">{134}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="s">{https://hdl.handle.net/11296/828e7d}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<section id="by-pypi-stable-release">
+<h3>By PyPI - Stable Release<a class="headerlink" href="#by-pypi-stable-release" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The package can be found in <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> as <code class="docutils literal notranslate"><span class="pre">qurrium-x.y.z</span></code></p></li>
+<li><p>Pip downloads the most stable release, but not necessarily the latest version.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>qurrium
+</pre></div>
+</div>
+</section>
+<section id="by-testpypi-nightly-release">
+<h3>By TestPyPI - Nightly Release<a class="headerlink" href="#by-testpypi-nightly-release" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This package can be found in <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> as <code class="docutils literal notranslate"><span class="pre">qurry-x.y.z.devW</span></code></p></li>
+<li><p>This version includes new features and minor bug fixes, but may not be stable.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>qiskit<span class="w"> </span>tqdm<span class="w"> </span>requests
+<span class="c1"># the installation from testPyPI can&#39; t find these dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>qurry
+</pre></div>
+</div>
+</section>
+<section id="maually-by-git">
+<h3>Maually by Git<a class="headerlink" href="#maually-by-git" title="Link to this heading">#</a></h3>
+<p><strong>Qurry can be installed from source</strong>. Since this package relies on Cython and Rust, <strong>it requires “C complier” and “Rust complier” which you need to install first.</strong></p>
+<p>To install rust, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</pre></div>
+</div>
+<p>Then install <code class="docutils literal notranslate"><span class="pre">qurrium</span></code> by the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/qurrium/qurrium.git<span class="w"> </span>--recursive
+<span class="nb">cd</span><span class="w"> </span>qurrium
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<section id="test-installation">
+<h4>Test Installation<a class="headerlink" href="#test-installation" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> is used for testing. Simply run the following command after the installation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="environment">
+<h2>Environment<a class="headerlink" href="#environment" title="Link to this heading">#</a></h2>
+<p><strong>Qurry currently <ins>SUPPORT qiskit 0.46.0+ and qiskit 1.0.0+</ins>, other lower versions are no longer available.
+The package has been tested on the following systems.</strong></p>
+<ul class="simple">
+<li><p><strong>Ubuntu 18.04+ LTS (All ManyLinux 2014 compatible distro)</strong></p>
+<ul>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> <strong>(recommended)</strong></p></li>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> Windows 10/11 WSL2 <strong>(recommended)</strong></p></li>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">aarch64</span></code></p></li>
+<li><p>We strongly recommend to use Linux based systems because Python multiprocessing may exist issues on Windows and the NVIDIA CUDA acceleration of <code class="docutils literal notranslate"><span class="pre">Qiskit</span></code>, <code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu</span></code> are supported only on Linux.</p></li>
+</ul>
+</li>
+<li><p><strong>Windows 10/11</strong></p>
+<ul>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">x86_64</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>MacOS 11+</strong></p>
+<ul>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">aarch64</span> <span class="pre">(Apple</span> <span class="pre">Silicon,</span> <span class="pre">M1/M2/M3/M4</span> <span class="pre">chips)</span></code></p></li>
+<li><p>on <code class="docutils literal notranslate"><span class="pre">x86_64</span> <span class="pre">(Intel</span> <span class="pre">chips)</span></code></p></li>
+<li><p><strong>The depedent modules are as follows.</strong></p></li>
+</ul>
+</li>
+<li><p>with required modules:</p>
+<ul>
+<li><p><a class="reference external" href="https://pypi.org/project/qiskit/"><code class="docutils literal notranslate"><span class="pre">qiskit</span></code></a>, <a class="reference external" href="https://pypi.org/project/tqdm/"><code class="docutils literal notranslate"><span class="pre">tqdm</span></code></a>, <a class="reference external" href="https://pypi.org/project/requests/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a></p></li>
+</ul>
+</li>
+<li><p>with optional modules:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code>: The complete simulator package of <code class="docutils literal notranslate"><span class="pre">qiskit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu</span></code>: The gpu acceleration of <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code> on Linux with Nvidia GPU</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu-cu11</span></code>: A package for CUDA 11</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-ibm-runtime</span></code>: The API to access IBM Quantum Device</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-ibm-provider</span></code>: The API to access IBM Quantum Device, but will be deprecated soon.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qiskit-ibmq-provider</span></code>: The API to access IBM Quantum Device, which has been deprecated.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="measurement-made-randomized-measurement-easy">
+<h2>Measurement – made randomized measurement easy.<a class="headerlink" href="#measurement-made-randomized-measurement-easy" title="Link to this heading">#</a></h2>
+<section id="qurrent-the-quantum-renyi-entropy-measurement">
+<h3><code class="docutils literal notranslate"><span class="pre">qurrent</span></code> - The Quantum Renyi Entropy Measurement<a class="headerlink" href="#qurrent-the-quantum-renyi-entropy-measurement" title="Link to this heading">#</a></h3>
+<p>The major function of this module is to measure the quantum Renyi entropy to quantify entanglement.</p>
+</section>
+<section id="qurrech-the-wave-function-overlap-measurement">
+<h3><code class="docutils literal notranslate"><span class="pre">qurrech</span></code> - The Wave Function Overlap Measurement<a class="headerlink" href="#qurrech-the-wave-function-overlap-measurement" title="Link to this heading">#</a></h3>
+<p>This module evaluates the overlap between any two given quantum states.</p>
+<p>In each of the modules, two methods are implemented to perform the measurements:</p>
+<ul class="simple">
+<li><p>Hadamard Test</p>
+<ul>
+<li><p>Ref:
+<strong>Entanglement spectroscopy on a quantum computer</strong> - Sonika Johri, Damian S. Steiger, and Matthias Troyer, <a class="reference external" href="https://doi.org/10.1103/PhysRevB.96.195136">PhysRevB.96.195136</a></p></li>
+</ul>
+</li>
+<li><p>Haar Randomized Measure</p>
+<ul>
+<li><p>Ref:
+<strong>Statistical correlations between locally randomized measurements: A toolbox for probing entanglement in many-body quantum states</strong> - A. Elben, B. Vermersch, C. F. Roos, and P. Zoller, <a class="reference external" href="https://doi.org/10.1103/PhysRevA.99.052323">PhysRevA.99.052323</a></p></li>
+</ul>
+</li>
+</ul>
+<!-- ### `qurmagsq` - The Magnetization Squared
+
+- Magnetization Squared
+
+### `qurstrop` - The String Operators
+
+- String Operators
+  - Used in:
+    **Crossing a topological phase transition with a quantum computer** - Smith, Adam and Jobst, Bernhard and Green, Andrew G. and Pollmann, Frank, [PhysRevResearch.4.L022020](https://link.aps.org/doi/10.1103/PhysRevResearch.4.L022020) -->
+</section>
+</section>
+<hr class="docutils" />
+<section id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading">#</a></h2>
+<p>The authors acknowledge the support from <a class="reference external" href="https://www.nccu.edu.tw/">National Chengchi University</a>, <a class="reference external" href="https://www.nstc.gov.tw/">NSTC-Quantum Virtual Machine project</a>, <a class="reference external" href="https://phys.ncts.ntu.edu.tw/">National Center for Theoretical Sciences (NCTS)</a>.
+and <a class="reference external" href="https://quantum.ntu.edu.tw/">IBM Quantum Hub at National Taiwan University (NTU)</a>.</p>
+<p>Special thank to <a class="reference external" href="https://quantum.ntu.edu.tw/">IBM Quantum Hub at NTU</a> for providing the access right of <a class="reference external" href="https://quantum-computing.ibm.com/">IBM Quantum</a> that allows us to fully test the tool and execute our experiments.</p>
+<p>The author <a class="reference external" href="https://github.com/harui2019/">&#64;harui2019</a> is grateful to the NTU hub of <a class="reference external" href="https://phys.ncts.ntu.edu.tw/">NCTS</a> that supported him as a Research Assistiant in the early stage of the development.</p>
+<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCCU_Physics_Logo.png" href="https://phys.nccu.edu.tw/" alt="National Chengchi University" width="400" ></p>
+<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NSTC_Logo.png" href="https://www.nstc.gov.tw/" alt="NSTC" width="400" ></p>
+<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCTS_Phys_Logo.png" href="https://phys.ncts.ntu.edu.tw/" alt="National Center for Theoretical Sciences, Physics Division" width="400" ></p>
+<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NTU_IBM_Q_Hub_Logo.png" href="https://quantum.ntu.edu.tw/" alt="IBM Quantum Hub at National Taiwan University" width="400"></p>
+<hr class="docutils" />
+<section id="stay-connected-more-features-coming-soon">
+<h3>Stay connected. More features coming soon…<a class="headerlink" href="#stay-connected-more-features-coming-soon" title="Link to this heading">#</a></h3>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage/index.html">Basic Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage/qurrent_1_intro.html">1. Entanglement Entropy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage/qurrent_1_1_hadamard_test.html">1.1 By Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage/qurrent_1_2_randomized_measure.html">1.2 By Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage/qurrent_1_3_classical_shadow.html">1.3 By Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage/qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multiple Output</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multi_output/index.html">Multi-Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multi_output/qurrent_1_intro.html">1. Entanglement Entropy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_output/qurrent_1_1_hadamard_test.html">1.1 By Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_output/qurrent_1_2_randomized_measure.html">1.2 By Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_output/qurrent_1_3_classical_shadow.html">1.3 By Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_output/qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Post Processing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="postprocessing/index.html">Post-Processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/intro.html">Entanglement Entropy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/1_hadamard.html">1.1 Entanglement Entropy - Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/2a_randomized_measure.html">1.2a Entanglement Entropy - Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/2b_randomized_measure.html">1.2b Entanglement Entropy - Randomized Measurement with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/4a_randomized_measure_v1.html">1.4a Entanglement Entropy - Randomized Measurement V1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/01_entropy_measure/4b_randomized_measure_v1.html">1.4b Entanglement Entropy - Randomized Measurement V1 with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/02_wave_func_overlap/intro.html">Wave Function Overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/02_wave_func_overlap/1_hadamard.html">2.1 WaveFunction Overlap - Hadamaed Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/02_wave_func_overlap/2_randomized_measure.html">2.2 WaveFunction Overlap - Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/02_wave_func_overlap/3_randomized_measure_v1.html">2.3 WaveFunction Overlap - Randomized Measurement V1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessing/index.html#access-the-post-processing-functions-with-rust-or-cython-acceleration">Access the post-processing functions with Rust or Cython acceleration</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix/index.html">Other Features</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">More Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="more_info/index.html">Installation and Usage</a></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="basic_usage/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Basic Usage</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-06-04 05:06:26.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
