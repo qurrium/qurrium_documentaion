@@ -1,0 +1,13 @@
+jupyter-book
+jupyter
+# extensions
+sphinxext-opengraph
+# basic requirements
+matplotlib
+numpy
+# qurrum requirements
+qiskit
+# qiskit_aer - not needed for runtime
+qurrium
+# theme
+pydata-sphinx-theme

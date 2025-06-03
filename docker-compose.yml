@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  sphinx:
+    image: sphinxdoc/sphinx
+    container_name: qurrium-docs
+    volumes:
+      - .:/docs  # Mount current directory as /docs inside container
+    working_dir: /docs
+    command: make html  # Change to `jupyter-book build .` if you're using Jupyter Book
+    environment:
+      - PYTHONUNBUFFERED=1
+    build:
+      context: .
+      dockerfile: Dockerfile
