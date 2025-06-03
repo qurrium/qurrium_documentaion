@@ -1,4 +1,4 @@
-# Instalation and Usage
+# Installation and Usage
 
 Qurrium 📏 also provides other features for convenient.
 
