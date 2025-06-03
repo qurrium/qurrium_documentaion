@@ -1,13 +1,19 @@
-jupyter-book
+ghp-import
+jupyter
+# formatting
+flake8
+black
+black[jupyter]
 jupyter
 # extensions
 sphinxext-opengraph
+# theme
+pydata-sphinx-theme
 # basic requirements
 matplotlib
 numpy
-# qurrum requirements
 qiskit
-# qiskit_aer - not needed for runtime
+qiskit_aer
+jax
+# qurrum requirements
 qurrium
-# theme
-pydata-sphinx-theme
