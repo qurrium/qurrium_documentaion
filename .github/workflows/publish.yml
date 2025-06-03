@@ -47,7 +47,7 @@ jobs:
 
       - name: Build the book
         run: |
-          jupyter-book build --all docs
+          docker-compose up --build
 
       - name: Create Tag and Push
         run: |

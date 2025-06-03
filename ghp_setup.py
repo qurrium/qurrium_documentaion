@@ -1,7 +1,4 @@
-"""
-This script is used to deploy the documentation to GitHub Pages
-using the ghp-import package.
-"""
+"""This script is used to deploy the documentation to GitHub Pages using the ghp-import package."""
 
 import datetime
 from ghp_import import ghp_import
