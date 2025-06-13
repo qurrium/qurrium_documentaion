@@ -59,14 +59,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
@@ -85,8 +85,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'postprocessing/01_entropy_measure/4b_randomized_measure_v1';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'stable';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="1.4a Entanglement Entropy - Randomized Measurement V1" href="4a_randomized_measure_v1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-03 21:59:04"/>
+    <meta name="docbuild:last-update" content="2025-06-13 22:56:56"/>
   </head>
   
   
@@ -172,6 +172,30 @@
     <p class="title logo__title">Qurrium 📏  documentation</p>
   
 </a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
     
   </div>
   
@@ -702,8 +726,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.002542688,
- &#39;takingTimeAllSys&#39;: 0.008262548}
+ &#39;takingTime&#39;: 0.002887451,
+ &#39;takingTimeAllSys&#39;: 0.010422739}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -780,7 +804,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.002161076,
+ &#39;takingTime&#39;: 0.002694474,
  &#39;takingTimeAllSys&#39;: 0}
 
 | result of randomized_entangled_entropy[purityCells]
@@ -937,25 +961,25 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| partition: 6
-| - takingTime: 0.002185999
-| - takingTimeAllSys: 0.008231946
+| - takingTime: 0.002900833
+| - takingTimeAllSys: 0.011021329
 | partition: (2, 8)
-| - takingTime: 0.002082853
+| - takingTime: 0.002583593
 | - takingTimeAllSys: 0
 | partition: 7
-| - takingTime: 0.004035863
+| - takingTime: 0.005301773
 | - takingTimeAllSys: 0
 | partition: (0, 7)
-| - takingTime: 0.00348065
+| - takingTime: 0.004719854
 | - takingTimeAllSys: 0
 | partition: (-2, 5)
-| - takingTime: 0.003883675
+| - takingTime: 0.005155052
 | - takingTimeAllSys: 0
 | partition: (-5, -1)
-| - takingTime: 0.00084599
+| - takingTime: 0.001279458
 | - takingTimeAllSys: 0
 | partition: (3, -2)
-| - takingTime: 0.000735557
+| - takingTime: 0.001133416
 | - takingTimeAllSys: 0
 </pre></div>
 </div>
@@ -1016,7 +1040,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6 by Python. - 00:00 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate all system by Python. - 00:04 &lt; ?       
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate all system by Python. - 00:03 &lt; ?       
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:10 &lt; ?
@@ -1025,100 +1049,100 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:10 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:10 &lt; 01:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:10 &lt; 01:01
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:10 &lt; 01:04                                                   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:10 &lt; 01:01                                                   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:14 &lt; 01:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:16 &lt; 01:01
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:14 &lt; 01:04                           
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:16 &lt; 01:01                           
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:14 &lt; 01:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:16 &lt; 01:01
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:14 &lt; 00:33
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:16 &lt; 00:40
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:14 &lt; 00:33            
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:16 &lt; 00:40            
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:19 &lt; 00:33
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:24 &lt; 00:40
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:19 &lt; 00:33                           
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:24 &lt; 00:40                           
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:19 &lt; 00:33
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:24 &lt; 00:40
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:19 &lt; 00:23
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:24 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:19 &lt; 00:23       
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:24 &lt; 00:31       
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:24 &lt; 00:23
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:30 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:24 &lt; 00:23                           
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:30 &lt; 00:31                           
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:24 &lt; 00:23
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:30 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:24 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:30 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:24 &lt; 00:16      
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:30 &lt; 00:21      
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:28 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:38 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:28 &lt; 00:16                          
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:38 &lt; 00:21                          
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:28 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:38 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:28 &lt; 00:10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:38 &lt; 00:14
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:28 &lt; 00:10     
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:38 &lt; 00:14     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:32 &lt; 00:10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:44 &lt; 00:14
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:32 &lt; 00:10                           
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:44 &lt; 00:14                           
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:32 &lt; 00:10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:44 &lt; 00:14
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:32 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:44 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:32 &lt; 00:04      
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:44 &lt; 00:06      
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:36 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_4&#39; - 00:50 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:36 &lt; 00:04                           
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:50 &lt; 00:06                           
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:36 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:50 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:36 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:50 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:36 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| urce is not in existed_all_system with mitigation. - 00:50 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1158,7 +1182,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  - magnet_square
    - magnsq_core ............................ Yes    No     No     No    
  - classical_shadow
-   - rho_m_core ............................. Yes    No     No     Yes   
+   - rho_m_core ............................. Yes    No     No     Error 
  - utils
    - randomized ............................. Yes    Depr.  Yes    No    
    - counts_process ......................... Yes    No     Yes    No    
@@ -1241,7 +1265,7 @@ by &lt;Hoshi&gt;
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/postprocessing/01_entropy_measure/4b_randomized_measure_v1.ipynb.txt">
+    <a href="../../_sources/postprocessing/01_entropy_measure/4b_randomized_measure_v1.ipynb">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
@@ -1279,7 +1303,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-03 21:59:04.
+  Last updated on 2025-06-13 22:56:56.
   <br/>
 </p></div>
       
