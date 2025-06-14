@@ -213,14 +213,14 @@ postprocessing/index
 
 ```{toctree}
 :maxdepth: 1
-:caption: Miscellaneous
+:caption: Other Features
 
 appendix/index
 ```
 
 ```{toctree}
 :maxdepth: 1
-:caption: More
+:caption: More Information
 
 more_info/index
 ```
