@@ -1,11 +1,14 @@
 services:
   qurrium-docs-sphinx:
+    working_dir: /build
     volumes:
-      - ./docs:/docs # Mount current directory as /docs inside container
-    working_dir: /docs
-    command: make html
+      - ./build:/build
     environment:
       - PYTHONUNBUFFERED=1
+    command: >
+      sphinx-build -b html "/tmp/docs" "/build/html/${QURRIUM_VERSION}"
     build:
+      args:
+        QURRIUM_VERSION: ${QURRIUM_VERSION}
       context: .
       dockerfile: Dockerfile

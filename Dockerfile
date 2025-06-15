@@ -19,6 +19,7 @@ RUN apt-get install -y git pandoc make
 COPY requirements.txt /requirements.txt
 COPY tox.ini /tox.ini
 COPY pytest.ini /pytest.ini
+COPY docs/ /tmp/docs/
 
 RUN uv pip install --no-cache-dir --system \
     sphinx \
@@ -35,8 +36,21 @@ RUN uv pip install --no-cache-dir --system \
 
 RUN uv pip install --no-cache-dir --system -r /requirements.txt
 
-WORKDIR /docs
+ARG QURRIUM_VERSION
+ENV QURRIUM_VERSION=${QURRIUM_VERSION}
 
-RUN black .
+RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
+    uv pip install --no-cache-dir --system qurrium; \
+    elif [ "$QURRIUM_VERSION" = "dev" ]; then \
+    uv pip install --no-cache-dir --system -i https://test.pypi.org/simple/ qurry; \
+    elif [ -z "$QURRIUM_VERSION" ]; then \
+    echo "QURRIUM_VERSION is not set. Please set it to 'stable' or 'dev'."; \
+    exit 1; \
+    else \
+    uv pip install --no-cache-dir --system qurrium==${QURRIUM_VERSION}; \
+    fi
 
-RUN flake8 . --count --exit-zero --statistics
+WORKDIR /tmp
+
+RUN black /tmp
+RUN flake8 /tmp --count --exit-zero --statistics

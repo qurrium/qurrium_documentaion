@@ -52,7 +52,6 @@ coverage.xml
 .pytest_cache/
 _build
 
-
 # Translations
 *.mo
 *.pot
@@ -142,7 +141,10 @@ dmypy.json
 # OSX
 .DS_Store
 
-
 # docs
 
 docs/main/example.multiOutput.qurry.001
+
+# deployment working
+
+deploy
