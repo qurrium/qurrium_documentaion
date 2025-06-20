@@ -38,7 +38,7 @@ multi_exps1_reades = experiment_randomized.multiRead(
 
 [31m---------------------------------------------------------------------------[39m
 [31mFileNotFoundError[39m                         Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[19][39m[32m, line 1[39m
+[36mCell[39m[36m [39m[32mIn[18][39m[32m, line 1[39m
 [32m----> [39m[32m1[39m multi_exps1_reades = [43mexperiment_randomized[49m[43m.[49m[43mmultiRead[49m[43m([49m
 [32m      2[39m [43m    [49m[43msave_location[49m[43m=[49m[33;43m"[39;49m[33;43m.[39;49m[33;43m"[39;49m[43m,[49m
 [32m      3[39m [43m    [49m[43msummoner_name[49m[43m=[49m[33;43m"[39;49m[33;43mqurrent.randomized_measure.001[39;49m[33;43m"[39;49m[43m,[49m

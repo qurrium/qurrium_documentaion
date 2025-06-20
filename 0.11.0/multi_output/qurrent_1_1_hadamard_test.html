@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="1. Entanglement Entropy" href="qurrent_1_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-13 21:16:02"/>
+    <meta name="docbuild:last-update" content="2025-06-20 05:09:25"/>
   </head>
   
   
@@ -513,15 +513,15 @@ where the true power of Qurrium as experiment manage toolkit.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  &#39;trivial_paramagnet_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x76c2ffffb380&gt;,
-  &#39;ghz_2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x76c300752fc0&gt;,
-  &#39;neel_2&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x76c3501f0b30&gt;,
-  &#39;trivial_paramagnet_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x76c3501f0500&gt;,
-  &#39;ghz_4&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x76c2ffb22fc0&gt;,
-  &#39;neel_4&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x76c2ffbf9700&gt;,
-  &#39;trivial_paramagnet_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x76c2ffbf9910&gt;,
-  &#39;ghz_6&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x76c2ffbf9940&gt;,
-  &#39;neel_6&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x76c2ffbf99a0&gt;})
+  &#39;trivial_paramagnet_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x734e80d3bec0&gt;,
+  &#39;ghz_2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x734e80f7dc40&gt;,
+  &#39;neel_2&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x734ec8f91bb0&gt;,
+  &#39;trivial_paramagnet_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x734e80d62960&gt;,
+  &#39;ghz_4&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x734e80d62990&gt;,
+  &#39;neel_4&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x734e80d63110&gt;,
+  &#39;trivial_paramagnet_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x734e80d638f0&gt;,
+  &#39;ghz_6&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x734e80d3bd10&gt;,
+  &#39;neel_6&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x734e80f5e6c0&gt;})
 </pre></div>
 </div>
 </div>
@@ -635,8 +635,8 @@ which can also be skipped by setting <code class="docutils literal notranslate">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MultiManagerContainer(num=1, {
-  &quot;35981502-1353-452d-b2f4-512c2f9f7f44&quot;:
-    &lt;MultiManager(name=&quot;qurrent.randomized_measure.007&quot;, jobstype=&quot;local&quot;, ..., exps_num=180)&gt;,
+  &quot;16d8d617-1745-4e39-92ba-4e00d696fd45&quot;:
+    &lt;MultiManager(name=&quot;qurrent.hadamard_test.001&quot;, jobstype=&quot;local&quot;, ..., exps_num=90)&gt;,
 })
 </pre></div>
 </div>
@@ -649,14 +649,15 @@ which can also be skipped by setting <code class="docutils literal notranslate">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;MultiManager(id=&quot;35981502-1353-452d-b2f4-512c2f9f7f44&quot;,
-  name=&quot;qurrent.randomized_measure.007&quot;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;MultiManager(id=&quot;16d8d617-1745-4e39-92ba-4e00d696fd45&quot;,
+  name=&quot;qurrent.hadamard_test.001&quot;,
   tags=(),
   jobstype=&quot;local&quot;,
   pending_strategy=&quot;tags&quot;,
   last_events={
-    &#39;output.001&#39;: &#39;2025-05-22 15:37:34&#39;,},
-  exps_num=180)&gt;
+    &#39;output.001&#39;: &#39;2025-06-17 19:48:17&#39;,
+    &#39;auto_report&#39;: &#39;2025-06-17 19:48:17&#39;,},
+  exps_num=90)&gt;
 </pre></div>
 </div>
 </div>
@@ -675,16 +676,10 @@ which can also be skipped by setting <code class="docutils literal notranslate">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 90/90 - Analysis: Calculating entangled entropy:  - 00:00 &lt; 00:00
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f364e053a4234e46807af473bd49a8e5", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| &quot;report.002&quot; has been completed.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| &quot;report.001&quot; has been completed.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;faa4a131-af5e-40ae-8cbf-354915d90cad&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;16d8d617-1745-4e39-92ba-4e00d696fd45&#39;
 </pre></div>
 </div>
 </div>
@@ -716,16 +711,26 @@ which can also be skipped by setting <code class="docutils literal notranslate">
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>Example of the content of <code class="docutils literal notranslate"><span class="pre">quantity_container</span></code></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">multi_exps1</span><span class="p">]</span><span class="o">.</span><span class="n">quantity_container</span><span class="p">[</span><span class="s2">&quot;report.001&quot;</span><span class="p">][</span>
-    <span class="p">(</span><span class="s2">&quot;trivial_paramagnet&quot;</span><span class="p">,</span> <span class="s2">&quot;size_10&quot;</span><span class="p">,</span> <span class="s2">&quot;system_range_5&quot;</span><span class="p">)</span>
+    <span class="p">(</span><span class="s2">&quot;trivial_paramagnet&quot;</span><span class="p">,</span> <span class="s2">&quot;size_4&quot;</span><span class="p">,</span> <span class="s2">&quot;system_range_2&quot;</span><span class="p">)</span>
 <span class="p">][:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;purity&#39;: 1.0,
+  &#39;entropy&#39;: np.float64(-0.0),
+  &#39;input&#39;: {},
+  &#39;header&#39;: {&#39;serial&#39;: 1, &#39;datetime&#39;: &#39;2025-06-17 19:48:27&#39;, &#39;log&#39;: {}}},
+ {&#39;purity&#39;: 1.0,
+  &#39;entropy&#39;: np.float64(-0.0),
+  &#39;input&#39;: {},
+  &#39;header&#39;: {&#39;serial&#39;: 1, &#39;datetime&#39;: &#39;2025-06-17 19:48:27&#39;, &#39;log&#39;: {}}}]
 </pre></div>
 </div>
 </div>
@@ -1046,7 +1051,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-13 21:16:02.
+  Last updated on 2025-06-20 05:09:25.
   <br/>
 </p></div>
       
