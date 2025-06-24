@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="1.2 By Randomized Measurement" href="qurrent_1_2_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-20 05:07:21"/>
+    <meta name="docbuild:last-update" content="2025-06-24 14:34:52"/>
   </head>
   
   
@@ -599,7 +599,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;53dc5264-1d7e-4470-9b23-077ee64715c2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;380a18d7-aecd-45b7-8368-673c99ca8cb3&#39;
 </pre></div>
 </div>
 </div>
@@ -612,9 +612,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=53dc5264-1d7e-4470-9b23-077ee64715c2, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=380a18d7-aecd-45b7-8368-673c99ca8cb3, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;53dc5264-1d7e-4470-9b23-077ee64715c2&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-20 05:07:14&#39;, &#39;run.001&#39;: &#39;2025-06-20 05:07:14&#39;})),
+  Commonparams(exp_id=&#39;380a18d7-aecd-45b7-8368-673c99ca8cb3&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-24 14:06:42&#39;, &#39;run.001&#39;: &#39;2025-06-24 14:06:42&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -634,7 +634,7 @@ q_7: ─────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilAnalysis(
   serial=0,
   AnalysisInput(num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, shots=4096, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  AnalysisContent(purity=0.6884159863807938, entropy=0.5386474948879484, and others)),
+  AnalysisContent(purity=0.6876169509779323, entropy=0.5403229846403703, and others)),
   unused_args_num=1
   )&gt;
 </pre></div>
@@ -680,12 +680,12 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| purity: 0.6884159863807938
-| entropy: 0.5386474948879484
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| purity: 0.6876169509779323
+| entropy: 0.5403229846403703
 | classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.061
+| taking_time: 0.076
 | input: {&#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;shots&#39;: 4096, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-20 05:07:15&#39;, &#39;summoner&#39;: None, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-24 14:06:43&#39;, &#39;summoner&#39;: None, &#39;log&#39;: {}}
 | shape ofexpect_rho:
 (16, 16)
 </pre></div>
@@ -728,7 +728,7 @@ which is where <code class="docutils literal notranslate"><span class="pre">expe
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7006a5e09670&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x739b16db36b0&gt;})
 </pre></div>
 </div>
 </div>
@@ -838,9 +838,9 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7006a5e09670&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7006a249b200&gt;,
-  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7006a2453f20&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x739b16db36b0&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x739b16a5a450&gt;,
+  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x739b16a5a180&gt;})
 </pre></div>
 </div>
 </div>
@@ -854,7 +854,7 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1a9484ca-cc09-4797-afda-9e3c6f85542b&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;7026acf5-7366-4394-8ea9-4a90d90c858b&#39;
 </pre></div>
 </div>
 </div>
@@ -866,9 +866,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=1a9484ca-cc09-4797-afda-9e3c6f85542b, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=7026acf5-7366-4394-8ea9-4a90d90c858b, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;1a9484ca-cc09-4797-afda-9e3c6f85542b&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-20 05:07:17&#39;, &#39;run.001&#39;: &#39;2025-06-20 05:07:17&#39;})),
+  Commonparams(exp_id=&#39;7026acf5-7366-4394-8ea9-4a90d90c858b&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-24 14:06:44&#39;, &#39;run.001&#39;: &#39;2025-06-24 14:06:44&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -888,7 +888,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilAnalysis(
   serial=0,
   AnalysisInput(num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, shots=4096, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  AnalysisContent(purity=0.5093007292259824, entropy=0.9734103119736215, and others)),
+  AnalysisContent(purity=0.5033448684486476, entropy=0.9903808886615886, and others)),
   unused_args_num=1
   )&gt;
 </pre></div>
@@ -913,12 +913,12 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| purity: 0.5093007292259824
-| entropy: 0.9734103119736215
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| purity: 0.5033448684486476
+| entropy: 0.9903808886615886
 | classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.074
+| taking_time: 0.086
 | input: {&#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;shots&#39;: 4096, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-20 05:07:17&#39;, &#39;summoner&#39;: None, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-24 14:06:44&#39;, &#39;summoner&#39;: None, &#39;log&#39;: {}}
 | the shape of expect_rho:
 (16, 16)
 </pre></div>
@@ -1216,7 +1216,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-20 05:07:21.
+  Last updated on 2025-06-24 14:34:52.
   <br/>
 </p></div>
       

@@ -1,0 +1,22 @@
+[
+    {
+        "version": "0.13.0",
+        "name": "0.13.0 (dev)",
+        "url": "https://docs.qurrium.org/dev/"
+    },
+    {
+        "name": "0.12.2 (stable)",
+        "version": "0.12.2",
+        "url": "https://docs.qurrium.org/"
+    },
+    {
+        "name": "0.12.0",
+        "version": "0.12.0",
+        "url": "https://docs.qurrium.org/0.12.0/"
+    },
+    {
+        "name": "0.11.0",
+        "version": "0.11.0",
+        "url": "https://docs.qurrium.org/0.11.0/"
+    }
+]
