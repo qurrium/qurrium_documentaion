@@ -16,11 +16,6 @@ ENV PATH="/root/.local/bin/:$PATH"
 RUN apt-get install -y git pandoc make
 
 # Install Sphinx and optional extensions
-COPY requirements.txt /requirements.txt
-COPY tox.ini /tox.ini
-COPY pytest.ini /pytest.ini
-COPY docs/ /tmp/docs/
-
 RUN uv pip install --no-cache-dir --system \
     sphinx \
     myst-parser \
@@ -34,10 +29,16 @@ RUN uv pip install --no-cache-dir --system \
     pandas \
     numpy
 
-RUN uv pip install --no-cache-dir --system -r /requirements.txt
-
 ARG QURRIUM_VERSION
 ENV QURRIUM_VERSION=${QURRIUM_VERSION}
+ARG DOC_VERSION
+ENV DOC_VERSION=${DOC_VERSION}
+
+RUN git clone https://github.com/qurrium/qurrium_documentaion.git app
+RUN cd /app && git checkout ${DOC_VERSION} && cd /
+RUN uv pip install --no-cache-dir --system -r /app/requirements.txt
+
+COPY docs/conf.py /app/docs/conf.py
 
 RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
     uv pip install --no-cache-dir --system qurrium; \
@@ -50,7 +51,7 @@ RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
     uv pip install --no-cache-dir --system qurrium==${QURRIUM_VERSION}; \
     fi
 
-WORKDIR /tmp
+WORKDIR /app
 
-RUN black /tmp
-RUN flake8 /tmp --count --exit-zero --statistics
+RUN black /app
+RUN flake8 /app --count --exit-zero --statistics --config /app/tox.ini

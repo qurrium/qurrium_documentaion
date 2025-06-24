@@ -5,10 +5,15 @@ services:
       - ./build:/build
     environment:
       - PYTHONUNBUFFERED=1
-    command: >
-      sphinx-build -b html "/tmp/docs" "/build/html/${QURRIUM_VERSION}"
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        sphinx-build -b html "/app/docs" "/app/build/${QURRIUM_VERSION}"
+        cp -r "/app/build/${QURRIUM_VERSION}" "/build/${QURRIUM_VERSION}"
+
     build:
       args:
         QURRIUM_VERSION: ${QURRIUM_VERSION}
+        DOC_VERSION: ${DOC_VERSION}
       context: .
       dockerfile: Dockerfile

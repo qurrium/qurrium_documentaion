@@ -42,21 +42,21 @@ if __name__ == "__main__":
         print("| Clearing existed temporary deployment directory...")
         shutil.rmtree("./deploy", ignore_errors=True)
 
-    if not os.path.exists("./build/html"):
+    if not os.path.exists("./build"):
         print(
             "| Error: The build directory does not exist. Please run the build command first."
         )
         sys.exit(1)
-    if not os.path.exists("./build/html/stable"):
+    if not os.path.exists("./build/stable"):
         print(
             "| Error: The stable directory does not exist in the build directory. "
             "Please run the build command first."
         )
         sys.exit(1)
 
-    print("| Copying files from build/html to deploy directory...")
+    print("| Copying files from build to deploy directory...")
 
-    shutil.copytree("./build/html", "./deploy")
+    shutil.copytree("./build", "./deploy")
 
     print("| Moving stable files from deploy/stable to deploy directory...")
 
