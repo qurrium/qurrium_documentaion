@@ -39,6 +39,8 @@ RUN cd /app && git checkout ${DOC_VERSION} && cd /
 RUN uv pip install --no-cache-dir --system -r /app/requirements.txt
 
 COPY docs/conf.py /app/docs/conf.py
+RUN rm /app/docs/_static/switcher.json
+COPY tools/switcher.json /app/docs/_static/switcher.json
 
 RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
     uv pip install --no-cache-dir --system qurrium; \
