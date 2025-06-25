@@ -11,12 +11,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/basic_usage/index.html" />
 <meta property="og:site_name" content="Qurrium 📏" />
-<meta property="og:description" content="This chapter provides a brief overview of the basic usage of Qurrium. Entanglement Entropy: 1. Entanglement Entropy, 1.1 By Hadamard Test- Basic Usage- a. Import the instances, b. Preparing quantum..." />
+<meta property="og:description" content="This chapter provides a brief overview of the basic usage of Qurrium. 1. Entanglement Entropy: This part will introduce several methods to compute the entanglement entropy of a quantum system. The ..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_basic_usage_index_a042377b.png" />
-<meta property="og:image:alt" content="This chapter provides a brief overview of the basic usage of Qurrium. Entanglement Entropy: 1. Entanglement Entropy, 1.1 By Hadamard Test- Basic Usage- a. Import the instances, b. Preparing quantum..." />
-<meta name="description" content="This chapter provides a brief overview of the basic usage of Qurrium. Entanglement Entropy: 1. Entanglement Entropy, 1.1 By Hadamard Test- Basic Usage- a. Import the instances, b. Preparing quantum..." />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_basic_usage_index_404cac53.png" />
+<meta property="og:image:alt" content="This chapter provides a brief overview of the basic usage of Qurrium. 1. Entanglement Entropy: This part will introduce several methods to compute the entanglement entropy of a quantum system. The ..." />
+<meta name="description" content="This chapter provides a brief overview of the basic usage of Qurrium. 1. Entanglement Entropy: This part will introduce several methods to compute the entanglement entropy of a quantum system. The ..." />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -86,16 +86,16 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.12.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Entanglement Entropy" href="qurrent_1_intro.html" />
+    <link rel="next" title="1.1 Entanglement Entropy by Hadamard Test" href="qurrent_1_1_hadamard_test.html" />
     <link rel="prev" title="Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap." href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-24 14:34:23"/>
+    <meta name="docbuild:last-update" content="2025-06-25 11:24:15"/>
   </head>
   
   
@@ -242,7 +242,7 @@ document.write(`
                     
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../more_info/index.html">
-    Installation and Usage
+    Installation and About
   </a>
 </li>
 
@@ -363,7 +363,7 @@ document.write(`
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../more_info/index.html">
-    Installation and Usage
+    Installation and About
   </a>
 </li>
 
@@ -398,14 +398,16 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Entanglement Entropy</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_intro.html">1. Entanglement Entropy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 By Hadamard Test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 By Randomized Measurement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 By Classical Shadow</a></li>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">QurriumBasic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
+</ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
 </ul>
@@ -465,78 +467,199 @@ document.write(`
   <section id="basic-usage">
 <h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h1>
 <p>This chapter provides a brief overview of the basic usage of Qurrium.</p>
+<section id="entanglement-entropy">
+<h2>1. Entanglement Entropy<a class="headerlink" href="#entanglement-entropy" title="Link to this heading">#</a></h2>
+<p>This part will introduce several methods to compute the entanglement entropy of a quantum system. The methods include:</p>
+<p>All three methods calculate the entropy of a quantum state, but their calculation techniques and post-processing procedures are entirely different.</p>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Entanglement Entropy</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_intro.html">1. Entanglement Entropy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 By Hadamard Test</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#basic-usage">Basic Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#a-import-the-instances">a. Import the instances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#b-preparing-quantum-circuit">b. Preparing quantum circuit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#c-execute-the-circuit">c. Execute the circuit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#i-directly-input-the-circuit">i. Directly input the circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#ii-add-the-circuits-to-container-waves-then-call-them-later">ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#d-export-them-after-all">d. Export them after all</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_1_hadamard_test.html#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 By Randomized Measurement</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#basic-usage">Basic Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#a-import-the-instances">a. Import the instances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#b-preparing-quantum-circuit">b. Preparing quantum circuit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#c-execute-the-circuit">c. Execute the circuit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#i-directly-input-the-circuit">i. Directly input the circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#ii-add-the-circuits-to-container-waves-then-call-them-later">ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#d-export-them-after-all">d. Export them after all</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_2_randomized_measure.html#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 By Classical Shadow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#basic-usag">Basic Usag</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#a-import-the-instances">a. Import the instances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#b-preparing-quantum-circuit">b. Preparing quantum circuit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#c-execute-the-circuit">c. Execute the circuit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#i-directly-input-the-circuit">i. Directly input the circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#ii-add-the-circuits-to-container-waves-then-call-them-later">ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#d-export-them-after-all">d. Export them after all</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrent_1_3_classical_shadow.html#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
 </ul>
 </div>
+</section>
+<section id="wavefuction-overlap">
+<h2>2. WaveFuction Overlap<a class="headerlink" href="#wavefuction-overlap" title="Link to this heading">#</a></h2>
+<p>This part will introduce several methods to compute the wavefuction overlap between 2 quantum system. The methods include:</p>
+<p>This feature has been implemented. The documentation is coming…</p>
+</section>
+<section id="magnetization-square">
+<h2>3. Magnetization Square<a class="headerlink" href="#magnetization-square" title="Link to this heading">#</a></h2>
+<p>This part will introduce several methods to compute the magnetization square of a quantum system. The methods include:</p>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">QurriumBasic</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qurrium_0_1_waves_executer.html#basic-usage">Basic Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#a-import-the-instances">a. Import the instances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#b-preparing-quantum-circuit">b. Preparing quantum circuit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#c-execute-the-circuit">c. Execute the circuit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qurrium_0_1_waves_executer.html#i-directly-input-the-circuit">i. Directly input the circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qurrium_0_1_waves_executer.html#ii-add-the-circuits-to-container-waves-then-call-them-later">ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#d-take-counts">d. take <code class="docutils literal notranslate"><span class="pre">counts</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#e-export-them-after-all">e. Export them after all</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qurrium_0_1_waves_executer.html#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
 </ul>
 </div>
+<!-- ## 4. String Operator
+
+This part will introduce several methods to compute the order of string operator of a quantum system. The methods include:
+
+This feature has been implemented. The documentation is coming... -->
+</section>
+<section id="extra-workflow-tools">
+<h2>Extra. Workflow Tools<a class="headerlink" href="#extra-workflow-tools" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</div>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<section id="randomized-measurement">
+<h3>Randomized Measurement<a class="headerlink" href="#randomized-measurement" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Probing Rényi entanglement entropy via randomized measurements - Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch, Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos <a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.aau4963">doi:10.1126/science.aau4963</a></p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span>
+<span class="nl">doi:10.1126/science.aau4963</span><span class="p">,</span>
+<span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Tiff Brydges  and Andreas Elben  and Petar Jurcevic  and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon  and Peter Zoller  and Rainer Blatt  and Christian F. Roos }</span><span class="p">,</span>
+<span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Probing Rényi entanglement entropy via randomized measurements}</span><span class="p">,</span>
+<span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Science}</span><span class="p">,</span>
+<span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{364}</span><span class="p">,</span>
+<span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{6437}</span><span class="p">,</span>
+<span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{260-263}</span><span class="p">,</span>
+<span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2019}</span><span class="p">,</span>
+<span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="na">URL</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/abs/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="na">eprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/pdf/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Quantum systems are predicted to be better at information processing than their classical counterparts, and quantum entanglement is key to this superior performance. But how does one gauge the degree of entanglement in a system? Brydges et al. monitored the build-up of the so-called Rényi entropy in a chain of up to 10 trapped calcium ions, each of which encoded a qubit. As the system evolved, interactions caused entanglement between the chain and the rest of the system to grow, which was reflected in the growth of the Rényi entropy. Science, this issue p. 260 The buildup of entropy in an ion chain reflects a growing entanglement between the chain and its complement. Entanglement is a key feature of many-body quantum systems. Measuring the entropy of different partitions of a quantum system provides a way to probe its entanglement structure. Here, we present and experimentally demonstrate a protocol for measuring the second-order Rényi entropy based on statistical correlations between randomized measurements. Our experiments, carried out with a trapped-ion quantum simulator with partition sizes of up to 10 qubits, prove the overall coherent character of the system dynamics and reveal the growth of entanglement between its parts, in both the absence and presence of disorder. Our protocol represents a universal tool for probing and characterizing engineered quantum systems in the laboratory, which is applicable to arbitrary quantum states of up to several tens of qubits.}</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="error-mitigation-on-randomized-measurement">
+<h3>Error Mitigation on Randomized Measurement<a class="headerlink" href="#error-mitigation-on-randomized-measurement" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Simple mitigation of global depolarizing errors in quantum simulations - Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self, Christopher and Kim, M. S. and Knolle, Johannes <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevE.104.035309">PhysRevE.104.035309</a></p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevE.104.035309</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Simple mitigation of global depolarizing errors in quantum simulations}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
+<span class="s">  Christopher and Kim, M. S. and Knolle, Johannes}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. E}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{104}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">issue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{3}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{035309}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{8}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2021}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Sep}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevE.104.035309}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevE.104.035309}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="classical-shadow">
+<h3>Classical Shadow<a class="headerlink" href="#classical-shadow" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Predicting many properties of a quantum system from very few measurements - Huang, Hsin-Yuan and Kueng, Richard and Preskill, John <a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">doi:10.1038/s41567-020-0932-7</a></p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">Huang2020-xg</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Predicting many properties of a quantum system from very few</span>
+<span class="s">              measurements&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Huang, Hsin-Yuan and Kueng, Richard and Preskill, John&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Predicting the properties of complex, large-scale quantum systems</span>
+<span class="s">              is essential for developing quantum technologies. We present an</span>
+<span class="s">              efficient method for constructing an approximate classical</span>
+<span class="s">              description of a quantum state using very few measurements of the</span>
+<span class="s">              state. This description, called a `classical shadow&#39;, can be used</span>
+<span class="s">              to predict many different properties; order</span>
+<span class="s">              $$\{\textbackslashmathrm\{log\}\}\textbackslash,(M)$$measurements</span>
+<span class="s">              suffice to accurately predict M different functions of the state</span>
+<span class="s">              with high success probability. The number of measurements is</span>
+<span class="s">              independent of the system size and saturates</span>
+<span class="s">              information-theoretic lower bounds. Moreover, target properties</span>
+<span class="s">              to predict can be selected after the measurements are completed.</span>
+<span class="s">              We support our theoretical findings with extensive numerical</span>
+<span class="s">              experiments. We apply classical shadows to predict quantum</span>
+<span class="s">              fidelities, entanglement entropies, two-point correlation</span>
+<span class="s">              functions, expectation values of local observables and the energy</span>
+<span class="s">              variance of many-body local Hamiltonians. The numerical results</span>
+<span class="s">              highlight the advantages of classical shadows relative to</span>
+<span class="s">              previously known methods.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">journal</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Nature Physics&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">volume</span><span class="w">   </span><span class="p">=</span><span class="w">  </span><span class="m">16</span><span class="p">,</span>
+<span class="w">  </span><span class="na">number</span><span class="w">   </span><span class="p">=</span><span class="w">  </span><span class="m">10</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;1050--1057&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w">    </span><span class="p">=</span><span class="w">  </span><span class="nv">oct</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">     </span><span class="p">=</span><span class="w">  </span><span class="m">2020</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>The randomized measurement toolbox - Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng, Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter <a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">doi:10.1038/s42254-022-00535-2</a></p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">Elben2023-bk</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;The randomized measurement toolbox&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Elben, Andreas and Flammia, Steven T and Huang, Hsin-Yuan and</span>
+<span class="s">              Kueng, Richard and Preskill, John and Vermersch, Beno{\^\i}t and</span>
+<span class="s">              Zoller, Peter&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Programmable quantum simulators and quantum computers are opening</span>
+<span class="s">              unprecedented opportunities for exploring and exploiting the</span>
+<span class="s">              properties of highly entangled complex quantum systems. The</span>
+<span class="s">              complexity of large quantum systems is the source of</span>
+<span class="s">              computational power but also makes them difficult to control</span>
+<span class="s">              precisely or characterize accurately using measured classical</span>
+<span class="s">              data. We review protocols for probing the properties of complex</span>
+<span class="s">              many-qubit systems using measurement schemes that are practical</span>
+<span class="s">              using today&#39;s quantum platforms. In these protocols, a quantum</span>
+<span class="s">              state is repeatedly prepared and measured in a randomly chosen</span>
+<span class="s">              basis; then a classical computer processes the measurement</span>
+<span class="s">              outcomes to estimate the desired property. The randomization of</span>
+<span class="s">              the measurement procedure has distinct advantages. For example, a</span>
+<span class="s">              single data set can be used multiple times to pursue a variety of</span>
+<span class="s">              applications, and imperfections in the measurements are mapped to</span>
+<span class="s">              a simplified noise model that can more easily be mitigated. We</span>
+<span class="s">              discuss a range of cases that have already been realized in</span>
+<span class="s">              quantum devices, including Hamiltonian simulation tasks, probes</span>
+<span class="s">              of quantum chaos, measurements of non-local order parameters, and</span>
+<span class="s">              comparison of quantum states produced in distantly separated</span>
+<span class="s">              laboratories. By providing a workable method for translating a</span>
+<span class="s">              complex quantum state into a succinct classical representation</span>
+<span class="s">              that preserves a rich variety of relevant physical properties,</span>
+<span class="s">              the randomized measurement toolbox strengthens our ability to</span>
+<span class="s">              grasp and control the quantum world.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">journal</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Nature Reviews Physics&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">volume</span><span class="w">   </span><span class="p">=</span><span class="w">  </span><span class="m">5</span><span class="p">,</span>
+<span class="w">  </span><span class="na">number</span><span class="w">   </span><span class="p">=</span><span class="w">  </span><span class="m">1</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;9--24&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w">    </span><span class="p">=</span><span class="w">  </span><span class="nv">jan</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">     </span><span class="p">=</span><span class="w">  </span><span class="m">2023</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="string-operator">
+<h3>String Operator<a class="headerlink" href="#string-operator" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Crossing a topological phase transition with a quantum computer - Smith, Adam and Jobst, Bernhard and Green, Andrew G. and Pollmann, Frank <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevResearch.4.L022020">PhysRevResearch.4.L022020</a></p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevResearch.4.L022020</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Crossing a topological phase transition with a quantum computer}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Smith, Adam and Jobst, Bernhard and Green, Andrew G. and Pollmann, Frank}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. Research}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{4}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">issue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{L022020}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{8}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Apr}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevResearch.4.L022020}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevResearch.4.L022020}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
 </section>
 
 
@@ -559,11 +682,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="qurrent_1_intro.html"
+       href="qurrent_1_1_hadamard_test.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1. Entanglement Entropy</p>
+        <p class="prev-next-title">1.1 Entanglement Entropy by Hadamard Test</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -576,6 +699,28 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-entropy">1. Entanglement Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wavefuction-overlap">2. WaveFuction Overlap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetization-square">3. Magnetization Square</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-workflow-tools">Extra. Workflow Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-measurement">Randomized Measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-mitigation-on-randomized-measurement">Error Mitigation on Randomized Measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-shadow">Classical Shadow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-operator">String Operator</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
@@ -618,7 +763,7 @@ document.write(`
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-24 14:34:23.
+  Last updated on 2025-06-25 11:24:15.
   <br/>
 </p></div>
       

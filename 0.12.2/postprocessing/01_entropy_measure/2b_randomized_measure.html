@@ -95,7 +95,7 @@
     <link rel="prev" title="1.2a Entanglement Entropy - Randomized Measurement" href="2a_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-24 14:34:23"/>
+    <meta name="docbuild:last-update" content="2025-06-25 09:39:41"/>
   </head>
   
   
@@ -749,8 +749,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;taking_time&#39;: 0.002428196,
- &#39;taking_time_all_sys&#39;: 0.010565353}
+ &#39;taking_time&#39;: 0.002117503,
+ &#39;taking_time_all_sys&#39;: 0.008397616}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -836,8 +836,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;taking_time&#39;: 0.002025127,
- &#39;taking_time_all_sys&#39;: 0.010565353}
+ &#39;taking_time&#39;: 0.00168989,
+ &#39;taking_time_all_sys&#39;: 0.008397616}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -848,7 +848,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 0.5189998149871826
 
 | You can see takingTimeAllSys is 0 for we use existed_all_system
-0.010565353
+0.008397616
 </pre></div>
 </div>
 </div>
@@ -975,28 +975,28 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5]
 | partition: [0, 1, 2, 3, 4, 5]
-| - taking_time: 0.002048672
-| - taking_time_all_sys: 0.010894613
+| - taking_time: 0.001622021
+| - taking_time_all_sys: 0.008420043
 [2, 3, 4, 5, 6, 7]
 | partition: [2, 3, 4, 5, 6, 7]
-| - taking_time: 0.002412578
-| - taking_time_all_sys: 0.010565353
+| - taking_time: 0.001682063
+| - taking_time_all_sys: 0.008397616
 [0, 1, 2, 3, 4, 5, 6]
 | partition: [0, 1, 2, 3, 4, 5, 6]
-| - taking_time: 0.004750638
-| - taking_time_all_sys: 0.010565353
+| - taking_time: 0.003518354
+| - taking_time_all_sys: 0.008397616
 [0, 1, 2, 3, 4, 5, 6]
 | partition: [0, 1, 2, 3, 4, 5, 6]
-| - taking_time: 0.004991441
-| - taking_time_all_sys: 0.010565353
+| - taking_time: 0.003640942
+| - taking_time_all_sys: 0.008397616
 [0, 1, 2, 6, 7]
 | partition: [0, 1, 2, 6, 7]
-| - taking_time: 0.001396014
-| - taking_time_all_sys: 0.010565353
+| - taking_time: 0.000921638
+| - taking_time_all_sys: 0.008397616
 [3, 4, 5, 6, 7, 0, 1]
 | partition: [3, 4, 5, 6, 7, 0, 1]
-| - taking_time: 0.004818669
-| - taking_time_all_sys: 0.010565353
+| - taking_time: 0.003741744
+| - taking_time_all_sys: 0.008397616
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1077,85 +1077,85 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [5, 4, 3, 2, 1, 0] - 00:04 &lt; ?      
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [5, 4, 3, 2, 1, 0] - 00:04 &lt; 00:22
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [5, 4, 3, 2, 1, 0] - 00:04 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [2, 3, 4, 5, 6, 7]. - 00:04 &lt; 00:22      
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [2, 3, 4, 5, 6, 7]. - 00:04 &lt; 00:21      
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 4, 5, 6, 7]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:09 &lt; 00:22
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:10 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 2] - 00:09 &lt; 00:22      
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 2] - 00:10 &lt; 00:21      
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 2] - 00:09 &lt; 00:18
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 2] - 00:10 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 3, 4, 5, 6]. - 00:09 &lt; 00:18   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:14 &lt; 00:18
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:14 &lt; 00:18   
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:14 &lt; 00:14
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 3, 4, 5, 6]. - 00:14 &lt; 00:14      
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 3, 4, 5, 6]. - 00:10 &lt; 00:21   
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:19 &lt; 00:14
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:19 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:19 &lt; 00:14   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:19 &lt; 00:21   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:19 &lt; 00:09
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:19 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 6, 7]. - 00:19 &lt; 00:09            
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 3, 4, 5, 6]. - 00:19 &lt; 00:21      
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:29 &lt; 00:21
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:29 &lt; 00:21   
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [6, 5, 4, 3, 2, 1, 0] - 00:29 &lt; 00:16
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [0, 1, 2, 6, 7]. - 00:29 &lt; 00:16            
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 6, 7]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:23 &lt; 00:09
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:37 &lt; 00:16
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:23 &lt; 00:09         
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:37 &lt; 00:16         
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:23 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:37 &lt; 00:08
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [3, 4, 5, 6, 7, 0, 1]. - 00:23 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [3, 4, 5, 6, 7, 0, 1]. - 00:37 &lt; 00:08
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 4, 5, 6, 7, 0, 1]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:28 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:46 &lt; 00:08
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:28 &lt; 00:04   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:46 &lt; 00:08   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:28 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:46 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:28 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:46 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1316,7 +1316,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-24 14:34:23.
+  Last updated on 2025-06-25 09:39:41.
   <br/>
 </p></div>
       

@@ -34,7 +34,7 @@ for k, v in main01.items():
     if k == "expect_rho":
         continue
     print(f"| {k}: {v}")
-print("| shape ofexpect_rho:")
+print("| shape of expect_rho:")
 print(main01["expect_rho"].shape)
 ------------------
 
