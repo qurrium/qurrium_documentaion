@@ -79,8 +79,8 @@ The package has been tested on the following systems.**
 - **Windows 10/11**
 - **MacOS 11+**
 - with required modules:
-  - [qiskit](https://pypi.org/project/qiskit/), 
-  - [tqdm](https://pypi.org/project/tqdm/), 
+  - [qiskit](https://pypi.org/project/qiskit/),
+  - [tqdm](https://pypi.org/project/tqdm/),
   - [requests](https://pypi.org/project/requests/)
 
 Check [Platform Support](./more_info/platform_support.md) for more detail.
@@ -121,13 +121,37 @@ Special thank to [IBM Quantum Hub at NTU](https://quantum.ntu.edu.tw/) for provi
 
 The author [@harui2019](https://github.com/harui2019/) is grateful to the NTU hub of [NCTS](https://phys.ncts.ntu.edu.tw/) that supported him as a Research Assistiant in the early stage of the development.
 
-<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCCU_Physics_Logo.png" href="https://phys.nccu.edu.tw/" alt="National Chengchi University" width="400" ></p>
+<a href="https://www.nccu.edu.tw/">
+  <img
+    src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCCU_Physics_Logo.png"
+    alt="National Chengchi University"
+    width="400"
+  >
+</a>
 
-<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NSTC_Logo.png" href="https://www.nstc.gov.tw/" alt="NSTC" width="400" ></p>
+<a href="https://www.nstc.gov.tw/">
+  <img
+    src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NSTC_Logo.png"
+    alt="NSTC"
+    width="400"
+  >
+</a>
 
-<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCTS_Phys_Logo.png" href="https://phys.ncts.ntu.edu.tw/" alt="National Center for Theoretical Sciences, Physics Division" width="400" ></p>
+<a href="https://phys.ncts.ntu.edu.tw/">
+  <img
+    src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NCTS_Phys_Logo.png"
+    alt="National Center for Theoretical Sciences, Physics Division"
+    width="400"
+  >
+</a>
 
-<p><img src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NTU_IBM_Q_Hub_Logo.png" href="https://quantum.ntu.edu.tw/" alt="IBM Quantum Hub at National Taiwan University" width="400"></p>
+<a href="https://quantum.ntu.edu.tw/">
+  <img
+    src="https://raw.githubusercontent.com/harui2019/harui2019/main/docs/image/logo/NTU_IBM_Q_Hub_Logo.png"
+    alt="IBM Quantum Hub at National Taiwan University"
+    width="400"
+  >
+</a>
 
 ---
 
