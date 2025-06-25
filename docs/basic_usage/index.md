@@ -10,6 +10,7 @@ All three methods calculate the entropy of a quantum state, but their calculatio
 
 ```{toctree}
 :maxdepth: 1
+:caption: Entanglement Entropy
 
 qurrent_1_1_hadamard_test
 qurrent_1_2_randomized_measure
@@ -29,6 +30,7 @@ This part will introduce several methods to compute the magnetization square of 
 
 ```{toctree}
 :maxdepth: 1
+:caption: Magnetization Square
 
 qurmagsq_3_1_zdir_magnet_square
 qurmagsq_3_2_magnet_square
@@ -46,6 +48,7 @@ This feature has been implemented. The documentation is coming... -->
 
 ```{toctree}
 :maxdepth: 1
+:caption: Workflow Tools
 
 qurrium_0_1_waves_executer
 ```
