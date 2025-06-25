@@ -148,3 +148,5 @@ docs/main/example.multiOutput.qurry.001
 # deployment working
 
 deploy
+jupyter_execute/
+**/jupyter_execute/
