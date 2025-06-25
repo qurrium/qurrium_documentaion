@@ -34,6 +34,7 @@ ENV QURRIUM_VERSION=${QURRIUM_VERSION}
 ARG DOC_VERSION
 ENV DOC_VERSION=${DOC_VERSION}
 
+RUN rm -rf /app
 RUN git clone https://github.com/qurrium/qurrium_documentaion.git app
 RUN cd /app && git checkout ${DOC_VERSION} && git fetch && git pull && cd /
 RUN uv pip install --no-cache-dir --system -r /app/requirements.txt
