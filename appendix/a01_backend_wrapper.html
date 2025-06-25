@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="Other Features" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-25 11:24:15"/>
+    <meta name="docbuild:last-update" content="2025-06-25 21:15:41"/>
   </head>
   
   
@@ -464,7 +464,7 @@ document.write(`
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>The complete source code of this tutorial can be found in</p>
-<p><a class="reference download internal" download="" href="../_downloads/09e26c3b9e83931871700bc61c537b15/a01_backend_wrapper.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">./a01_backend_wrapper.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/646376893402db2e1f54132f9e018f99/a01_backend_wrapper.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">./a01_backend_wrapper.ipynb</span></code></a></p>
 </div>
 <hr class="docutils" />
 <section id="a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend">
@@ -529,12 +529,12 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| BasicProvider, which can call by &#39;.get_backend&#39;:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x73747d08cbc0&gt;
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x78bad5b801d0&gt;
 | BasicSimulator, which is a direct call:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x73742b519520&gt;
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x78bb1a63ff80&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x73742b519520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x78bb1a63ff80&gt;
 </pre></div>
 </div>
 </div>
@@ -577,13 +577,18 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Via AerProvider, which can call by &#39;.get_backend&#39;:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
+| - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
 | - AerSimulator(&#39;aer_simulator_statevector&#39;)  AerSimulator(&#39;aer_simulator_statevector&#39;)
+| - AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)  AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_density_matrix&#39;)  AerSimulator(&#39;aer_simulator_density_matrix&#39;)
+| - AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)  AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)  AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)
 | - AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_unitary&#39;)  AerSimulator(&#39;aer_simulator_unitary&#39;)
+| - AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)  AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_superop&#39;)  AerSimulator(&#39;aer_simulator_superop&#39;)
+| - AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)  AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)
 | - QasmSimulator(&#39;qasm_simulator&#39;) ...... QasmSimulator(&#39;qasm_simulator&#39;)
 | - StatevectorSimulator(&#39;statevector_simulator&#39;)  StatevectorSimulator(&#39;statevector_simulator&#39;)
 | - UnitarySimulator(&#39;unitary_simulator&#39;)  UnitarySimulator(&#39;unitary_simulator&#39;)
@@ -631,7 +636,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Check the available devices: (&#39;CPU&#39;,)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Check the available devices: (&#39;CPU&#39;, &#39;GPU&#39;)
 | - Then set option as GPU
 | - And check again:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
@@ -728,7 +733,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Your qiskit version does not support fake_provider.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - BackendV2
+[&#39;fake_algiers&#39;, &#39;fake_almaden&#39;, &#39;fake_armonk&#39;, &#39;fake_athens&#39;, &#39;fake_auckland&#39;, &#39;fake_belem&#39;, &#39;fake_boeblingen&#39;, &#39;fake_bogota&#39;, &#39;fake_brisbane&#39;, &#39;fake_brooklyn&#39;, &#39;fake_burlington&#39;, &#39;fake_cairo&#39;, &#39;fake_cambridge&#39;, &#39;fake_casablanca&#39;, &#39;fake_cusco&#39;, &#39;fake_essex&#39;, &#39;fake_fez&#39;, &#39;fake_fractional&#39;, &#39;fake_geneva&#39;, &#39;fake_guadalupe&#39;, &#39;fake_hanoi&#39;, &#39;fake_jakarta&#39;, &#39;fake_johannesburg&#39;, &#39;fake_kawasaki&#39;, &#39;fake_kolkata&#39;, &#39;fake_kyiv&#39;, &#39;fake_kyoto&#39;, &#39;fake_lagos&#39;, &#39;fake_lima&#39;, &#39;fake_london&#39;, &#39;fake_manhattan&#39;, &#39;fake_manila&#39;, &#39;fake_melbourne&#39;, &#39;fake_marrakesh&#39;, &#39;fake_montreal&#39;, &#39;fake_mumbai&#39;, &#39;fake_nairobi&#39;, &#39;fake_osaka&#39;, &#39;fake_oslo&#39;, &#39;fake_ourense&#39;, &#39;fake_paris&#39;, &#39;fake_peekskill&#39;, &#39;fake_perth&#39;, &#39;fake_prague&#39;, &#39;fake_poughkeepsie&#39;, &#39;fake_quebec&#39;, &#39;fake_quito&#39;, &#39;fake_rochester&#39;, &#39;fake_rome&#39;, &#39;fake_santiago&#39;, &#39;fake_sherbrooke&#39;, &#39;fake_singapore&#39;, &#39;fake_sydney&#39;, &#39;fake_torino&#39;, &#39;fake_toronto&#39;, &#39;fake_valencia&#39;, &#39;fake_vigo&#39;, &#39;fake_washington&#39;, &#39;fake_yorktown&#39;]
 | - Since 0.33.0, FakeProvider for BackendV! has been deprecated.
 | - Or your qiskit version does not support fake_provider.
 </pre></div>
@@ -751,10 +757,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/site-packages/qurry/tools/backend/import_fake.py:141: QurryDependenciesNotWorking: &quot;No fake provider available. It may be caused by version conflict.  For qiskit&lt;1.0.0 please install qiskit-ibm-runtime&lt;0.21.0 by  &#39;pip install qiskit-ibm-runtime&lt;0.21.0&#39;.  If you are still using qiskit 0.46.X and lower originally,  then install newer qiskit-ibm-runtime at same time,  please check whether the version of qiskit  has been updated to 1.0 by the installation  because since qiskit-ibm-runtime 0.21.0+  has been updated its dependency to qiskit 1.0.  If you already have qiskit-ibm-runtimes installed and lower than 0.21.0,  it is only available to use qiskit 0.46.X as dependency  for the migration of fake_provider is not completed around this version.  Many of the fake backends are not available in qiskit-ibm-runtime.  (This made me a lot problem to handle the fake backends in Qurry.)  (If you see this error raised, good luck to you to fix environment. :smile:.)&quot;
-  warnings.warn(LUCKY_MSG, category=QurryDependenciesNotWorking)
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;
 </pre></div>
 </div>
@@ -775,7 +777,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Does we have GPU backend to access: False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Does we have GPU backend to access: True
 | - There is not GPU backend to access: &#39;aer_gpu&#39; unknown backend or backend callsign.
 </pre></div>
 </div>
@@ -793,7 +795,7 @@ document.write(`
  ### BackendWrapper Statesheet
 ------------------------------------------------------------
  #### Simulator
- - Aer GPU ........................... False
+ - Aer GPU ........................... True
  - Simulator Provider by ............. qiskit_aer
    sim
    No Callsign Added
@@ -803,8 +805,87 @@ document.write(`
    No Callsign Added
 ------------------------------------------------------------
  #### Fake
-   No Backends Available. Choose fake version when initializing the backend wrapper.
-   No Callsign Added
+   fake_algiers, fake_almaden, fake_armonk,
+   fake_athens, fake_auckland, fake_belem,
+   fake_boeblingen, fake_bogota, fake_brisbane,
+   fake_brooklyn, fake_burlington, fake_cairo,
+   fake_cambridge, fake_casablanca, fake_cusco,
+   fake_essex, fake_fez, fake_fractional,
+   fake_geneva, fake_guadalupe, fake_hanoi,
+   fake_jakarta, fake_johannesburg, fake_kawasaki,
+   fake_kolkata, fake_kyiv, fake_kyoto,
+   fake_lagos, fake_lima, fake_london,
+   fake_manhattan, fake_manila, fake_melbourne,
+   fake_marrakesh, fake_montreal, fake_mumbai,
+   fake_nairobi, fake_osaka, fake_oslo,
+   fake_ourense, fake_paris, fake_peekskill,
+   fake_perth, fake_prague, fake_poughkeepsie,
+   fake_quebec, fake_quito, fake_rochester,
+   fake_rome, fake_santiago, fake_sherbrooke,
+   fake_singapore, fake_sydney, fake_torino,
+   fake_toronto, fake_valencia, fake_vigo,
+   fake_washington, fake_yorktown
+ - Available Fake Backends Callsign
+   - fake_algiers ...................... fake_algiers
+   - fake_almaden ...................... fake_almaden
+   - fake_armonk ....................... fake_armonk
+   - fake_athens ....................... fake_athens
+   - fake_auckland ..................... fake_auckland
+   - fake_belem ........................ fake_belem
+   - fake_boeblingen ................... fake_boeblingen
+   - fake_bogota ....................... fake_bogota
+   - fake_brisbane ..................... fake_brisbane
+   - fake_brooklyn ..................... fake_brooklyn
+   - fake_burlington ................... fake_burlington
+   - fake_cairo ........................ fake_cairo
+   - fake_cambridge .................... fake_cambridge
+   - fake_casablanca ................... fake_casablanca
+   - fake_cusco ........................ fake_cusco
+   - fake_essex ........................ fake_essex
+   - fake_fez .......................... fake_fez
+   - fake_fractional ................... fake_fractional
+   - fake_geneva ....................... fake_geneva
+   - fake_guadalupe .................... fake_guadalupe
+   - fake_hanoi ........................ fake_hanoi
+   - fake_jakarta ...................... fake_jakarta
+   - fake_johannesburg ................. fake_johannesburg
+   - fake_kawasaki ..................... fake_kawasaki
+   - fake_kolkata ...................... fake_kolkata
+   - fake_kyiv ......................... fake_kyiv
+   - fake_kyoto ........................ fake_kyoto
+   - fake_lagos ........................ fake_lagos
+   - fake_lima ......................... fake_lima
+   - fake_london ....................... fake_london
+   - fake_manhattan .................... fake_manhattan
+   - fake_manila ....................... fake_manila
+   - fake_melbourne .................... fake_melbourne
+   - fake_marrakesh .................... fake_marrakesh
+   - fake_montreal ..................... fake_montreal
+   - fake_mumbai ....................... fake_mumbai
+   - fake_nairobi ...................... fake_nairobi
+   - fake_osaka ........................ fake_osaka
+   - fake_oslo ......................... fake_oslo
+   - fake_ourense ...................... fake_ourense
+   - fake_paris ........................ fake_paris
+   - fake_peekskill .................... fake_peekskill
+   - fake_perth ........................ fake_perth
+   - fake_prague ....................... fake_prague
+   - fake_poughkeepsie ................. fake_poughkeepsie
+   - fake_quebec ....................... fake_quebec
+   - fake_quito ........................ fake_quito
+   - fake_rochester .................... fake_rochester
+   - fake_rome ......................... fake_rome
+   - fake_santiago ..................... fake_santiago
+   - fake_sherbrooke ................... fake_sherbrooke
+   - fake_singapore .................... fake_singapore
+   - fake_sydney ....................... fake_sydney
+   - fake_torino ....................... fake_torino
+   - fake_toronto ...................... fake_toronto
+   - fake_valencia ..................... fake_valencia
+   - fake_vigo ......................... fake_vigo
+   - fake_washington ................... fake_washington
+   - fake_yorktown ..................... fake_yorktown
+   - fake_qasm ......................... fake_qasm_simulator
 ------------------------------------------------------------
  #### Extra
    No Backends Available.
@@ -813,7 +894,65 @@ document.write(`
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;sim&#39;: {&#39;sim&#39;: &lt;AerSimulator(&#39;aer_simulator&#39;)&gt;},
  &#39;real&#39;: {},
- &#39;fake&#39;: {},
+ &#39;fake&#39;: {&#39;fake_algiers&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.algiers.fake_algiers.FakeAlgiers at 0x78ba41450ec0&gt;,
+  &#39;fake_almaden&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.almaden.fake_almaden.FakeAlmadenV2 at 0x78ba30f1cfb0&gt;,
+  &#39;fake_armonk&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.armonk.fake_armonk.FakeArmonkV2 at 0x78ba30e05e50&gt;,
+  &#39;fake_athens&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.athens.fake_athens.FakeAthensV2 at 0x78ba30d40c80&gt;,
+  &#39;fake_auckland&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.auckland.fake_auckland.FakeAuckland at 0x78ba30d41730&gt;,
+  &#39;fake_belem&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.belem.fake_belem.FakeBelemV2 at 0x78ba30d416d0&gt;,
+  &#39;fake_boeblingen&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.boeblingen.fake_boeblingen.FakeBoeblingenV2 at 0x78ba30f1dee0&gt;,
+  &#39;fake_bogota&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.bogota.fake_bogota.FakeBogotaV2 at 0x78ba3eeed520&gt;,
+  &#39;fake_brisbane&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brisbane.fake_brisbane.FakeBrisbane at 0x78ba30eb3470&gt;,
+  &#39;fake_brooklyn&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brooklyn.fake_brooklyn.FakeBrooklynV2 at 0x78ba30e05f10&gt;,
+  &#39;fake_burlington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.burlington.fake_burlington.FakeBurlingtonV2 at 0x78ba30c771d0&gt;,
+  &#39;fake_cairo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cairo.fake_cairo.FakeCairoV2 at 0x78ba30ce5460&gt;,
+  &#39;fake_cambridge&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cambridge.fake_cambridge.FakeCambridgeV2 at 0x78ba30e07b30&gt;,
+  &#39;fake_casablanca&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.casablanca.fake_casablanca.FakeCasablancaV2 at 0x78ba30b14050&gt;,
+  &#39;fake_cusco&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cusco.fake_cusco.FakeCusco at 0x78ba4119b440&gt;,
+  &#39;fake_essex&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.essex.fake_essex.FakeEssexV2 at 0x78ba30b14500&gt;,
+  &#39;fake_fez&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fez.fake_fez.FakeFez at 0x78ba30bed310&gt;,
+  &#39;fake_fractional&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fractional.fake_fractional.FakeFractionalBackend at 0x78ba30bed880&gt;,
+  &#39;fake_geneva&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.geneva.fake_geneva.FakeGeneva at 0x78ba3164a570&gt;,
+  &#39;fake_guadalupe&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.guadalupe.fake_guadalupe.FakeGuadalupeV2 at 0x78ba30a94950&gt;,
+  &#39;fake_hanoi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.hanoi.fake_hanoi.FakeHanoiV2 at 0x78ba30ac4530&gt;,
+  &#39;fake_jakarta&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.jakarta.fake_jakarta.FakeJakartaV2 at 0x78ba30ad90d0&gt;,
+  &#39;fake_johannesburg&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.johannesburg.fake_johannesburg.FakeJohannesburgV2 at 0x78ba30908c20&gt;,
+  &#39;fake_kawasaki&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kawasaki.fake_kawasaki.FakeKawasaki at 0x78ba3090b140&gt;,
+  &#39;fake_kolkata&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kolkata.fake_kolkata.FakeKolkataV2 at 0x78ba30926090&gt;,
+  &#39;fake_kyiv&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyiv.fake_kyiv.FakeKyiv at 0x78ba307fc9e0&gt;,
+  &#39;fake_kyoto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyoto.fake_kyoto.FakeKyoto at 0x78ba30820590&gt;,
+  &#39;fake_lagos&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lagos.fake_lagos.FakeLagosV2 at 0x78ba308deea0&gt;,
+  &#39;fake_lima&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lima.fake_lima.FakeLimaV2 at 0x78ba3077ab70&gt;,
+  &#39;fake_london&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.london.fake_london.FakeLondonV2 at 0x78ba307910d0&gt;,
+  &#39;fake_manhattan&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manhattan.fake_manhattan.FakeManhattanV2 at 0x78ba30792d20&gt;,
+  &#39;fake_manila&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manila.fake_manila.FakeManilaV2 at 0x78ba30793230&gt;,
+  &#39;fake_melbourne&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.melbourne.fake_melbourne.FakeMelbourneV2 at 0x78ba3060d4c0&gt;,
+  &#39;fake_marrakesh&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.marrakesh.fake_marrakesh.FakeMarrakesh at 0x78ba3060f1a0&gt;,
+  &#39;fake_montreal&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.montreal.fake_montreal.FakeMontrealV2 at 0x78ba30eb0980&gt;,
+  &#39;fake_mumbai&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.mumbai.fake_mumbai.FakeMumbaiV2 at 0x78ba306b8b90&gt;,
+  &#39;fake_nairobi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.nairobi.fake_nairobi.FakeNairobiV2 at 0x78ba306e8680&gt;,
+  &#39;fake_osaka&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.osaka.fake_osaka.FakeOsaka at 0x78ba305201a0&gt;,
+  &#39;fake_oslo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.oslo.fake_oslo.FakeOslo at 0x78ba305226c0&gt;,
+  &#39;fake_ourense&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.ourense.fake_ourense.FakeOurenseV2 at 0x78ba305c2390&gt;,
+  &#39;fake_paris&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.paris.fake_paris.FakeParisV2 at 0x78ba305d49e0&gt;,
+  &#39;fake_peekskill&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.peekskill.fake_peekskill.FakePeekskill at 0x78ba305d4f80&gt;,
+  &#39;fake_perth&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.perth.fake_perth.FakePerth at 0x78ba30404aa0&gt;,
+  &#39;fake_prague&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.prague.fake_prague.FakePrague at 0x78ba3041b050&gt;,
+  &#39;fake_poughkeepsie&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.poughkeepsie.fake_poughkeepsie.FakePoughkeepsieV2 at 0x78ba304315b0&gt;,
+  &#39;fake_quebec&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quebec.fake_quebec.FakeQuebec at 0x78ba30459700&gt;,
+  &#39;fake_quito&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quito.fake_quito.FakeQuitoV2 at 0x78ba3045a990&gt;,
+  &#39;fake_rochester&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rochester.fake_rochester.FakeRochesterV2 at 0x78ba303352b0&gt;,
+  &#39;fake_rome&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rome.fake_rome.FakeRomeV2 at 0x78ba30336f30&gt;,
+  &#39;fake_santiago&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.santiago.fake_santiago.FakeSantiagoV2 at 0x78ba303373b0&gt;,
+  &#39;fake_sherbrooke&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sherbrooke.fake_sherbrooke.FakeSherbrooke at 0x78ba3034d0a0&gt;,
+  &#39;fake_singapore&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.singapore.fake_singapore.FakeSingaporeV2 at 0x78ba3034ed50&gt;,
+  &#39;fake_sydney&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sydney.fake_sydney.FakeSydneyV2 at 0x78ba302256a0&gt;,
+  &#39;fake_torino&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.torino.fake_torino.FakeTorino at 0x78ba302385c0&gt;,
+  &#39;fake_toronto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.toronto.fake_toronto.FakeTorontoV2 at 0x78ba302600e0&gt;,
+  &#39;fake_valencia&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.valencia.fake_valencia.FakeValenciaV2 at 0x78ba302e50d0&gt;,
+  &#39;fake_vigo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.vigo.fake_vigo.FakeVigoV2 at 0x78ba30eda090&gt;,
+  &#39;fake_washington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.washington.fake_washington.FakeWashingtonV2 at 0x78ba30114bf0&gt;,
+  &#39;fake_yorktown&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.yorktown.fake_yorktown.FakeYorktownV2 at 0x78ba30116d50&gt;},
  &#39;extra&#39;: {}}
 </pre></div>
 </div>
@@ -868,9 +1007,14 @@ document.write(`
 --------------------------------------------
  ### Qiskit version
  - main
-   - qiskit-aer ......... 0.17.1
+   - qiskit-aer .............. 0.17.0
+   - qiskit-aer-gpu .......... 0.15.1
+   - qiskit-aer-gpu-cu11 ..... 0.17.0
+   - qiskit-ibm-runtime ...... 0.39.0
  - deprecated
  - into-community
+--------------------------------------------
+ + qiskit-aer-gpu and qiskit-aer-gpu-cu11 should have the same version as qiskit-aer.
 --------------------------------------------
 </pre></div>
 </div>
@@ -981,7 +1125,7 @@ document.write(`
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-25 11:24:15.
+  Last updated on 2025-06-25 21:15:41.
   <br/>
 </p></div>
       

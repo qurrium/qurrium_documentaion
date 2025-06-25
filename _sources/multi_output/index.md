@@ -40,6 +40,7 @@ This feature has been implemented. The documentation is coming... -->
 
 ```{toctree}
 :maxdepth: 1
+:caption: Workflow Tools
 
 qurrium_0_1_waves_executer
 ```

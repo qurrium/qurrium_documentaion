@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="Basic Usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-25 11:24:15"/>
+    <meta name="docbuild:last-update" content="2025-06-25 21:15:41"/>
   </head>
   
   
@@ -398,16 +398,19 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Entanglement Entropy</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1.1 Entanglement Entropy by Hadamard Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Magnetization Square</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow Tools</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
 </ul>
@@ -602,7 +605,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;040bd8d3-7c4c-41c4-abcf-bed5b69561cc&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;f3834194-2a5e-415f-be60-ff2bbfa3a2d4&#39;
 </pre></div>
 </div>
 </div>
@@ -615,9 +618,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureHadamardExperiment(exp_id=040bd8d3-7c4c-41c4-abcf-bed5b69561cc, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureHadamardExperiment(exp_id=f3834194-2a5e-415f-be60-ff2bbfa3a2d4, 
   EntropyMeasureHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrent_hadamard&#39;, degree=(4, 8)),
-  Commonparams(exp_id=&#39;040bd8d3-7c4c-41c4-abcf-bed5b69561cc&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 11:15:10&#39;, &#39;run.001&#39;: &#39;2025-06-25 11:15:10&#39;})),
+  Commonparams(exp_id=&#39;f3834194-2a5e-415f-be60-ff2bbfa3a2d4&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 21:04:19&#39;, &#39;run.001&#39;: &#39;2025-06-25 21:04:19&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -667,7 +670,7 @@ q_7: ─────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;purity&#39;: 1.0,
  &#39;entropy&#39;: np.float64(-0.0),
  &#39;input&#39;: {},
- &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-25 11:15:10&#39;, &#39;log&#39;: {}}}
+ &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-25 21:04:19&#39;, &#39;log&#39;: {}}}
 </pre></div>
 </div>
 </div>
@@ -684,7 +687,7 @@ q_7: ─────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f0aa5b3ec00&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x708eeff2a2a0&gt;})
 </pre></div>
 </div>
 </div>
@@ -794,9 +797,9 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f0aa5b3ec00&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7f0aa5aa39e0&gt;,
-  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7f0aa5949340&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x708eeff2a2a0&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x708eefe195b0&gt;,
+  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x708eeff2a150&gt;})
 </pre></div>
 </div>
 </div>
@@ -810,7 +813,7 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;52d5dcf5-48a7-4251-ba6d-809a05e7eff1&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c7f579f6-cd1f-4520-b1d2-86954d079c6f&#39;
 </pre></div>
 </div>
 </div>
@@ -822,9 +825,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureHadamardExperiment(exp_id=52d5dcf5-48a7-4251-ba6d-809a05e7eff1, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureHadamardExperiment(exp_id=c7f579f6-cd1f-4520-b1d2-86954d079c6f, 
   EntropyMeasureHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrent_hadamard&#39;, degree=(4, 8)),
-  Commonparams(exp_id=&#39;52d5dcf5-48a7-4251-ba6d-809a05e7eff1&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 11:15:13&#39;, &#39;run.001&#39;: &#39;2025-06-25 11:15:13&#39;})),
+  Commonparams(exp_id=&#39;c7f579f6-cd1f-4520-b1d2-86954d079c6f&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 21:04:23&#39;, &#39;run.001&#39;: &#39;2025-06-25 21:04:23&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -842,7 +845,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EMHAnalysis(
   serial=1,
   EMHAnalysisInput(),
-  EMHAnalysisContent(purity=0.47705078125, entropy=1.0677852480316148)),
+  EMHAnalysisContent(purity=0.46484375, entropy=1.1051822366920565)),
   unused_args_num=1
   )&gt;
 </pre></div>
@@ -865,10 +868,10 @@ q_7: ─────────────────────────
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/args/experiment.degree_4_8.qurrent_hadamard.001.id=040bd8d3-7c4c-41c4-abcf-bed5b69561cc.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/advent/experiment.degree_4_8.qurrent_hadamard.001.id=040bd8d3-7c4c-41c4-abcf-bed5b69561cc.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/legacy/experiment.degree_4_8.qurrent_hadamard.001.id=040bd8d3-7c4c-41c4-abcf-bed5b69561cc.legacy.json&#39;,
- &#39;reports&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/reports/experiment.degree_4_8.qurrent_hadamard.001.id=040bd8d3-7c4c-41c4-abcf-bed5b69561cc.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/args/experiment.degree_4_8.qurrent_hadamard.001.id=f3834194-2a5e-415f-be60-ff2bbfa3a2d4.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/advent/experiment.degree_4_8.qurrent_hadamard.001.id=f3834194-2a5e-415f-be60-ff2bbfa3a2d4.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/legacy/experiment.degree_4_8.qurrent_hadamard.001.id=f3834194-2a5e-415f-be60-ff2bbfa3a2d4.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.degree_4_8.qurrent_hadamard.001/reports/experiment.degree_4_8.qurrent_hadamard.001.id=f3834194-2a5e-415f-be60-ff2bbfa3a2d4.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1033,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-25 11:24:15.
+  Last updated on 2025-06-25 21:15:41.
   <br/>
 </p></div>
       

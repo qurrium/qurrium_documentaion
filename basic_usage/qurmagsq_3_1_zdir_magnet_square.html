@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +95,7 @@
     <link rel="prev" title="1.3 Entanglement Entropy by Classical Shadow" href="qurrent_1_3_classical_shadow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-25 11:24:15"/>
+    <meta name="docbuild:last-update" content="2025-06-25 21:15:41"/>
   </head>
   
   
@@ -398,16 +398,19 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Entanglement Entropy</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Magnetization Square</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3.1 Magnetization Square on Z Direction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow Tools</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
 </ul>
@@ -549,7 +552,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;36c4ef52-ef3d-44be-90fa-41bf058a058c&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;eac4d8f1-fcf1-4d87-89d8-63a7ffe89784&#39;
 </pre></div>
 </div>
 </div>
@@ -562,9 +565,9 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=36c4ef52-ef3d-44be-90fa-41bf058a058c, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=eac4d8f1-fcf1-4d87-89d8-63a7ffe89784, 
   ZDirMagnetSquareArguments(exp_name=&#39;experiment.qurmagsq_magnet_square_zdir&#39;, num_qubits=6),
-  Commonparams(exp_id=&#39;36c4ef52-ef3d-44be-90fa-41bf058a058c&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 11:14:01&#39;, &#39;run.001&#39;: &#39;2025-06-25 11:14:01&#39;})),
+  Commonparams(exp_id=&#39;eac4d8f1-fcf1-4d87-89d8-63a7ffe89784&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 21:02:44&#39;, &#39;run.001&#39;: &#39;2025-06-25 21:02:44&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -618,9 +621,9 @@ q_3: ───────────────┤ X ├
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| magnetization square 1.0
 | num_qubits: 6
 | shots: 4096
-| taking_time: 0.00037708
+| taking_time: 0.000431812
 | input: {}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-25 11:14:01&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-25 21:02:44&#39;, &#39;log&#39;: {}}
 </pre></div>
 </div>
 </div>
@@ -646,7 +649,7 @@ It contains the magnetization square cells they correspond to the magnetization 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{9: 1.0, 27: 1.0, 5: 1.0, 7: 1.0, 11: 1.0, 0: 1.0, 14: 1.0, 18: 1.0, 3: 1.0, 10: 1.0, 29: 1.0, 21: 1.0, 2: 1.0, 24: 1.0, 16: 1.0, 23: 1.0, 1: 1.0, 15: 1.0, 8: 1.0, 17: 1.0, 13: 1.0, 4: 1.0, 22: 1.0, 25: 1.0, 26: 1.0, 6: 1.0, 12: 1.0, 19: 1.0, 28: 1.0, 20: 1.0}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{24: 1.0, 29: 1.0, 12: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 3: 1.0, 11: 1.0, 13: 1.0, 18: 1.0, 5: 1.0, 21: 1.0, 23: 1.0, 27: 1.0, 17: 1.0, 20: 1.0, 4: 1.0, 22: 1.0, 26: 1.0, 9: 1.0, 25: 1.0, 6: 1.0, 7: 1.0, 19: 1.0, 0: 1.0, 28: 1.0, 2: 1.0, 1: 1.0, 8: 1.0, 10: 1.0}
 </pre></div>
 </div>
 </div>
@@ -662,7 +665,7 @@ It contains the magnetization square cells they correspond to the magnetization 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({ 0: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073123f50&gt;})
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({ 0: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2c089e0&gt;})
 </pre></div>
 </div>
 </div>
@@ -759,16 +762,16 @@ q_3: ───────────────┤ X ├
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073123f50&gt;,
-  &#39;trivialPM_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f40d421dd30&gt;,
-  &#39;trivialPM_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f4083baf020&gt;,
-  &#39;trivialPM_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f4073123f20&gt;,
-  &#39;trivialPM_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f4073150980&gt;,
-  &#39;cat_2&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073123fe0&gt;,
-  &#39;cat_4&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073150c20&gt;,
-  &#39;cat_6&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073123f50&gt;,
-  &#39;cat_8&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073fda0f0&gt;,
-  &#39;cat_4.9&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7f4073150c20&gt;})
+  0: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2c089e0&gt;,
+  &#39;trivialPM_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x738de2b432f0&gt;,
+  &#39;trivialPM_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x738de2be6240&gt;,
+  &#39;trivialPM_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x738de2be6390&gt;,
+  &#39;trivialPM_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x738eb4589070&gt;,
+  &#39;cat_2&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2be64e0&gt;,
+  &#39;cat_4&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2be6630&gt;,
+  &#39;cat_6&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2c089e0&gt;,
+  &#39;cat_8&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2be6990&gt;,
+  &#39;cat_4.9&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x738de2be6630&gt;})
 </pre></div>
 </div>
 </div>
@@ -782,7 +785,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;7c3f48d7-9a99-4295-86e6-7d53d45023ef&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;73115b37-890e-49a7-bfaa-2475979eee50&#39;
 </pre></div>
 </div>
 </div>
@@ -794,9 +797,9 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=7c3f48d7-9a99-4295-86e6-7d53d45023ef, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=73115b37-890e-49a7-bfaa-2475979eee50, 
   ZDirMagnetSquareArguments(exp_name=&#39;experiment.qurmagsq_magnet_square_zdir&#39;, num_qubits=4),
-  Commonparams(exp_id=&#39;7c3f48d7-9a99-4295-86e6-7d53d45023ef&#39;, target_keys=[&#39;cat_4&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 11:14:04&#39;, &#39;run.001&#39;: &#39;2025-06-25 11:14:04&#39;})),
+  Commonparams(exp_id=&#39;73115b37-890e-49a7-bfaa-2475979eee50&#39;, target_keys=[&#39;cat_4&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-25 21:02:47&#39;, &#39;run.001&#39;: &#39;2025-06-25 21:02:47&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -837,10 +840,10 @@ q_3: ───────────────┤ X ├
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/args/experiment.qurmagsq_magnet_square_zdir.001.id=36c4ef52-ef3d-44be-90fa-41bf058a058c.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/advent/experiment.qurmagsq_magnet_square_zdir.001.id=36c4ef52-ef3d-44be-90fa-41bf058a058c.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/legacy/experiment.qurmagsq_magnet_square_zdir.001.id=36c4ef52-ef3d-44be-90fa-41bf058a058c.legacy.json&#39;,
- &#39;reports&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/reports/experiment.qurmagsq_magnet_square_zdir.001.id=36c4ef52-ef3d-44be-90fa-41bf058a058c.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/args/experiment.qurmagsq_magnet_square_zdir.001.id=eac4d8f1-fcf1-4d87-89d8-63a7ffe89784.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/advent/experiment.qurmagsq_magnet_square_zdir.001.id=eac4d8f1-fcf1-4d87-89d8-63a7ffe89784.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/legacy/experiment.qurmagsq_magnet_square_zdir.001.id=eac4d8f1-fcf1-4d87-89d8-63a7ffe89784.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/reports/experiment.qurmagsq_magnet_square_zdir.001.id=eac4d8f1-fcf1-4d87-89d8-63a7ffe89784.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -1002,7 +1005,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-25 11:24:15.
+  Last updated on 2025-06-25 21:15:41.
   <br/>
 </p></div>
       
