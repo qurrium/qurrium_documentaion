@@ -10,6 +10,7 @@ This part will introduce several methods to compute the entanglement entropy of 
 
 ```{toctree}
 :maxdepth: 1
+:caption: Entanglement Entropy
 
 qurrent_1_1_hadamard_test
 qurrent_1_2_randomized_measure
