@@ -22,7 +22,7 @@ pip install -i https://test.pypi.org/simple/ qurry
 
 ## Maually by Git
 
-**Qurry can be installed from source**. Since this package relies on Rust, **it requires "Rust complier" which you need to install first.**
+**Qurrium can be installed from source**. Since this package relies on Rust, **it requires "Rust complier" which you need to install first.**
 
 To install rust, run the following command:
 
