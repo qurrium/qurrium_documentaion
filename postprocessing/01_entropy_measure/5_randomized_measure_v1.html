@@ -7,16 +7,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="1.5 Entanglement Entropy - Randomized Measurement V1 with Error Mitigation" />
+<meta property="og:title" content="1.5 Randomized Measurement V1 with Error Mitigation" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/postprocessing/01_entropy_measure/5_randomized_measure_v1.html" />
 <meta property="og:site_name" content="Qurrium 📏" />
-<meta property="og:description" content="This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in quantum simulations. r..." />
+<meta property="og:description" content="Entanglement Entropy: This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in ..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_postprocessing_01_entropy_measure_5_randomized_measure_v1_5f7fff67.png" />
-<meta property="og:image:alt" content="This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in quantum simulations. r..." />
-<meta name="description" content="This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in quantum simulations. r..." />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_postprocessing_01_entropy_measure_5_randomized_measure_v1_a5e63e30.png" />
+<meta property="og:image:alt" content="Entanglement Entropy: This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in ..." />
+<meta name="description" content="Entanglement Entropy: This method is based on Probing Rényi entanglement entropy via randomized measurements with deplorizing error mitigation by Simple mitigation of global depolarizing errors in ..." />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -38,7 +38,7 @@
 <meta name='twitter:image' content=''>
 <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <title>1.5 Entanglement Entropy - Randomized Measurement V1 with Error Mitigation &#8212; Qurrium 📏  documentation</title>
+    <title>1.5 Randomized Measurement V1 with Error Mitigation &#8212; Qurrium 📏  documentation</title>
   
   
   
@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -92,10 +92,10 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2.1 Hadamaed Test" href="../02_wave_func_overlap/1_hadamard.html" />
-    <link rel="prev" title="1.4 Entanglement Entropy - Randomized Measurement V1" href="4_randomized_measure_v1.html" />
+    <link rel="prev" title="1.4 Randomized Measurement V1" href="4_randomized_measure_v1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-25 23:10:51"/>
+    <meta name="docbuild:last-update" content="2025-06-26 07:33:56"/>
   </head>
   
   
@@ -403,8 +403,8 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="1_hadamard.html">1.1 Hadamard Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_randomized_measure.html">1.2 Randomized Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_randomized_measure.html">1.3 Randomized Measurement with Error Mitigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_randomized_measure_v1.html">1.4 Entanglement Entropy - Randomized Measurement V1</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.5 Entanglement Entropy - Randomized Measurement V1 with Error Mitigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_randomized_measure_v1.html">1.4 Randomized Measurement V1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.5 Randomized Measurement V1 with Error Mitigation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">WaveFuction Overlap</span></p>
 <ul class="nav bd-sidenav">
@@ -468,9 +468,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="entanglement-entropy-randomized-measurement-v1-with-error-mitigation">
-<h1>1.5 Entanglement Entropy - Randomized Measurement V1 with Error Mitigation<a class="headerlink" href="#entanglement-entropy-randomized-measurement-v1-with-error-mitigation" title="Link to this heading">#</a></h1>
+  <section id="randomized-measurement-v1-with-error-mitigation">
+<h1>1.5 Randomized Measurement V1 with Error Mitigation<a class="headerlink" href="#randomized-measurement-v1-with-error-mitigation" title="Link to this heading">#</a></h1>
+<section id="entanglement-entropy">
+<h2>Entanglement Entropy<a class="headerlink" href="#entanglement-entropy" title="Link to this heading">#</a></h2>
 <p>This method is based on <a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.aau4963">Probing Rényi entanglement entropy via randomized measurements</a> with deplorizing error mitigation by <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevE.104.035309">Simple mitigation of global depolarizing errors in quantum simulations</a>.</p>
+</section>
 <section id="randomized-entangled-entropy-mitigated-v1">
 <h2><code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy_mitigated_v1</span></code><a class="headerlink" href="#randomized-entangled-entropy-mitigated-v1" title="Link to this heading">#</a></h2>
 <p>Similar to <code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy</span></code> introduced in section 3.1.3 a, this function is used to calculate the entropy of a quantum state, but additionally, mitigate the depolarizing error. You can call the function <code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy_mitigated_v1</span></code> from <code class="docutils literal notranslate"><span class="pre">qurry.process.randomized_measure</span></code>. In order to perform the error mitigation, this function requires the measurement outcomes of the all system as the baseline. If you already have data at hand, you can prepare a <code class="docutils literal notranslate"><span class="pre">dict</span></code> like following:</p>
@@ -694,8 +697,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.002529548,
- &#39;takingTimeAllSys&#39;: 0.008975413}
+ &#39;takingTime&#39;: 0.002566489,
+ &#39;takingTimeAllSys&#39;: 0.009071364}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -771,7 +774,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.002354824,
+ &#39;takingTime&#39;: 0.00205232,
  &#39;takingTimeAllSys&#39;: 0}
 
 | result of randomized_entangled_entropy[purityCells]
@@ -906,25 +909,25 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| partition: 6
-| - takingTime: 0.002365889
-| - takingTimeAllSys: 0.01002989
+| - takingTime: 0.002281717
+| - takingTimeAllSys: 0.010058425
 | partition: (2, 8)
-| - takingTime: 0.002290943
+| - takingTime: 0.002174833
 | - takingTimeAllSys: 0
 | partition: 7
-| - takingTime: 0.004778469
+| - takingTime: 0.004161488
 | - takingTimeAllSys: 0
 | partition: (0, 7)
-| - takingTime: 0.004081854
+| - takingTime: 0.00363694
 | - takingTimeAllSys: 0
 | partition: (-2, 5)
-| - takingTime: 0.004401135
+| - takingTime: 0.004187654
 | - takingTimeAllSys: 0
 | partition: (-5, -1)
-| - takingTime: 0.000832225
+| - takingTime: 0.000851153
 | - takingTimeAllSys: 0
 | partition: (3, -2)
-| - takingTime: 0.000744952
+| - takingTime: 0.000738483
 | - takingTimeAllSys: 0
 </pre></div>
 </div>
@@ -984,88 +987,88 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6 by Python. - 00:00 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:11 &lt; ?
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:13 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:11 &lt; ?
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:13 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:11 &lt; 01:06
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:13 &lt; 01:20
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:11 &lt; 01:06                                                   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:13 &lt; 01:20                                                   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:15 &lt; 01:06
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:19 &lt; 01:20
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:15 &lt; 01:06
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:19 &lt; 01:20
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:15 &lt; 00:35
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:19 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:15 &lt; 00:35                                                        
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:19 &lt; 00:44                                                        
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:20 &lt; 00:35
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:25 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:20 &lt; 00:35
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:20 &lt; 00:24
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:30
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:20 &lt; 00:24                                                   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:25 &lt; 00:30                                                   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:25 &lt; 00:24
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:31 &lt; 00:30
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:24
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:31 &lt; 00:30
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:31 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:25 &lt; 00:16                                                  
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:31 &lt; 00:21                                                  
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:30 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:38 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:30 &lt; 00:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:38 &lt; 00:21
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:30 &lt; 00:10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:38 &lt; 00:13
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:30 &lt; 00:10                                                          
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:38 &lt; 00:13                                                          
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:34 &lt; 00:10 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:43 &lt; 00:13 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:34 &lt; 00:10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:43 &lt; 00:13
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:34 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:43 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:34 &lt; 00:04                                                  
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:43 &lt; 00:06                                                  
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:38 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:49 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:38 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:49 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:38 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:49 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:38 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:49 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1144,7 +1147,7 @@ by &lt;Hoshi&gt;
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1.4 Entanglement Entropy - Randomized Measurement V1</p>
+        <p class="prev-next-title">1.4 Randomized Measurement V1</p>
       </div>
     </a>
     <a class="right-next"
@@ -1174,6 +1177,7 @@ by &lt;Hoshi&gt;
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-entropy">Entanglement Entropy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-entangled-entropy-mitigated-v1"><code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy_mitigated_v1</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dummy-data">Dummy Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-example">Simple Example</a></li>
@@ -1227,7 +1231,7 @@ by &lt;Hoshi&gt;
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-25 23:10:51.
+  Last updated on 2025-06-26 07:33:56.
   <br/>
 </p></div>
       
