@@ -1,6 +1,6 @@
 services:
   qurrium-docs-sphinx:
-    working_dir: /build
+    working_dir: /app
     volumes:
       - ./build:/build
     environment:
@@ -10,15 +10,15 @@ services:
       - |
         echo "| Clear existing build at mount point: /build/${QURRIUM_VERSION}"
         rm -rf /build/${QURRIUM_VERSION}
-        cd /app
         echo "======================================================================"
-        echo "### Building Sphinx documentation for Qurrium
+        echo "### Building Sphinx documentation for Qurrium"
         echo "======================================================================"
         echo "| Building docs for version: ${QURRIUM_VERSION}"
         echo "| Documentation version by branch or tag: ${DOC_VERSION}"
         echo "| git-hash: $(git log -n1 --format=%h --abbrev=7)"
-        cd /build
         echo "----------------------------------------------------------------------"
+        . /.venv/bin/activate
+        mkdir -p "/sphinx-build/${QURRIUM_VERSION}"
         sphinx-build -b html "/app/docs" "/sphinx-build/${QURRIUM_VERSION}"
         mv "/sphinx-build/${QURRIUM_VERSION}" "/build/${QURRIUM_VERSION}"
 
