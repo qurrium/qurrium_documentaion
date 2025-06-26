@@ -8,10 +8,19 @@ services:
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
-        rm -rf /app/build
+        echo "| Clear existing build at mount point: /build/${QURRIUM_VERSION}"
         rm -rf /build/${QURRIUM_VERSION}
-        sphinx-build -b html "/app/docs" "/app/build/${QURRIUM_VERSION}"
-        mv "/app/build/${QURRIUM_VERSION}" "/build/${QURRIUM_VERSION}"
+        cd /app
+        echo "======================================================================"
+        echo "### Building Sphinx documentation for Qurrium
+        echo "======================================================================"
+        echo "| Building docs for version: ${QURRIUM_VERSION}"
+        echo "| Documentation version by branch or tag: ${DOC_VERSION}"
+        echo "| git-hash: $(git log -n1 --format=%h --abbrev=7)"
+        cd /build
+        echo "----------------------------------------------------------------------"
+        sphinx-build -b html "/app/docs" "/sphinx-build/${QURRIUM_VERSION}"
+        mv "/sphinx-build/${QURRIUM_VERSION}" "/build/${QURRIUM_VERSION}"
 
     build:
       args:

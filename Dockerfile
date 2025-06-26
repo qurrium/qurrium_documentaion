@@ -36,7 +36,10 @@ ENV DOC_VERSION=${DOC_VERSION}
 
 RUN rm -rf /app
 RUN git clone https://github.com/qurrium/qurrium_documentaion.git app
-RUN cd /app && git checkout ${DOC_VERSION} && git fetch && git pull && cd /
+WORKDIR /app
+RUN git checkout ${DOC_VERSION} && git fetch && git pull
+WORKDIR /
+
 RUN uv pip install --no-cache-dir --system -r /app/requirements.txt
 
 COPY docs/conf.py /app/docs/conf.py
@@ -53,8 +56,6 @@ RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
     else \
     uv pip install --no-cache-dir --system qurrium==${QURRIUM_VERSION}; \
     fi
-
-WORKDIR /app
 
 RUN black /app
 RUN flake8 /app --count --exit-zero --statistics --config /app/tox.ini
