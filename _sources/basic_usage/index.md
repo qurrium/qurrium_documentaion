@@ -22,7 +22,14 @@ qurrent_1_3_classical_shadow
 
 This part will introduce several methods to compute the wavefuction overlap between 2 quantum system. The methods include:
 
-This feature has been implemented. The documentation is coming...
+```{toctree}
+:maxdepth: 1
+:caption: WaveFuction Overlap
+
+qurrech_2_1_hadamard_test
+qurrech_2_2_randomized_measure
+
+```
 
 ## 3. Magnetization Square
 

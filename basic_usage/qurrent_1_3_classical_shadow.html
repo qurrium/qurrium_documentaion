@@ -14,7 +14,7 @@
 <meta property="og:description" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_basic_usage_qurrent_1_3_classical_shadow_31d63be3.png" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_basic_usage_qurrent_1_3_classical_shadow_f268cb09.png" />
 <meta property="og:image:alt" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
 <meta name="description" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
 <meta name="twitter:card" content="summary_large_image" />
@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -91,11 +91,11 @@
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.1 Magnetization Square on Z Direction" href="qurmagsq_3_1_zdir_magnet_square.html" />
+    <link rel="next" title="2.1 Wave Function Overlap by Hadamard Test" href="qurrech_2_1_hadamard_test.html" />
     <link rel="prev" title="1.2 Entanglement Entropy by Randomized Measurement" href="qurrent_1_2_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-26 07:33:56"/>
+    <meta name="docbuild:last-update" content="2025-06-26 11:53:08"/>
   </head>
   
   
@@ -173,7 +173,13 @@
   
 </a></div>
     
-      <div class="navbar-item">
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
 <script>
 document.write(`
   <div class="version-switcher__container dropdown">
@@ -196,12 +202,6 @@ document.write(`
   </div>
 `);
 </script></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
 <nav>
@@ -227,19 +227,19 @@ document.write(`
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../appendix/index.html">
-    Other Features
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../more_info/index.html">
     Installation and About
@@ -330,6 +330,33 @@ document.write(`
           
           
             <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
@@ -404,6 +431,11 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1.3 Entanglement Entropy by Classical Shadow</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WaveFuction Overlap</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="qurrech_2_1_hadamard_test.html">2.1 Wave Function Overlap by Hadamard Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qurrech_2_2_randomized_measure.html">2.2 Wave Function Overlap by Randomized Measurement</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Magnetization Square</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
@@ -420,6 +452,17 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
   </div>
   
   <div id="rtd-footer-container"></div>
@@ -605,7 +648,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;f6dd071a-2b35-4a48-b38d-da37c464dbc3&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;925b20f3-4e68-4756-82e8-acad19048789&#39;
 </pre></div>
 </div>
 </div>
@@ -618,9 +661,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=f6dd071a-2b35-4a48-b38d-da37c464dbc3, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=925b20f3-4e68-4756-82e8-acad19048789, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;f6dd071a-2b35-4a48-b38d-da37c464dbc3&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-26 07:23:39&#39;, &#39;run.001&#39;: &#39;2025-06-26 07:23:39&#39;})),
+  Commonparams(exp_id=&#39;925b20f3-4e68-4756-82e8-acad19048789&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-26 11:46:59&#39;, &#39;run.001&#39;: &#39;2025-06-26 11:46:59&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -637,13 +680,10 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:2025-06-26 07:23:40,213:jax._src.xla_bridge:909: An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  SUAnalysisContent(purity=0.9696632806279443, entropy=0.044444242127353026, and others)),
+  SUAnalysisContent(purity=1.0224932396682826, entropy=-0.03209130465427579, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -770,16 +810,16 @@ q_7: ─────
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.029548168182373047
-| purity: 0.9696632806279443
-| entropy: 0.044444242127353026
+| taking_time: 0.031109094619750977
+| purity: 1.0224932396682826
+| entropy: -0.03209130465427579
 | estimate_of_given_operators: []
 | accuracy_prob_comp_delta: nan
 | num_of_estimators_k: 0
 | accuracy_predict_epsilon: nan
 | maximum_shadow_norm: nan
 | input: {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-26 07:23:40&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-26 11:47:00&#39;, &#39;log&#39;: {}}
 | shape of mean_of_rho:
 (16, 16)
 </pre></div>
@@ -838,7 +878,7 @@ called <code class="docutils literal notranslate"><span class="pre">average_clas
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7c546cc0d5e0&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a29040f8590&gt;})
 </pre></div>
 </div>
 </div>
@@ -948,9 +988,9 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7c546cc0d5e0&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7c537bf12480&gt;,
-  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7c537bf12150&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a29040f8590&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a29040f50f0&gt;,
+  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a29040fa3c0&gt;})
 </pre></div>
 </div>
 </div>
@@ -964,15 +1004,15 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/lib/python3.12/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/root/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
   self.pid = os.fork()
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/lib/python3.12/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/root/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
   self.pid = os.fork()
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;5d140a14-7ee7-44bf-80d7-19f8ce345205&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;82d784b1-199f-4cd1-a90d-8e22ecf8103e&#39;
 </pre></div>
 </div>
 </div>
@@ -984,9 +1024,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=5d140a14-7ee7-44bf-80d7-19f8ce345205, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=82d784b1-199f-4cd1-a90d-8e22ecf8103e, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;5d140a14-7ee7-44bf-80d7-19f8ce345205&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-26 07:23:55&#39;, &#39;run.001&#39;: &#39;2025-06-26 07:23:55&#39;})),
+  Commonparams(exp_id=&#39;82d784b1-199f-4cd1-a90d-8e22ecf8103e&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-26 11:47:07&#39;, &#39;run.001&#39;: &#39;2025-06-26 11:47:07&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -1006,7 +1046,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  SUAnalysisContent(purity=0.40310577110810714, entropy=1.3107696570482914, and others)),
+  SUAnalysisContent(purity=0.47988934820348567, entropy=1.0592263040557093, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -1032,16 +1072,16 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.03974294662475586
-| purity: 0.40310577110810714
-| entropy: 1.3107696570482914
+| taking_time: 0.04737687110900879
+| purity: 0.47988934820348567
+| entropy: 1.0592263040557093
 | estimate_of_given_operators: []
 | accuracy_prob_comp_delta: nan
 | num_of_estimators_k: 0
 | accuracy_predict_epsilon: nan
 | maximum_shadow_norm: nan
 | input: {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-26 07:23:55&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-26 11:47:08&#39;, &#39;log&#39;: {}}
 | the shape of mean_of_rho:
 (16, 16)
 </pre></div>
@@ -1064,21 +1104,21 @@ q_7: ─────────────────────────
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_100.qurshady_entropy.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/args/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/advent/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/legacy/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.legacy.json&#39;,
- &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.random_unitary_ids.json&#39;,
- &#39;reports&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/reports/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.reports.json&#39;,
- &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.average_classical_snapshots_rho.reports.json&#39;,
- &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=f6dd071a-2b35-4a48-b38d-da37c464dbc3.corresponding_rhos.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/args/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/advent/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/legacy/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.legacy.json&#39;,
+ &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.random_unitary_ids.json&#39;,
+ &#39;reports&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/reports/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.reports.json&#39;,
+ &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.average_classical_snapshots_rho.reports.json&#39;,
+ &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=925b20f3-4e68-4756-82e8-acad19048789.corresponding_rhos.reports.json&#39;}
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<hr class="docutils" />
+</section>
 <section id="post-process-availablities-and-version-info">
-<h3>Post-Process Availablities and Version Info<a class="headerlink" href="#post-process-availablities-and-version-info" title="Link to this heading">#</a></h3>
+<h2>Post-Process Availablities and Version Info<a class="headerlink" href="#post-process-availablities-and-version-info" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qurry.process</span><span class="w"> </span><span class="kn">import</span> <span class="n">AVAIBILITY_STATESHEET</span>
@@ -1128,7 +1168,6 @@ by &lt;Hoshi&gt;
 </div>
 </section>
 </section>
-</section>
 
 
                 </article>
@@ -1150,11 +1189,11 @@ by &lt;Hoshi&gt;
       </div>
     </a>
     <a class="right-next"
-       href="qurmagsq_3_1_zdir_magnet_square.html"
+       href="qurrech_2_1_hadamard_test.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3.1 Magnetization Square on Z Direction</p>
+        <p class="prev-next-title">2.1 Wave Function Overlap by Hadamard Test</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1185,9 +1224,9 @@ by &lt;Hoshi&gt;
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-export-them-after-all">d. Export them after all</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
 </ul>
   </nav></div>
 
@@ -1231,28 +1270,15 @@ by &lt;Hoshi&gt;
   </p>
 </div>
       
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-26 07:33:56.
-  <br/>
-</p></div>
-      
     </div>
   
   
   
     <div class="footer-items__end">
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
-    <br/>
-  </p>
-</div>
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-06-26 11:53:08.
+  <br/>
 </p></div>
       
     </div>
