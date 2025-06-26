@@ -1,15 +1,22 @@
+# ci
 ghp-import
 jupyter
 # formatting
 flake8
 black
 black[jupyter]
-jupyter
-# extensions
+# sphinx
+sphinx
+sphinx-book-theme
 sphinxext-opengraph
+sphinxcontrib-bibtex
 # theme
+myst-nb
+myst-parser
+jupyter-book
 pydata-sphinx-theme
 # basic requirements
+ipykernel
 matplotlib
 numpy
 qiskit
