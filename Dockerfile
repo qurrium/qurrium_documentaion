@@ -3,10 +3,10 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Install build tools
 RUN apt-get update && apt-get install -y git pandoc make
-RUN apt-get update && \
-    apt-get install -y fonts-noto-core fonts-noto-color-emoji && \
-    rm -rf /var/lib/apt/lists/* && \
-    fc-cache -f -v
+RUN apt-get update && apt-get install -y \
+    fonts-noto-cjk \
+    fonts-noto-color-emoji \
+    fonts-noto-mono
 
 # Prepare Python environment
 RUN uv python install 3.13
