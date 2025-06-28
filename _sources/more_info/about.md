@@ -1,6 +1,6 @@
 # About
 
-## Why name Qurry🍛/Qurrium📏
+## Why name Qurry / Qurrium
 
 1. The name **qurrent** was the second proposed name for this package.
    It’s not simply **current** with a **q** replacing the **c**,
@@ -23,6 +23,8 @@
 
 5. So there is the evolution of the package name:
    **`xproc -> qurrent -> qurry -> qurrium`**
+
+6. Emoji: Qurry🍛/Qurrium📏
 
 ## Citation
 

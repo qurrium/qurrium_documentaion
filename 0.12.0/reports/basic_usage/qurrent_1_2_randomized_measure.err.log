@@ -1,27 +1,38 @@
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+  File "/.venv/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
     asyncio.get_running_loop()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
 RuntimeError: no running event loop
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/.venv/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/usr/local/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/.venv/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/.venv/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
     return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
     return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+           ~~~~~~~~~~~~~^^
+  File "/.venv/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "/usr/local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/.venv/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/usr/local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+  File "/.venv/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -40,7 +51,7 @@ exp1_files_info
 [32m      3[39m [43m)[49m
 [32m      4[39m exp1_files_info
 
-[36mFile [39m[32m/usr/local/lib/python3.12/site-packages/qurry/qurrium/experiment/experiment.py:1193[39m, in [36mExperimentPrototype.write[39m[34m(self, save_location, mode, indent, encoding, jsonable, export_transpiled_circuit, _pbar, _qurryinfo_hold_access)[39m
+[36mFile [39m[32m/.venv/lib/python3.13/site-packages/qurry/qurrium/experiment/experiment.py:1193[39m, in [36mExperimentPrototype.write[39m[34m(self, save_location, mode, indent, encoding, jsonable, export_transpiled_circuit, _pbar, _qurryinfo_hold_access)[39m
 [32m   1188[39m [38;5;66;03m# experiment write[39;00m
 [32m   1189[39m export_material = [38;5;28mself[39m.export(
 [32m   1190[39m     save_location=save_location,
@@ -56,7 +67,7 @@ exp1_files_info
 [32m   1200[39m [38;5;28;01massert[39;00m [33m"[39m[33mqurryinfo[39m[33m"[39m [38;5;129;01min[39;00m files, [33m"[39m[33mqurryinfo location is not in files.[39m[33m"[39m
 [32m   1201[39m [38;5;66;03m# qurryinfo write[39;00m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/site-packages/qurry/qurrium/experiment/export.py:287[39m, in [36mExport.write[39m[34m(self, mode, indent, encoding, jsonable, mute, multiprocess, pbar)[39m
+[36mFile [39m[32m/.venv/lib/python3.13/site-packages/qurry/qurrium/experiment/export.py:287[39m, in [36mExport.write[39m[34m(self, mode, indent, encoding, jsonable, mute, multiprocess, pbar)[39m
 [32m    285[39m [38;5;28;01melse[39;00m:
 [32m    286[39m     [38;5;28;01mfor[39;00m filekey, content [38;5;129;01min[39;00m export_set.items():
 [32m--> [39m[32m287[39m         [43mquickJSON[49m[43m([49m
@@ -72,7 +83,7 @@ exp1_files_info
 [32m    298[39m [38;5;28;01mdel[39;00m export_set
 [32m    299[39m gc.collect()
 
-[36mFile [39m[32m/usr/local/lib/python3.12/site-packages/qurry/capsule/quick.py:39[39m, in [36mquickJSON[39m[34m(content, filename, mode, indent, encoding, jsonable, save_location, mute)[39m
+[36mFile [39m[32m/.venv/lib/python3.13/site-packages/qurry/capsule/quick.py:39[39m, in [36mquickJSON[39m[34m(content, filename, mode, indent, encoding, jsonable, save_location, mute)[39m
 [32m     12[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mquickJSON[39m(
 [32m     13[39m     content: Iterable,
 [32m     14[39m     filename: Union[[38;5;28mstr[39m, Path],
@@ -94,14 +105,14 @@ exp1_files_info
 [32m     47[39m [43m        [49m[43mmute[49m[43m=[49m[43mmute[49m[43m,[49m
 [32m     48[39m [43m    [49m[43m)[49m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/site-packages/qurry/capsule/jsonablize.py:132[39m, in [36mquickJSONExport[39m[34m(content, filename, mode, indent, encoding, jsonable, save_location, mute)[39m
+[36mFile [39m[32m/.venv/lib/python3.13/site-packages/qurry/capsule/jsonablize.py:132[39m, in [36mquickJSONExport[39m[34m(content, filename, mode, indent, encoding, jsonable, save_location, mute)[39m
 [32m    130[39m         json.dump(parse(content), file, indent=indent, ensure_ascii=[38;5;28;01mFalse[39;00m)
 [32m    131[39m     [38;5;28;01melse[39;00m:
 [32m--> [39m[32m132[39m         [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mcontent[49m[43m,[49m[43m [49m[43mfile[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[43mindent[49m[43m,[49m[43m [49m[43mensure_ascii[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m)[49m
 [32m    133[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m mute:
 [32m    134[39m     [38;5;28;01mreturn[39;00m [33mf[39m[33m"[39m[33m'[39m[38;5;132;01m{[39;00msave_loc_w_name[38;5;132;01m}[39;00m[33m'[39m[33m exported successfully.[39m[33m"[39m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
 [32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
 [32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
 [32m    175[39m         separators=separators,
@@ -111,49 +122,49 @@ exp1_files_info
 [32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
 [32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:433[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
+[32m    431[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
+[32m    432[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
+[32m--> [39m[32m433[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
+[32m    434[39m [38;5;28;01melse[39;00m:
+[32m    435[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:407[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
+[32m    405[39m         [38;5;28;01melse[39;00m:
+[32m    406[39m             chunks = _iterencode(value, _current_indent_level)
+[32m--> [39m[32m407[39m         [38;5;28;01myield from[39;00m chunks
+[32m    408[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m first [38;5;129;01mand[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m    409[39m     _current_indent_level -= [32m1[39m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:407[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
+[32m    405[39m         [38;5;28;01melse[39;00m:
+[32m    406[39m             chunks = _iterencode(value, _current_indent_level)
+[32m--> [39m[32m407[39m         [38;5;28;01myield from[39;00m chunks
+[32m    408[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m first [38;5;129;01mand[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m    409[39m     _current_indent_level -= [32m1[39m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
 [32m    324[39m         [38;5;28;01melse[39;00m:
 [32m    325[39m             chunks = _iterencode(value, _current_indent_level)
 [32m--> [39m[32m326[39m         [38;5;28;01myield from[39;00m chunks
 [32m    327[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 [32m    328[39m     _current_indent_level -= [32m1[39m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
 [32m    324[39m         [38;5;28;01melse[39;00m:
 [32m    325[39m             chunks = _iterencode(value, _current_indent_level)
 [32m--> [39m[32m326[39m         [38;5;28;01myield from[39;00m chunks
 [32m    327[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 [32m    328[39m     _current_indent_level -= [32m1[39m
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:439[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    437[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
-[32m    438[39m     markers[markerid] = o
-[32m--> [39m[32m439[39m o = [43m_default[49m[43m([49m[43mo[49m[43m)[49m
-[32m    440[39m [38;5;28;01myield from[39;00m _iterencode(o, _current_indent_level)
-[32m    441[39m [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:440[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
+[32m    438[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
+[32m    439[39m     markers[markerid] = o
+[32m--> [39m[32m440[39m o = [43m_default[49m[43m([49m[43mo[49m[43m)[49m
+[32m    441[39m [38;5;28;01myield from[39;00m _iterencode(o, _current_indent_level)
+[32m    442[39m [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 
-[36mFile [39m[32m/usr/local/lib/python3.12/json/encoder.py:180[39m, in [36mJSONEncoder.default[39m[34m(self, o)[39m
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/json/encoder.py:180[39m, in [36mJSONEncoder.default[39m[34m(self, o)[39m
 [32m    161[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mdefault[39m([38;5;28mself[39m, o):
 [32m    162[39m [38;5;250m    [39m[33;03m"""Implement this method in a subclass such that it returns[39;00m
 [32m    163[39m [33;03m    a serializable object for ``o``, or calls the base implementation[39;00m
