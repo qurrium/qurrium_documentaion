@@ -7,9 +7,13 @@ myst:
 html_theme.sidebar_secondary.remove: true
 ---
 
-# Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap.
+# Qurrium
 
-## _The python package that makes the randomized measurement easy._
+**_The python package for measuring quantum entanglement entropy and wave function overlap_**
+
+**_Make the randomized measurement easy_**
+
+---
 
 The major function includes the measurement of quantum Renyi Entropy and Wave Function Overlap based on the randomized measurement protocol.
 When interfaced with **IBM Qiskit**, the package automates the workflow from creating experiment objects, job submission and recall and postprocessing.  

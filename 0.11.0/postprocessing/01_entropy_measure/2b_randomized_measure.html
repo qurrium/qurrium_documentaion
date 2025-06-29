@@ -95,7 +95,7 @@
     <link rel="prev" title="1.2a Entanglement Entropy - Randomized Measurement" href="2a_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-28 14:39:49"/>
+    <meta name="docbuild:last-update" content="2025-06-29 13:40:13"/>
   </head>
   
   
@@ -784,8 +784,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;taking_time&#39;: 0.002475985,
- &#39;taking_time_all_sys&#39;: 0.009278251}
+ &#39;taking_time&#39;: 0.002468677,
+ &#39;taking_time_all_sys&#39;: 0.009569495}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -870,8 +870,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;taking_time&#39;: 0.00176679,
- &#39;taking_time_all_sys&#39;: 0.009278251}
+ &#39;taking_time&#39;: 0.002133878,
+ &#39;taking_time_all_sys&#39;: 0.009569495}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -882,7 +882,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 0.5189998149871826
 
 | You can see takingTimeAllSys is 0 for we use existed_all_system
-0.009278251
+0.009569495
 </pre></div>
 </div>
 </div>
@@ -1008,28 +1008,28 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5]
 | partition: [0, 1, 2, 3, 4, 5]
-| - taking_time: 0.001809849
-| - taking_time_all_sys: 0.009071886
+| - taking_time: 0.001824068
+| - taking_time_all_sys: 0.009594414
 [2, 3, 4, 5, 6, 7]
 | partition: [2, 3, 4, 5, 6, 7]
-| - taking_time: 0.001773356
-| - taking_time_all_sys: 0.009278251
+| - taking_time: 0.002013251
+| - taking_time_all_sys: 0.009569495
 [0, 1, 2, 3, 4, 5, 6]
 | partition: [0, 1, 2, 3, 4, 5, 6]
-| - taking_time: 0.003739017
-| - taking_time_all_sys: 0.009278251
+| - taking_time: 0.003970425
+| - taking_time_all_sys: 0.009569495
 [0, 1, 2, 3, 4, 5, 6]
 | partition: [0, 1, 2, 3, 4, 5, 6]
-| - taking_time: 0.003658292
-| - taking_time_all_sys: 0.009278251
+| - taking_time: 0.004019601
+| - taking_time_all_sys: 0.009569495
 [0, 1, 2, 6, 7]
 | partition: [0, 1, 2, 6, 7]
-| - taking_time: 0.000909372
-| - taking_time_all_sys: 0.009278251
+| - taking_time: 0.001130204
+| - taking_time_all_sys: 0.009569495
 [3, 4, 5, 6, 7, 0, 1]
 | partition: [3, 4, 5, 6, 7, 0, 1]
-| - taking_time: 0.003859869
-| - taking_time_all_sys: 0.009278251
+| - taking_time: 0.003899257
+| - taking_time_all_sys: 0.009569495
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1169,25 +1169,22 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:01 &lt; 00:00         
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 2, 1, 0] - 00:01 &lt; 00:00
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate selected classical registers: [3, 4, 5, 6, 7, 0, 1]. - 00:01 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 4, 5, 6, 7, 0, 1]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:03 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Using existing all system from &#39;from_previous_result:test_result_1_2_1&#39; - 00:02 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:03 &lt; 00:00   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:02 &lt; 00:00   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:03 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:02 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:03 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of selected qubits: [7, 6, 5, 4, 3, 1, 0] - 00:02 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1350,7 +1347,7 @@ by &lt;Hoshi&gt;
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-28 14:39:49.
+  Last updated on 2025-06-29 13:40:13.
   <br/>
 </p></div>
       
