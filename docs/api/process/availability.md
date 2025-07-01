@@ -1,4 +1,4 @@
-# `qurry.process.availability`
+# `availability`
 
 ```{eval-rst}
 .. automodule:: qurry.process.availability

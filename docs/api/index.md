@@ -2,21 +2,34 @@
 
 This page contains all API reference for `Qurrium`.
 
-## Post-Processing
+## Process
+
+All Post-Processing functions.
 
 ```{toctree}
-:maxdepth: 2
-:caption: `qurry.process`
+:maxdepth: 1
 
 process/utils
 process/availability
 process/exception
+process/status
+
+```
+
+```{toctree}
+:maxdepth: 1
+
+process/hadamard
+process/randomized_measure/index
+process/classical_shadow/index
+process/magnet_square
+process/string_operator
 
 ```
 
 ## Declare
 
-Type hint and default content
+Type hint and default content.
 
 <!-- ```{eval-rst}
 .. automodule:: qurry.decalre
