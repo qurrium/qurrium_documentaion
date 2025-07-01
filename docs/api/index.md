@@ -8,9 +8,9 @@ This page contains all API reference for `Qurrium`.
 :maxdepth: 2
 :caption: `qurry.process`
 
-qurrent_1_1_hadamard_test
-qurrent_1_2_randomized_measure
-qurrent_1_3_classical_shadow
+process/utils
+process/availability
+process/exception
 
 ```
 
