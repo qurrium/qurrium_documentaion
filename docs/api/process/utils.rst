@@ -1,55 +1,50 @@
-# `qurry.process.utils`
+`qurry.process.utils`
+=====================
 
-## `counts_process`
+`counts_process`
+----------------
 
 Recounting counts.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.counts_process
-:members:
-```
+    :members:
 
-## `bit_slice`
+`bit_slice`
+-----------
 
 bitstring slicing.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.bit_slice
-:members:
-```
+    :members:
 
-## `randomized`
+`randomized`
+------------
 
 Peripheral functions for randomized measurement.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.randomized
-:members:
-```
+    :members:
 
-## `dummy`
+`dummy`
+-------
 
 Dummy case counts generating.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.dummy
-:members:
-```
+    :members:
 
-## `test`
+`test`
+------
 
 Rust binding test function.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.test
-:members:
-```
+    :members:
 
-## `other`
+`other`
+-------
 
 Remains are not ditributed.
 
-```{eval-rst}
 .. automodule:: qurry.process.utils.other
-:members:
-```
+    :members:
