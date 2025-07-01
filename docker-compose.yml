@@ -3,6 +3,7 @@ services:
     working_dir: /app
     volumes:
       - ./build:/build
+      - ./sphinx-build:/sphinx-build
     environment:
       - PYTHONUNBUFFERED=1
     entrypoint: ["/bin/bash", "-c"]
