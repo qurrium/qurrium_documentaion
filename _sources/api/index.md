@@ -8,6 +8,7 @@ All Post-Processing functions.
 
 ```{toctree}
 :maxdepth: 1
+:caption: Post-Processing Utilties
 
 process/utils
 process/availability
@@ -18,6 +19,7 @@ process/status
 
 ```{toctree}
 :maxdepth: 1
+:caption: Post-Processing Functions
 
 process/hadamard
 process/randomized_measure/index
@@ -29,12 +31,17 @@ process/string_operator
 
 ## Declare
 
-Type hint and default content.
+Type hints for some complex data structures.
 
-<!-- ```{eval-rst}
-.. automodule:: qurry.decalre
-:members:
-``` -->
+```{toctree}
+:maxdepth: 1
+:caption: Declare
+
+declare/qurrium
+declare/run
+declare/transpile
+
+```
 
 ## Capsule
 

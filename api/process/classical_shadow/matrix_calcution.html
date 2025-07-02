@@ -97,7 +97,7 @@
     <link rel="prev" title="unitary_set" href="unitary_set.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:55:10"/>
   </head>
   
   
@@ -441,12 +441,14 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Utilties</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Functions</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -470,6 +472,12 @@ document.write(`
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Declare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../declare/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -574,8 +582,16 @@ This is the fastest implementation to calculate the trace of Rho.</p>
 <dd><p>The method to use for the calculation of classical shadow.
 It can be either “jax” or “numpy”.</p>
 <ul class="simple">
-<li><p>“jax”: Use JAX to calculate the Kronecker product.</p></li>
-<li><p>“numpy”: Use Numpy to calculate the Kronecker product.</p></li>
+<li><dl class="simple">
+<dt>“jax”:</dt><dd><p>Use JAX to calculate the Kronecker product.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“numpy”:</dt><dd><p>Use Numpy to calculate the Kronecker product.</p>
+</dd>
+</dl>
+</li>
 </ul>
 <p>alias of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code>[‘jax’, ‘numpy’]</p>
 </dd></dl>
@@ -586,8 +602,16 @@ It can be either “jax” or “numpy”.</p>
 <dd><p>The default backend to use for the calculation of classical shadow.
 It can be either “jax” or “numpy”.</p>
 <ul class="simple">
-<li><p>“jax”: Use JAX to calculate the Kronecker product.</p></li>
-<li><p>“numpy”: Use Numpy to calculate the Kronecker product.</p></li>
+<li><dl class="simple">
+<dt>“jax”:</dt><dd><p>Use JAX to calculate the Kronecker product.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“numpy”:</dt><dd><p>Use Numpy to calculate the Kronecker product.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </dd></dl>
 
@@ -597,7 +621,7 @@ It can be either “jax” or “numpy”.</p>
 <dd><p>The method to calculate the trace of single Rho square.</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>“trace_of_matmul”: Use</dt><dd><p>np.trace(np.matmul(rho_m1, rho_m2)) to calculate the trace.</p>
+<dt>“trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2)) to calculate the trace.</p>
 </dd>
 </dl>
 </li>
@@ -739,12 +763,12 @@ It can be either “jax” or “numpy”.</p>
 <dd class="field-odd"><p><strong>method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to DEFAULT_ALL_TRACE_RHO_METHOD.</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_numpy”: Use</dt><dd><p>np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+<dt>”einsum_aij_bji_to_ab_numpy”:</dt><dd><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_jax”: Use</dt><dd><p>jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+<dt>”einsum_aij_bji_to_ab_jax”:</dt><dd><p>Use jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
 </dl>
 </li>
@@ -966,7 +990,7 @@ np.ndarray[tuple[int, int], np.dtype[np.complex128]],</p></li>
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-02 18:02:17.
+  Last updated on 2025-07-02 18:55:10.
   <br/>
 </p></div>
       
