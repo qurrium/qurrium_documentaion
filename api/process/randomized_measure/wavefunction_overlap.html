@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="wavefunction_overlap" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/process/randomized_measure/wavefunction_overlap.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="wavefunction_overlap_2: Post Processing - Randomized Measure - Wavefunction Overlap - Wavefunction Overlap 2 ( qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2) echo_cor..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_process_randomized_measure_wavefunction_overlap_565325ef.png" />
+<meta property="og:image:alt" content="wavefunction_overlap_2: Post Processing - Randomized Measure - Wavefunction Overlap - Wavefunction Overlap 2 ( qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2) echo_cor..." />
+<meta name="description" content="wavefunction_overlap_2: Post Processing - Randomized Measure - Wavefunction Overlap - Wavefunction Overlap 2 ( qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2) echo_cor..." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>wavefunction_overlap &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/process/randomized_measure/wavefunction_overlap';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="entangled_entropy_v1" href="entangled_entropy_v1.html" />
+    <link rel="prev" title="entangled_entropy" href="entangled_entropy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="wavefunction-overlap">
+<h1><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code><a class="headerlink" href="#wavefunction-overlap" title="Link to this heading">#</a></h1>
+<section id="module-qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2">
+<span id="wavefunction-overlap-2"></span><h2><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Wavefunction Overlap - Wavefunction Overlap 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2" title="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2</span></code></a>)</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.GenericFloatType">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.</span></span><span class="sig-name descname"><span class="pre">GenericFloatType</span></span><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.GenericFloatType" title="Link to this definition">#</a></dt>
+<dd><p>The generic float type by numpy or python.</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.</span></span><span class="sig-name descname"><span class="pre">WaveFuctionOverlapResult</span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/wavefunction_overlap_2.html#WaveFuctionOverlapResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult" title="Link to this definition">#</a></dt>
+<dd><p>The return type of the post-processing for wavefunction overlap.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers">
+<span class="sig-name descname"><span class="pre">classical_registers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers_actually">
+<span class="sig-name descname"><span class="pre">classical_registers_actually</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers_actually" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers which is actually used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.counts_num">
+<span class="sig-name descname"><span class="pre">counts_num</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.counts_num" title="Link to this definition">#</a></dt>
+<dd><p>The number of first counts and second counts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echo">
+<span class="sig-name descname"><span class="pre">echo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echo" title="Link to this definition">#</a></dt>
+<dd><p>The overlap value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoCells">
+<span class="sig-name descname"><span class="pre">echoCells</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoCells" title="Link to this definition">#</a></dt>
+<dd><p>The overlap of each single count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoSD">
+<span class="sig-name descname"><span class="pre">echoSD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoSD" title="Link to this definition">#</a></dt>
+<dd><p>The overlap standard deviation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.num_classical_registers">
+<span class="sig-name descname"><span class="pre">num_classical_registers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.num_classical_registers" title="Link to this definition">#</a></dt>
+<dd><p>The number of classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.taking_time">
+<span class="sig-name descname"><span class="pre">taking_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.taking_time" title="Link to this definition">#</a></dt>
+<dd><p>The calculation time.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.randomized_overlap_echo">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.</span></span><span class="sig-name descname"><span class="pre">randomized_overlap_echo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult" title="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult"><span class="pre">WaveFuctionOverlapResult</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/wavefunction_overlap_2.html#randomized_overlap_echo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.randomized_overlap_echo" title="Link to this definition">#</a></dt>
+<dd><p>Calculate wavefunction overlap
+a.k.a. loschmidt echo when processes time evolution system.</p>
+<dl>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Statistical correlations between locally randomized measurements:</p></li>
+</ul>
+<p>A toolbox for probing entanglement in many-body quantum states -
+A. Elben, B. Vermersch, C. F. Roos, and P. Zoller,
+[PhysRevA.99.052323](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1103/PhysRevA.99.052323">https://doi.org/10.1103/PhysRevA.99.052323</a></p>
+</div></blockquote>
+<p>)</p>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>first_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>second_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+<li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em><em>, </em><em>optional</em>) – The progress bar API, you can use put a <a href="#id1"><span class="problematic" id="id2">:cls:`tqdm`</span></a> object here.
+This function will update the progress bar description.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dictionary contains purity, entropy,</dt><dd><p>a list of each overlap, puritySD, degree, actual measure range, bitstring range.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult" title="qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult">WaveFuctionOverlapResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.wavefunction_overlap.echo_core_2">
+<span id="echo-core-2"></span><h2><code class="docutils literal notranslate"><span class="pre">echo_core_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_core_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Wavefunction Overlap - Echo Core 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_core_2" title="qurry.process.randomized_measure.wavefunction_overlap.echo_core_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_core_2</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.</span></span><span class="sig-name descname"><span class="pre">overlap_echo_core_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_core_2.html#overlap_echo_core_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2" title="Link to this definition">#</a></dt>
+<dd><p>The core function of wavefunction overlap for just purity cell part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>first_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>second_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected classical registers, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_allrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.</span></span><span class="sig-name descname"><span class="pre">overlap_echo_core_2_allrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_core_2.html#overlap_echo_core_2_allrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_allrust" title="Link to this definition">#</a></dt>
+<dd><p>The core function of wavefunction overlap by Rust for just purity cell part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>first_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>second_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected classical registers, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.</span></span><span class="sig-name descname"><span class="pre">overlap_echo_core_2_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_core_2.html#overlap_echo_core_2_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>The core function of wavefunction overlap by Python or Rust for just purity cell part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>first_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>second_counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected classical registers, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2">
+<span id="echo-cell-2"></span><h2><code class="docutils literal notranslate"><span class="pre">echo_cell_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Wavefunction Overlap - Echo Cell 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2" title="qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.</span></span><span class="sig-name descname"><span class="pre">echo_cell_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_cell_2.html#echo_cell_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the echo cell, one of overlap, of a subsystem.
+:param idx: Index of the cell (counts).
+:type idx: int
+:param first_counts: Counts measured from the first quantum circuit.
+:type first_counts: dict[str, int]
+:param second_counts: Counts measured from the second quantum circuit.
+:type second_counts: dict[str, int]
+:param selected_classical_registers: The list of <strong>the index of the selected_classical_registers</strong>.
+:type selected_classical_registers: list[int]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, float, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_py">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.</span></span><span class="sig-name descname"><span class="pre">echo_cell_2_py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_cell_2.html#echo_cell_2_py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_py" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the echo cell, one of overlap, of a subsystem by Python.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em>) – Index of the cell (counts).</p></li>
+<li><p><strong>first_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the first quantum circuit.</p></li>
+<li><p><strong>second_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the second quantum circuit.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, float, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.</span></span><span class="sig-name descname"><span class="pre">echo_cell_2_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/wavefunction_overlap/echo_cell_2.html#echo_cell_2_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_rust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the echo cell, one of overlap, of a subsystem by Rust.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em>) – Index of the cell (counts).</p></li>
+<li><p><strong>first_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the first quantum circuit.</p></li>
+<li><p><strong>second_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the second quantum circuit.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, float, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="entangled_entropy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="entangled_entropy_v1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.GenericFloatType"><code class="docutils literal notranslate"><span class="pre">GenericFloatType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.classical_registers</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.classical_registers_actually"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.classical_registers_actually</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.counts_num"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.counts_num</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echo"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.echo</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoCells"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.echoCells</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.echoSD"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.echoSD</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.num_classical_registers"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.num_classical_registers</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.WaveFuctionOverlapResult.taking_time"><code class="docutils literal notranslate"><span class="pre">WaveFuctionOverlapResult.taking_time</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.wavefunction_overlap_2.randomized_overlap_echo"><code class="docutils literal notranslate"><span class="pre">randomized_overlap_echo()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_core_2"><code class="docutils literal notranslate"><span class="pre">echo_core_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2"><code class="docutils literal notranslate"><span class="pre">overlap_echo_core_2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_allrust"><code class="docutils literal notranslate"><span class="pre">overlap_echo_core_2_allrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_core_2.overlap_echo_core_2_pyrust"><code class="docutils literal notranslate"><span class="pre">overlap_echo_core_2_pyrust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2"><code class="docutils literal notranslate"><span class="pre">echo_cell_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2"><code class="docutils literal notranslate"><span class="pre">echo_cell_2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_py"><code class="docutils literal notranslate"><span class="pre">echo_cell_2_py()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.wavefunction_overlap.echo_cell_2.echo_cell_2_rust"><code class="docutils literal notranslate"><span class="pre">echo_cell_2_rust()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/api/process/randomized_measure/wavefunction_overlap.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-02 18:02:17.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

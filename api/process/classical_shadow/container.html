@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="container" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/process/classical_shadow/container.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="Classical Shadow - Classical Shadow - Container ( qurry.process.classical_shadow.container)" />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_process_classical_shadow_container_78feb032.png" />
+<meta property="og:image:alt" content="Classical Shadow - Classical Shadow - Container ( qurry.process.classical_shadow.container)" />
+<meta name="description" content="Classical Shadow - Classical Shadow - Container ( qurry.process.classical_shadow.container)" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>container &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/process/classical_shadow/container';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="classical_shadow" href="classical_shadow.html" />
+    <link rel="prev" title="expectation_process" href="expectation_process.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-qurry.process.classical_shadow.container">
+<span id="container"></span><h1><code class="docutils literal notranslate"><span class="pre">container</span></code><a class="headerlink" href="#module-qurry.process.classical_shadow.container" title="Link to this heading">#</a></h1>
+<p>Classical Shadow - Classical Shadow - Container
+(<a class="reference internal" href="#module-qurry.process.classical_shadow.container" title="qurry.process.classical_shadow.container"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.classical_shadow.container</span></code></a>)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowBasic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowBasic</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowBasic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic" title="Link to this definition">#</a></dt>
+<dd><p>The basic information of the classical shadow.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowBasic.average_classical_snapshots_rho">
+<span class="sig-name descname"><span class="pre">average_classical_snapshots_rho</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.average_classical_snapshots_rho" title="Link to this definition">#</a></dt>
+<dd><p>The dictionary of average classical snapshots,
+which uses the notation rho in
+[Predicting many properties of a quantum system from very few measurements](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>).</p>
+</div></blockquote>
+<p>The numpy.array shape is <cite>(2, 2)</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowBasic.classical_registers_actually">
+<span class="sig-name descname"><span class="pre">classical_registers_actually</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.classical_registers_actually" title="Link to this definition">#</a></dt>
+<dd><p>The list of the selected_classical_registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowBasic.taking_time">
+<span class="sig-name descname"><span class="pre">taking_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.taking_time" title="Link to this definition">#</a></dt>
+<dd><p>The time taken for the calculation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowComplex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowComplex</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowComplex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowComplex" title="Link to this definition">#</a></dt>
+<dd><p>The expectation value of Rho and the purity calculated by classical shadow.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowEstimation</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowEstimation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation" title="Link to this definition">#</a></dt>
+<dd><p>The esitimations of the classical shadow from classical snapshots.</p>
+<p>Here, we use the notations that use in the supplementary material of
+:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>Predicting many properties of a quantum system from very few measurements&lt;</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>&gt;`</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_predict_epsilon">
+<span class="sig-name descname"><span class="pre">accuracy_predict_epsilon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_predict_epsilon" title="Link to this definition">#</a></dt>
+<dd><p>The prediction of accuracy, which used the notation <span class="math notranslate nohighlight">\(\epsilon\)</span>
+and mentioned in Theorem S1 in the supplementary material,
+the equation (S13) in the supplementary material.</p>
+<p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
+in the supplementary material, the equation (S13) is as follows,</p>
+<div class="math notranslate nohighlight">
+\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
+|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
+and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operatorsm
+and <span class="math notranslate nohighlight">\(N\)</span> is the number of classical snapshots.
+The <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> is maximum shadow norm,
+which is defined in the supplementary material with value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_prob_comp_delta">
+<span class="sig-name descname"><span class="pre">accuracy_prob_comp_delta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_prob_comp_delta" title="Link to this definition">#</a></dt>
+<dd><p>The probabiltiy complement of accuracy, which used the notation <span class="math notranslate nohighlight">\(\delta\)</span>
+and mentioned in Theorem S1 in the supplementary material,
+the equation (S13) in the supplementary material.
+The probabiltiy of accuracy is <span class="math notranslate nohighlight">\(1 - \delta\)</span>.</p>
+<p>The number of given operators and the accuracy parameters will
+be used to decide the number of estimators K
+from the equation (S13) in the supplementary material.</p>
+<div class="math notranslate nohighlight">
+\[K = 2 \log(2M / \delta)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta\)</span> is the probabiltiy complement of accuracy,
+and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators.</p>
+<p>But we can see <span class="math notranslate nohighlight">\(K\)</span> will be not the integer value of the result of the equation.
+So, we will use the ceil value of the result of the equation.
+And recalculate the probabiltiy complement of accuracy from this new value of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.corresponding_rhos">
+<span class="sig-name descname"><span class="pre">corresponding_rhos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.corresponding_rhos" title="Link to this definition">#</a></dt>
+<dd><p>The corresponding rho of measurement primitive <span class="math notranslate nohighlight">\(\mathcal{U}\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.epsilon_upperbound">
+<span class="sig-name descname"><span class="pre">epsilon_upperbound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.epsilon_upperbound" title="Link to this definition">#</a></dt>
+<dd><p>The upper bound of the prediction of accuracy,
+which used the notation <span class="math notranslate nohighlight">\(\epsilon\)</span>
+and mentioned in Theorem S1 in the supplementary material,
+the equation (S13) in the supplementary material.</p>
+<div class="math notranslate nohighlight">
+\[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(O\)</span> is the any operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits.
+So we set the shadow norm as follows,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\chi = || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}} \\
+\chi_{\infty} = 4^n || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\infty}^2 \\
+\chi^2 \leq \chi_{\infty}\end{split}\]</div>
+<p>and we can simplify the equation to:</p>
+<div class="math notranslate nohighlight">
+\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi^2
+    \leq \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi_{\infty}^2\]</div>
+<p>Then get:</p>
+<div class="math notranslate nohighlight">
+\[\epsilon \leq \sqrt{\frac{34}{N}} \max_{1 \leq i \leq M} \chi_\infty\]</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.estimate_of_given_operators">
+<span class="sig-name descname"><span class="pre">estimate_of_given_operators</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.estimate_of_given_operators" title="Link to this definition">#</a></dt>
+<dd><p>The esitmation values of measurement primitive <span class="math notranslate nohighlight">\(\mathcal{U}\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.maximum_shadow_norm">
+<span class="sig-name descname"><span class="pre">maximum_shadow_norm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.maximum_shadow_norm" title="Link to this definition">#</a></dt>
+<dd><p>The maximum shadow norm, which is defined in the supplementary material.
+The maximum shadow norm is used to calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span>
+from the equation (S13) in the supplementary material.</p>
+<p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
+in the supplementary material, the equation (S13) is as follows,</p>
+<div class="math notranslate nohighlight">
+\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
+|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
+and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operatorsm
+and <span class="math notranslate nohighlight">\(N\)</span> is the number of classical snapshots.
+The <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> is maximum shadow norm.</p>
+<p>Due to its calculation is complex, we curently use the value of np.nan
+to represent the maximum shadow norm.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.num_of_estimators_k">
+<span class="sig-name descname"><span class="pre">num_of_estimators_k</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.num_of_estimators_k" title="Link to this definition">#</a></dt>
+<dd><p>The number of esitmators, which used the notation K
+and mentioned in Algorithm 1 in the paper,
+Theorem S1 in the supplementary material,
+the equation (S13) in the supplementary material.</p>
+<p>We can calculate the number of esitmator K from the equation (S13)
+in the supplementary material, the equation (S13) is as follows,</p>
+<div class="math notranslate nohighlight">
+\[K = 2 \log(2M / \delta)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta\)</span> is the probabiltiy complement of accuracy,
+and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators.</p>
+<p>But we can see <span class="math notranslate nohighlight">\(K\)</span> will be not the integer value of the result of the equation.
+So, we will use the ceil value of the result of the equation.
+And recalculate the probabiltiy complement of accuracy from this new value of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.shadow_norm_upperbound">
+<span class="sig-name descname"><span class="pre">shadow_norm_upperbound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.shadow_norm_upperbound" title="Link to this definition">#</a></dt>
+<dd><p>The largest shadow norm upper bound is defined as follows,</p>
+<div class="math notranslate nohighlight">
+\[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(O\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,
+which mentioned in the paper at Theorem 1 (informal version).</p>
+<p>This is the worst scenario of the shadow norm
+for its scaling can be reduced to <span class="math notranslate nohighlight">\(3^n || O ||_{\infty}^2\)</span>,
+which is the significantly lower bound than the worst case scenario.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowMeanRho">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowMeanRho</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowMeanRho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho" title="Link to this definition">#</a></dt>
+<dd><p>The esitimations of the classical shadow from classical snapshots.</p>
+<p>Here, we use the notations that use in the supplementary material of
+:ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>Predicting many properties of a quantum system from very few measurements&lt;</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>&gt;`</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowMeanRho.mean_of_rho">
+<span class="sig-name descname"><span class="pre">mean_of_rho</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho.mean_of_rho" title="Link to this definition">#</a></dt>
+<dd><p>The mean of single classical snapshots.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowPurity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowPurity</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowPurity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity" title="Link to this definition">#</a></dt>
+<dd><p>The expectation value of Rho.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowPurity.entropy">
+<span class="sig-name descname"><span class="pre">entropy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float64</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity.entropy" title="Link to this definition">#</a></dt>
+<dd><p>The entropy calculated by classical shadow.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowPurity.purity">
+<span class="sig-name descname"><span class="pre">purity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float64</span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity.purity" title="Link to this definition">#</a></dt>
+<dd><p>The purity calculated by classical shadow.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="expectation_process.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="classical_shadow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowBasic</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.average_classical_snapshots_rho"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowBasic.average_classical_snapshots_rho</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.classical_registers_actually"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowBasic.classical_registers_actually</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.taking_time"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowBasic.taking_time</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowComplex"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowComplex</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_predict_epsilon"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.accuracy_predict_epsilon</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_prob_comp_delta"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.accuracy_prob_comp_delta</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.corresponding_rhos"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.corresponding_rhos</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.epsilon_upperbound"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.epsilon_upperbound</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.estimate_of_given_operators"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.estimate_of_given_operators</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.maximum_shadow_norm"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.maximum_shadow_norm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.num_of_estimators_k"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.num_of_estimators_k</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.shadow_norm_upperbound"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowEstimation.shadow_norm_upperbound</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowMeanRho</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho.mean_of_rho"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowMeanRho.mean_of_rho</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowPurity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity.entropy"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowPurity.entropy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.classical_shadow.container.ClassicalShadowPurity.purity"><code class="docutils literal notranslate"><span class="pre">ClassicalShadowPurity.purity</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/api/process/classical_shadow/container.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-02 18:02:17.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

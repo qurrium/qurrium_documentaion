@@ -59,7 +59,8 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +96,7 @@
     <link rel="prev" title="1.3 Entanglement Entropy by Classical Shadow" href="qurrent_1_3_classical_shadow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-29 08:39:12"/>
+    <meta name="docbuild:last-update" content="2025-07-02 17:30:14"/>
   </head>
   
   
@@ -224,6 +225,13 @@ document.write(`
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../postprocessing/index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
   </a>
 </li>
 
@@ -377,6 +385,13 @@ document.write(`
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../postprocessing/index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
   </a>
 </li>
 
@@ -652,7 +667,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4d4266d7-94c8-4776-bba6-5f3f5eb21aa6&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;7fc76552-2b1b-4b4c-83ff-9fdc98afe534&#39;
 </pre></div>
 </div>
 </div>
@@ -665,9 +680,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=4d4266d7-94c8-4776-bba6-5f3f5eb21aa6, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=7fc76552-2b1b-4b4c-83ff-9fdc98afe534, 
   EchoListenHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrech_hadamard&#39;, degree=(4, 8)),
-  Commonparams(exp_id=&#39;4d4266d7-94c8-4776-bba6-5f3f5eb21aa6&#39;, target_keys=[0, 1], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-29 08:31:19&#39;, &#39;run.001&#39;: &#39;2025-06-29 08:31:19&#39;})),
+  Commonparams(exp_id=&#39;7fc76552-2b1b-4b4c-83ff-9fdc98afe534&#39;, target_keys=[0, 1], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-02 17:11:44&#39;, &#39;run.001&#39;: &#39;2025-07-02 17:11:44&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -717,7 +732,7 @@ q_7: ─────
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;echo&#39;: 1.0,
  &#39;input&#39;: {},
- &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-29 08:31:19&#39;, &#39;log&#39;: {}}}
+ &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-02 17:11:44&#39;, &#39;log&#39;: {}}}
 </pre></div>
 </div>
 </div>
@@ -734,8 +749,8 @@ q_7: ─────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7fd486a2c590&gt;,
-  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7fd486a2c590&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78cf1dc15070&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78cf1dc15070&gt;})
 </pre></div>
 </div>
 </div>
@@ -845,10 +860,10 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7fd486a2c590&gt;,
-  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7fd486a2c590&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7fd486a29010&gt;,
-  &#39;ghz_8.3&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7fd486a2e3c0&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78cf1dc15070&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78cf1dc15070&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x78cf1dcf4770&gt;,
+  &#39;ghz_8.3&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x78cf1dcf45f0&gt;})
 </pre></div>
 </div>
 </div>
@@ -862,7 +877,7 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2122aa6d-73a1-4bf3-9d51-6bb537fd1a7c&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;f578fe91-3944-4b8c-8292-24b0068000ff&#39;
 </pre></div>
 </div>
 </div>
@@ -874,9 +889,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=2122aa6d-73a1-4bf3-9d51-6bb537fd1a7c, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=f578fe91-3944-4b8c-8292-24b0068000ff, 
   EchoListenHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrech_hadamard&#39;, degree=(4, 8)),
-  Commonparams(exp_id=&#39;2122aa6d-73a1-4bf3-9d51-6bb537fd1a7c&#39;, target_keys=[&#39;ghz_8.3&#39;, 4], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-29 08:31:21&#39;, &#39;run.001&#39;: &#39;2025-06-29 08:31:21&#39;})),
+  Commonparams(exp_id=&#39;f578fe91-3944-4b8c-8292-24b0068000ff&#39;, target_keys=[&#39;ghz_8.3&#39;, 4], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-02 17:11:48&#39;, &#39;run.001&#39;: &#39;2025-07-02 17:11:48&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -894,7 +909,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ELHAnalysis(
   serial=1,
   ELHAnalysisInput(),
-  ELHAnalysisContent(echo=0.048828125)),
+  ELHAnalysisContent(echo=0.060546875)),
   unused_args_num=1
   )&gt;
 </pre></div>
@@ -915,12 +930,12 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002&#39;,
- &#39;qurryinfo&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002/args/experiment.degree_4_8.qurrech_hadamard.002.id=4d4266d7-94c8-4776-bba6-5f3f5eb21aa6.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002/advent/experiment.degree_4_8.qurrech_hadamard.002.id=4d4266d7-94c8-4776-bba6-5f3f5eb21aa6.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002/legacy/experiment.degree_4_8.qurrech_hadamard.002.id=4d4266d7-94c8-4776-bba6-5f3f5eb21aa6.legacy.json&#39;,
- &#39;reports&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.002/reports/experiment.degree_4_8.qurrech_hadamard.002.id=4d4266d7-94c8-4776-bba6-5f3f5eb21aa6.reports.json&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001&#39;,
+ &#39;qurryinfo&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/qurryinfo.json&#39;,
+ &#39;args&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/args/experiment.degree_4_8.qurrech_hadamard.001.id=7fc76552-2b1b-4b4c-83ff-9fdc98afe534.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/advent/experiment.degree_4_8.qurrech_hadamard.001.id=7fc76552-2b1b-4b4c-83ff-9fdc98afe534.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/legacy/experiment.degree_4_8.qurrech_hadamard.001.id=7fc76552-2b1b-4b4c-83ff-9fdc98afe534.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/reports/experiment.degree_4_8.qurrech_hadamard.001.id=7fc76552-2b1b-4b4c-83ff-9fdc98afe534.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -1087,7 +1102,7 @@ by &lt;Hoshi&gt;
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-29 08:39:12.
+  Last updated on 2025-07-02 17:30:14.
   <br/>
 </p></div>
       

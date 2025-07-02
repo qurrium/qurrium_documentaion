@@ -59,7 +59,8 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -95,7 +96,7 @@
     <link rel="prev" title="1.2 Entanglement Entropy by Randomized Measurement" href="qurrent_1_2_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-29 08:39:12"/>
+    <meta name="docbuild:last-update" content="2025-07-02 17:30:14"/>
   </head>
   
   
@@ -224,6 +225,13 @@ document.write(`
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../postprocessing/index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
   </a>
 </li>
 
@@ -377,6 +385,13 @@ document.write(`
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../postprocessing/index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
   </a>
 </li>
 
@@ -648,7 +663,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;37797130-94c0-4bb0-97e0-6d4bb6764acd&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;835ba5cd-15bb-4a3b-8825-4f3721f010ae&#39;
 </pre></div>
 </div>
 </div>
@@ -661,9 +676,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=37797130-94c0-4bb0-97e0-6d4bb6764acd, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=835ba5cd-15bb-4a3b-8825-4f3721f010ae, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;37797130-94c0-4bb0-97e0-6d4bb6764acd&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-29 08:32:55&#39;, &#39;run.001&#39;: &#39;2025-06-29 08:32:55&#39;})),
+  Commonparams(exp_id=&#39;835ba5cd-15bb-4a3b-8825-4f3721f010ae&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-02 17:14:22&#39;, &#39;run.001&#39;: &#39;2025-07-02 17:14:22&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -680,10 +695,13 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:2025-07-02 17:14:22,635:jax._src.xla_bridge:909: An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+</pre></div>
+</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  SUAnalysisContent(purity=0.6095832925763998, entropy=0.7141047328164418, and others)),
+  SUAnalysisContent(purity=1.768495948450132, entropy=-0.8225229138889318, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -810,16 +828,16 @@ q_7: ─────
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.033930301666259766
-| purity: 0.6095832925763998
-| entropy: 0.7141047328164418
+| taking_time: 0.029404401779174805
+| purity: 1.768495948450132
+| entropy: -0.8225229138889318
 | estimate_of_given_operators: []
 | accuracy_prob_comp_delta: nan
 | num_of_estimators_k: 0
 | accuracy_predict_epsilon: nan
 | maximum_shadow_norm: nan
 | input: {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-29 08:32:56&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-02 17:14:22&#39;, &#39;log&#39;: {}}
 | shape of mean_of_rho:
 (16, 16)
 </pre></div>
@@ -878,7 +896,7 @@ called <code class="docutils literal notranslate"><span class="pre">average_clas
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7066130d4590&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f73faf0a090&gt;})
 </pre></div>
 </div>
 </div>
@@ -988,9 +1006,9 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7066130d4590&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7066130d10f0&gt;,
-  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7066130d63c0&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7f73faf0a090&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7f73faea2870&gt;,
+  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7f73fae21160&gt;})
 </pre></div>
 </div>
 </div>
@@ -1004,15 +1022,15 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/root/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/lib/python3.12/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
   self.pid = os.fork()
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/root/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/lib/python3.12/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
   self.pid = os.fork()
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;e4db9ba1-c852-49c7-91a9-e24a625a38a7&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2365b380-296b-4848-b455-b0402f6230f8&#39;
 </pre></div>
 </div>
 </div>
@@ -1024,9 +1042,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=e4db9ba1-c852-49c7-91a9-e24a625a38a7, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ShadowUnveilExperiment(exp_id=2365b380-296b-4848-b455-b0402f6230f8, 
   ShadowUnveilArguments(exp_name=&#39;experiment.N_U_100.qurshady_entropy&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;e4db9ba1-c852-49c7-91a9-e24a625a38a7&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-06-29 08:33:03&#39;, &#39;run.001&#39;: &#39;2025-06-29 08:33:03&#39;})),
+  Commonparams(exp_id=&#39;2365b380-296b-4848-b455-b0402f6230f8&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-02 17:14:36&#39;, &#39;run.001&#39;: &#39;2025-07-02 17:14:36&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -1046,7 +1064,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  SUAnalysisContent(purity=0.3620580523664301, entropy=1.4657070573954079, and others)),
+  SUAnalysisContent(purity=0.8704239801114255, entropy=0.20020979161796243, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -1072,16 +1090,16 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually: [3, 2, 1, 0]
-| taking_time: 0.04723763465881348
-| purity: 0.3620580523664301
-| entropy: 1.4657070573954079
+| taking_time: 0.03932046890258789
+| purity: 0.8704239801114255
+| entropy: 0.20020979161796243
 | estimate_of_given_operators: []
 | accuracy_prob_comp_delta: nan
 | num_of_estimators_k: 0
 | accuracy_predict_epsilon: nan
 | maximum_shadow_norm: nan
 | input: {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 8, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-06-29 08:33:04&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-02 17:14:36&#39;, &#39;log&#39;: {}}
 | the shape of mean_of_rho:
 (16, 16)
 </pre></div>
@@ -1102,15 +1120,15 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_100.qurshady_entropy.002&#39;,
- &#39;qurryinfo&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/args/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/advent/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/legacy/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.legacy.json&#39;,
- &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/tales/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.random_unitary_ids.json&#39;,
- &#39;reports&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/reports/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.reports.json&#39;,
- &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/tales/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.average_classical_snapshots_rho.reports.json&#39;,
- &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_100.qurshady_entropy.002/tales/experiment.N_U_100.qurshady_entropy.002.id=37797130-94c0-4bb0-97e0-6d4bb6764acd.corresponding_rhos.reports.json&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_100.qurshady_entropy.001&#39;,
+ &#39;qurryinfo&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/qurryinfo.json&#39;,
+ &#39;args&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/args/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/advent/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/legacy/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.legacy.json&#39;,
+ &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.random_unitary_ids.json&#39;,
+ &#39;reports&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/reports/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.reports.json&#39;,
+ &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.average_classical_snapshots_rho.reports.json&#39;,
+ &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_100.qurshady_entropy.001/tales/experiment.N_U_100.qurshady_entropy.001.id=835ba5cd-15bb-4a3b-8825-4f3721f010ae.corresponding_rhos.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -1277,7 +1295,7 @@ by &lt;Hoshi&gt;
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-29 08:39:12.
+  Last updated on 2025-07-02 17:30:14.
   <br/>
 </p></div>
       

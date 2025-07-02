@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.process.utils.bit_slice &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/process/utils/bit_slice';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.proces...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.process.utils.bit_slice</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Post Processing - Utils - Bit Slice (:mod:`qurry.process.utils.bit_slice`)&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">overload</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..availability</span><span class="w"> </span><span class="kn">import</span> <span class="n">availablility</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PostProcessingRustImportError</span><span class="p">,</span> <span class="n">PostProcessingRustUnavailableWarning</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">...boorust</span><span class="w"> </span><span class="kn">import</span> <span class="n">bit_slice</span>  <span class="c1"># type: ignore</span>
+
+    <span class="n">qubit_selector_rust_source</span> <span class="o">=</span> <span class="n">bit_slice</span><span class="o">.</span><span class="n">qubit_selector_rust</span>  <span class="c1"># type: ignore</span>
+    <span class="n">cycling_slice_rust_source</span> <span class="o">=</span> <span class="n">bit_slice</span><span class="o">.</span><span class="n">cycling_slice_rust</span>  <span class="c1"># type: ignore</span>
+    <span class="n">degree_handler_rust_source</span> <span class="o">=</span> <span class="n">bit_slice</span><span class="o">.</span><span class="n">degree_handler_rust</span>
+
+    <span class="n">RUST_AVAILABLE</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">FAILED_RUST_IMPORT</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="n">RUST_AVAILABLE</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">FAILED_RUST_IMPORT</span> <span class="o">=</span> <span class="n">err</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">qubit_selector_rust_source</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Dummy function for cycling_slice_rust.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">PostProcessingRustImportError</span><span class="p">(</span>
+            <span class="s2">&quot;Rust is not available, using python to calculate cycling slice.&quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; More infomation about this error: </span><span class="si">{</span><span class="n">FAILED_RUST_IMPORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice_rust_source</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Dummy function for cycling_slice_rust.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">PostProcessingRustImportError</span><span class="p">(</span>
+            <span class="s2">&quot;Rust is not available, using python to calculate cycling slice.&quot;</span>
+        <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">FAILED_RUST_IMPORT</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">degree_handler_rust_source</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Dummy function for degree_handler_rust.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">PostProcessingRustImportError</span><span class="p">(</span>
+            <span class="s2">&quot;Rust is not available, using python to calculate degree handler.&quot;</span>
+        <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">FAILED_RUST_IMPORT</span>
+
+
+<span class="n">BACKEND_AVAILABLE</span> <span class="o">=</span> <span class="n">availablility</span><span class="p">(</span>
+    <span class="s2">&quot;utils.bit_slice&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;Rust&quot;</span><span class="p">,</span> <span class="n">RUST_AVAILABLE</span><span class="p">,</span> <span class="n">FAILED_RUST_IMPORT</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="qubit_selector">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.qubit_selector">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">qubit_selector</span><span class="p">(</span>
+    <span class="n">num_qubits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">degree</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Determint the qubits to be used.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_qubits (int): Number of qubits.</span>
+<span class="sd">        degree (Union[int, tuple[int, int], None], optional):</span>
+<span class="sd">            Degree of freedom or specific subsystem range.</span>
+<span class="sd">            Defaults to None then will use number of qubits as degree.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: The specific degree of subsystem qubits</span>
+<span class="sd">            beyond number of qubits which the wave function has.</span>
+<span class="sd">        ValueError: The number of qubits of subsystem A is not a natural number.</span>
+<span class="sd">        ValueError: Invalid input for subsystem range defined by only two integers.</span>
+<span class="sd">        ValueError: Degree of freedom is not given.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple[int]: The range of qubits to be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">subsystem</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">degree</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">degree</span> <span class="o">=</span> <span class="n">num_qubits</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">degree</span> <span class="o">&gt;</span> <span class="n">num_qubits</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The subsystem A includes </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2"> qubits &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;beyond </span><span class="si">{</span><span class="n">num_qubits</span><span class="si">}</span><span class="s2"> which the wave function has.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">degree</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The number of qubits of subsystem A has to be natural number.&quot;</span><span class="p">)</span>
+
+        <span class="n">item_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_qubits</span> <span class="o">-</span> <span class="n">degree</span><span class="p">,</span> <span class="n">num_qubits</span><span class="p">)</span>
+        <span class="n">subsystem</span> <span class="o">=</span> <span class="n">subsystem</span><span class="p">[</span><span class="n">num_qubits</span> <span class="o">-</span> <span class="n">degree</span> <span class="p">:</span> <span class="n">num_qubits</span><span class="p">]</span>
+
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">degree</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">deg_parsed</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">degree</span>
+                <span class="k">if</span> <span class="n">degree</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">degree</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">else</span> <span class="p">[(</span><span class="n">d</span> <span class="o">%</span> <span class="n">num_qubits</span> <span class="k">if</span> <span class="n">d</span> <span class="o">!=</span> <span class="n">num_qubits</span> <span class="k">else</span> <span class="n">num_qubits</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">degree</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">item_range</span> <span class="o">=</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">deg_parsed</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">deg_parsed</span><span class="p">))</span>
+            <span class="n">subsystem</span> <span class="o">=</span> <span class="n">subsystem</span><span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">deg_parsed</span><span class="p">)</span> <span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">deg_parsed</span><span class="p">)]</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Subsystem range is defined by only two integers, &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;but there is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">degree</span><span class="p">)</span><span class="si">}</span><span class="s2"> integers in &#39;</span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;degree&#39; must be &#39;int&#39; or &#39;tuple[int, int]&#39;, but get &#39;</span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">item_range</span></div>
+
+
+
+<div class="viewcode-block" id="qubit_selector_rust">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.qubit_selector_rust">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">qubit_selector_rust</span><span class="p">(</span>
+    <span class="n">num_qubits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">degree</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Determint the qubits to be used.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_qubits (int): Number of qubits.</span>
+<span class="sd">        degree (Union[int, tuple[int, int], None], optional):</span>
+<span class="sd">            Degree of freedom or specific subsystem range.</span>
+<span class="sd">            Defaults to None then will use number of qubits as degree.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: The specific degree of subsystem qubits</span>
+<span class="sd">            beyond number of qubits which the wave function has.</span>
+<span class="sd">        ValueError: The number of qubits of subsystem A is not a natural number.</span>
+<span class="sd">        ValueError: Invalid input for subsystem range defined by only two integers.</span>
+<span class="sd">        ValueError: Degree of freedom is not given.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple[int]: The range of qubits to be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">RUST_AVAILABLE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">qubit_selector_rust_source</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;Rust is not available, using python to calculate qubit selector.&quot;</span>
+        <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; More infomation about this error: </span><span class="si">{</span><span class="n">FAILED_RUST_IMPORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">category</span><span class="o">=</span><span class="n">PostProcessingRustUnavailableWarning</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">qubit_selector</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span></div>
+
+
+
+<span class="n">_ItemT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_ItemT&quot;</span><span class="p">)</span>
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_ItemT</span><span class="p">],</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">_ItemT</span><span class="p">]:</span> <span class="o">...</span>
+<span class="nd">@overload</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">_ItemT</span><span class="p">],</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">_ItemT</span><span class="p">]:</span> <span class="o">...</span>
+<span class="nd">@overload</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span> <span class="o">...</span>
+
+
+<div class="viewcode-block" id="cycling_slice">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.cycling_slice">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Slice a iterable object with cycling.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        target (_SliceableT): The target object.</span>
+<span class="sd">        start (int): Index of start.</span>
+<span class="sd">        end (int): Index of end.</span>
+<span class="sd">        step (int, optional): Step of slice. Defaults to 1.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        IndexError: Slice out of range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Iterable: The sliced object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+    <span class="n">slice_check</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sa">f</span><span class="s2">&quot;start: </span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2"> &lt; -length: </span><span class="si">{</span><span class="o">-</span><span class="n">length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">start</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">length</span><span class="p">),</span>
+        <span class="sa">f</span><span class="s2">&quot;length: </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2"> &lt; end: </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">length</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">slice_check</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+            <span class="s2">&quot;Slice out of range: &quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">slice_check</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">target</span>
+    <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">new_string</span> <span class="o">=</span> <span class="n">target</span><span class="p">[</span><span class="n">start</span><span class="p">:]</span> <span class="o">+</span> <span class="n">target</span><span class="p">[:</span><span class="n">end</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">new_string</span> <span class="o">=</span> <span class="n">target</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">new_string</span><span class="p">[::</span><span class="n">step</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="cycling_slice_rust">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.cycling_slice_rust">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cycling_slice_rust</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Slice a iterable object with cycling.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        target (str): The target object.</span>
+<span class="sd">        start (int): Index of start.</span>
+<span class="sd">        end (int): Index of end.</span>
+<span class="sd">        step (int, optional): Step of slice. Defaults to 1.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        IndexError: Slice out of range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The sliced object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Expect &#39;str&#39; but get &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">target</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;. cycling_slice_rust only support &#39;str&#39;.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">RUST_AVAILABLE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cycling_slice_rust_source</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;Rust is not available, using python to calculate cycling slice.&quot;</span>
+        <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; Check: </span><span class="si">{</span><span class="n">FAILED_RUST_IMPORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">PostProcessingRustUnavailableWarning</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">cycling_slice</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="qubit_mapper_2_int">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.qubit_mapper_2_int">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">qubit_mapper_2_int</span><span class="p">(</span>
+    <span class="n">actual_num_qubits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">selected_qubits</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map the index of selected qubits to the index of the classical register.</span>
+<span class="sd">    The selected qubits are defined by two integers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        actual_num_qubits (int): The actual number of qubits.</span>
+<span class="sd">        selected_qubits (tuple[int, int]): The range of the selected qubits.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: The range of qubits should be defined by two integers.</span>
+<span class="sd">        ValueError: The selected qubits are beyond the number of qubits.</span>
+<span class="sd">        ValueError: The selected qubits are not natural number.</span>
+<span class="sd">        ValueError: The first integer should be less than the second integer.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict[int, int]:</span>
+<span class="sd">            The mapping of the index of selected qubits to the index of the classical register.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">qi</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">for</span> <span class="n">qi</span> <span class="ow">in</span> <span class="n">selected_qubits</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;The range of qubits should be defined by two integers, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;but get &#39;</span><span class="si">{</span><span class="n">selected_qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; with type &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&#39; &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;and &#39;</span><span class="si">{</span><span class="n">selected_qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; with type &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">actual_num_qubits</span> <span class="ow">or</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">actual_num_qubits</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;The selected qubits </span><span class="si">{</span><span class="n">selected_qubits</span><span class="si">}</span><span class="s2"> &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;are beyond the number of qubits </span><span class="si">{</span><span class="n">actual_num_qubits</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;The first integer should be less than the second integer &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;when inputs as tuple, but get &#39;</span><span class="si">{</span><span class="n">selected_qubits</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">qi_list</span> <span class="o">=</span> <span class="n">cycling_slice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">actual_num_qubits</span><span class="p">)),</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">selected_qubits</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">qi</span><span class="p">:</span> <span class="n">ci</span> <span class="k">for</span> <span class="n">ci</span><span class="p">,</span> <span class="n">qi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">qi_list</span><span class="p">)}</span></div>
+
+
+
+<div class="viewcode-block" id="qubit_mapper">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.qubit_mapper">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">qubit_mapper</span><span class="p">(</span>
+    <span class="n">actual_num_qubits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">selected_qubits</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map the index of selected qubits to the index of the classical register.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        actual_num_qubits (int):</span>
+<span class="sd">            The actual number of qubits.</span>
+<span class="sd">        selected_qubits (Optional[Union[Sequence[int], int, tuple[int, int]]], optional):</span>
+<span class="sd">            The selected qubits.</span>
+<span class="sd">            If it is None, then it will return the mapping of all qubits.</span>
+<span class="sd">            If it is int, then it will return the mapping of the last n qubits.</span>
+<span class="sd">            If it is tuple, then it will return the mapping of the qubits in the range.</span>
+<span class="sd">            If it is list, then it will return the mapping of the selected qubits.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: The range of qubits should be defined by two integers.</span>
+<span class="sd">        ValueError: The selected qubits are beyond the number of qubits.</span>
+<span class="sd">        ValueError: The selected qubits are not natural number.</span>
+<span class="sd">        ValueError: The first integer should be less than the second integer.</span>
+<span class="sd">        ValueError: The number of selected qubits should be more than 1.</span>
+<span class="sd">        ValueError: The selected qubits index are beyond the number of qubits.</span>
+<span class="sd">        ValueError: The selected qubits index are not natural number.</span>
+<span class="sd">        ValueError: Duplicate selected qubits index are not allowed.</span>
+<span class="sd">        ValueError: Invalid input for selected qubits.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict[int, int]:</span>
+<span class="sd">            The mapping of the index of selected qubits to the index of the classical register.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">selected_qubits</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">actual_num_qubits</span><span class="p">)}</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">qi</span><span class="p">:</span> <span class="n">ci</span>
+            <span class="k">for</span> <span class="n">ci</span><span class="p">,</span> <span class="n">qi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">actual_num_qubits</span> <span class="o">-</span> <span class="n">selected_qubits</span><span class="p">,</span> <span class="n">actual_num_qubits</span><span class="p">))</span>
+        <span class="p">}</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Subsystem range is defined by only two integers when inputs as tuple, &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;but there is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">)</span><span class="si">}</span><span class="s2"> integers in &#39;</span><span class="si">{</span><span class="n">selected_qubits</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">qubit_mapper_2_int</span><span class="p">(</span><span class="n">actual_num_qubits</span><span class="p">,</span> <span class="n">selected_qubits</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicate selected qubits index </span><span class="si">{</span><span class="n">selected_qubits</span><span class="si">}</span><span class="s2"> are not allowed.&quot;</span><span class="p">)</span>
+        <span class="n">selected_qubits</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">selected_qubits</span><span class="p">))</span>
+        <span class="n">all_qubits</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">actual_num_qubits</span><span class="p">))</span>
+        <span class="n">selected_qubits_actual</span> <span class="o">=</span> <span class="p">[</span><span class="n">all_qubits</span><span class="p">[</span><span class="n">q_idx_raw</span><span class="p">]</span> <span class="k">for</span> <span class="n">q_idx_raw</span> <span class="ow">in</span> <span class="n">selected_qubits</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">qi</span><span class="p">:</span> <span class="n">ci</span> <span class="k">for</span> <span class="n">ci</span><span class="p">,</span> <span class="n">qi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected_qubits_actual</span><span class="p">)}</span>
+
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Invalid input for selected qubits: &#39;</span><span class="si">{</span><span class="n">selected_qubits</span><span class="si">}</span><span class="s2">&#39;. &quot;</span>
+        <span class="o">+</span> <span class="s2">&quot;It should be &#39;int&#39;, &#39;tuple[int, int]&#39;, or &#39;list[int]&#39;.&quot;</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="degree_handler">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.degree_handler">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">degree_handler</span><span class="p">(</span>
+    <span class="n">allsystem_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">degree</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">measure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Handle the degree of freedom for the subsystem.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        allsystem_size (int):</span>
+<span class="sd">            The size of the whole system.</span>
+<span class="sd">        degree (Optional[Union[int, tuple[int, int]]]):</span>
+<span class="sd">            The degree of freedom.</span>
+<span class="sd">        measure (Optional[tuple[int, int]]):</span>
+<span class="sd">            The measure range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple[tuple[int, int], tuple[int, int], int]:</span>
+<span class="sd">            The degree of freedom, measure range, and subsystem size.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Determine degree</span>
+    <span class="n">degree</span> <span class="o">=</span> <span class="n">qubit_selector</span><span class="p">(</span><span class="n">allsystem_size</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="n">degree</span><span class="p">)</span>
+    <span class="n">subsystem_size</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">degree</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">degree</span><span class="p">)</span>
+
+    <span class="c1"># Check whether the bitstring range is valid</span>
+    <span class="n">bitstring_range</span> <span class="o">=</span> <span class="n">degree</span>
+    <span class="n">bitstring_check</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;b &gt; a&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">bitstring_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+        <span class="s2">&quot;a &gt;= -allsystemSize&quot;</span><span class="p">:</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="n">allsystem_size</span><span class="p">,</span>
+        <span class="s2">&quot;b &lt;= allsystemSize&quot;</span><span class="p">:</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">allsystem_size</span><span class="p">,</span>
+        <span class="s2">&quot;b-a &lt;= allsystemSize&quot;</span><span class="p">:</span> <span class="p">((</span><span class="n">bitstring_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">allsystem_size</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">bitstring_check</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Invalid &#39;bitStringRange = </span><span class="si">{</span><span class="n">bitstring_range</span><span class="si">}</span><span class="s2"> for allsystemSize = </span><span class="si">{</span><span class="n">allsystem_size</span><span class="si">}</span><span class="s2">&#39;. &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;Available range &#39;bitStringRange = [a, b)&#39; should be&quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">;&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">bitstring_check</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span><span class="p">])</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">measure</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">measure</span> <span class="o">=</span> <span class="n">qubit_selector</span><span class="p">(</span><span class="n">allsystem_size</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bitstring_range</span><span class="p">,</span> <span class="n">measure</span><span class="p">,</span> <span class="n">subsystem_size</span></div>
+
+
+
+<div class="viewcode-block" id="degree_handler_rust">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.degree_handler_rust">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">degree_handler_rust</span><span class="p">(</span>
+    <span class="n">allsystem_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">degree</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">measure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Handle the degree of freedom for the subsystem.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        allsystem_size (int):</span>
+<span class="sd">            The size of the whole system.</span>
+<span class="sd">        degree (Optional[Union[int, tuple[int, int]]]):</span>
+<span class="sd">            The degree of freedom.</span>
+<span class="sd">        measure (Optional[tuple[int, int]]):</span>
+<span class="sd">            The measure range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple[tuple[int, int], tuple[int, int], int]:</span>
+<span class="sd">            The degree of freedom, measure range, and subsystem size.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">RUST_AVAILABLE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">degree_handler_rust_source</span><span class="p">(</span><span class="n">allsystem_size</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">measure</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;Rust is not available, using python to calculate degree handler.&quot;</span>
+        <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; Check: </span><span class="si">{</span><span class="n">FAILED_RUST_IMPORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">PostProcessingRustUnavailableWarning</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">degree_handler</span><span class="p">(</span><span class="n">allsystem_size</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">measure</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_cycling_slice_active">
+<a class="viewcode-back" href="../../../../api/process/utils.html#qurry.process.utils.bit_slice.is_cycling_slice_active">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_cycling_slice_active</span><span class="p">(</span>
+    <span class="n">allsystem_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">bitstring_range</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+    <span class="n">subsystem_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check whether the cycling slice is active.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        allsystem_size (int):</span>
+<span class="sd">            The size of the whole system.</span>
+<span class="sd">        bitstring_range (tuple[int, int]):</span>
+<span class="sd">            The range of the bitstring.</span>
+<span class="sd">        subsystem_size (int):</span>
+<span class="sd">            The size of the subsystem</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: Whether the cycling slice is active.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_dummy_string</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">allsystem_size</span><span class="p">))</span>
+    <span class="n">_dummy_string_slice</span> <span class="o">=</span> <span class="n">cycling_slice</span><span class="p">(</span><span class="n">_dummy_string</span><span class="p">,</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">is_avtive_cycling_slice</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">_dummy_string</span><span class="p">[</span><span class="n">bitstring_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="n">bitstring_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="n">_dummy_string_slice</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_avtive_cycling_slice</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">_dummy_string_slice</span><span class="p">)</span> <span class="o">==</span> <span class="n">subsystem_size</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;| All system size &#39;</span><span class="si">{</span><span class="n">subsystem_size</span><span class="si">}</span><span class="s2">&#39; &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;does not match dummyStringSlice &#39;</span><span class="si">{</span><span class="n">_dummy_string_slice</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">is_avtive_cycling_slice</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-02 18:02:17.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

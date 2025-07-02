@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="utils" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/process/utils.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="counts_process: Recounting counts. Post Processing - Utils - Counts Process ( qurry.process.utils.ccounts_process) bit_slice: bitstring slicing. Post Processing - Utils - Bit Slice ( qurry.process...." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_process_utils_f0a50fb6.png" />
+<meta property="og:image:alt" content="counts_process: Recounting counts. Post Processing - Utils - Counts Process ( qurry.process.utils.ccounts_process) bit_slice: bitstring slicing. Post Processing - Utils - Bit Slice ( qurry.process...." />
+<meta name="description" content="counts_process: Recounting counts. Post Processing - Utils - Counts Process ( qurry.process.utils.ccounts_process) bit_slice: bitstring slicing. Post Processing - Utils - Bit Slice ( qurry.process...." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>utils &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/process/utils';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="availability" href="availability.html" />
+    <link rel="prev" title="API" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="utils">
+<h1><code class="docutils literal notranslate"><span class="pre">utils</span></code><a class="headerlink" href="#utils" title="Link to this heading">#</a></h1>
+<section id="counts-process">
+<h2><code class="docutils literal notranslate"><span class="pre">counts_process</span></code><a class="headerlink" href="#counts-process" title="Link to this heading">#</a></h2>
+<p>Recounting counts.</p>
+<p id="module-qurry.process.utils.counts_process">Post Processing - Utils - Counts Process (<code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.ccounts_process</span></code>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.counts_list_recount">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">counts_list_recount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classical_register</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers_sorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#counts_list_recount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.counts_list_recount" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the counts under the degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>counts_list</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The list of counts measured from the single quantum circuit.</p></li>
+<li><p><strong>num_classical_register</strong> (<em>int</em>) – The number of classical registers.</p></li>
+<li><p><strong>selected_classical_registers_sorted</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[dict[str, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.counts_list_recount_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">counts_list_recount_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classical_register</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers_sorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#counts_list_recount_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.counts_list_recount_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the counts under the degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>counts_list</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The list of counts measured from the single quantum circuit.</p></li>
+<li><p><strong>num_classical_register</strong> (<em>int</em>) – The number of classical registers.</p></li>
+<li><p><strong>selected_classical_registers_sorted</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to “Rust”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[dict[str, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.counts_list_vectorize_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">counts_list_vectorize_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#counts_list_vectorize_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.counts_list_vectorize_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>Vectorized counts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>counts_list</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The list of counts measured from the single quantum circuit.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[tuple[list[list[int]], list[int]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.rho_m_flatten_counts_list_vectorize_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">rho_m_flatten_counts_list_vectorize_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_unitary_um</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers_sorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#rho_m_flatten_counts_list_vectorize_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.rho_m_flatten_counts_list_vectorize_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>Dedicated function for rho_m_flatten counts list vectorized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>counts_list</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The list of counts measured from the single quantum circuit.</p></li>
+<li><p><strong>random_unitary_um</strong> (<em>dict</em><em>[</em><em>int</em><em>, </em><em>dict</em><em>[</em><em>int</em><em>, </em><em>Union</em><em>[</em><em>Literal</em><em>[</em><em>0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>]</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The shadow direction of the unitary operators.</p></li>
+<li><p><strong>selected_classical_registers_sorted</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[tuple[list[list[int]], list[int]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.shot_counts_selected_clreg_checker_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">shot_counts_selected_clreg_checker_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#shot_counts_selected_clreg_checker_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.shot_counts_selected_clreg_checker_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>Check whether the selected classical registers are valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – The number of shots.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The list of the counts.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The selected classical registers. Defaults to None.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to “Rust”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The size of the subsystem and the selected classical registers.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.single_counts_recount">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">single_counts_recount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">single_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classical_register</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers_sorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#single_counts_recount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.single_counts_recount" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the counts under the degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>single_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the single quantum circuit.</p></li>
+<li><p><strong>num_classical_register</strong> (<em>int</em>) – The number of classical registers.</p></li>
+<li><p><strong>selected_classical_registers_sorted</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.counts_process.single_counts_recount_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.counts_process.</span></span><span class="sig-name descname"><span class="pre">single_counts_recount_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">single_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classical_register</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers_sorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/counts_process.html#single_counts_recount_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.counts_process.single_counts_recount_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the counts under the degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>single_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the single quantum circuit.</p></li>
+<li><p><strong>num_classical_register</strong> (<em>int</em>) – The number of classical registers.</p></li>
+<li><p><strong>selected_classical_registers_sorted</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to “Rust”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counts under the degree.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="bit-slice">
+<h2><code class="docutils literal notranslate"><span class="pre">bit_slice</span></code><a class="headerlink" href="#bit-slice" title="Link to this heading">#</a></h2>
+<p>bitstring slicing.</p>
+<p id="module-qurry.process.utils.bit_slice">Post Processing - Utils - Bit Slice (<a class="reference internal" href="#module-qurry.process.utils.bit_slice" title="qurry.process.utils.bit_slice"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.bit_slice</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.cycling_slice">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">cycling_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">_ItemT</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">_ItemT</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#cycling_slice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.cycling_slice" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">cycling_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">_ItemT</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">_ItemT</span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">cycling_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span></dt>
+<dd><p>Slice a iterable object with cycling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<em>_SliceableT</em>) – The target object.</p></li>
+<li><p><strong>start</strong> (<em>int</em>) – Index of start.</p></li>
+<li><p><strong>end</strong> (<em>int</em>) – Index of end.</p></li>
+<li><p><strong>step</strong> (<em>int</em><em>, </em><em>optional</em>) – Step of slice. Defaults to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – Slice out of range.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The sliced object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Iterable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.cycling_slice_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">cycling_slice_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#cycling_slice_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.cycling_slice_rust" title="Link to this definition">#</a></dt>
+<dd><p>Slice a iterable object with cycling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<em>str</em>) – The target object.</p></li>
+<li><p><strong>start</strong> (<em>int</em>) – Index of start.</p></li>
+<li><p><strong>end</strong> (<em>int</em>) – Index of end.</p></li>
+<li><p><strong>step</strong> (<em>int</em><em>, </em><em>optional</em>) – Step of slice. Defaults to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – Slice out of range.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The sliced object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.degree_handler">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">degree_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allsystem_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#degree_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.degree_handler" title="Link to this definition">#</a></dt>
+<dd><p>Handle the degree of freedom for the subsystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>allsystem_size</strong> (<em>int</em>) – The size of the whole system.</p></li>
+<li><p><strong>degree</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The degree of freedom.</p></li>
+<li><p><strong>measure</strong> (<em>Optional</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The measure range.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The degree of freedom, measure range, and subsystem size.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[tuple[int, int], tuple[int, int], int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.degree_handler_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">degree_handler_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allsystem_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#degree_handler_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.degree_handler_rust" title="Link to this definition">#</a></dt>
+<dd><p>Handle the degree of freedom for the subsystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>allsystem_size</strong> (<em>int</em>) – The size of the whole system.</p></li>
+<li><p><strong>degree</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The degree of freedom.</p></li>
+<li><p><strong>measure</strong> (<em>Optional</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>]</em>) – The measure range.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The degree of freedom, measure range, and subsystem size.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[tuple[int, int], tuple[int, int], int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.is_cycling_slice_active">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">is_cycling_slice_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allsystem_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitstring_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsystem_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#is_cycling_slice_active"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.is_cycling_slice_active" title="Link to this definition">#</a></dt>
+<dd><p>Check whether the cycling slice is active.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>allsystem_size</strong> (<em>int</em>) – The size of the whole system.</p></li>
+<li><p><strong>bitstring_range</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em>) – The range of the bitstring.</p></li>
+<li><p><strong>subsystem_size</strong> (<em>int</em>) – The size of the subsystem</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the cycling slice is active.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.qubit_mapper">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">qubit_mapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual_num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#qubit_mapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.qubit_mapper" title="Link to this definition">#</a></dt>
+<dd><p>Map the index of selected qubits to the index of the classical register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual_num_qubits</strong> (<em>int</em>) – The actual number of qubits.</p></li>
+<li><p><strong>selected_qubits</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>, </em><em>int</em><em>, </em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The selected qubits.
+If it is None, then it will return the mapping of all qubits.
+If it is int, then it will return the mapping of the last n qubits.
+If it is tuple, then it will return the mapping of the qubits in the range.
+If it is list, then it will return the mapping of the selected qubits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The range of qubits should be defined by two integers.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits are beyond the number of qubits.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits are not natural number.</p></li>
+<li><p><strong>ValueError</strong> – The first integer should be less than the second integer.</p></li>
+<li><p><strong>ValueError</strong> – The number of selected qubits should be more than 1.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits index are beyond the number of qubits.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits index are not natural number.</p></li>
+<li><p><strong>ValueError</strong> – Duplicate selected qubits index are not allowed.</p></li>
+<li><p><strong>ValueError</strong> – Invalid input for selected qubits.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mapping of the index of selected qubits to the index of the classical register.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.qubit_mapper_2_int">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">qubit_mapper_2_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual_num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#qubit_mapper_2_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.qubit_mapper_2_int" title="Link to this definition">#</a></dt>
+<dd><p>Map the index of selected qubits to the index of the classical register.
+The selected qubits are defined by two integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual_num_qubits</strong> (<em>int</em>) – The actual number of qubits.</p></li>
+<li><p><strong>selected_qubits</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em>) – The range of the selected qubits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The range of qubits should be defined by two integers.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits are beyond the number of qubits.</p></li>
+<li><p><strong>ValueError</strong> – The selected qubits are not natural number.</p></li>
+<li><p><strong>ValueError</strong> – The first integer should be less than the second integer.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mapping of the index of selected qubits to the index of the classical register.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.qubit_selector">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">qubit_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#qubit_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.qubit_selector" title="Link to this definition">#</a></dt>
+<dd><p>Determint the qubits to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>degree</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>None</em><em>]</em><em>, </em><em>optional</em>) – Degree of freedom or specific subsystem range.
+Defaults to None then will use number of qubits as degree.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The specific degree of subsystem qubits
+    beyond number of qubits which the wave function has.</p></li>
+<li><p><strong>ValueError</strong> – The number of qubits of subsystem A is not a natural number.</p></li>
+<li><p><strong>ValueError</strong> – Invalid input for subsystem range defined by only two integers.</p></li>
+<li><p><strong>ValueError</strong> – Degree of freedom is not given.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The range of qubits to be used.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.bit_slice.qubit_selector_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.bit_slice.</span></span><span class="sig-name descname"><span class="pre">qubit_selector_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/bit_slice.html#qubit_selector_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.bit_slice.qubit_selector_rust" title="Link to this definition">#</a></dt>
+<dd><p>Determint the qubits to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>degree</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>None</em><em>]</em><em>, </em><em>optional</em>) – Degree of freedom or specific subsystem range.
+Defaults to None then will use number of qubits as degree.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The specific degree of subsystem qubits
+    beyond number of qubits which the wave function has.</p></li>
+<li><p><strong>ValueError</strong> – The number of qubits of subsystem A is not a natural number.</p></li>
+<li><p><strong>ValueError</strong> – Invalid input for subsystem range defined by only two integers.</p></li>
+<li><p><strong>ValueError</strong> – Degree of freedom is not given.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The range of qubits to be used.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="randomized">
+<h2><code class="docutils literal notranslate"><span class="pre">randomized</span></code><a class="headerlink" href="#randomized" title="Link to this heading">#</a></h2>
+<p>Peripheral functions for randomized measurement.</p>
+<p id="module-qurry.process.utils.randomized">Post Processing - Utils - Randomized
+(<a class="reference internal" href="#module-qurry.process.utils.randomized" title="qurry.process.utils.randomized"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.randomized</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.randomized.ensemble_cell">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.randomized.</span></span><span class="sig-name descname"><span class="pre">ensemble_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_i_meas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_j_meas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float64</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/randomized.html#ensemble_cell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.randomized.ensemble_cell" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the value of two counts from qubits in ensemble average.</p>
+<ul>
+<li><p>about <cite>diff = hamming_distance(sAi, sAj)</cite>:</p>
+<blockquote>
+<div><p>It is <cite>hamming_distance</cite> from <cite>qiskit.visualization.count_visualization</cite>.
+Due to frequently update of Qiskit and it’s a simple function,
+I decide not to use source code instead of calling from <cite>qiskit</cite>.</p>
+</div></blockquote>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_i</strong> (<em>str</em>) – First count’s qubits arrange.</p></li>
+<li><p><strong>s_i_meas</strong> (<em>int</em>) – First count.</p></li>
+<li><p><strong>s_j</strong> (<em>str</em>) – Second count’s qubits arrange.</p></li>
+<li><p><strong>s_j_meas</strong> (<em>int</em>) – Second count.</p></li>
+<li><p><strong>a_num</strong> (<em>int</em>) – Degree of freedom.</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of executation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the value of two counts from qubits in ensemble average.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.randomized.ensemble_cell_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.randomized.</span></span><span class="sig-name descname"><span class="pre">ensemble_cell_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_i_meas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_j_meas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float64</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/randomized.html#ensemble_cell_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.randomized.ensemble_cell_rust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the value of two counts from qubits in ensemble average by Rust.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_i</strong> (<em>str</em>) – First count’s qubits arrange.</p></li>
+<li><p><strong>s_i_meas</strong> (<em>int</em>) – First count.</p></li>
+<li><p><strong>s_j</strong> (<em>str</em>) – Second count’s qubits arrange.</p></li>
+<li><p><strong>s_j_meas</strong> (<em>int</em>) – Second count.</p></li>
+<li><p><strong>a_num</strong> (<em>int</em>) – Degree of freedom.</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of executation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the value of two counts from qubits in ensemble average.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.randomized.hamming_distance">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.randomized.</span></span><span class="sig-name descname"><span class="pre">hamming_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/randomized.html#hamming_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.randomized.hamming_distance" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the Hamming distance between two bit strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>str1</strong> (<em>str</em>) – First string.</p></li>
+<li><p><strong>str2</strong> (<em>str</em>) – Second string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance between strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Strings not same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.randomized.hamming_distance_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.randomized.</span></span><span class="sig-name descname"><span class="pre">hamming_distance_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/randomized.html#hamming_distance_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.randomized.hamming_distance_rust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the Hamming distance between two bit strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>str1</strong> (<em>str</em>) – First string.</p></li>
+<li><p><strong>str2</strong> (<em>str</em>) – Second string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance between strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>VisualizationError</strong> – Strings not same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="dummy">
+<h2><code class="docutils literal notranslate"><span class="pre">dummy</span></code><a class="headerlink" href="#dummy" title="Link to this heading">#</a></h2>
+<p>Dummy case counts generating.</p>
+<p id="module-qurry.process.utils.dummy">Post Processing - Utils - Toolkits for Dummy Case
+(<a class="reference internal" href="#module-qurry.process.utils.dummy" title="qurry.process.utils.dummy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.dummy</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.dummy.makeTwoBitStrOneLiner">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.dummy.</span></span><span class="sig-name descname"><span class="pre">makeTwoBitStrOneLiner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitlen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qurry.process.utils.dummy.makeTwoBitStrOneLiner" title="Link to this definition">#</a></dt>
+<dd><p>Make a list of bit strings with length of <cite>num</cite>. But it’s an ONE LINE code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitlen</strong> (<em>int</em>) – bit string length.</p></li>
+<li><p><strong>bits</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The input for recurrsion. Defaults to [‘’].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of bit strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.dummy.make_dummy_case">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.dummy.</span></span><span class="sig-name descname"><span class="pre">make_dummy_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot_per_case</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitstring_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/dummy.html#make_dummy_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.dummy.make_dummy_case" title="Link to this definition">#</a></dt>
+<dd><p>Make a dummy case for the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_a</strong> (<em>int</em>) – Number of qubits in subsystem A.</p></li>
+<li><p><strong>shot_per_case</strong> (<em>int</em>) – Number of shots per case.</p></li>
+<li><p><strong>bitstring_num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – Maximum number of bits.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em>) – The backend to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The dummy case.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.dummy.make_two_bit_str">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.dummy.</span></span><span class="sig-name descname"><span class="pre">make_two_bit_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitlen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/dummy.html#make_two_bit_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.dummy.make_two_bit_str" title="Link to this definition">#</a></dt>
+<dd><p>Make a list of bit strings with length of <cite>num</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num</strong> (<em>int</em>) – bit string length.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em>) – The backend to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of bit strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.dummy.make_two_bit_str_32_py">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.dummy.</span></span><span class="sig-name descname"><span class="pre">make_two_bit_str_32_py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitlen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/dummy.html#make_two_bit_str_32_py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.dummy.make_two_bit_str_32_py" title="Link to this definition">#</a></dt>
+<dd><p>Make a list of bit strings with length of <cite>num</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitlen</strong> (<em>int</em>) – bit string length.</p></li>
+<li><p><strong>num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – The number of bit strings.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of bit strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.dummy.make_two_bit_str_unlimit">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.dummy.</span></span><span class="sig-name descname"><span class="pre">make_two_bit_str_unlimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitlen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/process/utils/dummy.html#make_two_bit_str_unlimit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.dummy.make_two_bit_str_unlimit" title="Link to this definition">#</a></dt>
+<dd><p>Make a list of bit strings with length of <cite>num</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitlen</strong> (<em>int</em>) – bit string length.</p></li>
+<li><p><strong>num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – The number of bit strings.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em>) – The backend to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of bit strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="test">
+<h2><code class="docutils literal notranslate"><span class="pre">test</span></code><a class="headerlink" href="#test" title="Link to this heading">#</a></h2>
+<p>Rust binding test function.</p>
+<p id="module-qurry.process.utils.test">Test (<a class="reference internal" href="#module-qurry.process.utils.test" title="qurry.process.utils.test"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.test</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.utils.test.test_bit_slice">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.test.</span></span><span class="sig-name descname"><span class="pre">test_bit_slice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/process/utils/test.html#test_bit_slice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.utils.test.test_bit_slice" title="Link to this definition">#</a></dt>
+<dd><p>Test the construct module.</p>
+</dd></dl>
+
+</section>
+<section id="other">
+<h2><code class="docutils literal notranslate"><span class="pre">other</span></code><a class="headerlink" href="#other" title="Link to this heading">#</a></h2>
+<p>Remains are not ditributed.</p>
+<p id="module-qurry.process.utils.other">Post Processing - Utils - Other
+(<a class="reference internal" href="#module-qurry.process.utils.other" title="qurry.process.utils.other"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.utils.other</span></code></a>)</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="qurry.process.utils.other.NUMERICAL_ERROR_TOLERANCE">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.utils.other.</span></span><span class="sig-name descname"><span class="pre">NUMERICAL_ERROR_TOLERANCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-14</span></em><a class="headerlink" href="#qurry.process.utils.other.NUMERICAL_ERROR_TOLERANCE" title="Link to this definition">#</a></dt>
+<dd><p>Tolerance for numerical errors in calculations.
+This is used to determine if two floating-point numbers are close enough to be considered equal.</p>
+<p>The default value is set to 1e-14.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="availability.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">availability</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counts-process"><code class="docutils literal notranslate"><span class="pre">counts_process</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.counts_list_recount"><code class="docutils literal notranslate"><span class="pre">counts_list_recount()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.counts_list_recount_pyrust"><code class="docutils literal notranslate"><span class="pre">counts_list_recount_pyrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.counts_list_vectorize_pyrust"><code class="docutils literal notranslate"><span class="pre">counts_list_vectorize_pyrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.rho_m_flatten_counts_list_vectorize_pyrust"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten_counts_list_vectorize_pyrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.shot_counts_selected_clreg_checker_pyrust"><code class="docutils literal notranslate"><span class="pre">shot_counts_selected_clreg_checker_pyrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.single_counts_recount"><code class="docutils literal notranslate"><span class="pre">single_counts_recount()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.counts_process.single_counts_recount_pyrust"><code class="docutils literal notranslate"><span class="pre">single_counts_recount_pyrust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-slice"><code class="docutils literal notranslate"><span class="pre">bit_slice</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.cycling_slice"><code class="docutils literal notranslate"><span class="pre">cycling_slice()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.cycling_slice_rust"><code class="docutils literal notranslate"><span class="pre">cycling_slice_rust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.degree_handler"><code class="docutils literal notranslate"><span class="pre">degree_handler()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.degree_handler_rust"><code class="docutils literal notranslate"><span class="pre">degree_handler_rust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.is_cycling_slice_active"><code class="docutils literal notranslate"><span class="pre">is_cycling_slice_active()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.qubit_mapper"><code class="docutils literal notranslate"><span class="pre">qubit_mapper()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.qubit_mapper_2_int"><code class="docutils literal notranslate"><span class="pre">qubit_mapper_2_int()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.qubit_selector"><code class="docutils literal notranslate"><span class="pre">qubit_selector()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.bit_slice.qubit_selector_rust"><code class="docutils literal notranslate"><span class="pre">qubit_selector_rust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized"><code class="docutils literal notranslate"><span class="pre">randomized</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.randomized.ensemble_cell"><code class="docutils literal notranslate"><span class="pre">ensemble_cell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.randomized.ensemble_cell_rust"><code class="docutils literal notranslate"><span class="pre">ensemble_cell_rust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.randomized.hamming_distance"><code class="docutils literal notranslate"><span class="pre">hamming_distance()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.randomized.hamming_distance_rust"><code class="docutils literal notranslate"><span class="pre">hamming_distance_rust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dummy"><code class="docutils literal notranslate"><span class="pre">dummy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.dummy.makeTwoBitStrOneLiner"><code class="docutils literal notranslate"><span class="pre">makeTwoBitStrOneLiner()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.dummy.make_dummy_case"><code class="docutils literal notranslate"><span class="pre">make_dummy_case()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.dummy.make_two_bit_str"><code class="docutils literal notranslate"><span class="pre">make_two_bit_str()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.dummy.make_two_bit_str_32_py"><code class="docutils literal notranslate"><span class="pre">make_two_bit_str_32_py()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.dummy.make_two_bit_str_unlimit"><code class="docutils literal notranslate"><span class="pre">make_two_bit_str_unlimit()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test"><code class="docutils literal notranslate"><span class="pre">test</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.test.test_bit_slice"><code class="docutils literal notranslate"><span class="pre">test_bit_slice()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other"><code class="docutils literal notranslate"><span class="pre">other</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.utils.other.NUMERICAL_ERROR_TOLERANCE"><code class="docutils literal notranslate"><span class="pre">NUMERICAL_ERROR_TOLERANCE</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/api/process/utils.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-02 18:02:17.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

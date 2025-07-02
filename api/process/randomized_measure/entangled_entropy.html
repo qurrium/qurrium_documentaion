@@ -1,0 +1,1481 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="entangled_entropy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/process/randomized_measure/entangled_entropy.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="entangled_entropy_2: Post Processing - Randomized Measure - Entangled Entropy - Entangled Entropy 2 ( qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2) entropy_core_2: Post Pr..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_process_randomized_measure_entangled_entropy_a3f3173d.png" />
+<meta property="og:image:alt" content="entangled_entropy_2: Post Processing - Randomized Measure - Entangled Entropy - Entangled Entropy 2 ( qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2) entropy_core_2: Post Pr..." />
+<meta name="description" content="entangled_entropy_2: Post Processing - Randomized Measure - Entangled Entropy - Entangled Entropy 2 ( qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2) entropy_core_2: Post Pr..." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>entangled_entropy &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/process/randomized_measure/entangled_entropy';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="wavefunction_overlap" href="wavefunction_overlap.html" />
+    <link rel="prev" title="randomized_measure" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-02 18:02:17"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="entangled-entropy">
+<h1><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code><a class="headerlink" href="#entangled-entropy" title="Link to this heading">#</a></h1>
+<section id="module-qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2">
+<span id="entangled-entropy-2"></span><h2><code class="docutils literal notranslate"><span class="pre">entangled_entropy_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Entangled Entropy - Entangled Entropy 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2" title="qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.preparing_all_system">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.</span></span><span class="sig-name descname"><span class="pre">preparing_all_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">existed_all_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><span class="pre">ExistedAllSystemInfo</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><span class="pre">ExistedAllSystemInfo</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entangled_entropy_2.html#preparing_all_system"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.preparing_all_system" title="Link to this definition">#</a></dt>
+<dd><p>Prepare all system for the entangled entropy calculation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>existed_all_system</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><em>ExistedAllSystemInfo</em></a><em>]</em>) – Existing all system source.
+If there is known all system result,
+then you can put it here to save a lot of time on calculating all system
+for no matter what partition you are using,
+their all system result is the same.
+This can save a lot of time
+Defaults to None.</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the counts.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts from randomized measurement results.</p></li>
+<li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em>) – Backend for the process.</p></li>
+<li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em><em>, </em><em>optional</em>) – The progress bar API, you can use put a <a href="#id1"><span class="problematic" id="id2">:cls:`tqdm`</span></a> object here.
+This function will update the progress bar description.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The all system information.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo">ExistedAllSystemInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.</span></span><span class="sig-name descname"><span class="pre">randomized_entangled_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult" title="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult"><span class="pre">EntangledEntropyResult</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entangled_entropy_2.html#randomized_entangled_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy" title="Link to this definition">#</a></dt>
+<dd><p>Calculate entangled entropy.
+The entropy we compute is the Second Order Rényi Entropy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Probing Rényi entanglement entropy via randomized measurements -</p></li>
+</ul>
+<p>Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,
+Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos ,
+[doi:10.1126/science.aau4963](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.aau4963">https://www.science.org/doi/abs/10.1126/science.aau4963</a>)</p>
+</div></blockquote>
+</div>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">doi:10.1126/science.aau4963</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
+<span class="s">        and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
+<span class="s">        and Peter Zoller  and Rainer Blatt  and Christian F. Roos }</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Probing Rényi entanglement entropy via randomized measurements}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Science}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{364}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{6437}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{260-263}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2019}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">URL</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/abs/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">eprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/pdf/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Quantum systems are predicted to be better at information</span>
+<span class="s">    processing than their classical counterparts, and quantum entanglement</span>
+<span class="s">    is key to this superior performance. But how does one gauge the degree</span>
+<span class="s">    of entanglement in a system? Brydges et al. monitored the build-up of</span>
+<span class="s">    the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
+<span class="s">    each of which encoded a qubit. As the system evolved,</span>
+<span class="s">    interactions caused entanglement between the chain and the rest of</span>
+<span class="s">    the system to grow, which was reflected in the growth of</span>
+<span class="s">    the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
+<span class="s">    in an ion chain reflects a growing entanglement between the chain</span>
+<span class="s">    and its complement. Entanglement is a key feature of many-body quantum systems.</span>
+<span class="s">    Measuring the entropy of different partitions of a quantum system</span>
+<span class="s">    provides a way to probe its entanglement structure.</span>
+<span class="s">    Here, we present and experimentally demonstrate a protocol</span>
+<span class="s">    for measuring the second-order Rényi entropy based on statistical correlations</span>
+<span class="s">    between randomized measurements. Our experiments, carried out with a trapped-ion</span>
+<span class="s">    quantum simulator with partition sizes of up to 10 qubits,</span>
+<span class="s">    prove the overall coherent character of the system dynamics and</span>
+<span class="s">    reveal the growth of entanglement between its parts,</span>
+<span class="s">    in both the absence and presence of disorder.</span>
+<span class="s">    Our protocol represents a universal tool for probing and</span>
+<span class="s">    characterizing engineered quantum systems in the laboratory,</span>
+<span class="s">    which is applicable to arbitrary quantum states of up to</span>
+<span class="s">    several tens of qubits.}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+<li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em><em>, </em><em>optional</em>) – The progress bar API, you can use put a <a href="#id3"><span class="problematic" id="id4">:cls:`tqdm`</span></a> object here.
+This function will update the progress bar description.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary contains purity, entropy, a dictionary of each purity cell,
+entropySD, puritySD, num_classical_registers, classical_registers,
+classical_registers_actually, counts_num, taking_time.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>EntangledEntropyReturn</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy_mitigated">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.</span></span><span class="sig-name descname"><span class="pre">randomized_entangled_entropy_mitigated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">existed_all_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><span class="pre">ExistedAllSystemInfo</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated" title="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated"><span class="pre">EntangledEntropyResultMitigated</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entangled_entropy_2.html#randomized_entangled_entropy_mitigated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy_mitigated" title="Link to this definition">#</a></dt>
+<dd><p>Calculate entangled entropy with depolarizing error mitigation.
+The entropy we compute is the Second Order Rényi Entropy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Probing Rényi entanglement entropy via randomized measurements -</p></li>
+</ul>
+<p>Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,
+Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos ,
+[doi:10.1126/science.aau4963](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.aau4963">https://www.science.org/doi/abs/10.1126/science.aau4963</a>)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Simple mitigation of global depolarizing errors in quantum simulations -</p></li>
+</ul>
+<p>Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,
+Christopher and Kim, M. S. and Knolle, Johannes,
+[PhysRevE.104.035309](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevE.104.035309">https://link.aps.org/doi/10.1103/PhysRevE.104.035309</a>)</p>
+</div></blockquote>
+</div>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">doi:10.1126/science.aau4963</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
+<span class="s">        and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
+<span class="s">        and Peter Zoller  and Rainer Blatt  and Christian F. Roos }</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Probing Rényi entanglement entropy via randomized measurements}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Science}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{364}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{6437}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{260-263}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2019}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">URL</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/abs/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">eprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.science.org/doi/pdf/10.1126/science.aau4963}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Quantum systems are predicted to be better at information</span>
+<span class="s">    processing than their classical counterparts, and quantum entanglement</span>
+<span class="s">    is key to this superior performance. But how does one gauge the degree</span>
+<span class="s">    of entanglement in a system? Brydges et al. monitored the build-up of</span>
+<span class="s">    the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
+<span class="s">    each of which encoded a qubit. As the system evolved,</span>
+<span class="s">    interactions caused entanglement between the chain and the rest of</span>
+<span class="s">    the system to grow, which was reflected in the growth of</span>
+<span class="s">    the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
+<span class="s">    in an ion chain reflects a growing entanglement between the chain</span>
+<span class="s">    and its complement. Entanglement is a key feature of many-body quantum systems.</span>
+<span class="s">    Measuring the entropy of different partitions of a quantum system</span>
+<span class="s">    provides a way to probe its entanglement structure.</span>
+<span class="s">    Here, we present and experimentally demonstrate a protocol</span>
+<span class="s">    for measuring the second-order Rényi entropy based on statistical correlations</span>
+<span class="s">    between randomized measurements. Our experiments, carried out with a trapped-ion</span>
+<span class="s">    quantum simulator with partition sizes of up to 10 qubits,</span>
+<span class="s">    prove the overall coherent character of the system dynamics and</span>
+<span class="s">    reveal the growth of entanglement between its parts,</span>
+<span class="s">    in both the absence and presence of disorder.</span>
+<span class="s">    Our protocol represents a universal tool for probing and</span>
+<span class="s">    characterizing engineered quantum systems in the laboratory,</span>
+<span class="s">    which is applicable to arbitrary quantum states of up to</span>
+<span class="s">    several tens of qubits.}</span>
+<span class="p">}</span>
+
+<span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevE.104.035309</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Simple mitigation of global depolarizing errors in quantum simulations}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
+<span class="s">    Christopher and Kim, M. S. and Knolle, Johannes}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. E}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{104}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">issue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{3}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{035309}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{8}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2021}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Sep}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevE.104.035309}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevE.104.035309}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the counts.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts from randomized measurement results.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+<li><p><strong>existed_all_system</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><em>ExistedAllSystemInfo</em></a><em>]</em><em>, </em><em>optional</em>) – Existing all system source.
+If there is known all system result,
+then you can put it here to save a lot of time on calculating all system
+for no matter what partition you are using,
+their all system result is the same.
+This can save a lot of time
+Defaults to None.</p></li>
+<li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em><em>, </em><em>optional</em>) – The progress bar API, you can use put a <a href="#id5"><span class="problematic" id="id6">:cls:`tqdm`</span></a> object here.
+This function will update the progress bar description.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dictionary contains</dt><dd><p>purity, entropy, a dictionary of each purity cell,
+entropySD, puritySD, num_classical_registers, classical_registers,
+classical_registers_actually, counts_num, taking_time,
+purityAllSys, entropyAllSys, puritySDAllSys, entropySDAllSys,
+num_classical_registers_all_sys, classical_registers_all_sys,
+classical_registers_actually_all_sys, errorRate, mitigatedPurity, mitigatedEntropy.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated" title="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated">EntangledEntropyResultMitigated</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.entangled_entropy.entropy_core_2">
+<span id="entropy-core-2"></span><h2><code class="docutils literal notranslate"><span class="pre">entropy_core_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.entangled_entropy.entropy_core_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Entangled Entropy - Core 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.entangled_entropy.entropy_core_2" title="qurry.process.randomized_measure.entangled_entropy.entropy_core_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entropy_core_2</span></code></a>)</p>
+<p>This version introduces another way to process subsystems.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entropy_core_2.</span></span><span class="sig-name descname"><span class="pre">entangled_entropy_core_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entropy_core_2.html#entangled_entropy_core_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2" title="Link to this definition">#</a></dt>
+<dd><p>The core function of entangled entropy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected qubits, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_allrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entropy_core_2.</span></span><span class="sig-name descname"><span class="pre">entangled_entropy_core_2_allrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entropy_core_2.html#entangled_entropy_core_2_allrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_allrust" title="Link to this definition">#</a></dt>
+<dd><p>The core function of entangled entropy by Rust for just purity cell part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected qubits, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_pyrust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.entropy_core_2.</span></span><span class="sig-name descname"><span class="pre">entangled_entropy_core_2_pyrust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/entropy_core_2.html#entangled_entropy_core_2_pyrust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_pyrust" title="Link to this definition">#</a></dt>
+<dd><p>The core function of entangled entropy by Python or Rust for just purity cell part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shots</strong> (<em>int</em>) – Shots of the experiment on quantum machine.</p></li>
+<li><p><strong>counts</strong> (<em>list</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>]</em>) – Counts of the experiment on quantum machine.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Purity of each cell, Selected classical registers, Message, Time to calculate.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[int, np.float64], list[int], str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.entangled_entropy.error_mitigation">
+<span id="error-mitigation"></span><h2><code class="docutils literal notranslate"><span class="pre">error_mitigation</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.entangled_entropy.error_mitigation" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Entangled Entropy - Error Mitigation
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.entangled_entropy.error_mitigation" title="qurry.process.randomized_measure.entangled_entropy.error_mitigation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.entangled_entropy.error_mitigation</span></code></a>)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.error_mitigation.depolarizing_error_mitgation">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.error_mitigation.</span></span><span class="sig-name descname"><span class="pre">depolarizing_error_mitgation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meas_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_InputT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_InputT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">_InputT</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/error_mitigation.html#depolarizing_error_mitgation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.depolarizing_error_mitgation" title="Link to this definition">#</a></dt>
+<dd><p>Depolarizing error mitigation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meas_system</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>np.ndarray</em><em>]</em>) – Value of the measured subsystem.</p></li>
+<li><p><strong>all_system</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>np.ndarray</em><em>]</em>) – Value of the whole system.</p></li>
+<li><p><strong>n_a</strong> (<em>int</em>) – The size of the subsystem.</p></li>
+<li><p><strong>system_size</strong> (<em>int</em>) – The size of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Error rate, mitigated purity, mitigated entropy.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[dict[str, float], dict[str, np.ndarray]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.error_mitigation.mitigation_equation">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.error_mitigation.</span></span><span class="sig-name descname"><span class="pre">mitigation_equation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pser</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_InputT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meas_series</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_InputT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">_InputT</span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/error_mitigation.html#mitigation_equation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.mitigation_equation" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the mitigation equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pser</strong> (<em>Union</em><em>[</em><em>np.ndarray</em><em>, </em><em>float</em><em>]</em>) – Solution of p.</p></li>
+<li><p><strong>meas_series</strong> (<em>Union</em><em>[</em><em>np.ndarray</em><em>, </em><em>float</em><em>]</em>) – Measured series.</p></li>
+<li><p><strong>n_a</strong> (<em>int</em>) – Subsystem size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mitigated series.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[np.ndarray, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.error_mitigation.solve_p">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.error_mitigation.</span></span><span class="sig-name descname"><span class="pre">solve_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meas_series</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_InputT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">_InputT</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">_InputT</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/error_mitigation.html#solve_p"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.solve_p" title="Link to this definition">#</a></dt>
+<dd><p>Solve the equation of p from all system size and subsystem size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meas_series</strong> (<em>Union</em><em>[</em><em>np.ndarray</em><em>, </em><em>float</em><em>]</em>) – Measured series.</p></li>
+<li><p><strong>n_a</strong> (<em>int</em>) – Subsystem size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Two solutions of p.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[tuple[np.ndarray, np.ndarray], tuple[float, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.entangled_entropy.purity_cell_2">
+<span id="purity-cell-2"></span><h2><code class="docutils literal notranslate"><span class="pre">purity_cell_2</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.entangled_entropy.purity_cell_2" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Entangled Entropy - Purity Cell 2
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.entangled_entropy.purity_cell_2" title="qurry.process.randomized_measure.entangled_entropy.purity_cell_2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.entangled_entropy.purity_cell_2</span></code></a>)</p>
+<p>This version introduces another way to process subsystems.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.purity_cell_2.</span></span><span class="sig-name descname"><span class="pre">purity_cell_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Rust'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/purity_cell_2.html#purity_cell_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the purity cell, one of overlap, of a subsystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em>) – Index of the cell (counts).</p></li>
+<li><p><strong>single_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the single quantum circuit.</p></li>
+<li><p><strong>selected_bitstrings</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected classical registers</strong>.</p></li>
+<li><p><strong>backend</strong> (<em>ExistingProcessBackendLabel</em><em>, </em><em>optional</em>) – Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, Union[float, np.float64], list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_py">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.purity_cell_2.</span></span><span class="sig-name descname"><span class="pre">purity_cell_2_py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/purity_cell_2.html#purity_cell_2_py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_py" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the purity cell, one of overlap, of a subsystem by Python.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em>) – Index of the cell (counts).</p></li>
+<li><p><strong>single_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the single quantum circuit.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, float, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_rust">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.purity_cell_2.</span></span><span class="sig-name descname"><span class="pre">purity_cell_2_rust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/purity_cell_2.html#purity_cell_2_rust"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_rust" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the purity cell, one of overlap, of a subsystem by Rust.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em>) – Index of the cell (counts).</p></li>
+<li><p><strong>single_counts</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Counts measured from the single quantum circuit.</p></li>
+<li><p><strong>selected_classical_registers</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index, one of overlap purity,
+The list of <strong>the index of the selected classical registers</strong>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, float, list[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.process.randomized_measure.entangled_entropy.container">
+<span id="container"></span><h2><code class="docutils literal notranslate"><span class="pre">container</span></code><a class="headerlink" href="#module-qurry.process.randomized_measure.entangled_entropy.container" title="Link to this heading">#</a></h2>
+<p>Post Processing - Randomized Measure - Entangled Entropy - Container
+(<a class="reference internal" href="#module-qurry.process.randomized_measure.entangled_entropy.container" title="qurry.process.randomized_measure.entangled_entropy.container"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container</span></code></a>)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container.</span></span><span class="sig-name descname"><span class="pre">EntangledEntropyResult</span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/container.html#EntangledEntropyResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult" title="Link to this definition">#</a></dt>
+<dd><p>The return type of the post-processing for entangled entropy.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers">
+<span class="sig-name descname"><span class="pre">classical_registers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers_actually">
+<span class="sig-name descname"><span class="pre">classical_registers_actually</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers_actually" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers which is actually used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.counts_num">
+<span class="sig-name descname"><span class="pre">counts_num</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.counts_num" title="Link to this definition">#</a></dt>
+<dd><p>The number of counts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropy">
+<span class="sig-name descname"><span class="pre">entropy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropy" title="Link to this definition">#</a></dt>
+<dd><p>The entropy of the system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropySD">
+<span class="sig-name descname"><span class="pre">entropySD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropySD" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the entropy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.num_classical_registers">
+<span class="sig-name descname"><span class="pre">num_classical_registers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.num_classical_registers" title="Link to this definition">#</a></dt>
+<dd><p>The number of classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purity">
+<span class="sig-name descname"><span class="pre">purity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purity" title="Link to this definition">#</a></dt>
+<dd><p>The purity of the system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purityCells">
+<span class="sig-name descname"><span class="pre">purityCells</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purityCells" title="Link to this definition">#</a></dt>
+<dd><p>The purity of each single count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.puritySD">
+<span class="sig-name descname"><span class="pre">puritySD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.puritySD" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the purity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.taking_time">
+<span class="sig-name descname"><span class="pre">taking_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.taking_time" title="Link to this definition">#</a></dt>
+<dd><p>The calculation time.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container.</span></span><span class="sig-name descname"><span class="pre">EntangledEntropyResultMitigated</span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/container.html#EntangledEntropyResultMitigated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated" title="Link to this definition">#</a></dt>
+<dd><p>The return type of the post-processing for entangled entropy with error mitigation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.all_system_source">
+<span class="sig-name descname"><span class="pre">all_system_source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'independent'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'null_counts'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.all_system_source" title="Link to this definition">#</a></dt>
+<dd><p>The name of source of all system.</p>
+<ul class="simple">
+<li><p>independent: The all system is calculated independently.</p></li>
+<li><p>null_counts: No counts exist.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_actually_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_actually_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_actually_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers which is actually used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropyAllSys">
+<span class="sig-name descname"><span class="pre">entropyAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropyAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropySDAllSys">
+<span class="sig-name descname"><span class="pre">entropySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.errorRate">
+<span class="sig-name descname"><span class="pre">errorRate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.errorRate" title="Link to this definition">#</a></dt>
+<dd><p>The error rate of the measurement from depolarizing error migigation calculated.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedEntropy">
+<span class="sig-name descname"><span class="pre">mitigatedEntropy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedEntropy" title="Link to this definition">#</a></dt>
+<dd><p>The mitigated entropy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedPurity">
+<span class="sig-name descname"><span class="pre">mitigatedPurity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedPurity" title="Link to this definition">#</a></dt>
+<dd><p>The mitigated purity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.num_classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">num_classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.num_classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The number of classical registers of all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityAllSys">
+<span class="sig-name descname"><span class="pre">purityAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityCellsAllSys">
+<span class="sig-name descname"><span class="pre">purityCellsAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityCellsAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of each single count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.puritySDAllSys">
+<span class="sig-name descname"><span class="pre">puritySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.puritySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.taking_time_all_sys">
+<span class="sig-name descname"><span class="pre">taking_time_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.taking_time_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The calculation time of the all system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container.</span></span><span class="sig-name descname"><span class="pre">ExistedAllSystemInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">purityAllSys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropyAllSys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">puritySDAllSys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropySDAllSys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">purityCellsAllSys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classical_registers_all_sys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classical_registers_all_sys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classical_registers_actually_all_sys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taking_time_all_sys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/container.html#ExistedAllSystemInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo" title="Link to this definition">#</a></dt>
+<dd><p>Existed all system information</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_actually_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_actually_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_actually_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers which is actually used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropyAllSys">
+<span class="sig-name descname"><span class="pre">entropyAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropyAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropySDAllSys">
+<span class="sig-name descname"><span class="pre">entropySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.num_classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">num_classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.num_classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The number of classical registers of all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityAllSys">
+<span class="sig-name descname"><span class="pre">purityAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityCellsAllSys">
+<span class="sig-name descname"><span class="pre">purityCellsAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityCellsAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of each single count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.puritySDAllSys">
+<span class="sig-name descname"><span class="pre">puritySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.puritySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.source">
+<span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.source" title="Link to this definition">#</a></dt>
+<dd><p>The source of all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.taking_time_all_sys">
+<span class="sig-name descname"><span class="pre">taking_time_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.taking_time_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The calculation time of the all system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container.</span></span><span class="sig-name descname"><span class="pre">ExistedAllSystemInfoInput</span></span><a class="reference internal" href="../../../_modules/qurry/process/randomized_measure/entangled_entropy/container.html#ExistedAllSystemInfoInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput" title="Link to this definition">#</a></dt>
+<dd><p>Existed all system information</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_actually_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_actually_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_actually_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers which is actually used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The list of the index of the selected classical registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropyAllSys">
+<span class="sig-name descname"><span class="pre">entropyAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropyAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropySDAllSys">
+<span class="sig-name descname"><span class="pre">entropySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the entropy of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.num_classical_registers_all_sys">
+<span class="sig-name descname"><span class="pre">num_classical_registers_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.num_classical_registers_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The number of classical registers of all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityAllSys">
+<span class="sig-name descname"><span class="pre">purityAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityCellsAllSys">
+<span class="sig-name descname"><span class="pre">purityCellsAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityCellsAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The purity of each single count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.puritySDAllSys">
+<span class="sig-name descname"><span class="pre">puritySDAllSys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.puritySDAllSys" title="Link to this definition">#</a></dt>
+<dd><p>The standard deviation of the purity of the all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.source">
+<span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.source" title="Link to this definition">#</a></dt>
+<dd><p>The source of all system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.taking_time_all_sys">
+<span class="sig-name descname"><span class="pre">taking_time_all_sys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float64</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.taking_time_all_sys" title="Link to this definition">#</a></dt>
+<dd><p>The calculation time of the all system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="qurry.process.randomized_measure.entangled_entropy.container.GenericFloatType">
+<span class="sig-prename descclassname"><span class="pre">qurry.process.randomized_measure.entangled_entropy.container.</span></span><span class="sig-name descname"><span class="pre">GenericFloatType</span></span><a class="headerlink" href="#qurry.process.randomized_measure.entangled_entropy.container.GenericFloatType" title="Link to this definition">#</a></dt>
+<dd><p>The generic float type by numpy or python.</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="wavefunction_overlap.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.preparing_all_system"><code class="docutils literal notranslate"><span class="pre">preparing_all_system()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy"><code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entangled_entropy_2.randomized_entangled_entropy_mitigated"><code class="docutils literal notranslate"><span class="pre">randomized_entangled_entropy_mitigated()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.entangled_entropy.entropy_core_2"><code class="docutils literal notranslate"><span class="pre">entropy_core_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_core_2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_allrust"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_core_2_allrust()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.entropy_core_2.entangled_entropy_core_2_pyrust"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_core_2_pyrust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.entangled_entropy.error_mitigation"><code class="docutils literal notranslate"><span class="pre">error_mitigation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.depolarizing_error_mitgation"><code class="docutils literal notranslate"><span class="pre">depolarizing_error_mitgation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.mitigation_equation"><code class="docutils literal notranslate"><span class="pre">mitigation_equation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.error_mitigation.solve_p"><code class="docutils literal notranslate"><span class="pre">solve_p()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.entangled_entropy.purity_cell_2"><code class="docutils literal notranslate"><span class="pre">purity_cell_2</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2"><code class="docutils literal notranslate"><span class="pre">purity_cell_2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_py"><code class="docutils literal notranslate"><span class="pre">purity_cell_2_py()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.purity_cell_2.purity_cell_2_rust"><code class="docutils literal notranslate"><span class="pre">purity_cell_2_rust()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.process.randomized_measure.entangled_entropy.container"><code class="docutils literal notranslate"><span class="pre">container</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.classical_registers</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.classical_registers_actually"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.classical_registers_actually</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.counts_num"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.counts_num</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropy"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.entropy</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.entropySD"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.entropySD</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.num_classical_registers"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.num_classical_registers</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purity"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.purity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.purityCells"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.purityCells</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.puritySD"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.puritySD</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResult.taking_time"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResult.taking_time</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.all_system_source"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.all_system_source</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_actually_all_sys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.classical_registers_actually_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropyAllSys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.entropyAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.entropySDAllSys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.entropySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.errorRate"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.errorRate</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedEntropy"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.mitigatedEntropy</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.mitigatedPurity"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.mitigatedPurity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.num_classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.num_classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityAllSys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.purityAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.purityCellsAllSys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.purityCellsAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.puritySDAllSys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.puritySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.EntangledEntropyResultMitigated.taking_time_all_sys"><code class="docutils literal notranslate"><span class="pre">EntangledEntropyResultMitigated.taking_time_all_sys</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_actually_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.classical_registers_actually_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropyAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.entropyAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.entropySDAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.entropySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.num_classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.num_classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.purityAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.purityCellsAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.purityCellsAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.puritySDAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.puritySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.source"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.source</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfo.taking_time_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfo.taking_time_all_sys</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_actually_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.classical_registers_actually_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropyAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.entropyAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.entropySDAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.entropySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.num_classical_registers_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.num_classical_registers_all_sys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.purityAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.purityCellsAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.purityCellsAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.puritySDAllSys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.puritySDAllSys</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.source"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.source</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.ExistedAllSystemInfoInput.taking_time_all_sys"><code class="docutils literal notranslate"><span class="pre">ExistedAllSystemInfoInput.taking_time_all_sys</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.process.randomized_measure.entangled_entropy.container.GenericFloatType"><code class="docutils literal notranslate"><span class="pre">GenericFloatType</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/api/process/randomized_measure/entangled_entropy.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-02 18:02:17.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -59,7 +59,8 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -91,11 +92,11 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Other Features" href="../../appendix/index.html" />
+    <link rel="next" title="API" href="../../api/index.html" />
     <link rel="prev" title="2.2 Randomized Measurement" href="2_randomized_measure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-06-29 08:39:12"/>
+    <meta name="docbuild:last-update" content="2025-07-02 17:30:14"/>
   </head>
   
   
@@ -224,6 +225,13 @@ document.write(`
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API
   </a>
 </li>
 
@@ -377,6 +385,13 @@ document.write(`
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API
   </a>
 </li>
 
@@ -610,7 +625,7 @@ document.write(`
  &#39;echo&#39;: np.float64(1.0627930164337158),
  &#39;echoSD&#39;: np.float64(0.0),
  &#39;measureActually&#39;: (2, 8),
- &#39;takingTime&#39;: 0.002918724}
+ &#39;takingTime&#39;: 0.003260175}
 | result of randomized_overlap_echo_v1[purityCells]
 1.0627930164337158
 1.0627930164337158
@@ -749,46 +764,46 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:00 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:02 &lt; 00:15
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:06 &lt; 00:36
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:02 &lt; 00:15
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:06 &lt; 00:36
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:05 &lt; 00:15
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:12 &lt; 00:30
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:05 &lt; 00:15
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:12 &lt; 00:30
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:09 &lt; 00:13
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:18 &lt; 00:24
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:09 &lt; 00:13
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:18 &lt; 00:24
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:14 &lt; 00:11
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:25 &lt; 00:19
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:14 &lt; 00:11
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:25 &lt; 00:19
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:18 &lt; 00:07
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:31 &lt; 00:12
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:18 &lt; 00:07
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:31 &lt; 00:12
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:21 &lt; 00:03
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:37 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:21 &lt; 00:03
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:37 &lt; 00:06
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:24 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:43 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:24 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate overlap with 200 counts. - 00:43 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -870,11 +885,11 @@ by &lt;Hoshi&gt;
       </div>
     </a>
     <a class="right-next"
-       href="../../appendix/index.html"
+       href="../../api/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Other Features</p>
+        <p class="prev-next-title">API</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -955,7 +970,7 @@ by &lt;Hoshi&gt;
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-06-29 08:39:12.
+  Last updated on 2025-07-02 17:30:14.
   <br/>
 </p></div>
       
