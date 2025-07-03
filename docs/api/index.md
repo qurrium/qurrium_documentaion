@@ -43,30 +43,43 @@ declare/transpile
 
 ```
 
+## Tools
+
+Tools.
+
+```{toctree}
+:maxdepth: 1
+:caption: Tools
+
+tools/qiskit_version
+tools/progressbar
+tools/parallelmanager
+tools/except_decorator
+tools/datetime
+tools/command
+tools/backend
+
+```
+
+## Recipe
+
+Simple circuits case library.
+
+```{toctree}
+:maxdepth: 1
+:caption: Recipe
+
+recipe/n_body
+recipe/simple
+
+```
+
 ## Capsule
 
 Files writing, reading, and something interesting?
 
 <!-- ```{eval-rst}
 .. automodule:: qurry.capsule
-:members:
-``` -->
-
-## Recipe
-
-Simple circuits case library.
-
-<!-- ```{eval-rst}
-.. automodule:: qurry.recipe
-:members:
-``` -->
-
-## Tools
-
-Tools
-
-<!-- ```{eval-rst}
-.. automodule:: qurry.tools
 :members:
 ``` -->
 
