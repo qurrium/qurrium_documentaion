@@ -96,7 +96,7 @@
     <link rel="prev" title="3.2 Magnetization Square for Any Directions" href="qurmagsq_3_2_magnet_square.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-02 17:30:14"/>
+    <meta name="docbuild:last-update" content="2025-07-03 01:54:44"/>
   </head>
   
   
@@ -719,7 +719,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;fecfc93e-74f9-4521-97ba-7baf20e31be7&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;397a55f9-6716-4c46-9b3e-bc92f859fd96&#39;
 </pre></div>
 </div>
 </div>
@@ -736,13 +736,13 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:2025-07-02 17:11:32,323:jax._src.xla_bridge:909: An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:2025-07-03 01:43:46,072:jax._src.xla_bridge:794: An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=4, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3}, unitary_located=[0, 1, 2, 3]),
-  SUAnalysisContent(purity=0.8714418226679831, entropy=0.1985237414371246, and others)),
+  SUAnalysisContent(purity=0.7182746231227016, entropy=0.47739254935286457, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -782,7 +782,7 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| estimate_of_given_operators:
-[np.complex128(1+0j), np.complex128(0.5000000000000001+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(0.5000000000000001+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j)]
+[np.complex128(0.75+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.5+0j), np.complex128(0.75+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.5+0j), np.complex128(0.5+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.5+0j)]
 |--------------------------------------------------
 | accuracy_prob_comp_delta: 0.008051103069660285
 | num_of_estimators_k: 16
@@ -829,7 +829,7 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| The magnetization square value is: 0.96875
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| The magnetization square value is: 0.84375
 </pre></div>
 </div>
 </div>
@@ -848,16 +848,16 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually : [3, 2, 1, 0]
-| taking_time : 0.12224626541137695
-| purity : 0.8714418226679831
-| entropy : 0.1985237414371246
-| estimate_of_given_operators : [np.complex128(1+0j), np.complex128(0.5000000000000001+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(0.5000000000000001+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j)]
+| taking_time : 0.13900995254516602
+| purity : 0.7182746231227016
+| entropy : 0.47739254935286457
+| estimate_of_given_operators : [np.complex128(0.75+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.5+0j), np.complex128(0.75+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.5+0j), np.complex128(0.5+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.5+0j)]
 | accuracy_prob_comp_delta : 0.008051103069660285
 | num_of_estimators_k : 16
 | accuracy_predict_epsilon : 5.386402633793108
 | maximum_shadow_norm : nan
 | input : {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 4, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3}, &#39;unitary_located&#39;: [0, 1, 2, 3]}
-| header : {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-02 17:11:32&#39;, &#39;log&#39;: {}}
+| header : {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-03 01:43:46&#39;, &#39;log&#39;: {}}
 </pre></div>
 </div>
 </div>
@@ -888,15 +888,15 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_300.qurshady_entropy.001&#39;,
- &#39;qurryinfo&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/args/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/advent/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/legacy/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.legacy.json&#39;,
- &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.random_unitary_ids.json&#39;,
- &#39;reports&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/reports/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.reports.json&#39;,
- &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.average_classical_snapshots_rho.reports.json&#39;,
- &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=fecfc93e-74f9-4521-97ba-7baf20e31be7.corresponding_rhos.reports.json&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_300.qurshady_entropy.003&#39;,
+ &#39;qurryinfo&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/qurryinfo.json&#39;,
+ &#39;args&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/args/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/advent/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/legacy/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.legacy.json&#39;,
+ &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/tales/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.random_unitary_ids.json&#39;,
+ &#39;reports&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/reports/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.reports.json&#39;,
+ &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/tales/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.average_classical_snapshots_rho.reports.json&#39;,
+ &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_300.qurshady_entropy.003/tales/experiment.N_U_300.qurshady_entropy.003.id=397a55f9-6716-4c46-9b3e-bc92f859fd96.corresponding_rhos.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -1064,7 +1064,7 @@ by &lt;Hoshi&gt;
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-02 17:30:14.
+  Last updated on 2025-07-03 01:54:44.
   <br/>
 </p></div>
       

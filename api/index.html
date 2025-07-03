@@ -97,7 +97,7 @@
     <link rel="prev" title="2.3 Randomized Measurement V1" href="../postprocessing/02_wave_func_overlap/3_randomized_measure_v1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-02 18:55:10"/>
+    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
   </head>
   
   
@@ -479,6 +479,21 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tools/qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/progressbar.html"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recipe</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="recipe/n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipe/simple.html"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+</ul>
 </div>
 </nav></div>
     </div>
@@ -581,27 +596,38 @@ document.write(`
 </ul>
 </div>
 </section>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Link to this heading">#</a></h2>
+<p>Tools.</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools/qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/progressbar.html"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+</ul>
+</div>
+</section>
+<section id="recipe">
+<h2>Recipe<a class="headerlink" href="#recipe" title="Link to this heading">#</a></h2>
+<p>Simple circuits case library.</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recipe</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="recipe/n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipe/simple.html"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+</ul>
+</div>
+</section>
 <section id="capsule">
 <h2>Capsule<a class="headerlink" href="#capsule" title="Link to this heading">#</a></h2>
 <p>Files writing, reading, and something interesting?</p>
 <!-- ```{eval-rst}
 .. automodule:: qurry.capsule
-:members:
-``` -->
-</section>
-<section id="recipe">
-<h2>Recipe<a class="headerlink" href="#recipe" title="Link to this heading">#</a></h2>
-<p>Simple circuits case library.</p>
-<!-- ```{eval-rst}
-.. automodule:: qurry.recipe
-:members:
-``` -->
-</section>
-<section id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Link to this heading">#</a></h2>
-<p>Tools</p>
-<!-- ```{eval-rst}
-.. automodule:: qurry.tools
 :members:
 ``` -->
 </section>
@@ -689,9 +715,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declare">Declare</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capsule">Capsule</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe">Recipe</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe">Recipe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capsule">Capsule</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurrent">Qurrent</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurrech">Qurrech</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurries">Qurries</a></li>
@@ -746,7 +772,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-02 18:55:10.
+  Last updated on 2025-07-03 12:28:51.
   <br/>
 </p></div>
       

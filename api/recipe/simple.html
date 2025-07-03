@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="simple" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/recipe/simple.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="cat: The entangled circuit :cls: GHZ as known as :cls: Cat. GHZ state ( qurry.recipe.simple.cat) The entangled circuit:cls:`GHZ` a.k.a.:cls:`Cat`. Reference:,,.} intracell: Intracell ( qurry.recipe..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_recipe_simple_7c3c7d3b.png" />
+<meta property="og:image:alt" content="cat: The entangled circuit :cls: GHZ as known as :cls: Cat. GHZ state ( qurry.recipe.simple.cat) The entangled circuit:cls:`GHZ` a.k.a.:cls:`Cat`. Reference:,,.} intracell: Intracell ( qurry.recipe..." />
+<meta name="description" content="cat: The entangled circuit :cls: GHZ as known as :cls: Cat. GHZ state ( qurry.recipe.simple.cat) The entangled circuit:cls:`GHZ` a.k.a.:cls:`Cat`. Reference:,,.} intracell: Intracell ( qurry.recipe..." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>simple &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/recipe/simple';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Other Features" href="../../appendix/index.html" />
+    <link rel="prev" title="n_body" href="n_body.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Utilties</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Functions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process/hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../process/randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../process/classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Declare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../declare/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tools/qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/progressbar.html"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recipe</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="simple">
+<h1><code class="docutils literal notranslate"><span class="pre">simple</span></code><a class="headerlink" href="#simple" title="Link to this heading">#</a></h1>
+<section id="cat">
+<h2><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Link to this heading">#</a></h2>
+<p>The entangled circuit :cls:<code class="docutils literal notranslate"><span class="pre">GHZ</span></code> as known as :cls:<code class="docutils literal notranslate"><span class="pre">Cat</span></code>.</p>
+<p id="module-qurry.recipe.simple.cat">GHZ state (<a class="reference internal" href="#module-qurry.recipe.simple.cat" title="qurry.recipe.simple.cat"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.recipe.simple.cat</span></code></a>)</p>
+<p>The entangled circuit <a href="#id1"><span class="problematic" id="id2">:cls:`GHZ`</span></a> a.k.a. <a href="#id3"><span class="problematic" id="id4">:cls:`Cat`</span></a>.</p>
+<dl>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</p></li>
+</ul>
+<p>Using the IBM Quantum Computer - Choo, Kenny and von Keyserlingk, Curt W. and
+Regnault, Nicolas and Neupert, Titus
+[doi:10.1103/PhysRevLett.121.086808](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1103/PhysRevLett.121.086808">https://doi.org/10.1103/PhysRevLett.121.086808</a>)</p>
+</div></blockquote>
+</div>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevLett.121.086808</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">        Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</span>
+<span class="s">        Using the IBM Quantum Computer}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">        Choo, Kenny and von Keyserlingk, Curt W. and Regnault, Nicolas and Neupert, Titus}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. Lett.}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{121}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">issue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{8}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{086808}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{5}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2018}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Aug}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevLett.121.086808}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevLett.121.086808}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>}</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.cat.Cat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.cat.</span></span><span class="sig-name descname"><span class="pre">Cat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cat'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/cat.html#Cat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.cat.Cat" title="Link to this definition">#</a></dt>
+<dd><p><a href="#id5"><span class="problematic" id="id6">:cls:`Cat`</span></a>, the anthor name of entangled circuit <a href="#id7"><span class="problematic" id="id8">:cls:`GHZ`</span></a>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Open boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├──■────────────────────────────────
+    └───┘┌─┴─┐
+q1: ─────┤ X ├──■───────────────────────────
+         └───┘┌─┴─┐
+q2: ──────────┤ X ├──■──────────────────────
+              └───┘┌─┴─┐
+q3: ───────────────┤ X ├──■─────────────────
+                   └───┘┌─┴─┐
+q4: ────────────────────┤ X ├──■────────────
+                        └───┘┌─┴─┐
+q5: ─────────────────────────┤ X ├──■───────
+                             └───┘┌─┴─┐
+q6: ──────────────────────────────┤ X ├──■──
+                                  └───┘┌─┴─┐
+q7: ───────────────────────────────────┤ X ├
+                                       └───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\sqrt{2}}
+    \left({|01\rangle} - {|10\rangle} \right)^{\otimes N/2}, N = 8\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – The number of qubits for constructing the example circuit.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “cat”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.cat.GHZ">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.cat.</span></span><span class="sig-name descname"><span class="pre">GHZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ghz'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/cat.html#GHZ"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.cat.GHZ" title="Link to this definition">#</a></dt>
+<dd><p>The entangled circuit <a href="#id9"><span class="problematic" id="id10">:cls:`GHZ`</span></a>.
+Introduce in <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808</a> .</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Open boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├──■────────────────────────────────
+    └───┘┌─┴─┐
+q1: ─────┤ X ├──■───────────────────────────
+         └───┘┌─┴─┐
+q2: ──────────┤ X ├──■──────────────────────
+              └───┘┌─┴─┐
+q3: ───────────────┤ X ├──■─────────────────
+                   └───┘┌─┴─┐
+q4: ────────────────────┤ X ├──■────────────
+                        └───┘┌─┴─┐
+q5: ─────────────────────────┤ X ├──■───────
+                             └───┘┌─┴─┐
+q6: ──────────────────────────────┤ X ├──■──
+                                  └───┘┌─┴─┐
+q7: ───────────────────────────────────┤ X ├
+                                       └───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\sqrt{2}}
+    \left({|01\rangle} - {|10\rangle} \right)^{\otimes N/2}, N = 8\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – The number of qubits for constructing the example circuit.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “ghz”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-qurry.recipe.simple.intracell">
+<span id="intracell"></span><h2><code class="docutils literal notranslate"><span class="pre">intracell</span></code><a class="headerlink" href="#module-qurry.recipe.simple.intracell" title="Link to this heading">#</a></h2>
+<p>Intracell (<a class="reference internal" href="#module-qurry.recipe.simple.intracell" title="qurry.recipe.simple.intracell"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.recipe.simple.intracell</span></code></a>)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.intracell.Intracell">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.intracell.</span></span><span class="sig-name descname"><span class="pre">Intracell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'singlet'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'minus'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'plus'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'singlet'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'intracell'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/intracell.html#Intracell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.intracell.Intracell" title="Link to this definition">#</a></dt>
+<dd><p>The entangled circuit <a href="#id1"><span class="problematic" id="id2">:cls:`Intracell`</span></a>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># At state `singlet`, `minus` a.k.a. `Singlet` with 8 qubits:
+    ┌───┐┌───┐
+q0: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q1: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q2: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q3: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q4: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q5: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q6: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q7: ┤ X ├─────┤ X ├
+    └───┘     └───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\sqrt{2}}
+    \left({|01\rangle} - {|10\rangle} \right)^{\otimes N/2}, N = 8\]</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># At state `plus` with 8 qubits:
+    ┌───┐
+q0: ┤ H ├──■──
+    ├───┤┌─┴─┐
+q1: ┤ X ├┤ X ├
+    ├───┤└───┘
+q2: ┤ H ├──■──
+    ├───┤┌─┴─┐
+q3: ┤ X ├┤ X ├
+    ├───┤└───┘
+q4: ┤ H ├──■──
+    ├───┤┌─┴─┐
+q5: ┤ X ├┤ X ├
+    ├───┤└───┘
+q6: ┤ H ├──■──
+    ├───┤┌─┴─┐
+q7: ┤ X ├┤ X ├
+    └───┘└───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\sqrt{2}}
+    \left({|01\rangle} + {|10\rangle} \right)^{\otimes N/2}, N = 8\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>state</strong> (<em>str</em><em>, </em><em>optional</em>) – Choosing the state. There are ‘singlet’, ‘minus’, ‘plus’
+which ‘minus’ is same as ‘singlet’.
+Defaults to “singlet”.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “intracell”.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qurry.recipe.simple.intracell.Intracell.state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'singlet'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'minus'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'plus'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.recipe.simple.intracell.Intracell.state" title="Link to this definition">#</a></dt>
+<dd><p>The state of the circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The state of the circuit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.intracell.Singlet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.intracell.</span></span><span class="sig-name descname"><span class="pre">Singlet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'singlet'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/intracell.html#Singlet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.intracell.Singlet" title="Link to this definition">#</a></dt>
+<dd><p><a href="#id3"><span class="problematic" id="id4">:cls:`Siglet`</span></a>, the entangled circuit <a href="#id5"><span class="problematic" id="id6">:cls:`Intracell`</span></a> with <cite>singlet</cite> state.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># At 8 qubits:
+    ┌───┐┌───┐
+q0: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q1: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q2: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q3: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q4: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q5: ┤ X ├─────┤ X ├
+    ├───┤┌───┐└───┘
+q6: ┤ X ├┤ H ├──■──
+    ├───┤└───┘┌─┴─┐
+q7: ┤ X ├─────┤ X ├
+    └───┘     └───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\sqrt{2}}
+    \left({|01\rangle} - {|10\rangle} \right)^{\otimes N/2}, N = 8\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “singlet”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When given number of qubits is not even.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="paramagnet">
+<h2><code class="docutils literal notranslate"><span class="pre">paramagnet</span></code><a class="headerlink" href="#paramagnet" title="Link to this heading">#</a></h2>
+<p>The circuits :cls:<code class="docutils literal notranslate"><span class="pre">TrivialParamagnet</span></code> and :cls:<code class="docutils literal notranslate"><span class="pre">TopologicalParamagnet</span></code>.</p>
+<p id="module-qurry.recipe.simple.paramagnet">Paramagnet (<a class="reference internal" href="#module-qurry.recipe.simple.paramagnet" title="qurry.recipe.simple.paramagnet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.recipe.simple.paramagnet</span></code></a>)</p>
+<p>The circuits <a href="#id1"><span class="problematic" id="id2">:cls:`TrivialParamagnet`</span></a> and <a href="#id3"><span class="problematic" id="id4">:cls:`TopologicalParamagnet`</span></a>.</p>
+<dl>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</p></li>
+</ul>
+<p>Using the IBM Quantum Computer - Choo, Kenny and von Keyserlingk, Curt W. and
+Regnault, Nicolas and Neupert, Titus
+[doi:10.1103/PhysRevLett.121.086808](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1103/PhysRevLett.121.086808">https://doi.org/10.1103/PhysRevLett.121.086808</a>)</p>
+</div></blockquote>
+</div>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">PhysRevLett.121.086808</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">        Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</span>
+<span class="s">        Using the IBM Quantum Computer}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">        Choo, Kenny and von Keyserlingk, Curt W. and Regnault, Nicolas and Neupert, Titus}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Phys. Rev. Lett.}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{121}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">issue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{8}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{086808}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{5}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2018}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Aug}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{American Physical Society}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1103/PhysRevLett.121.086808}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://link.aps.org/doi/10.1103/PhysRevLett.121.086808}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>}</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.paramagnet.Cluster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.paramagnet.</span></span><span class="sig-name descname"><span class="pre">Cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border_cond</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'open'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'period'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'period'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cluster'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/paramagnet.html#Cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.paramagnet.Cluster" title="Link to this definition">#</a></dt>
+<dd><p><a href="#id5"><span class="problematic" id="id6">:cls:`Cluster`</span></a>, another name of The entangled circuit <a href="#id7"><span class="problematic" id="id8">:cls:`Topological paramagnet`</span></a>.
+Introduce in <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808</a> .</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL `CZGate`, Open boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├─■────
+    ├───┤ │
+q1: ┤ H ├─■──■─
+    ├───┤    │
+q2: ┤ H ├─■──■─
+    ├───┤ │
+q3: ┤ H ├─■──■─
+    ├───┤    │
+q4: ┤ H ├─■──■─
+    ├───┤ │
+q5: ┤ H ├─■──■─
+    ├───┤    │
+q6: ┤ H ├─■──■─
+    ├───┤ │
+q7: ┤ H ├─■────
+    └───┘
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL `CZGate`, Period boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├─■─────■─
+    ├───┤ │     │
+q1: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q2: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q3: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q4: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q5: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q6: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q7: ┤ H ├─■─────■─
+    └───┘
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>border_cond</strong> (<em>str</em><em>, </em><em>optional</em>) – Boundary condition is <cite>open</cite> or <cite>period</cite>.
+Defaults to “period”.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “cluster”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When given number of qubits is not even.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.paramagnet.TopologicalParamagnet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.paramagnet.</span></span><span class="sig-name descname"><span class="pre">TopologicalParamagnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border_cond</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'open'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'period'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'period'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cluster'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/paramagnet.html#TopologicalParamagnet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.paramagnet.TopologicalParamagnet" title="Link to this definition">#</a></dt>
+<dd><p>The entangled circuit <a href="#id9"><span class="problematic" id="id10">:cls:`Topological paramagnet`</span></a>.
+Introduce in <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808</a> .</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL CZGate, Open boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├─■────
+    ├───┤ │
+q1: ┤ H ├─■──■─
+    ├───┤    │
+q2: ┤ H ├─■──■─
+    ├───┤ │
+q3: ┤ H ├─■──■─
+    ├───┤    │
+q4: ┤ H ├─■──■─
+    ├───┤ │
+q5: ┤ H ├─■──■─
+    ├───┤    │
+q6: ┤ H ├─■──■─
+    ├───┤ │
+q7: ┤ H ├─■────
+    └───┘
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL CZGate, Open boundary at 5 qubits:
+    ┌───┐
+q0: ┤ H ├─■────
+    ├───┤ │
+q1: ┤ H ├─■──■─
+    ├───┤    │
+q2: ┤ H ├─■──■─
+    ├───┤ │
+q3: ┤ H ├─■──■─
+    ├───┤    │
+q4: ┤ H ├────■─
+    └───┘
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL CZGate, Period boundary at 8 qubits:
+    ┌───┐
+q0: ┤ H ├─■─────■─
+    ├───┤ │     │
+q1: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q2: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q3: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q4: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q5: ┤ H ├─■──■──┼─
+    ├───┤    │  │
+q6: ┤ H ├─■──■──┼─
+    ├───┤ │     │
+q7: ┤ H ├─■─────■─
+    └───┘
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># With ACTUAL CZGate, Period boundary at 5 qubits:
+    ┌───┐
+q0: ┤ H ├─■──■────
+    ├───┤ │  │
+q1: ┤ H ├─■──┼──■─
+    ├───┤    │  │
+q2: ┤ H ├─■──┼──■─
+    ├───┤ │  │
+q3: ┤ H ├─■──┼──■─
+    ├───┤    │  │
+q4: ┤ H ├────■──■─
+    └───┘
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>border_cond</strong> (<em>str</em><em>, </em><em>optional</em>) – Boundary condition is <cite>open</cite> or <cite>period</cite>.
+Defaults to “period”.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “cluster”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When given number of qubits is not even.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qurry.recipe.simple.paramagnet.TopologicalParamagnet.border_cond">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">border_cond</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'open'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'period'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.recipe.simple.paramagnet.TopologicalParamagnet.border_cond" title="Link to this definition">#</a></dt>
+<dd><p>The border condition.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.recipe.simple.paramagnet.TrivialParamagnet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.recipe.simple.paramagnet.</span></span><span class="sig-name descname"><span class="pre">TrivialParamagnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'trivial_paramagnet'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/recipe/simple/paramagnet.html#TrivialParamagnet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.recipe.simple.paramagnet.TrivialParamagnet" title="Link to this definition">#</a></dt>
+<dd><p>The product state circuit <a href="#id11"><span class="problematic" id="id12">:cls:`TrivialParamagnet`</span></a>.
+Introduce in <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808</a> .</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># At 8 qubits:
+    ┌───┐
+q0: ┤ H ├
+    ├───┤
+q1: ┤ H ├
+    ├───┤
+q2: ┤ H ├
+    ├───┤
+q3: ┤ H ├
+    ├───┤
+q4: ┤ H ├
+    ├───┤
+q5: ┤ H ├
+    ├───┤
+q6: ┤ H ├
+    ├───┤
+q7: ┤ H ├
+    └───┘
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[{|+\rangle}^{\otimes N}, N = 8\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_qubits</strong> (<em>int</em>) – Number of qubits.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of case. Defaults to “trivial_paramagnet”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="n_body.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../appendix/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Other Features</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat"><code class="docutils literal notranslate"><span class="pre">cat</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.cat.Cat"><code class="docutils literal notranslate"><span class="pre">Cat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.cat.GHZ"><code class="docutils literal notranslate"><span class="pre">GHZ</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-qurry.recipe.simple.intracell"><code class="docutils literal notranslate"><span class="pre">intracell</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.intracell.Intracell"><code class="docutils literal notranslate"><span class="pre">Intracell</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.intracell.Intracell.state"><code class="docutils literal notranslate"><span class="pre">Intracell.state</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.intracell.Singlet"><code class="docutils literal notranslate"><span class="pre">Singlet</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paramagnet"><code class="docutils literal notranslate"><span class="pre">paramagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.paramagnet.Cluster"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.paramagnet.TopologicalParamagnet"><code class="docutils literal notranslate"><span class="pre">TopologicalParamagnet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.paramagnet.TopologicalParamagnet.border_cond"><code class="docutils literal notranslate"><span class="pre">TopologicalParamagnet.border_cond</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.recipe.simple.paramagnet.TrivialParamagnet"><code class="docutils literal notranslate"><span class="pre">TrivialParamagnet</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/api/recipe/simple.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-03 12:28:51.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

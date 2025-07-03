@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="progressbar" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/api/tools/progressbar.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="Progress Bar for Qurrium ( qurry.tools.progressbar)" />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_tools_progressbar_8e607c8b.png" />
+<meta property="og:image:alt" content="Progress Bar for Qurrium ( qurry.tools.progressbar)" />
+<meta name="description" content="Progress Bar for Qurrium ( qurry.tools.progressbar)" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <title>progressbar &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/tools/progressbar';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="parallelmanager" href="parallelmanager.html" />
+    <link rel="prev" title="qiskit_version" href="qiskit_version.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Utilties</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Post-Processing Functions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process/hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../process/randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../process/classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process/classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Declare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../declare/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recipe</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recipe/n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/simple.html"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-qurry.tools.progressbar">
+<span id="progressbar"></span><h1><code class="docutils literal notranslate"><span class="pre">progressbar</span></code><a class="headerlink" href="#module-qurry.tools.progressbar" title="Link to this heading">#</a></h1>
+<p>Progress Bar for Qurrium (<a class="reference internal" href="#module-qurry.tools.progressbar" title="qurry.tools.progressbar"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.tools.progressbar</span></code></a>)</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.DEFAULT_BAR_FORMAT">
+<span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_BAR_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'qurry-barless':</span> <span class="pre">'|</span> <span class="pre">{n_fmt}/{total_fmt}</span> <span class="pre">-</span> <span class="pre">{desc}</span> <span class="pre">-</span> <span class="pre">{elapsed}</span> <span class="pre">&lt;</span> <span class="pre">{remaining}',</span> <span class="pre">'qurry-full':</span> <span class="pre">'|</span> <span class="pre">{n_fmt}/{total_fmt}</span> <span class="pre">{percentage:3.0f}%|{bar}|</span> <span class="pre">-</span> <span class="pre">{desc}</span> <span class="pre">-</span> <span class="pre">{elapsed}</span> <span class="pre">&lt;</span> <span class="pre">{remaining}',</span> <span class="pre">'simple':</span> <span class="pre">'|</span> <span class="pre">{desc}</span> <span class="pre">-</span> <span class="pre">{elapsed}</span> <span class="pre">&lt;</span> <span class="pre">{remaining}'}</span></em><a class="headerlink" href="#qurry.tools.progressbar.DEFAULT_BAR_FORMAT" title="Link to this definition">#</a></dt>
+<dd><p>Default bar format for progress bar.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>“simple”:</dt><dd><p>A simple format with description, elapsed time, and remaining time.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“qurry-full”:</dt><dd><p>A full format with count, percentage, bar, description, elapsed time, and remaining time.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“qurry-barless”:</dt><dd><p>A format without the bar, showing count, description, elapsed time, and remaining time.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.PROGRESSBAR_ASCII">
+<span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">PROGRESSBAR_ASCII</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'4squares':</span> <span class="pre">'</span> <span class="pre">▖▘▝▗▚▞█',</span> <span class="pre">'boolen-eq':</span> <span class="pre">'</span> <span class="pre">=',</span> <span class="pre">'braille':</span> <span class="pre">'</span> <span class="pre">⠏⠛⠹⠼⠶⠧⠿',</span> <span class="pre">'decimal':</span> <span class="pre">'</span> <span class="pre">123456789#',</span> <span class="pre">'standard':</span> <span class="pre">'</span> <span class="pre">▏▎▍▌▋▊▉█'}</span></em><a class="headerlink" href="#qurry.tools.progressbar.PROGRESSBAR_ASCII" title="Link to this definition">#</a></dt>
+<dd><p>Default ASCII characters for progress bar.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>“4squares”:</dt><dd><p>A 4-squares ASCII style.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“standard”:</dt><dd><p>A standard ASCII style with 8 segments.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“decimal”:</dt><dd><p>A decimal ASCII style with numbers 1-9 and a hash.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“braille”:</dt><dd><p>A braille ASCII style with 7 segments.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“boolen-eq”:</dt><dd><p>A boolean equal sign ASCII style with just an equal sign.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.default_setup">
+<span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">default_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bar_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'qurry-full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_ascii</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'4squares'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/tools/progressbar.html#default_setup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.tools.progressbar.default_setup" title="Link to this definition">#</a></dt>
+<dd><p>Get the default setup for progress bar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bar_format</strong> (<em>str</em><em>, </em><em>optional</em>) – The format of the bar. Defaults to ‘qurry-full’.</p></li>
+<li><p><strong>progressbar_ascii</strong> (<em>str</em><em>, </em><em>optional</em>) – The ascii of the bar. Defaults to ‘4squares’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The default setup for progress bar.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.qurry_progressbar">
+<span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">qurry_progressbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'qurry-full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_ascii</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'4squares'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.tools.progressbar.tqdm" title="qurry.tools.progressbar.tqdm"><span class="pre">tqdm</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/qurry/tools/progressbar.html#qurry_progressbar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.tools.progressbar.qurry_progressbar" title="Link to this definition">#</a></dt>
+<dd><p>A progress bar for Qurry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterable</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>T</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The iterable object. Defaults to None.</p></li>
+<li><p><strong>bar_format</strong> (<em>str</em><em>, </em><em>optional</em>) – The format of the bar. Defaults to ‘qurry-full’.</p></li>
+<li><p><strong>bar_ascii</strong> (<em>str</em><em>, </em><em>optional</em>) – The ascii of the bar. Defaults to ‘4squares’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The progress bar.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qurry.tools.progressbar.tqdm" title="qurry.tools.progressbar.tqdm">tqdm</a>[T]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.set_pbar_description">
+<span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">set_pbar_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../_modules/qurry/tools/progressbar.html#set_pbar_description"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.tools.progressbar.set_pbar_description" title="Link to this definition">#</a></dt>
+<dd><p>Set the description of the progress bar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em>) – The progress bar.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qurry.tools.progressbar.tqdm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.tools.progressbar.</span></span><span class="sig-name descname"><span class="pre">tqdm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">__</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/tools/progressbar.html#tqdm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.tools.progressbar.tqdm" title="Link to this definition">#</a></dt>
+<dd><p>A fake tqdm class for type hint.</p>
+<p>For tqdm not yet implemented their type hint by subscript like:
+&gt;&gt;&gt; some_tqdm: tqdm[int] = tqdm(range(10))</p>
+<p>So, we make a fake tqdm class to make it work.
+And it should be tracked by this issue: <a class="github reference external" href="https://github.com/tqdm/tqdm/issues/260">tqdm/tqdm#260</a>
+To avoid the conflict,
+you <strong>SHOULD NOT IMPORT</strong> this class and keep it only working
+for <a class="reference internal" href="#qurry.tools.progressbar.qurry_progressbar" title="qurry.tools.progressbar.qurry_progressbar"><code class="xref py py-func docutils literal notranslate"><span class="pre">qurry_progressbar()</span></code></a> as type hint.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="qiskit_version.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="parallelmanager.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.DEFAULT_BAR_FORMAT"><code class="docutils literal notranslate"><span class="pre">DEFAULT_BAR_FORMAT</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.PROGRESSBAR_ASCII"><code class="docutils literal notranslate"><span class="pre">PROGRESSBAR_ASCII</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.default_setup"><code class="docutils literal notranslate"><span class="pre">default_setup()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.qurry_progressbar"><code class="docutils literal notranslate"><span class="pre">qurry_progressbar()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.set_pbar_description"><code class="docutils literal notranslate"><span class="pre">set_pbar_description()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qurry.tools.progressbar.tqdm"><code class="docutils literal notranslate"><span class="pre">tqdm</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/api/tools/progressbar.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-03 12:28:51.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
