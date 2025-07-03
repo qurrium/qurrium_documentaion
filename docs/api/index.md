@@ -118,3 +118,15 @@ Core modules for Qurrium
 .. automodule:: qurry.qurrium
 :members:
 ``` -->
+
+### Exception
+
+Exception of Qurrium.
+
+```{toctree}
+:maxdepth: 1
+:caption: Exception
+
+exception
+
+```
