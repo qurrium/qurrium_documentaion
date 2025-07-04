@@ -78,10 +78,19 @@ recipe/simple
 
 Files writing, reading, and something interesting?
 
-<!-- ```{eval-rst}
-.. automodule:: qurry.capsule
-:members:
-``` -->
+```{toctree}
+:maxdepth: 1
+:caption: Capsule
+
+capsule/mori
+capsule/hoshi
+capsule/utils
+capsule/quick
+capsule/jsonablize
+capsule/exception
+capsule/index
+
+```
 
 ## Qurrent
 
@@ -119,7 +128,7 @@ Core modules for Qurrium
 :members:
 ``` -->
 
-### Exception
+## Exception
 
 Exception of Qurrium.
 
@@ -128,5 +137,15 @@ Exception of Qurrium.
 :caption: Exception
 
 exception
+
+```
+
+## Template of API
+
+```{toctree}
+:maxdepth: 1
+:caption: Template of API
+
+template
 
 ```
