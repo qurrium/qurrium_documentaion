@@ -4,7 +4,10 @@ This page contains all API reference for `Qurrium`.
 
 ## Process
 
-All Post-Processing functions.
+```{eval-rst}
+.. automodule:: qurry.process
+    :members:
+```
 
 ```{toctree}
 :maxdepth: 1
@@ -31,7 +34,10 @@ process/string_operator
 
 ## Declare
 
-Type hints for some complex data structures.
+```{eval-rst}
+.. automodule:: qurry.declare
+    :members:
+```
 
 ```{toctree}
 :maxdepth: 1
@@ -45,7 +51,10 @@ declare/transpile
 
 ## Tools
 
-Tools.
+```{eval-rst}
+.. automodule:: qurry.tools
+    :members:
+```
 
 ```{toctree}
 :maxdepth: 1
@@ -63,7 +72,10 @@ tools/backend
 
 ## Recipe
 
-Simple circuits case library.
+```{eval-rst}
+.. automodule:: qurry.recipe
+    :members:
+```
 
 ```{toctree}
 :maxdepth: 1
@@ -96,37 +108,46 @@ capsule/index
 
 Division for entangled entropy.
 
-<!-- ```{eval-rst}
+```{eval-rst}
 .. automodule:: qurry.qurrent
-:members:
-``` -->
+    :members:
+```
 
 ## Qurrech
 
 Division for wave fucnction overlap.
 
-<!-- ```{eval-rst}
+```{eval-rst}
 .. automodule:: qurry.qurrech
-:members:
-``` -->
+    :members:
+```
 
 ## Qurries
 
 Division for all other implementation.
 
-<!-- ```{eval-rst}
+```{eval-rst}
 .. automodule:: qurry.qurries
-:members:
-``` -->
+    :members:
+```
 
 ## Qurrium
 
 Core modules for Qurrium
 
-<!-- ```{eval-rst}
+```{eval-rst}
 .. automodule:: qurry.qurrium
-:members:
-``` -->
+    :members:
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Qurrium
+
+qurrium/qurrium
+qurrium/utils/index
+
+```
 
 ## Exception
 

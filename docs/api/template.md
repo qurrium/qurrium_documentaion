@@ -1,9 +1,4 @@
-# `simple`
-
-```{eval-rst}
-.. automodule:: qurry.recipe.simple
-    :members:
-```
+# `template`
 
 ```{eval-rst}
 
@@ -56,26 +51,3 @@
   Using the IBM Quantum Computer - Choo, Kenny and von Keyserlingk, Curt W. and
   Regnault, Nicolas and Neupert, Titus
   [doi:10.1103/PhysRevLett.121.086808](https://doi.org/10.1103/PhysRevLett.121.086808)
-
-## `cat`
-
-```{eval-rst}
-.. automodule:: qurry.recipe.simple.cat
-    :members:
-```
-
-## `intracell`
-
-```{eval-rst}
-.. automodule:: qurry.recipe.simple.intracell
-    :members:
-```
-
-## `paramagnet`
-
-The circuits :cls:`TrivialParamagnet` and :cls:`TopologicalParamagnet`.
-
-```{eval-rst}
-.. automodule:: qurry.recipe.simple.paramagnet
-    :members:
-```
