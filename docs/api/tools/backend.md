@@ -1,5 +1,10 @@
 # `backend`
 
+```{eval-rst}
+.. automodule:: qurry.tools.backend
+    :members:
+```
+
 ## `backend_manager`
 
 ```{eval-rst}

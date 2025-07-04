@@ -2,6 +2,11 @@
 
 Arguments for :meth:`run` of :cls:`Backend` from :mod:`qiskit.providers.backend`
 
+```{eval-rst}
+.. automodule:: qurry.declare.run
+    :members:
+```
+
 ## `base_run`
 
 ```{eval-rst}

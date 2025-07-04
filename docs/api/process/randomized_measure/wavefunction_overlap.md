@@ -1,5 +1,10 @@
 # `wavefunction_overlap`
 
+```{eval-rst}
+.. automodule:: qurry.process.randomized_measure.wavefunction_overlap
+    :members:
+```
+
 ## `wavefunction_overlap_2`
 
 ```{eval-rst}
