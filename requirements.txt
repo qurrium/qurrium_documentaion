@@ -14,7 +14,8 @@ sphinxcontrib-bibtex
 myst-nb
 myst-parser
 jupyter-book
-pydata-sphinx-theme
+# pydata-sphinx-theme
+sphinx-immaterial
 # basic requirements
 ipykernel
 matplotlib
