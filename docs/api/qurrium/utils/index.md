@@ -9,6 +9,12 @@
 :maxdepth: 2
 
 build
+construct
+iocontrol
+qasm
+chunk
 inputfixer
+randomized
+random_unitary
 
 ```

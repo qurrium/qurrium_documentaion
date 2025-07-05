@@ -1,6 +1,6 @@
 # API
 
-This page contains all API reference for `Qurrium`.
+This page contains all API reference for Qurrium.
 
 ## Process
 
@@ -113,6 +113,17 @@ Division for entangled entropy.
     :members:
 ```
 
+```{toctree}
+:maxdepth: 1
+:caption: Qurrent
+
+qurrent/hadamard_test
+qurrent/randomized_measure
+qurrent/randomized_measure_v1
+qurrent/classical_shadow
+
+```
+
 ## Qurrech
 
 Division for wave fucnction overlap.
@@ -122,6 +133,16 @@ Division for wave fucnction overlap.
     :members:
 ```
 
+```{toctree}
+:maxdepth: 1
+:caption: Qurrech
+
+qurrech/hadamard_test
+qurrech/randomized_measure
+qurrech/randomized_measure_v1
+
+```
+
 ## Qurries
 
 Division for all other implementation.
@@ -129,6 +150,20 @@ Division for all other implementation.
 ```{eval-rst}
 .. automodule:: qurry.qurries
     :members:
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Qurries
+
+qurries/magnet_square
+qurries/magnet_square_z
+qurries/string_operator
+qurries/samplingqurry
+qurries/wavesqurry
+qurries/position_distribution
+qurries/twisted_operator
+
 ```
 
 ## Qurrium
@@ -146,6 +181,10 @@ Core modules for Qurrium
 
 qurrium/qurrium
 qurrium/utils/index
+qurrium/analysis
+qurrium/experiment/index
+qurrium/multimanager/index
+qurrium/container/index
 
 ```
 
