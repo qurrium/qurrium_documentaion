@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrium.qurrium &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrium/qurrium';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurriu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrium.qurrium</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Qurrium (:mod:`qurry.qurrium.qurrium`)&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">abstractmethod</span><span class="p">,</span> <span class="n">ABC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Generic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.runner</span><span class="w"> </span><span class="kn">import</span> <span class="n">RemoteAccessor</span><span class="p">,</span> <span class="n">retrieve_counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">passmanager_processor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.container</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">WaveContainer</span><span class="p">,</span>
+    <span class="n">ExperimentContainer</span><span class="p">,</span>
+    <span class="n">MultiManagerContainer</span><span class="p">,</span>
+    <span class="n">PassManagerContainer</span><span class="p">,</span>
+    <span class="n">ExperimentContainerWrapper</span><span class="p">,</span>
+    <span class="n">_E</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.multimanager.multimanager</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">MultiManager</span><span class="p">,</span>
+    <span class="n">PendingTargetProviderLiteral</span><span class="p">,</span>
+    <span class="n">PendingStrategyLiteral</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">qurry_progressbar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..tools.backend</span><span class="w"> </span><span class="kn">import</span> <span class="n">GeneralSimulator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..tools.qiskit_version</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_version_v0_check</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..declare</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">RunArgsType</span><span class="p">,</span>
+    <span class="n">TranspileArgs</span><span class="p">,</span>
+    <span class="n">PassManagerType</span><span class="p">,</span>
+    <span class="n">ConfigListType</span><span class="p">,</span>
+    <span class="n">_MA</span><span class="p">,</span>
+    <span class="n">_OA</span><span class="p">,</span>
+    <span class="n">SpecificAnalsisArgs</span><span class="p">,</span>
+    <span class="n">_RA</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="QurriumPrototype">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">QurriumPrototype</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">_E</span><span class="p">,</span> <span class="n">_MA</span><span class="p">,</span> <span class="n">_OA</span><span class="p">,</span> <span class="n">_RA</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Qurrium</span>
+
+<span class="sd">    *~ Create countless adventure, legacy and tales. ~*</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__name__</span> <span class="o">=</span> <span class="s2">&quot;QurriumPrototype&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The name of Qurrium.&quot;&quot;&quot;</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;qurrium&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The short name of Qurrium.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Wave</span>
+<div class="viewcode-block" id="QurriumPrototype.add">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.add">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">wave</span><span class="p">:</span> <span class="n">QuantumCircuit</span><span class="p">,</span>
+        <span class="n">key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Hashable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">replace</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;duplicate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hashable</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add new wave function to measure.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wave (QuantumCircuit): The wave functions or circuits want to measure.</span>
+<span class="sd">            key (Optional[Hashable], optional):</span>
+<span class="sd">                Given a specific key to add to the wave function or circuit,</span>
+<span class="sd">                if `key == None`, then generate a number as key.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            replace (Literal[True, False, &amp;#39;duplicate&amp;#39;], optional):</span>
+<span class="sd">                If the key is already in the wave function or circuit,</span>
+<span class="sd">                then replace the old wave function or circuit when `True`,</span>
+<span class="sd">                or duplicate the wave function or circuit when `&#39;duplicate&#39;`.</span>
+<span class="sd">                Defaults to `True`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optional[Hashable]: Key of given wave function in `.waves`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">wave</span><span class="o">=</span><span class="n">wave</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.remove">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.remove">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">Hashable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove wave function from `.waves`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wave (Hashable): The key of wave in `.waves`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.has">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.has">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">has</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wavename</span><span class="p">:</span> <span class="n">Hashable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Is there a wave with specific name.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wavename (Hashable): Name of wave which is used in `.waves`</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Exist or not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">wavename</span><span class="p">)</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">experiment_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">_E</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The instance of experiment.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;The experiment is not defined.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="p">:</span> <span class="n">WaveContainer</span> <span class="o">=</span> <span class="n">WaveContainer</span><span class="p">()</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The wave functions container.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">orphan_exps</span><span class="p">:</span> <span class="n">ExperimentContainer</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">ExperimentContainer</span><span class="p">()</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The orphan experiments container.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">:</span> <span class="n">MultiManagerContainer</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">MultiManagerContainer</span><span class="p">()</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The last multimanager be called.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RemoteAccessor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The accessor of extra backend.</span>
+<span class="sd">        It will be None if no extra backend is loaded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span><span class="p">:</span> <span class="n">PassManagerContainer</span> <span class="o">=</span> <span class="n">PassManagerContainer</span><span class="p">()</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The collection of pass managers.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">:</span> <span class="n">ExperimentContainerWrapper</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">ExperimentContainerWrapper</span><span class="p">(</span>
+            <span class="n">orphan_exps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">orphan_exps</span><span class="p">,</span>
+            <span class="n">multimanagers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">,</span>
+        <span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The wrapper of experiments container from orphan_exps and multimanagers.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;__post_init__&quot;</span><span class="p">):</span>
+            <span class="c1"># Call the __post_init__ method if it exists</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;__post_init__&quot;</span><span class="p">)()</span>
+
+        <span class="n">qiskit_version_v0_check</span><span class="p">()</span>
+
+<div class="viewcode-block" id="QurriumPrototype.build">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.build">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">circuits</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]],</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">passmanager</span><span class="p">:</span> <span class="n">PassManagerType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">qasm_version</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;qasm2&quot;</span><span class="p">,</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            circuits (list[Union[QuantumCircuit, Hashable]]):</span>
+<span class="sd">                The circuits or keys of circuits in `.waves`.</span>
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Backend, optional):</span>
+<span class="sd">                The quantum backend. Defaults to AerSimulator().</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                The name of the experiment.</span>
+<span class="sd">                Naming this experiment to recognize it</span>
+<span class="sd">                when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;experiment&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            passmanager (PassManagerType, optional):</span>
+<span class="sd">                The passmanager. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Given the experiment multiple tags to make a dictionary for recongnizing it.</span>
+
+<span class="sd">            qasm_version (Literal[&quot;qasm2&quot;, &quot;qasm3&quot;], optional):</span>
+<span class="sd">                The export version of OpenQASM. Defaults to &#39;qasm3&#39;.</span>
+<span class="sd">            export (bool, optional):</span>
+<span class="sd">                Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            custom_and_main_kwargs (Any):</span>
+<span class="sd">                Other custom arguments.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ExperimentPrototype: The experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">passmanager_pair</span> <span class="o">=</span> <span class="n">passmanager_processor</span><span class="p">(</span>
+            <span class="n">passmanager</span><span class="o">=</span><span class="n">passmanager</span><span class="p">,</span> <span class="n">passmanager_container</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span>
+        <span class="p">)</span>
+        <span class="n">targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">circuits</span><span class="p">)</span>
+
+        <span class="n">new_exps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_instance</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
+            <span class="n">targets</span><span class="o">=</span><span class="n">targets</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="n">exp_name</span><span class="p">,</span>
+            <span class="n">run_args</span><span class="o">=</span><span class="n">run_args</span><span class="p">,</span>
+            <span class="n">transpile_args</span><span class="o">=</span><span class="n">transpile_args</span><span class="p">,</span>
+            <span class="n">passmanager_pair</span><span class="o">=</span><span class="n">passmanager_pair</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="c1"># process tool</span>
+            <span class="n">qasm_version</span><span class="o">=</span><span class="n">qasm_version</span><span class="p">,</span>
+            <span class="n">export</span><span class="o">=</span><span class="n">export</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">orphan_exps</span><span class="p">[</span><span class="n">new_exps</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_exps</span>
+        <span class="k">return</span> <span class="n">new_exps</span><span class="o">.</span><span class="n">exp_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.output">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.output">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">output</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="c1"># create new exp</span>
+        <span class="n">circuits</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">passmanager</span><span class="p">:</span> <span class="n">PassManagerType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># already built exp</span>
+        <span class="n">exp_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">qasm_version</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;qasm2&quot;</span><span class="p">,</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Output the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            circuits (Optional[list[Union[QuantumCircuit, Hashable]]], optional):</span>
+<span class="sd">                The circuits or keys of circuits in `.waves`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Optional[Backend], optional):</span>
+<span class="sd">                The quantum backend. Defaults to None.</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                Naming this experiment to recognize it</span>
+<span class="sd">                when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;experiment&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            passmanager (PassManagerType, optional):</span>
+<span class="sd">                The passmanager. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Given the experiment multiple tags to make a dictionary for recongnizing it.</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">            exp_id (Optional[str], optional):</span>
+<span class="sd">                The ID of experiment. Defaults to None.</span>
+
+<span class="sd">            qasm_version (Literal[&quot;qasm2&quot;, &quot;qasm3&quot;], optional):</span>
+<span class="sd">                The export version of OpenQASM. Defaults to &#39;qasm3&#39;.</span>
+<span class="sd">            export (bool, optional):</span>
+<span class="sd">                Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            custom_and_main_kwargs (Any):</span>
+<span class="sd">                Other custom arguments.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The experiment ID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">exp_id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">circuits</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No circuits or exp_id given.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">exp_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">circuits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Both circuits and exp_id are given.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">exp_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">circuits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="p">),</span> <span class="s2">&quot;No circuits given, but it should be given for passing check.&quot;</span>
+            <span class="n">exp_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
+                <span class="n">circuits</span><span class="o">=</span><span class="n">circuits</span><span class="p">,</span>
+                <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+                <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+                <span class="n">exp_name</span><span class="o">=</span><span class="n">exp_name</span><span class="p">,</span>
+                <span class="n">run_args</span><span class="o">=</span><span class="n">run_args</span><span class="p">,</span>
+                <span class="n">transpile_args</span><span class="o">=</span><span class="n">transpile_args</span><span class="p">,</span>
+                <span class="n">passmanager</span><span class="o">=</span><span class="n">passmanager</span><span class="p">,</span>
+                <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+                <span class="c1"># process tool</span>
+                <span class="n">qasm_version</span><span class="o">=</span><span class="n">qasm_version</span><span class="p">,</span>
+                <span class="n">export</span><span class="o">=</span><span class="n">export</span><span class="p">,</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+                <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="n">runned_exp_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">orphan_exps</span><span class="p">[</span><span class="n">exp_id</span><span class="p">]</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">)</span>
+
+        <span class="n">resulted_exp_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">orphan_exps</span><span class="p">[</span><span class="n">runned_exp_id</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="p">(</span>
+            <span class="n">export</span><span class="o">=</span><span class="n">export</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">resulted_exp_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.measure_to_output">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.measure_to_output">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measure_to_output</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_OA</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Trasnform :meth:`measure` arguments form into :meth:`output` form.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;The method is not defined.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.measure">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.measure">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measure</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Execute the experiment.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;The method is not defined.&quot;</span><span class="p">)</span></div>
+
+
+    <span class="c1"># pylint: disable=invalid-name</span>
+<div class="viewcode-block" id="QurriumPrototype.multiBuild">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiBuild">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiBuild</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">config_list</span><span class="p">:</span> <span class="n">ConfigListType</span><span class="p">[</span><span class="n">_MA</span><span class="p">],</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Backend</span> <span class="o">=</span> <span class="n">GeneralSimulator</span><span class="p">(),</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">jobstype</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;local&quot;</span><span class="p">],</span> <span class="n">PendingTargetProviderLiteral</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;local&quot;</span><span class="p">,</span>
+        <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span> <span class="o">=</span> <span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+        <span class="n">skip_build_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">multiprocess_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build the multimanager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config_list (ConfigListType[_BA]):</span>
+<span class="sd">                The list of default configurations of multiple experiment.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                When `None`, it will be set to their coresponding :attr:`short_name`.</span>
+<span class="sd">            summoner_id (Optional[str], optional):</span>
+<span class="sd">                Id for multimanager. Defaults to None.</span>
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Backend, optional):</span>
+<span class="sd">                The backend to run. Defaults to GeneralSimulator().</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Tags of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            manager_run_args (Optional[Union[BaseRunArgs, dict[str, Any]]], optional):</span>
+<span class="sd">                The extra arguments for running the job, but for all experiments</span>
+<span class="sd">                in the :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`</span>
+<span class="sd">                for :meth:`~qiskit.providers.backend.BackendV2.run`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            jobstype (Union[Literal[&#39;local&#39;], PendingTargetProviderLiteral], optional):</span>
+<span class="sd">                Type of jobs to run multiple experiments.</span>
+<span class="sd">                jobstype: &quot;local&quot;, &quot;IBMQ&quot;, &quot;IBM&quot;, &quot;AWS_Bracket&quot;, &quot;Azure_Q&quot;</span>
+<span class="sd">                Defaults to &quot;local&quot;.</span>
+<span class="sd">            pending_strategy (PendingStrategyLiteral, optional):</span>
+<span class="sd">                Type of pending strategy.</span>
+<span class="sd">                pendingStrategy: &quot;default&quot;, &quot;onetime&quot;, &quot;each&quot;, &quot;tags&quot;</span>
+<span class="sd">                Defaults to &quot;tags&quot;.</span>
+<span class="sd">            skip_build_write (bool, optional):</span>
+<span class="sd">                Whether to skip the file writing during the building. Defaults to True.</span>
+<span class="sd">            multiprocess_build (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for building. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for writing. Defaults to True.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">summoner_id</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s2">&quot;summoner_id should be string here.&quot;</span>
+            <span class="k">return</span> <span class="n">summoner_id</span>
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unknow summoner_id in multimanagers.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">summoner_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">summoner_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">short_name</span>
+
+        <span class="n">ready_config_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">raw_config</span> <span class="ow">in</span> <span class="n">config_list</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to_output</span><span class="p">(</span><span class="o">**</span><span class="n">raw_config</span><span class="p">)</span>
+            <span class="n">circuits</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;circuits&quot;</span><span class="p">]</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;circuits&quot;</span><span class="p">)</span>
+            <span class="c1"># circuits = config.pop(&quot;circuits&quot;) # which can not keep type</span>
+            <span class="n">config_targets</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">circuits</span><span class="p">),</span>
+                <span class="s2">&quot;passmanager_pair&quot;</span><span class="p">:</span> <span class="n">passmanager_processor</span><span class="p">(</span>
+                    <span class="n">passmanager</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;passmanager&quot;</span><span class="p">),</span> <span class="n">passmanager_container</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span>
+                <span class="p">),</span>
+            <span class="p">}</span>
+            <span class="n">config_targets</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+            <span class="n">ready_config_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">config_targets</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| MultiManager building...&quot;</span><span class="p">)</span>
+        <span class="n">current_multimanager</span><span class="p">:</span> <span class="n">MultiManager</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">MultiManager</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
+            <span class="n">config_list</span><span class="o">=</span><span class="n">ready_config_list</span><span class="p">,</span>
+            <span class="n">experiment_instance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_instance</span><span class="p">,</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="n">manager_run_args</span><span class="o">=</span><span class="n">manager_run_args</span><span class="p">,</span>
+            <span class="n">jobstype</span><span class="o">=</span><span class="n">jobstype</span><span class="p">,</span>
+            <span class="n">pending_strategy</span><span class="o">=</span><span class="n">pending_strategy</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">skip_writing</span><span class="o">=</span><span class="n">skip_build_write</span><span class="p">,</span>
+            <span class="n">multiprocess_build</span><span class="o">=</span><span class="n">multiprocess_build</span><span class="p">,</span>
+            <span class="n">multiprocess_write</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">pending_pool</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuits_map</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">job_id</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_multimanager</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiOutput">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiOutput">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiOutput</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">config_list</span><span class="p">:</span> <span class="n">ConfigListType</span><span class="p">[</span><span class="n">_MA</span><span class="p">],</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Backend</span> <span class="o">=</span> <span class="n">GeneralSimulator</span><span class="p">(),</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">skip_build_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">skip_output_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Output the multiple experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config_list (ConfigListType[_BA]):</span>
+<span class="sd">                The list of default configurations of multiple experiment.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name for multimanager. Defaults to None.</span>
+<span class="sd">                When `None`, it will be set to their coresponding :attr:`short_name`.</span>
+<span class="sd">            summoner_id (Optional[str], optional):</span>
+<span class="sd">                Id for multimanager. Defaults to None.</span>
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Backend, optional):</span>
+<span class="sd">                The backend to run. Defaults to GeneralSimulator().</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Tags of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            manager_run_args (Optional[Union[BaseRunArgs, dict[str, Any]]], optional):</span>
+<span class="sd">                The extra arguments for running the job, but for all experiments</span>
+<span class="sd">                in the :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`</span>
+<span class="sd">                for :meth:`~qiskit.providers.backend.BackendV2.run`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            skip_build_write (bool, optional):</span>
+<span class="sd">                Whether to skip the file writing during the building. Defaults to True.</span>
+<span class="sd">            skip_output_write (bool, optional):</span>
+<span class="sd">                Whether to skip the file writing during the output. Defaults to False.</span>
+<span class="sd">            multiprocess_build (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for building. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for writing. Defaults to True.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="p">()</span>
+
+        <span class="n">besummonned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiBuild</span><span class="p">(</span>
+            <span class="n">config_list</span><span class="o">=</span><span class="n">config_list</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="n">manager_run_args</span><span class="o">=</span><span class="n">manager_run_args</span><span class="p">,</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">jobstype</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+            <span class="n">pending_strategy</span><span class="o">=</span><span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+            <span class="n">skip_build_write</span><span class="o">=</span><span class="n">skip_build_write</span><span class="p">,</span>
+            <span class="n">multiprocess_build</span><span class="o">=</span><span class="n">multiprocess_build</span><span class="p">,</span>
+            <span class="n">multiprocess_write</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">besummonned</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span> <span class="o">==</span> <span class="n">besummonned</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| MultiOutput running...&quot;</span><span class="p">)</span>
+        <span class="n">circ_serial</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">experiment_progress</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">exps</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+        <span class="n">is_call_auto_multianalysis</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">exp_id</span><span class="p">,</span> <span class="n">exp_instance</span> <span class="ow">in</span> <span class="n">experiment_progress</span><span class="p">:</span>
+            <span class="n">experiment_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="s2">&quot;Experiments running...&quot;</span><span class="p">)</span>
+
+            <span class="n">current_id</span> <span class="o">=</span> <span class="n">exp_instance</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">pbar</span><span class="o">=</span><span class="n">experiment_progress</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">current_id</span> <span class="o">==</span> <span class="n">exp_id</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;exps_id output: </span><span class="si">{</span><span class="n">current_id</span><span class="si">}</span><span class="s2"> != exp_id: </span><span class="si">{</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+            <span class="n">current_id</span> <span class="o">=</span> <span class="n">exp_instance</span><span class="o">.</span><span class="n">result</span><span class="p">(</span>
+                <span class="n">export</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">assert</span> <span class="n">current_id</span> <span class="o">==</span> <span class="n">exp_id</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;exps_id output: </span><span class="si">{</span><span class="n">current_id</span><span class="si">}</span><span class="s2"> != exp_id: </span><span class="si">{</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">is_call_auto_multianalysis</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">exp_instance</span><span class="o">.</span><span class="n">is_auto_analysis</span> <span class="ow">and</span> <span class="n">exp_instance</span><span class="o">.</span><span class="n">is_hold_by_multimanager</span>
+            <span class="p">)</span>
+
+            <span class="n">circ_serial_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">circ_serial</span><span class="p">)</span>
+            <span class="n">tmp_circ_serial</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">idx</span> <span class="o">+</span> <span class="n">circ_serial_len</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">exp_instance</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="n">circ_serial</span> <span class="o">+=</span> <span class="n">tmp_circ_serial</span>
+
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">pending_pool</span><span class="p">[</span><span class="n">exp_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_circ_serial</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuits_map</span><span class="p">[</span><span class="n">exp_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_circ_serial</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">job_id</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">exp_id</span><span class="p">,</span> <span class="s2">&quot;local&quot;</span><span class="p">))</span>
+        <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_serial</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_call_auto_multianalysis</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Auto analysis is called, running analysis...&quot;</span><span class="p">)</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">analysis_name</span><span class="o">=</span><span class="s2">&quot;auto_report&quot;</span><span class="p">,</span> <span class="n">no_serialize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_output_write</span><span class="p">:</span>
+            <span class="n">bewritten</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiWrite</span><span class="p">(</span><span class="n">besummonned</span><span class="p">,</span> <span class="n">multiprocess_write</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">bewritten</span> <span class="o">==</span> <span class="n">besummonned</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiPending">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiPending">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiPending</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">config_list</span><span class="p">:</span> <span class="n">ConfigListType</span><span class="p">[</span><span class="n">_MA</span><span class="p">],</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Backend</span> <span class="o">=</span> <span class="n">GeneralSimulator</span><span class="p">(),</span>
+        <span class="n">provider</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">jobstype</span><span class="p">:</span> <span class="n">PendingTargetProviderLiteral</span> <span class="o">=</span> <span class="s2">&quot;IBM&quot;</span><span class="p">,</span>
+        <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span> <span class="o">=</span> <span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pending the multiple experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config_list (ConfigListType[_BA]):</span>
+<span class="sd">                The list of default configurations of multiple experiment.</span>
+<span class="sd">            summoner_name (str, optional):</span>
+<span class="sd">                Name for multimanager. Defaults to their coresponding :attr:`short_name`.</span>
+<span class="sd">            summoner_id (Optional[str], optional):</span>
+<span class="sd">                Id for multimanager. Defaults to None.</span>
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Backend, optional):</span>
+<span class="sd">                The quantum backend. Defaults to GeneralSimulator().</span>
+<span class="sd">            provider (Optional[Any], optional):</span>
+<span class="sd">                The provider. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Tags of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            manager_run_args (Optional[Union[BaseRunArgs, dict[str, Any]]], optional):</span>
+<span class="sd">                The extra arguments for running the job, but for all experiments</span>
+<span class="sd">                in the :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`</span>
+<span class="sd">                for :meth:`~qiskit.providers.backend.BackendV2.run`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            jobstype (PendingTargetProviderLiteral, optional):</span>
+<span class="sd">                Type of jobs to run multiple experiments.</span>
+<span class="sd">                jobstype: &quot;local&quot;, &quot;IBMQ&quot;, &quot;IBM&quot;, &quot;AWS_Bracket&quot;, &quot;Azure_Q&quot;</span>
+<span class="sd">                Defaults to &quot;IBM&quot;.</span>
+<span class="sd">            pending_strategy (PendingStrategyLiteral, optional):</span>
+<span class="sd">                Type of pending strategy.</span>
+<span class="sd">                pendingStrategy: &quot;default&quot;, &quot;onetime&quot;, &quot;each&quot;, &quot;tags&quot;</span>
+<span class="sd">                Defaults to &quot;tags&quot;.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">besummonned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiBuild</span><span class="p">(</span>
+            <span class="n">config_list</span><span class="o">=</span><span class="n">config_list</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="n">manager_run_args</span><span class="o">=</span><span class="n">manager_run_args</span><span class="p">,</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">jobstype</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+            <span class="n">pending_strategy</span><span class="o">=</span><span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+            <span class="n">skip_build_write</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">besummonned</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span> <span class="o">==</span> <span class="n">besummonned</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| MultiPending running...&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span> <span class="o">=</span> <span class="n">RemoteAccessor</span><span class="p">(</span>
+            <span class="n">multimanager</span><span class="o">=</span><span class="n">current_multimanager</span><span class="p">,</span>
+            <span class="n">experiment_container</span><span class="o">=</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">exps</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">backend_type</span><span class="o">=</span><span class="n">jobstype</span><span class="p">,</span>
+            <span class="n">provider</span><span class="o">=</span><span class="n">provider</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="o">.</span><span class="n">pending</span><span class="p">(</span>
+            <span class="n">pending_strategy</span><span class="o">=</span><span class="n">pending_strategy</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">bewritten</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiWrite</span><span class="p">(</span><span class="n">besummonned</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">bewritten</span> <span class="o">==</span> <span class="n">besummonned</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiAnalysis">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiAnalysis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiAnalysis</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">analysis_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;report&quot;</span><span class="p">,</span>
+        <span class="n">no_serialize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">specific_analysis_args</span><span class="p">:</span> <span class="n">SpecificAnalsisArgs</span><span class="p">[</span><span class="n">_RA</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">skip_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">analysis_args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the analysis for multiple experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            summoner_id (str): The summoner_id of multimanager.</span>
+<span class="sd">            analysis_name (str, optional):</span>
+<span class="sd">                The name of analysis. Defaults to &#39;report&#39;.</span>
+<span class="sd">            no_serialize (bool, optional):</span>
+<span class="sd">                Whether to serialize the analysis. Defaults to False.</span>
+<span class="sd">            specific_analysis_args(SpecificAnalsisArgs[_RA, optional):</span>
+<span class="sd">                The specific arguments for analysis. Defaults to None.</span>
+<span class="sd">            skip_write (bool, optional):</span>
+<span class="sd">                Whether to skip the file writing during the analysis. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for writing. Defaults to False.</span>
+<span class="sd">            analysis_args (Any, optional):</span>
+<span class="sd">                Other arguments for analysis.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">specific_analysis_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">specific_analysis_args</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">:</span>
+            <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">summoner_id</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No such summoner_id in multimanagers.&quot;</span><span class="p">)</span>
+
+        <span class="n">report_name</span> <span class="o">=</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span>
+            <span class="n">analysis_name</span><span class="o">=</span><span class="n">analysis_name</span><span class="p">,</span>
+            <span class="n">no_serialize</span><span class="o">=</span><span class="n">no_serialize</span><span class="p">,</span>
+            <span class="n">specific_analysis_args</span><span class="o">=</span><span class="n">specific_analysis_args</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">analysis_args</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;| &quot;</span><span class="si">{</span><span class="n">report_name</span><span class="si">}</span><span class="s1">&quot; has been completed.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_write</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">multiWrite</span><span class="p">(</span><span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span> <span class="n">multiprocess_write</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiWrite">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiWrite">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiWrite</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">compress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">compress_overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">remain_only_compressed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">export_transpiled_circuit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_before_and_after</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_exps</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_quantities</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Write the multimanager to the file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            summoner_id (str): The summoner_id of multimanager.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            compress (bool, optional):</span>
+<span class="sd">                Whether to compress the export file.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            compress_overwrite (bool, optional):</span>
+<span class="sd">                Whether to overwrite the compressed file.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            remain_only_compressed (bool, optional):</span>
+<span class="sd">                Whether to remain only compressed file.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            export_transpiled_circuit (bool, optional):</span>
+<span class="sd">                Whether to export the transpiled circuit.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            skip_before_and_after (bool, optional):</span>
+<span class="sd">                Skip the beforewards and afterwards. Defaults to False.</span>
+<span class="sd">            skip_exps (bool, optional):</span>
+<span class="sd">                Skip the experiments. Defaults to False.</span>
+<span class="sd">            skip_quantities (bool, optional):</span>
+<span class="sd">                Skip the quantities container. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether to use multiprocess to write the file. Defaults to True.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: summoner_id not in multimanagers.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No such summoner_id in multimanagers.&quot;</span><span class="p">,</span> <span class="n">summoner_id</span><span class="p">)</span>
+
+        <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">summoner_id</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span> <span class="o">==</span> <span class="n">summoner_id</span>
+
+        <span class="n">current_multimanager</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">export_transpiled_circuit</span><span class="o">=</span><span class="n">export_transpiled_circuit</span><span class="p">,</span>
+            <span class="n">skip_before_and_after</span><span class="o">=</span><span class="n">skip_before_and_after</span><span class="p">,</span>
+            <span class="n">skip_exps</span><span class="o">=</span><span class="n">skip_exps</span><span class="p">,</span>
+            <span class="n">skip_quantities</span><span class="o">=</span><span class="n">skip_quantities</span><span class="p">,</span>
+            <span class="n">multiprocess</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">compress</span><span class="p">:</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span>
+                <span class="n">compress_overwrite</span><span class="o">=</span><span class="n">compress_overwrite</span><span class="p">,</span>
+                <span class="n">remain_only_compressed</span><span class="o">=</span><span class="n">remain_only_compressed</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">compress_overwrite</span> <span class="ow">or</span> <span class="n">remain_only_compressed</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;&#39;compressOverwrite&#39; or &#39;remainOnlyCompressed&#39; is set to True, &quot;</span>
+                    <span class="o">+</span> <span class="s2">&quot;but &#39;compress&#39; is False.&quot;</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiRead">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiRead">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiRead</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">reload</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">read_from_tarfile</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the multimanager from the file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            summoner_name (str): Name for multimanager.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            reload (bool, optional):</span>
+<span class="sd">                Whether to reload the multimanager.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            read_from_tarfile (bool, optional):</span>
+<span class="sd">                Whether to read from the tarfile.</span>
+<span class="sd">                Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">filtered_summoner_id_names</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">summoner_name</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_summoner_id_names</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">filtered_summoner_id_names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">reload</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="s2">&quot;| Found existed multimanager: &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">filtered_summoner_id_names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">filtered_summoner_id_names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="n">filtered_summoner_id_names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| MultiRead reloading...&quot;</span><span class="p">)</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">filtered_summoner_id_names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_summoner_id_names</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Multiple multimanager found for &#39;</span><span class="si">{</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">filtered_summoner_id_names</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">current_multimanager</span><span class="p">:</span> <span class="n">MultiManager</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">MultiManager</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">experiment_instance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_instance</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">is_read_or_retrieve</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">read_from_tarfile</span><span class="o">=</span><span class="n">read_from_tarfile</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_multimanager</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+<div class="viewcode-block" id="QurriumPrototype.multiRetrieve">
+<a class="viewcode-back" href="../../../api/qurrium/qurrium.html#qurry.qurrium.qurrium.QurriumPrototype.multiRetrieve">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiRetrieve</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">provider</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">refresh</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">reload</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">read_from_tarfile</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve the multiple experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name for multimanager. Defaults to None.</span>
+<span class="sd">            summoner_id (Optional[str], optional):</span>
+<span class="sd">                Id for multimanager. Defaults to None.</span>
+<span class="sd">            backend (Optional[Backend], optional):</span>
+<span class="sd">                The quantum backend. Defaults to None.</span>
+<span class="sd">            provider (Optional[Any], optional):</span>
+<span class="sd">                The provider. Defaults to None.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then cancelled the file to be exported.</span>
+<span class="sd">                Defaults to Path(&#39;./&#39;).</span>
+<span class="sd">            refresh (bool, optional):</span>
+<span class="sd">                Whether to refresh the retrieve. Defaults to False.</span>
+<span class="sd">            overwrite (bool, optional):</span>
+<span class="sd">                Whether to overwrite the retrieve. Defaults to False.</span>
+<span class="sd">            reload (bool, optional):</span>
+<span class="sd">                Whether to reload the multimanager. Defaults to False.</span>
+<span class="sd">            read_from_tarfile (bool, optional):</span>
+<span class="sd">                Whether to read from the tarfile. Defaults to False.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: No summoner_name or summoner_id given.</span>
+<span class="sd">            ValueError: Both summoner_name and summoner_id are given.</span>
+<span class="sd">            ValueError: No such summoner_id in multimanagers.</span>
+<span class="sd">            TypeError: summoner_name or summoner_id is not str.</span>
+<span class="sd">            ValueError: No backend or provider given.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">summoner_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">summoner_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No summoner_name or summoner_id given.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">summoner_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Both summoner_name and summoner_id are given.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">summoner_id</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">summoner_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">:</span>
+                <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">summoner_id</span><span class="p">]</span>
+                <span class="n">besummonned</span> <span class="o">=</span> <span class="n">summoner_id</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No such summoner_id in multimanagers.&quot;</span><span class="p">,</span> <span class="n">summoner_id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">summoner_name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">besummonned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiRead</span><span class="p">(</span>
+                <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+                <span class="n">reload</span><span class="o">=</span><span class="n">reload</span><span class="p">,</span>
+                <span class="n">read_from_tarfile</span><span class="o">=</span><span class="n">read_from_tarfile</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">[</span><span class="n">besummonned</span><span class="p">]</span>
+            <span class="k">assert</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_id</span> <span class="o">==</span> <span class="n">besummonned</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;summoner_name: </span><span class="si">{</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2"> with type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">summoner_name</span><span class="p">)</span><span class="si">}</span><span class="s2"> or &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;summoner_id: </span><span class="si">{</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2"> with type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">summoner_id</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not str.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| MultiRetrieve running...&quot;</span><span class="p">)</span>
+        <span class="n">jobs_type</span> <span class="o">=</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">provider</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No backend or provider given.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span> <span class="o">=</span> <span class="n">RemoteAccessor</span><span class="p">(</span>
+            <span class="n">multimanager</span><span class="o">=</span><span class="n">current_multimanager</span><span class="p">,</span>
+            <span class="n">experiment_container</span><span class="o">=</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">exps</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">provider</span><span class="o">=</span><span class="n">provider</span><span class="p">,</span>
+            <span class="n">backend_type</span><span class="o">=</span><span class="n">jobs_type</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">jobs_type</span> <span class="o">==</span> <span class="s2">&quot;IBMQ&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+                <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">,</span>
+                <span class="n">refresh</span><span class="o">=</span><span class="n">refresh</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">jobs_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;IBM&quot;</span><span class="p">,</span> <span class="s2">&quot;IBMRuntime&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Jobstype of &#39;</span><span class="si">{</span><span class="n">besummonned</span><span class="si">}</span><span class="s2">&#39; is &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s2"> which is not supported.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">besummonned</span>
+
+        <span class="n">retrieve_times</span> <span class="o">=</span> <span class="n">retrieve_counter</span><span class="p">(</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">retrieve_times</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">overwrite</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Retrieve </span><span class="si">{</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2"> overwrite.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Retrieve skip for </span><span class="si">{</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2"> existed.&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">besummonned</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Retrieve </span><span class="si">{</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2"> completed.&quot;</span><span class="p">)</span>
+        <span class="n">bewritten</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiWrite</span><span class="p">(</span><span class="n">besummonned</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">bewritten</span> <span class="o">==</span> <span class="n">besummonned</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;waves=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">_repr_oneline</span><span class="p">()</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;exps=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="o">.</span><span class="n">_repr_oneline</span><span class="p">()</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;multimanagers_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;accessor=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;passmanagers_len=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_pretty_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">cycle</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="n">len_multimanagers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="p">)</span>
+        <span class="n">len_passmanagers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cycle</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(...)&gt;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span><span class="p">,</span> <span class="s2">&quot;)&gt;&quot;</span><span class="p">):</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;waves=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">waves</span><span class="o">.</span><span class="n">_repr_oneline</span><span class="p">()</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exps=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="o">.</span><span class="n">_repr_oneline</span><span class="p">()</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">(</span>
+                    <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;multimanagers=MultiManagers({&quot;</span><span class="p">,</span> <span class="s2">&quot;}&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;, num=</span><span class="si">{</span><span class="n">len_multimanagers</span><span class="si">}</span><span class="s2">), &quot;</span>
+                <span class="p">):</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multimanagers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+                        <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                        <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">v</span><span class="o">.</span><span class="n">_repr_oneline_no_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">len_multimanagers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;accessor=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">accessor</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;passmanagers=PassManagers({&quot;</span><span class="p">,</span> <span class="s2">&quot;}&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;, num=</span><span class="si">{</span><span class="n">len_passmanagers</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">passmanagers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+                        <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                        <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">len_passmanagers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">break_</span><span class="p">()</span></div>
+
+        <span class="c1"># pylint: enable=protected-access</span>
+
+
+<span class="c1"># pylint: enable=invalid-name</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

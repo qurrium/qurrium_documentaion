@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -464,10 +464,7 @@ document.write(`
                 <article class="bd-article">
                   
   <h1>Source code for qurry.declare.qurrium</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;Declaration - Arguments (:mod:`qurry.declare.qurrium`)</span>
-
-<span class="sd">Arguments for :meth:`output` from :cls:`QurriumPrototype`</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">&quot;&quot;&quot;Declaration - Arguments (:mod:`qurry.declare.qurrium`)&quot;&quot;&quot;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">TypedDict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">TypeVar</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
@@ -483,13 +480,16 @@ document.write(`
 
 
 <span class="n">PassManagerType</span> <span class="o">=</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">]]]</span>
-<span class="sd">&quot;&quot;&quot;The type hint for passmanager argument in :meth:`output` from :cls:`QurriumPrototype`.&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;The type hint for passmanager argument in </span>
+<span class="sd">:meth:`~qurry.qurrium.qurrium.QurriumPrototype.output`.&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="BasicArgs">
 <a class="viewcode-back" href="../../../api/declare/qurrium.html#qurry.declare.qurrium.BasicArgs">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BasicArgs</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic output arguments for :meth:`output`.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic input fields for</span>
+<span class="sd">    :meth:`~qurry.qurrium.qurrium.QurriumPrototype.measure`</span>
+<span class="sd">    and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiOutput`.&quot;&quot;&quot;</span>
 
     <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span>
@@ -512,26 +512,34 @@ document.write(`
 
 
 <span class="n">_MA</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_MA&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">BasicArgs</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;The type var of :class:`BasicArgs` for</span>
+<span class="sd">:meth:`~qurry.qurrium.qurrium.QurriumPrototype.measure`</span>
+<span class="sd">and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiOutput&quot;&quot;&quot;</span>
+
 <span class="n">ConfigListType</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="nb">list</span><span class="p">[</span><span class="n">_MA</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">_MA</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]]</span>
-<span class="sd">&quot;&quot;&quot;The type hint for :cls:`MultiManager` and </span>
-<span class="sd">:meth:`multiBulid`, :meth:`multiOutput` from :cls:`QurriumPrototype`.</span>
+<span class="sd">&quot;&quot;&quot;The generic type hint for the input of</span>
+<span class="sd">:meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiBulid`</span>
+<span class="sd">and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiOutput`.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="OutputArgs">
 <a class="viewcode-back" href="../../../api/declare/qurrium.html#qurry.declare.qurrium.OutputArgs">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">OutputArgs</span><span class="p">(</span><span class="n">BasicArgs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic output arguments for :meth:`output`.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic output arguments for</span>
+<span class="sd">    :meth:`~qurry.qurrium.qurrium.QurriumPrototype.output`.&quot;&quot;&quot;</span>
 
     <span class="n">circuits</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]</span></div>
 
 
 
 <span class="n">_OA</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_OA&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">OutputArgs</span><span class="p">)</span>
-<span class="sd">&quot;&quot;&quot;The type hint for :meth:`measure_to_output` from :cls:`QurriumPrototype`.</span>
-<span class="sd">OutputArgs is used for passing arguments in an standard format to</span>
-<span class="sd">:meth:`output` from :cls:`QurriumPrototype` and </span>
-<span class="sd">:meth:`multiOutput` from :cls:`MultiManager`.</span>
+<span class="sd">&quot;&quot;&quot;The type var of :class:`OutputArgs` </span>
+<span class="sd">for :meth:`~qurry.qurrium.qurrium.QurriumPrototype.output` </span>
+
+<span class="sd">:class:`OutputArgs` is also used for passing arguments in an standard format to</span>
+<span class="sd">:meth:`~qurry.qurrium.qurrium.QurriumPrototype.output` </span>
+<span class="sd">and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiOutput`.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
@@ -543,9 +551,14 @@ document.write(`
 
 
 <span class="n">_RA</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_RA&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">AnalyzeArgs</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;The type var of :class:`AnalyzeArgs` for</span>
+<span class="sd">:meth:`~qurry.qurrium.qurrium.QurriumPrototype.analyze`</span>
+<span class="sd">and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiAnalysis`.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
 <span class="n">SpecificAnalsisArgs</span> <span class="o">=</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">_RA</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]]]</span>
-<span class="sd">&quot;&quot;&quot;The type hint for :meth:`analyze` from :cls:`MultiManager`</span>
-<span class="sd">and :meth:`multiAnalsis` from :cls:`QurriumPrototype`.</span>
+<span class="sd">&quot;&quot;&quot;The type hint for :meth:`~qurry.qurrium.multimanager.multimanager.analyze` </span>
+<span class="sd">and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiAnalysis`.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 
@@ -601,7 +614,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

@@ -1,0 +1,851 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrech.randomized_measure.arguments &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrech/randomized_measure/arguments';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../qurrech.html" class="nav-link">qurry.qurrech</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurrec...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrech.randomized_measure.arguments</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;EchoListenRandomized - Arguments</span>
+<span class="sd">(:mod:`qurry.qurrech.randomized_measure.arguments`)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.transpiler.passmanager</span><span class="w"> </span><span class="kn">import</span> <span class="n">PassManager</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">...qurrium.experiment</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArgumentsPrototype</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...process.randomized_measure.wavefunction_overlap</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">PostProcessingBackendLabel</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">backend_name_getter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...declare</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasicArgs</span><span class="p">,</span> <span class="n">OutputArgs</span><span class="p">,</span> <span class="n">AnalyzeArgs</span><span class="p">,</span> <span class="n">TranspileArgs</span>
+
+
+<div class="viewcode-block" id="EchoListenRandomizedArguments">
+<a class="viewcode-back" href="../../../../api/qurrech/randomized_measure.html#qurry.qurrech.randomized_measure.arguments.EchoListenRandomizedArguments">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">EchoListenRandomizedArguments</span><span class="p">(</span><span class="n">ArgumentsPrototype</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for</span>
+<span class="sd">    :class:`~qurry.qurrech.randomized_measure.experiment.EchoListenRandomizedExperiment`.&quot;&quot;&quot;</span>
+
+    <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;exps&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The name of the experiment.</span>
+<span class="sd">    Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">    This name is also used for creating a folder to store the exports.</span>
+<span class="sd">    Defaults to `&#39;experiment&#39;`.&quot;&quot;&quot;</span>
+    <span class="n">times</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The number of random unitary operator. </span>
+<span class="sd">    It will denote as :math:`N_U` in the experiment name.&quot;&quot;&quot;</span>
+    <span class="n">qubits_measured_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">qubits_measured_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">registers_mapping_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The mapping of the classical registers with quantum registers.</span>
+<span class="sd">    for the first quantum circuit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: 0, # The quantum register 0 is mapped to the classical register 0.</span>
+<span class="sd">            1: 1, # The quantum register 1 is mapped to the classical register 1.</span>
+<span class="sd">            5: 2, # The quantum register 5 is mapped to the classical register 2.</span>
+<span class="sd">            7: 3, # The quantum register 7 is mapped to the classical register 3.</span>
+<span class="sd">        }</span>
+
+<span class="sd">    The key is the index of the quantum register with the numerical order.</span>
+<span class="sd">    The value is the index of the classical register with the numerical order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">registers_mapping_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The mapping of the classical registers with quantum registers.</span>
+<span class="sd">    for the second quantum circuit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: 0, # The quantum register 0 is mapped to the classical register 0.</span>
+<span class="sd">            1: 1, # The quantum register 1 is mapped to the classical register 1.</span>
+<span class="sd">            5: 2, # The quantum register 5 is mapped to the classical register 2.</span>
+<span class="sd">            7: 3, # The quantum register 7 is mapped to the classical register 3.</span>
+<span class="sd">        }</span>
+
+<span class="sd">    The key is the index of the quantum register with the numerical order.</span>
+<span class="sd">    The value is the index of the classical register with the numerical order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">actual_num_qubits_1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The actual number of qubits of the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">actual_num_qubits_2</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The actual number of qubits of the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_located_mapping_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the first quantum circuit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: 0, # The quantum register 0 is used for the unitary operator 0.</span>
+<span class="sd">            1: 1, # The quantum register 1 is used for the unitary operator 1.</span>
+<span class="sd">            5: 2, # The quantum register 5 is used for the unitary operator 2.</span>
+<span class="sd">            7: 3, # The quantum register 7 is used for the unitary operator 3.</span>
+<span class="sd">        }</span>
+
+<span class="sd">    The key is the index of the quantum register with the numerical order.</span>
+<span class="sd">    The value is the index of the unitary operator with the numerical order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">unitary_located_mapping_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the second quantum circuit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: 0, # The quantum register 0 is used for the unitary operator 0.</span>
+<span class="sd">            1: 1, # The quantum register 1 is used for the unitary operator 1.</span>
+<span class="sd">            5: 2, # The quantum register 5 is used for the unitary operator 2.</span>
+<span class="sd">            7: 3, # The quantum register 7 is used for the unitary operator 3.</span>
+<span class="sd">        }</span>
+
+<span class="sd">    The key is the index of the quantum register with the numerical order.</span>
+<span class="sd">    The value is the index of the unitary operator with the numerical order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">second_backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Backend</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The extra backend for the second quantum circuit.</span>
+<span class="sd">    If None, then use the same backend as the first quantum circuit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">second_transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments of :func:`~qiskit.compiler.transpile` </span>
+<span class="sd">    or :class:`~qiskit.transpiler.passmanager.PassManager` for the second quantum circuit.</span>
+<span class="sd">    And it only works when the second backend is given.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">random_unitary_seeds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The seeds for all random unitary operator.</span>
+<span class="sd">    This argument only takes input as type of `dict[int, dict[int, int]]`.</span>
+<span class="sd">    The first key is the index for the random unitary operator.</span>
+<span class="sd">    The second key is the index for the qubit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: {0: 1234, 1: 5678},</span>
+<span class="sd">            1: {0: 2345, 1: 6789},</span>
+<span class="sd">            2: {0: 3456, 1: 7890},</span>
+<span class="sd">        }</span>
+
+<span class="sd">    If you want to generate the seeds for all random unitary operator,</span>
+<span class="sd">    you can use the function </span>
+<span class="sd">    :func:`~qurry.qurrium.utils.random_unitary.generate_random_unitary_seeds`</span>
+<span class="sd">    in :mod:`qurry.qurrium.utils.random_unitary`.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from qurry.qurrium.utils.random_unitary import generate_random_unitary_seeds</span>
+
+<span class="sd">        random_unitary_seeds = generate_random_unitary_seeds(100, 2)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">registers_mapping_1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                <span class="s2">&quot;registers_mapping_1&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">registers_mapping_1</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">registers_mapping_2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                <span class="s2">&quot;registers_mapping_2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">registers_mapping_2</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unitary_located_mapping_1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                <span class="s2">&quot;unitary_located_mapping_1&quot;</span><span class="p">,</span>
+                <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">unitary_located_mapping_1</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unitary_located_mapping_2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                <span class="s2">&quot;unitary_located_mapping_2&quot;</span><span class="p">,</span>
+                <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">unitary_located_mapping_2</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_unitary_seeds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+                <span class="s2">&quot;random_unitary_seeds&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_unitary_seeds</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The arguments as dictionary.&quot;&quot;&quot;</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">second_backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">):</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="s2">&quot;second_backend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">backend_name_getter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">second_backend</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">second_backend</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="s2">&quot;second_backend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">second_backend</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="s2">&quot;second_backend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">tmp</span></div>
+
+
+
+<div class="viewcode-block" id="EchoListenRandomizedMeasureArgs">
+<a class="viewcode-back" href="../../../../api/qurrech/randomized_measure.html#qurry.qurrech.randomized_measure.arguments.EchoListenRandomizedMeasureArgs">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EchoListenRandomizedMeasureArgs</span><span class="p">(</span><span class="n">BasicArgs</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Input fields for</span>
+<span class="sd">    :meth:`~qurry.qurrech.randomized_measure.qurry.EchoListenRandomized.measure`</span>
+<span class="sd">    and :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiOutput`.&quot;&quot;&quot;</span>
+
+    <span class="n">wave1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The key or the circuit to execute.&quot;&quot;&quot;</span>
+    <span class="n">wave2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The key or the circuit to execute.&quot;&quot;&quot;</span>
+    <span class="n">times</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The number of random unitary operator. </span>
+<span class="sd">    It will denote as :math:`N_U` in the experiment name.&quot;&quot;&quot;</span>
+    <span class="n">measure_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">measure_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_not_cover_measure</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether the range of the unitary operator is not cover the measure range.&quot;&quot;&quot;</span>
+    <span class="n">second_backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The extra backend for the second group of quantum circuits.</span>
+<span class="sd">    If None, then use the same backend as the first quantum circuit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">second_transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The transpile arguments for the second group of quantum circuits.&quot;&quot;&quot;</span>
+    <span class="n">second_passmanager</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The passmanager for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">random_unitary_seeds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The seeds for all random unitary operator.</span>
+<span class="sd">    This argument only takes input as type of `dict[int, dict[int, int]]`.</span>
+<span class="sd">    The first key is the index for the random unitary operator.</span>
+<span class="sd">    The second key is the index for the qubit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: {0: 1234, 1: 5678},</span>
+<span class="sd">            1: {0: 2345, 1: 6789},</span>
+<span class="sd">            2: {0: 3456, 1: 7890},</span>
+<span class="sd">        }</span>
+
+<span class="sd">    If you want to generate the seeds for all random unitary operator,</span>
+<span class="sd">    you can use the function </span>
+<span class="sd">    :func:`~qurry.qurrium.utils.random_unitary.generate_random_unitary_seeds`</span>
+<span class="sd">    in :mod:`qurry.qurrium.utils.random_unitary`.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from qurry.qurrium.utils.random_unitary import generate_random_unitary_seeds</span>
+
+<span class="sd">        random_unitary_seeds = generate_random_unitary_seeds(100, 2)</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="EchoListenRandomizedOutputArgs">
+<a class="viewcode-back" href="../../../../api/qurrech/randomized_measure.html#qurry.qurrech.randomized_measure.arguments.EchoListenRandomizedOutputArgs">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EchoListenRandomizedOutputArgs</span><span class="p">(</span><span class="n">OutputArgs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Output arguments for</span>
+<span class="sd">    :meth:`~qurry.qurrech.randomized_measure.qurry.EchoListenRandomized.output`.&quot;&quot;&quot;</span>
+
+    <span class="n">times</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The number of random unitary operator. </span>
+<span class="sd">    It will denote as :math:`N_U` in the experiment name.&quot;&quot;&quot;</span>
+    <span class="n">measure_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">measure_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The measure range for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the first quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The range of the unitary operator for the second quantum circuit.&quot;&quot;&quot;</span>
+    <span class="n">unitary_loc_not_cover_measure</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Confirm that not all unitary operator are covered by the measure.&quot;&quot;&quot;</span>
+    <span class="n">second_backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The extra backend for the second quantum circuit.</span>
+<span class="sd">    If None, then use the same backend as the first quantum circuit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">second_transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The transpile arguments for the second group of quantum circuits.&quot;&quot;&quot;</span>
+    <span class="n">random_unitary_seeds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The seeds for all random unitary operator.</span>
+<span class="sd">    This argument only takes input as type of `dict[int, dict[int, int]]`.</span>
+<span class="sd">    The first key is the index for the random unitary operator.</span>
+<span class="sd">    The second key is the index for the qubit.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        {</span>
+<span class="sd">            0: {0: 1234, 1: 5678},</span>
+<span class="sd">            1: {0: 2345, 1: 6789},</span>
+<span class="sd">            2: {0: 3456, 1: 7890},</span>
+<span class="sd">        }</span>
+
+<span class="sd">    If you want to generate the seeds for all random unitary operator,</span>
+<span class="sd">    you can use the function :func:`generate_random_unitary_seeds` </span>
+<span class="sd">    in :mod:`qurry.qurrium.utils.random_unitary`.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from qurry.qurrium.utils.random_unitary import generate_random_unitary_seeds</span>
+
+<span class="sd">        random_unitary_seeds = generate_random_unitary_seeds(100, 2)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">second_passmanager_pair</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The passmanager for the second quantum circuit.&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="EchoListenRandomizedAnalyzeArgs">
+<a class="viewcode-back" href="../../../../api/qurrech/randomized_measure.html#qurry.qurrech.randomized_measure.arguments.EchoListenRandomizedAnalyzeArgs">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EchoListenRandomizedAnalyzeArgs</span><span class="p">(</span><span class="n">AnalyzeArgs</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The input of :meth:`~qurry.qurrium.qurrium.QurriumPrototype.multiAnalysis` and</span>
+<span class="sd">    :meth:`~qurry.qurrech.randomized_measure.experiment.EchoListenRandomizedExperiment.analyze`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">selected_classical_registers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The list of **the index of the selected_classical_registers**.</span>
+<span class="sd">    It&#39;s not the qubit index of first or second quantum circuit,</span>
+<span class="sd">    but their corresponding classical registers.&quot;&quot;&quot;</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">PostProcessingBackendLabel</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The backend for the process.&quot;&quot;&quot;</span>
+    <span class="n">counts_used</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The index of the counts used.&quot;&quot;&quot;</span></div>
+
+
+
+<span class="n">SHORT_NAME</span> <span class="o">=</span> <span class="s2">&quot;qurrech_randomized&quot;</span>
+<span class="sd">&quot;&quot;&quot;The short name of</span>
+<span class="sd">:class:`~qurry.qurrech.randomized_measure.experiment.EchoListenRandomizedExperiment`.&quot;&quot;&quot;</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

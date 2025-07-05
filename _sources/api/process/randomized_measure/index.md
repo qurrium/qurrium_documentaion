@@ -2,6 +2,11 @@
 
 Post-processing for randomized measurement.
 
+```{eval-rst}
+.. automodule:: qurry.process.randomized_measure
+    :members:
+```
+
 ```{toctree}
 :maxdepth: 2
 

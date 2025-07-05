@@ -1,8 +1,11 @@
 # `simple`
 
-## `cat`
+```{eval-rst}
+.. automodule:: qurry.recipe.simple
+    :members:
+```
 
-The entangled circuit :cls:`GHZ` as known as :cls:`Cat`.
+## `cat`
 
 ```{eval-rst}
 .. automodule:: qurry.recipe.simple.cat
@@ -17,8 +20,6 @@ The entangled circuit :cls:`GHZ` as known as :cls:`Cat`.
 ```
 
 ## `paramagnet`
-
-The circuits :cls:`TrivialParamagnet` and :cls:`TopologicalParamagnet`.
 
 ```{eval-rst}
 .. automodule:: qurry.recipe.simple.paramagnet

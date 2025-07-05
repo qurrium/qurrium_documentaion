@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -496,55 +496,76 @@ document.write(`
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate entangled entropy.</span>
 <span class="sd">    The entropy we compute is the Second Order Rényi Entropy.</span>
 
-<span class="sd">    .. note::</span>
+<span class="sd">    Reference:</span>
+<span class="sd">        - Randomized Measure - Entangled Entropy</span>
+<span class="sd">            -   Probing Rényi entanglement entropy via randomized measurements -</span>
+<span class="sd">                Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,</span>
+<span class="sd">                Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos,</span>
+<span class="sd">                `doi:10.1126/science.aau4963</span>
+<span class="sd">                &lt;https://www.science.org/doi/abs/10.1126/science.aau4963&gt;`_</span>
 
-<span class="sd">        - Probing Rényi entanglement entropy via randomized measurements -</span>
-<span class="sd">        Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,</span>
-<span class="sd">        Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos ,</span>
-<span class="sd">        [doi:10.1126/science.aau4963](</span>
-<span class="sd">            https://www.science.org/doi/abs/10.1126/science.aau4963)</span>
+<span class="sd">            -   Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                A toolbox for probing entanglement in many-body quantum states -</span>
+<span class="sd">                A. Elben, B. Vermersch, C. F. Roos, and P. Zoller,</span>
+<span class="sd">                `PhysRevA.99.052323 &lt;https://doi.org/10.1103/PhysRevA.99.052323&gt;`_</span>
 
-<span class="sd">    .. code-block:: bibtex</span>
+<span class="sd">        .. code-block:: bibtex</span>
 
+<span class="sd">            @article{doi:10.1126/science.aau4963,</span>
+<span class="sd">                author = {Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
+<span class="sd">                    and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
+<span class="sd">                    and Peter Zoller  and Rainer Blatt  and Christian F. Roos },</span>
+<span class="sd">                title = {Probing Rényi entanglement entropy via randomized measurements},</span>
+<span class="sd">                journal = {Science},</span>
+<span class="sd">                volume = {364},</span>
+<span class="sd">                number = {6437},</span>
+<span class="sd">                pages = {260-263},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                doi = {10.1126/science.aau4963},</span>
+<span class="sd">                URL = {https://www.science.org/doi/abs/10.1126/science.aau4963},</span>
+<span class="sd">                eprint = {https://www.science.org/doi/pdf/10.1126/science.aau4963},</span>
+<span class="sd">                abstract = {Quantum systems are predicted to be better at information</span>
+<span class="sd">                processing than their classical counterparts, and quantum entanglement</span>
+<span class="sd">                is key to this superior performance. But how does one gauge the degree</span>
+<span class="sd">                of entanglement in a system? Brydges et al. monitored the build-up of</span>
+<span class="sd">                the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
+<span class="sd">                each of which encoded a qubit. As the system evolved,</span>
+<span class="sd">                interactions caused entanglement between the chain and the rest of</span>
+<span class="sd">                the system to grow, which was reflected in the growth of</span>
+<span class="sd">                the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
+<span class="sd">                in an ion chain reflects a growing entanglement between the chain</span>
+<span class="sd">                and its complement. Entanglement is a key feature of many-body quantum systems.</span>
+<span class="sd">                Measuring the entropy of different partitions of a quantum system</span>
+<span class="sd">                provides a way to probe its entanglement structure.</span>
+<span class="sd">                Here, we present and experimentally demonstrate a protocol</span>
+<span class="sd">                for measuring the second-order Rényi entropy based on statistical correlations</span>
+<span class="sd">                between randomized measurements. Our experiments, carried out with a trapped-ion</span>
+<span class="sd">                quantum simulator with partition sizes of up to 10 qubits,</span>
+<span class="sd">                prove the overall coherent character of the system dynamics and</span>
+<span class="sd">                reveal the growth of entanglement between its parts,</span>
+<span class="sd">                in both the absence and presence of disorder.</span>
+<span class="sd">                Our protocol represents a universal tool for probing and</span>
+<span class="sd">                characterizing engineered quantum systems in the laboratory,</span>
+<span class="sd">                which is applicable to arbitrary quantum states of up to</span>
+<span class="sd">                several tens of qubits.}</span>
+<span class="sd">            }</span>
 
-<span class="sd">        @article{doi:10.1126/science.aau4963,</span>
-<span class="sd">            author = {Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
-<span class="sd">                and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
-<span class="sd">                and Peter Zoller  and Rainer Blatt  and Christian F. Roos },</span>
-<span class="sd">            title = {Probing Rényi entanglement entropy via randomized measurements},</span>
-<span class="sd">            journal = {Science},</span>
-<span class="sd">            volume = {364},</span>
-<span class="sd">            number = {6437},</span>
-<span class="sd">            pages = {260-263},</span>
-<span class="sd">            year = {2019},</span>
-<span class="sd">            doi = {10.1126/science.aau4963},</span>
-<span class="sd">            URL = {https://www.science.org/doi/abs/10.1126/science.aau4963},</span>
-<span class="sd">            eprint = {https://www.science.org/doi/pdf/10.1126/science.aau4963},</span>
-<span class="sd">            abstract = {Quantum systems are predicted to be better at information</span>
-<span class="sd">            processing than their classical counterparts, and quantum entanglement</span>
-<span class="sd">            is key to this superior performance. But how does one gauge the degree</span>
-<span class="sd">            of entanglement in a system? Brydges et al. monitored the build-up of</span>
-<span class="sd">            the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
-<span class="sd">            each of which encoded a qubit. As the system evolved,</span>
-<span class="sd">            interactions caused entanglement between the chain and the rest of</span>
-<span class="sd">            the system to grow, which was reflected in the growth of</span>
-<span class="sd">            the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
-<span class="sd">            in an ion chain reflects a growing entanglement between the chain</span>
-<span class="sd">            and its complement. Entanglement is a key feature of many-body quantum systems.</span>
-<span class="sd">            Measuring the entropy of different partitions of a quantum system</span>
-<span class="sd">            provides a way to probe its entanglement structure.</span>
-<span class="sd">            Here, we present and experimentally demonstrate a protocol</span>
-<span class="sd">            for measuring the second-order Rényi entropy based on statistical correlations</span>
-<span class="sd">            between randomized measurements. Our experiments, carried out with a trapped-ion</span>
-<span class="sd">            quantum simulator with partition sizes of up to 10 qubits,</span>
-<span class="sd">            prove the overall coherent character of the system dynamics and</span>
-<span class="sd">            reveal the growth of entanglement between its parts,</span>
-<span class="sd">            in both the absence and presence of disorder.</span>
-<span class="sd">            Our protocol represents a universal tool for probing and</span>
-<span class="sd">            characterizing engineered quantum systems in the laboratory,</span>
-<span class="sd">            which is applicable to arbitrary quantum states of up to</span>
-<span class="sd">            several tens of qubits.}</span>
-<span class="sd">        }</span>
+<span class="sd">            @article{PhysRevA.99.052323,</span>
+<span class="sd">                title = {</span>
+<span class="sd">                    Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                    A toolbox for probing entanglement in many-body quantum states},</span>
+<span class="sd">                author = {Elben, A. and Vermersch, B. and Roos, C. F. and Zoller, P.},</span>
+<span class="sd">                journal = {Phys. Rev. A},</span>
+<span class="sd">                volume = {99},</span>
+<span class="sd">                issue = {5},</span>
+<span class="sd">                pages = {052323},</span>
+<span class="sd">                numpages = {12},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                month = {May},</span>
+<span class="sd">                publisher = {American Physical Society},</span>
+<span class="sd">                doi = {10.1103/PhysRevA.99.052323},</span>
+<span class="sd">                url = {https://link.aps.org/doi/10.1103/PhysRevA.99.052323}</span>
+<span class="sd">            }</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        shots (int):</span>
@@ -556,7 +577,8 @@ document.write(`
 <span class="sd">        backend (ExistingProcessBackendLabel, optional):</span>
 <span class="sd">            Backend for the process. Defaults to DEFAULT_PROCESS_BACKEND.</span>
 <span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
-<span class="sd">            The progress bar API, you can use put a :cls:`tqdm` object here.</span>
+<span class="sd">            The progress bar API,</span>
+<span class="sd">            you can use put a `tqdm.tqdm &lt;https://tqdm.github.io/&gt;` object here.</span>
 <span class="sd">            This function will update the progress bar description.</span>
 <span class="sd">            Defaults to None.</span>
 
@@ -642,7 +664,8 @@ document.write(`
 <span class="sd">        backend (PostProcessingBackendLabel):</span>
 <span class="sd">            Backend for the process.</span>
 <span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
-<span class="sd">            The progress bar API, you can use put a :cls:`tqdm` object here.</span>
+<span class="sd">            The progress bar API,</span>
+<span class="sd">            you can use put a `tqdm.tqdm &lt;https://tqdm.github.io/&gt;` object here.</span>
 <span class="sd">            This function will update the progress bar description.</span>
 <span class="sd">            Defaults to None.</span>
 
@@ -712,76 +735,100 @@ document.write(`
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate entangled entropy with depolarizing error mitigation.</span>
 <span class="sd">    The entropy we compute is the Second Order Rényi Entropy.</span>
 
-<span class="sd">    .. note::</span>
-<span class="sd">        - Probing Rényi entanglement entropy via randomized measurements -</span>
-<span class="sd">        Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,</span>
-<span class="sd">        Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos ,</span>
-<span class="sd">        [doi:10.1126/science.aau4963](</span>
-<span class="sd">            https://www.science.org/doi/abs/10.1126/science.aau4963)</span>
+<span class="sd">    Reference:</span>
+<span class="sd">        - Randomized Measure - Entangled Entropy</span>
+<span class="sd">            -   Probing Rényi entanglement entropy via randomized measurements -</span>
+<span class="sd">                Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,</span>
+<span class="sd">                Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos,</span>
+<span class="sd">                `doi:10.1126/science.aau4963</span>
+<span class="sd">                &lt;https://www.science.org/doi/abs/10.1126/science.aau4963&gt;`_</span>
 
-<span class="sd">        - Simple mitigation of global depolarizing errors in quantum simulations -</span>
-<span class="sd">        Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
-<span class="sd">        Christopher and Kim, M. S. and Knolle, Johannes,</span>
-<span class="sd">        [PhysRevE.104.035309](</span>
-<span class="sd">            https://link.aps.org/doi/10.1103/PhysRevE.104.035309)</span>
+<span class="sd">            -   Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                A toolbox for probing entanglement in many-body quantum states -</span>
+<span class="sd">                A. Elben, B. Vermersch, C. F. Roos, and P. Zoller,</span>
+<span class="sd">                `PhysRevA.99.052323 &lt;https://doi.org/10.1103/PhysRevA.99.052323&gt;`_</span>
 
-<span class="sd">    .. code-block:: bibtex</span>
+<span class="sd">        .. code-block:: bibtex</span>
 
+<span class="sd">            @article{doi:10.1126/science.aau4963,</span>
+<span class="sd">                author = {Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
+<span class="sd">                    and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
+<span class="sd">                    and Peter Zoller  and Rainer Blatt  and Christian F. Roos },</span>
+<span class="sd">                title = {Probing Rényi entanglement entropy via randomized measurements},</span>
+<span class="sd">                journal = {Science},</span>
+<span class="sd">                volume = {364},</span>
+<span class="sd">                number = {6437},</span>
+<span class="sd">                pages = {260-263},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                doi = {10.1126/science.aau4963},</span>
+<span class="sd">                URL = {https://www.science.org/doi/abs/10.1126/science.aau4963},</span>
+<span class="sd">                eprint = {https://www.science.org/doi/pdf/10.1126/science.aau4963},</span>
+<span class="sd">                abstract = {Quantum systems are predicted to be better at information</span>
+<span class="sd">                processing than their classical counterparts, and quantum entanglement</span>
+<span class="sd">                is key to this superior performance. But how does one gauge the degree</span>
+<span class="sd">                of entanglement in a system? Brydges et al. monitored the build-up of</span>
+<span class="sd">                the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
+<span class="sd">                each of which encoded a qubit. As the system evolved,</span>
+<span class="sd">                interactions caused entanglement between the chain and the rest of</span>
+<span class="sd">                the system to grow, which was reflected in the growth of</span>
+<span class="sd">                the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
+<span class="sd">                in an ion chain reflects a growing entanglement between the chain</span>
+<span class="sd">                and its complement. Entanglement is a key feature of many-body quantum systems.</span>
+<span class="sd">                Measuring the entropy of different partitions of a quantum system</span>
+<span class="sd">                provides a way to probe its entanglement structure.</span>
+<span class="sd">                Here, we present and experimentally demonstrate a protocol</span>
+<span class="sd">                for measuring the second-order Rényi entropy based on statistical correlations</span>
+<span class="sd">                between randomized measurements. Our experiments, carried out with a trapped-ion</span>
+<span class="sd">                quantum simulator with partition sizes of up to 10 qubits,</span>
+<span class="sd">                prove the overall coherent character of the system dynamics and</span>
+<span class="sd">                reveal the growth of entanglement between its parts,</span>
+<span class="sd">                in both the absence and presence of disorder.</span>
+<span class="sd">                Our protocol represents a universal tool for probing and</span>
+<span class="sd">                characterizing engineered quantum systems in the laboratory,</span>
+<span class="sd">                which is applicable to arbitrary quantum states of up to</span>
+<span class="sd">                several tens of qubits.}</span>
+<span class="sd">            }</span>
 
-<span class="sd">        @article{doi:10.1126/science.aau4963,</span>
-<span class="sd">            author = {Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
-<span class="sd">                and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
-<span class="sd">                and Peter Zoller  and Rainer Blatt  and Christian F. Roos },</span>
-<span class="sd">            title = {Probing Rényi entanglement entropy via randomized measurements},</span>
-<span class="sd">            journal = {Science},</span>
-<span class="sd">            volume = {364},</span>
-<span class="sd">            number = {6437},</span>
-<span class="sd">            pages = {260-263},</span>
-<span class="sd">            year = {2019},</span>
-<span class="sd">            doi = {10.1126/science.aau4963},</span>
-<span class="sd">            URL = {https://www.science.org/doi/abs/10.1126/science.aau4963},</span>
-<span class="sd">            eprint = {https://www.science.org/doi/pdf/10.1126/science.aau4963},</span>
-<span class="sd">            abstract = {Quantum systems are predicted to be better at information</span>
-<span class="sd">            processing than their classical counterparts, and quantum entanglement</span>
-<span class="sd">            is key to this superior performance. But how does one gauge the degree</span>
-<span class="sd">            of entanglement in a system? Brydges et al. monitored the build-up of</span>
-<span class="sd">            the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
-<span class="sd">            each of which encoded a qubit. As the system evolved,</span>
-<span class="sd">            interactions caused entanglement between the chain and the rest of</span>
-<span class="sd">            the system to grow, which was reflected in the growth of</span>
-<span class="sd">            the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
-<span class="sd">            in an ion chain reflects a growing entanglement between the chain</span>
-<span class="sd">            and its complement. Entanglement is a key feature of many-body quantum systems.</span>
-<span class="sd">            Measuring the entropy of different partitions of a quantum system</span>
-<span class="sd">            provides a way to probe its entanglement structure.</span>
-<span class="sd">            Here, we present and experimentally demonstrate a protocol</span>
-<span class="sd">            for measuring the second-order Rényi entropy based on statistical correlations</span>
-<span class="sd">            between randomized measurements. Our experiments, carried out with a trapped-ion</span>
-<span class="sd">            quantum simulator with partition sizes of up to 10 qubits,</span>
-<span class="sd">            prove the overall coherent character of the system dynamics and</span>
-<span class="sd">            reveal the growth of entanglement between its parts,</span>
-<span class="sd">            in both the absence and presence of disorder.</span>
-<span class="sd">            Our protocol represents a universal tool for probing and</span>
-<span class="sd">            characterizing engineered quantum systems in the laboratory,</span>
-<span class="sd">            which is applicable to arbitrary quantum states of up to</span>
-<span class="sd">            several tens of qubits.}</span>
-<span class="sd">        }</span>
+<span class="sd">            @article{PhysRevA.99.052323,</span>
+<span class="sd">                title = {</span>
+<span class="sd">                    Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                    A toolbox for probing entanglement in many-body quantum states},</span>
+<span class="sd">                author = {Elben, A. and Vermersch, B. and Roos, C. F. and Zoller, P.},</span>
+<span class="sd">                journal = {Phys. Rev. A},</span>
+<span class="sd">                volume = {99},</span>
+<span class="sd">                issue = {5},</span>
+<span class="sd">                pages = {052323},</span>
+<span class="sd">                numpages = {12},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                month = {May},</span>
+<span class="sd">                publisher = {American Physical Society},</span>
+<span class="sd">                doi = {10.1103/PhysRevA.99.052323},</span>
+<span class="sd">                url = {https://link.aps.org/doi/10.1103/PhysRevA.99.052323}</span>
+<span class="sd">            }</span>
 
-<span class="sd">        @article{PhysRevE.104.035309,</span>
-<span class="sd">            title = {Simple mitigation of global depolarizing errors in quantum simulations},</span>
-<span class="sd">            author = {Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
-<span class="sd">            Christopher and Kim, M. S. and Knolle, Johannes},</span>
-<span class="sd">            journal = {Phys. Rev. E},</span>
-<span class="sd">            volume = {104},</span>
-<span class="sd">            issue = {3},</span>
-<span class="sd">            pages = {035309},</span>
-<span class="sd">            numpages = {8},</span>
-<span class="sd">            year = {2021},</span>
-<span class="sd">            month = {Sep},</span>
-<span class="sd">            publisher = {American Physical Society},</span>
-<span class="sd">            doi = {10.1103/PhysRevE.104.035309},</span>
-<span class="sd">            url = {https://link.aps.org/doi/10.1103/PhysRevE.104.035309}</span>
-<span class="sd">        }</span>
+<span class="sd">        - Error Mitigation</span>
+<span class="sd">            -   Simple mitigation of global depolarizing errors in quantum simulations -</span>
+<span class="sd">                Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
+<span class="sd">                Christopher and Kim, M. S. and Knolle, Johannes,</span>
+<span class="sd">                `PhysRevE.104.035309 &lt;https://link.aps.org/doi/10.1103/PhysRevE.104.035309&gt;`_</span>
+
+<span class="sd">        .. code-block:: bibtex</span>
+
+<span class="sd">            @article{PhysRevE.104.035309,</span>
+<span class="sd">                title = {Simple mitigation of global depolarizing errors in quantum simulations},</span>
+<span class="sd">                author = {Vovrosh, Joseph and Khosla, Kiran E. and Greenaway, Sean and Self,</span>
+<span class="sd">                Christopher and Kim, M. S. and Knolle, Johannes},</span>
+<span class="sd">                journal = {Phys. Rev. E},</span>
+<span class="sd">                volume = {104},</span>
+<span class="sd">                issue = {3},</span>
+<span class="sd">                pages = {035309},</span>
+<span class="sd">                numpages = {8},</span>
+<span class="sd">                year = {2021},</span>
+<span class="sd">                month = {Sep},</span>
+<span class="sd">                publisher = {American Physical Society},</span>
+<span class="sd">                doi = {10.1103/PhysRevE.104.035309},</span>
+<span class="sd">                url = {https://link.aps.org/doi/10.1103/PhysRevE.104.035309}</span>
+<span class="sd">            }</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        shots (int):</span>
@@ -801,7 +848,8 @@ document.write(`
 <span class="sd">            This can save a lot of time</span>
 <span class="sd">            Defaults to None.</span>
 <span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
-<span class="sd">            The progress bar API, you can use put a :cls:`tqdm` object here.</span>
+<span class="sd">            The progress bar API,</span>
+<span class="sd">            you can use put a `tqdm.tqdm &lt;https://tqdm.github.io/&gt;` object here.</span>
 <span class="sd">            This function will update the progress bar description.</span>
 <span class="sd">            Defaults to None.</span>
 
@@ -993,7 +1041,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

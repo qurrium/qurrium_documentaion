@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrent.randomized_measure.qurry &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrent/randomized_measure/qurry';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../qurrent.html" class="nav-link">qurry.qurrent</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurren...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrent.randomized_measure.qurry</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;EntropyMeasureRandomized - Qurrium</span>
+<span class="sd">(:mod:`qurry.qurrent.randomized_measure.qurry`)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Iterable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.arguments</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">SHORT_NAME</span><span class="p">,</span>
+    <span class="n">EntropyMeasureRandomizedMeasureArgs</span><span class="p">,</span>
+    <span class="n">EntropyMeasureRandomizedOutputArgs</span><span class="p">,</span>
+    <span class="n">EntropyMeasureRandomizedAnalyzeArgs</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.experiment</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">EntropyMeasureRandomizedExperiment</span><span class="p">,</span>
+    <span class="n">PostProcessingBackendLabel</span><span class="p">,</span>
+    <span class="n">DEFAULT_PROCESS_BACKEND</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...qurrium</span><span class="w"> </span><span class="kn">import</span> <span class="n">QurriumPrototype</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...declare</span><span class="w"> </span><span class="kn">import</span> <span class="n">RunArgsType</span><span class="p">,</span> <span class="n">TranspileArgs</span><span class="p">,</span> <span class="n">PassManagerType</span><span class="p">,</span> <span class="n">SpecificAnalsisArgs</span>
+
+
+<div class="viewcode-block" id="EntropyMeasureRandomized">
+<a class="viewcode-back" href="../../../../api/qurrent/randomized_measure.html#qurry.qurrent.randomized_measure.qurry.EntropyMeasureRandomized">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EntropyMeasureRandomized</span><span class="p">(</span>
+    <span class="n">QurriumPrototype</span><span class="p">[</span>
+        <span class="n">EntropyMeasureRandomizedExperiment</span><span class="p">,</span>
+        <span class="n">EntropyMeasureRandomizedMeasureArgs</span><span class="p">,</span>
+        <span class="n">EntropyMeasureRandomizedOutputArgs</span><span class="p">,</span>
+        <span class="n">EntropyMeasureRandomizedAnalyzeArgs</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Randomized Measure for entangled entropy.</span>
+<span class="sd">    The entropy we compute is the Second Order Rényi Entropy.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        - Randomized Measure - Entangled Entropy</span>
+<span class="sd">            -   Probing Rényi entanglement entropy via randomized measurements -</span>
+<span class="sd">                Tiff Brydges, Andreas Elben, Petar Jurcevic, Benoît Vermersch,</span>
+<span class="sd">                Christine Maier, Ben P. Lanyon, Peter Zoller, Rainer Blatt ,and Christian F. Roos,</span>
+<span class="sd">                `doi:10.1126/science.aau4963</span>
+<span class="sd">                &lt;https://www.science.org/doi/abs/10.1126/science.aau4963&gt;`_</span>
+
+<span class="sd">            -   Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                A toolbox for probing entanglement in many-body quantum states -</span>
+<span class="sd">                A. Elben, B. Vermersch, C. F. Roos, and P. Zoller,</span>
+<span class="sd">                `PhysRevA.99.052323 &lt;https://doi.org/10.1103/PhysRevA.99.052323&gt;`_</span>
+
+<span class="sd">        .. code-block:: bibtex</span>
+
+<span class="sd">            @article{doi:10.1126/science.aau4963,</span>
+<span class="sd">                author = {Tiff Brydges  and Andreas Elben  and Petar Jurcevic</span>
+<span class="sd">                    and Benoît Vermersch  and Christine Maier  and Ben P. Lanyon</span>
+<span class="sd">                    and Peter Zoller  and Rainer Blatt  and Christian F. Roos },</span>
+<span class="sd">                title = {Probing Rényi entanglement entropy via randomized measurements},</span>
+<span class="sd">                journal = {Science},</span>
+<span class="sd">                volume = {364},</span>
+<span class="sd">                number = {6437},</span>
+<span class="sd">                pages = {260-263},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                doi = {10.1126/science.aau4963},</span>
+<span class="sd">                URL = {https://www.science.org/doi/abs/10.1126/science.aau4963},</span>
+<span class="sd">                eprint = {https://www.science.org/doi/pdf/10.1126/science.aau4963},</span>
+<span class="sd">                abstract = {Quantum systems are predicted to be better at information</span>
+<span class="sd">                processing than their classical counterparts, and quantum entanglement</span>
+<span class="sd">                is key to this superior performance. But how does one gauge the degree</span>
+<span class="sd">                of entanglement in a system? Brydges et al. monitored the build-up of</span>
+<span class="sd">                the so-called Rényi entropy in a chain of up to 10 trapped calcium ions,</span>
+<span class="sd">                each of which encoded a qubit. As the system evolved,</span>
+<span class="sd">                interactions caused entanglement between the chain and the rest of</span>
+<span class="sd">                the system to grow, which was reflected in the growth of</span>
+<span class="sd">                the Rényi entropy. Science, this issue p. 260 The buildup of entropy</span>
+<span class="sd">                in an ion chain reflects a growing entanglement between the chain</span>
+<span class="sd">                and its complement. Entanglement is a key feature of many-body quantum systems.</span>
+<span class="sd">                Measuring the entropy of different partitions of a quantum system</span>
+<span class="sd">                provides a way to probe its entanglement structure.</span>
+<span class="sd">                Here, we present and experimentally demonstrate a protocol</span>
+<span class="sd">                for measuring the second-order Rényi entropy based on statistical correlations</span>
+<span class="sd">                between randomized measurements. Our experiments, carried out with a trapped-ion</span>
+<span class="sd">                quantum simulator with partition sizes of up to 10 qubits,</span>
+<span class="sd">                prove the overall coherent character of the system dynamics and</span>
+<span class="sd">                reveal the growth of entanglement between its parts,</span>
+<span class="sd">                in both the absence and presence of disorder.</span>
+<span class="sd">                Our protocol represents a universal tool for probing and</span>
+<span class="sd">                characterizing engineered quantum systems in the laboratory,</span>
+<span class="sd">                which is applicable to arbitrary quantum states of up to</span>
+<span class="sd">                several tens of qubits.}</span>
+<span class="sd">            }</span>
+
+<span class="sd">            @article{PhysRevA.99.052323,</span>
+<span class="sd">                title = {</span>
+<span class="sd">                    Statistical correlations between locally randomized measurements:</span>
+<span class="sd">                    A toolbox for probing entanglement in many-body quantum states},</span>
+<span class="sd">                author = {Elben, A. and Vermersch, B. and Roos, C. F. and Zoller, P.},</span>
+<span class="sd">                journal = {Phys. Rev. A},</span>
+<span class="sd">                volume = {99},</span>
+<span class="sd">                issue = {5},</span>
+<span class="sd">                pages = {052323},</span>
+<span class="sd">                numpages = {12},</span>
+<span class="sd">                year = {2019},</span>
+<span class="sd">                month = {May},</span>
+<span class="sd">                publisher = {American Physical Society},</span>
+<span class="sd">                doi = {10.1103/PhysRevA.99.052323},</span>
+<span class="sd">                url = {https://link.aps.org/doi/10.1103/PhysRevA.99.052323}</span>
+<span class="sd">            }</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__name__</span> <span class="o">=</span> <span class="s2">&quot;EntropyRandomizedMeasure&quot;</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="n">SHORT_NAME</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">experiment_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">EntropyMeasureRandomizedExperiment</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The container class responding to this QurryV5 class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">EntropyMeasureRandomizedExperiment</span>
+
+<div class="viewcode-block" id="EntropyMeasureRandomized.measure_to_output">
+<a class="viewcode-back" href="../../../../api/qurrent/randomized_measure.html#qurry.qurrent.randomized_measure.qurry.EntropyMeasureRandomized.measure_to_output">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measure_to_output</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">wave</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">times</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">measure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">unitary_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">unitary_loc_not_cover_measure</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">random_unitary_seeds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># basic inputs</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">passmanager</span><span class="p">:</span> <span class="n">PassManagerType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">qasm_version</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;qasm2&quot;</span><span class="p">,</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EntropyMeasureRandomizedOutputArgs</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Trasnform :meth:`measure` arguments form into :meth:`output` form.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wave (Union[QuantumCircuit, Hashable]):</span>
+<span class="sd">                The key or the circuit to execute.</span>
+<span class="sd">            times (int, optional):</span>
+<span class="sd">                The number of random unitary operator.</span>
+<span class="sd">                It will denote as :math:`N_U` in the experiment name.</span>
+<span class="sd">                Defaults to `100`.</span>
+<span class="sd">            measure (Optional[Union[list[int], tuple[int, int], int]], optional):</span>
+<span class="sd">                The selected qubits for the measurement.</span>
+<span class="sd">                If it is None, then it will return the mapping of all qubits.</span>
+<span class="sd">                If it is int, then it will return the mapping of the last n qubits.</span>
+<span class="sd">                If it is tuple, then it will return the mapping of the qubits in the range.</span>
+<span class="sd">                If it is list, then it will return the mapping of the selected qubits.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            unitary_loc (Optional[Union[list[int], tuple[int, int], int]], optional):</span>
+<span class="sd">                The range of the unitary operator. Defaults to None.</span>
+<span class="sd">            unitary_loc_not_cover_measure (bool, optional):</span>
+<span class="sd">                Whether the range of the unitary operator is not cover the measure range.</span>
+<span class="sd">                Defaults to `False`.</span>
+<span class="sd">            random_unitary_seeds (Optional[dict[int, dict[int, int]]], optional):</span>
+<span class="sd">                The seeds for all random unitary operator.</span>
+<span class="sd">                This argument only takes input as type of `dict[int, dict[int, int]]`.</span>
+<span class="sd">                The first key is the index for the random unitary operator.</span>
+<span class="sd">                The second key is the index for the qubit.</span>
+
+<span class="sd">                .. code-block:: python</span>
+
+<span class="sd">                    {</span>
+<span class="sd">                        0: {0: 1234, 1: 5678},</span>
+<span class="sd">                        1: {0: 2345, 1: 6789},</span>
+<span class="sd">                        2: {0: 3456, 1: 7890},</span>
+<span class="sd">                    }</span>
+
+<span class="sd">                If you want to generate the seeds for all random unitary operator,</span>
+<span class="sd">                you can use the function :func:`generate_random_unitary_seeds` </span>
+<span class="sd">                in :mod:`qurry.qurrium.utils.random_unitary`.</span>
+
+<span class="sd">                .. code-block:: python</span>
+
+<span class="sd">                    from qurry.qurrium.utils.random_unitary import generate_random_unitary_seeds</span>
+
+<span class="sd">                    random_unitary_seeds = generate_random_unitary_seeds(100, 2)</span>
+
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Optional[Backend], optional):</span>
+<span class="sd">                The quantum backend. Defaults to None.</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                The name of the experiment.</span>
+<span class="sd">                Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;exps&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            passmanager (Optional[Union[str, PassManager, tuple[str, PassManager]], optional):</span>
+<span class="sd">                The passmanager. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                The tags of the experiment. Defaults to None.</span>
+
+<span class="sd">            qasm_version (Literal[&quot;qasm2&quot;, &quot;qasm3&quot;], optional):</span>
+<span class="sd">                The version of OpenQASM. Defaults to &quot;qasm3&quot;.</span>
+<span class="sd">            export (bool, optional):</span>
+<span class="sd">                Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            EntropyMeasureRandomizedOutputArgs: The output arguments.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">wave</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The `wave` must be provided.&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;circuits&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">wave</span><span class="p">],</span>
+            <span class="s2">&quot;times&quot;</span><span class="p">:</span> <span class="n">times</span><span class="p">,</span>
+            <span class="s2">&quot;measure&quot;</span><span class="p">:</span> <span class="n">measure</span><span class="p">,</span>
+            <span class="s2">&quot;unitary_loc&quot;</span><span class="p">:</span> <span class="n">unitary_loc</span><span class="p">,</span>
+            <span class="s2">&quot;unitary_loc_not_cover_measure&quot;</span><span class="p">:</span> <span class="n">unitary_loc_not_cover_measure</span><span class="p">,</span>
+            <span class="s2">&quot;random_unitary_seeds&quot;</span><span class="p">:</span> <span class="n">random_unitary_seeds</span><span class="p">,</span>
+            <span class="s2">&quot;shots&quot;</span><span class="p">:</span> <span class="n">shots</span><span class="p">,</span>
+            <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="n">backend</span><span class="p">,</span>
+            <span class="s2">&quot;exp_name&quot;</span><span class="p">:</span> <span class="n">exp_name</span><span class="p">,</span>
+            <span class="s2">&quot;run_args&quot;</span><span class="p">:</span> <span class="n">run_args</span><span class="p">,</span>
+            <span class="s2">&quot;transpile_args&quot;</span><span class="p">:</span> <span class="n">transpile_args</span><span class="p">,</span>
+            <span class="s2">&quot;passmanager&quot;</span><span class="p">:</span> <span class="n">passmanager</span><span class="p">,</span>
+            <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">tags</span><span class="p">,</span>
+            <span class="c1"># process tool</span>
+            <span class="s2">&quot;qasm_version&quot;</span><span class="p">:</span> <span class="n">qasm_version</span><span class="p">,</span>
+            <span class="s2">&quot;export&quot;</span><span class="p">:</span> <span class="n">export</span><span class="p">,</span>
+            <span class="s2">&quot;save_location&quot;</span><span class="p">:</span> <span class="n">save_location</span><span class="p">,</span>
+            <span class="s2">&quot;pbar&quot;</span><span class="p">:</span> <span class="n">pbar</span><span class="p">,</span>
+        <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="EntropyMeasureRandomized.measure">
+<a class="viewcode-back" href="../../../../api/qurrent/randomized_measure.html#qurry.qurrent.randomized_measure.qurry.EntropyMeasureRandomized.measure">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measure</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">wave</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">times</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">measure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">unitary_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">unitary_loc_not_cover_measure</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">random_unitary_seeds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># basic inputs</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">passmanager</span><span class="p">:</span> <span class="n">PassManagerType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">qasm_version</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;qasm2&quot;</span><span class="p">,</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Execute the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wave (Union[QuantumCircuit, Hashable]):</span>
+<span class="sd">                The key or the circuit to execute.</span>
+<span class="sd">            times (int, optional):</span>
+<span class="sd">                The number of random unitary operator.</span>
+<span class="sd">                It will denote as :math:`N_U` in the experiment name.</span>
+<span class="sd">                Defaults to `100`.</span>
+<span class="sd">            measure (Optional[Union[list[int], tuple[int, int], int]], optional):</span>
+<span class="sd">                The selected qubits for the measurement.</span>
+<span class="sd">                If it is None, then it will return the mapping of all qubits.</span>
+<span class="sd">                If it is int, then it will return the mapping of the last n qubits.</span>
+<span class="sd">                If it is tuple, then it will return the mapping of the qubits in the range.</span>
+<span class="sd">                If it is list, then it will return the mapping of the selected qubits.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            unitary_loc (Optional[Union[list[int], tuple[int, int], int]], optional):</span>
+<span class="sd">                The range of the unitary operator. Defaults to None.</span>
+<span class="sd">            unitary_loc_not_cover_measure (bool, optional):</span>
+<span class="sd">                Whether the range of the unitary operator is not cover the measure range.</span>
+<span class="sd">                Defaults to `False`.</span>
+<span class="sd">            random_unitary_seeds (Optional[dict[int, dict[int, int]]], optional):</span>
+<span class="sd">                The seeds for all random unitary operator.</span>
+<span class="sd">                This argument only takes input as type of `dict[int, dict[int, int]]`.</span>
+<span class="sd">                The first key is the index for the random unitary operator.</span>
+<span class="sd">                The second key is the index for the qubit.</span>
+
+<span class="sd">                .. code-block:: python</span>
+
+<span class="sd">                    {</span>
+<span class="sd">                        0: {0: 1234, 1: 5678},</span>
+<span class="sd">                        1: {0: 2345, 1: 6789},</span>
+<span class="sd">                        2: {0: 3456, 1: 7890},</span>
+<span class="sd">                    }</span>
+
+<span class="sd">                If you want to generate the seeds for all random unitary operator,</span>
+<span class="sd">                you can use the function :func:`generate_random_unitary_seeds` </span>
+<span class="sd">                in :mod:`qurry.qurrium.utils.random_unitary`.</span>
+
+<span class="sd">                .. code-block:: python</span>
+
+<span class="sd">                    from qurry.qurrium.utils.random_unitary import generate_random_unitary_seeds</span>
+
+<span class="sd">                    random_unitary_seeds = generate_random_unitary_seeds(100, 2)</span>
+
+<span class="sd">            shots (int, optional):</span>
+<span class="sd">                Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Optional[Backend], optional):</span>
+<span class="sd">                The quantum backend. Defaults to None.</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                The name of the experiment.</span>
+<span class="sd">                Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;exps&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            passmanager (Optional[Union[str, PassManager, tuple[str, PassManager]], optional):</span>
+<span class="sd">                The passmanager. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                The tags of the experiment. Defaults to None.</span>
+
+<span class="sd">            qasm_version (Literal[&quot;qasm2&quot;, &quot;qasm3&quot;], optional):</span>
+<span class="sd">                The version of OpenQASM. Defaults to &quot;qasm3&quot;.</span>
+<span class="sd">            export (bool, optional):</span>
+<span class="sd">                Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The experiment ID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">output_args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to_output</span><span class="p">(</span>
+            <span class="n">wave</span><span class="o">=</span><span class="n">wave</span><span class="p">,</span>
+            <span class="n">times</span><span class="o">=</span><span class="n">times</span><span class="p">,</span>
+            <span class="n">measure</span><span class="o">=</span><span class="n">measure</span><span class="p">,</span>
+            <span class="n">unitary_loc</span><span class="o">=</span><span class="n">unitary_loc</span><span class="p">,</span>
+            <span class="n">unitary_loc_not_cover_measure</span><span class="o">=</span><span class="n">unitary_loc_not_cover_measure</span><span class="p">,</span>
+            <span class="n">random_unitary_seeds</span><span class="o">=</span><span class="n">random_unitary_seeds</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="n">exp_name</span><span class="p">,</span>
+            <span class="n">run_args</span><span class="o">=</span><span class="n">run_args</span><span class="p">,</span>
+            <span class="n">transpile_args</span><span class="o">=</span><span class="n">transpile_args</span><span class="p">,</span>
+            <span class="n">passmanager</span><span class="o">=</span><span class="n">passmanager</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="c1"># process tool</span>
+            <span class="n">qasm_version</span><span class="o">=</span><span class="n">qasm_version</span><span class="p">,</span>
+            <span class="n">export</span><span class="o">=</span><span class="n">export</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="o">**</span><span class="n">output_args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="EntropyMeasureRandomized.multiAnalysis">
+<a class="viewcode-back" href="../../../../api/qurrent/randomized_measure.html#qurry.qurrent.randomized_measure.qurry.EntropyMeasureRandomized.multiAnalysis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiAnalysis</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">analysis_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;report&quot;</span><span class="p">,</span>
+        <span class="n">no_serialize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">specific_analysis_args</span><span class="p">:</span> <span class="n">SpecificAnalsisArgs</span><span class="p">[</span><span class="n">EntropyMeasureRandomizedAnalyzeArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">skip_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># analysis arguments</span>
+        <span class="n">selected_qubits</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">independent_all_system</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">PostProcessingBackendLabel</span> <span class="o">=</span> <span class="n">DEFAULT_PROCESS_BACKEND</span><span class="p">,</span>
+        <span class="n">counts_used</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">analysis_args</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the analysis for multiple experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            summoner_id (str): The summoner_id of multimanager.</span>
+<span class="sd">            analysis_name (str, optional):</span>
+<span class="sd">                The name of analysis. Defaults to &#39;report&#39;.</span>
+<span class="sd">            no_serialize (bool, optional):</span>
+<span class="sd">                Whether to serialize the analysis. Defaults to False.</span>
+<span class="sd">            specific_analysis_args (</span>
+<span class="sd">                SpecificAnalsisArgs[EntropyMeasureRandomizedAnalyzeArgs], optional</span>
+<span class="sd">            ):</span>
+<span class="sd">                The specific arguments for analysis. Defaults to None.</span>
+<span class="sd">            skip_write (bool, optional):</span>
+<span class="sd">                Whether to skip the file writing during the analysis. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for writing. Defaults to False.</span>
+
+<span class="sd">            selected_qubits (Optional[list[int]], optional):</span>
+<span class="sd">                The selected qubits. Defaults to None.</span>
+<span class="sd">            independent_all_system (bool, optional):</span>
+<span class="sd">                Whether to treat all system as independent. Defaults to False.</span>
+<span class="sd">            backend (PostProcessingBackendLabel, optional):</span>
+<span class="sd">                The backend for the postprocessing. Defaults to DEFAULT_PROCESS_BACKEND.</span>
+<span class="sd">            counts_used (Optional[Iterable[int]], optional):</span>
+<span class="sd">                The counts used for the analysis. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The summoner_id of multimanager.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">multiAnalysis</span><span class="p">(</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span>
+            <span class="n">analysis_name</span><span class="o">=</span><span class="n">analysis_name</span><span class="p">,</span>
+            <span class="n">no_serialize</span><span class="o">=</span><span class="n">no_serialize</span><span class="p">,</span>
+            <span class="n">specific_analysis_args</span><span class="o">=</span><span class="n">specific_analysis_args</span><span class="p">,</span>
+            <span class="n">skip_write</span><span class="o">=</span><span class="n">skip_write</span><span class="p">,</span>
+            <span class="n">multiprocess_write</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">,</span>
+            <span class="n">selected_qubits</span><span class="o">=</span><span class="n">selected_qubits</span><span class="p">,</span>
+            <span class="n">independent_all_system</span><span class="o">=</span><span class="n">independent_all_system</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">counts_used</span><span class="o">=</span><span class="n">counts_used</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">analysis_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

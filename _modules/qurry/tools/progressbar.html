@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -464,7 +464,39 @@ document.write(`
                 <article class="bd-article">
                   
   <h1>Source code for qurry.tools.progressbar</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;Progress Bar for Qurrium (:mod:`qurry.tools.progressbar`)&quot;&quot;&quot;</span>
+<span></span><span class="sd">&#39;&#39;&#39;Progress Bar for Qurrium (:mod:`qurry.tools.progressbar`)</span>
+
+<span class="sd">For the followings GitHub issues on https://tqdm.github.io/</span>
+
+<span class="sd">-   https://github.com/tqdm/tqdm/issues/260</span>
+<span class="sd">    We do some improvement in our package.</span>
+<span class="sd">    We make a fake tqdm class :class:`tqdm` for type hint.</span>
+
+<span class="sd">-   https://github.com/tqdm/tqdm/issues/705</span>
+<span class="sd">    The intersphinx usage in docstring like:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        &quot;&quot;&quot;Dummy docstring.</span>
+
+<span class="sd">        Hey, it&#39;s a :class:`~tqdm.tqdm`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<span class="sd">    It&#39;s not available, so we replace them by:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        &quot;&quot;&quot;Dummy docstring.</span>
+
+<span class="sd">        Hey, it&#39;s a `tqdm.tqdm &lt;https://tqdm.github.io/&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<span class="sd">    by the external link to the `tqdm &lt;https://tqdm.github.io/&gt;`_ documentation,</span>
+<span class="sd">    which follows `Links to External Web Pages</span>
+<span class="sd">    &lt;https://sublime-and-sphinx-guide.readthedocs.io/\</span>
+<span class="sd">        en/latest/references.html#links-to-external-web-pages&gt;`_</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">real_tqdm</span>
@@ -480,10 +512,24 @@ document.write(`
 
 <span class="sd">- &quot;simple&quot;:</span>
 <span class="sd">    A simple format with description, elapsed time, and remaining time.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        &quot;| {desc} - {elapsed} &lt; {remaining}&quot;</span>
+
 <span class="sd">- &quot;qurry-full&quot;:</span>
 <span class="sd">    A full format with count, percentage, bar, description, elapsed time, and remaining time.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        &quot;| {n_fmt}/{total_fmt} {percentage:3.0f}%|{bar}| - {desc} - {elapsed} &lt; {remaining}&quot;</span>
+
 <span class="sd">- &quot;qurry-barless&quot;:</span>
 <span class="sd">    A format without the bar, showing count, description, elapsed time, and remaining time.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        &quot;| {n_fmt}/{total_fmt} - {desc} - {elapsed} &lt; {remaining}&quot;</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">PROGRESSBAR_ASCII</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;4squares&quot;</span><span class="p">:</span> <span class="s2">&quot; ▖▘▝▗▚▞█&quot;</span><span class="p">,</span>
@@ -504,6 +550,16 @@ document.write(`
 <span class="sd">    A braille ASCII style with 7 segments.</span>
 <span class="sd">- &quot;boolen-eq&quot;:</span>
 <span class="sd">    A boolean equal sign ASCII style with just an equal sign.</span>
+
+<span class="sd">.. code-block:: python</span>
+
+<span class="sd">    {</span>
+<span class="sd">        &quot;4squares&quot;: &quot; ▖▘▝▗▚▞█&quot;,</span>
+<span class="sd">        &quot;standard&quot;: &quot; ▏▎▍▌▋▊▉█&quot;,</span>
+<span class="sd">        &quot;decimal&quot;: &quot; 123456789#&quot;,</span>
+<span class="sd">        &quot;braille&quot;: &quot; ⠏⠛⠹⠼⠶⠧⠿&quot;,</span>
+<span class="sd">        &quot;boolen-eq&quot;: &quot; =&quot;,</span>
+<span class="sd">    }    </span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
@@ -542,12 +598,17 @@ document.write(`
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A fake tqdm class for type hint.</span>
 
 <span class="sd">    For tqdm not yet implemented their type hint by subscript like:</span>
-<span class="sd">    &gt;&gt;&gt; some_tqdm: tqdm[int] = tqdm(range(10))</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        some_tqdm: tqdm[int] = tqdm(range(10))</span>
 
 <span class="sd">    So, we make a fake tqdm class to make it work.</span>
-<span class="sd">    And it should be tracked by this issue: https://github.com/tqdm/tqdm/issues/260</span>
-<span class="sd">    To avoid the conflict,</span>
-<span class="sd">    you **SHOULD NOT IMPORT** this class and keep it only working</span>
+
+<span class="sd">    And it should be tracked by this issue:</span>
+<span class="sd">    https://github.com/tqdm/tqdm/issues/260 to avoid the conflict.</span>
+
+<span class="sd">    You **SHOULD NOT IMPORT** this class and keep it only working</span>
 <span class="sd">    for :func:`qurry_progressbar` as type hint.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -556,8 +617,8 @@ document.write(`
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="s2">&quot;This is not real tqdm class, &quot;</span>
-            <span class="o">+</span> <span class="s2">&quot;but a type hint inherit from `Iterator` &quot;</span>
-            <span class="o">+</span> <span class="s2">&quot;for function `qurry_progressbar`, you imported the wrong one.&quot;</span>
+            <span class="s2">&quot;but a type hint inherit from &#39;Iterator&#39; &quot;</span>
+            <span class="s2">&quot;for function &#39;qurry_progressbar&#39;, you imported the wrong one.&quot;</span>
         <span class="p">)</span></div>
 
 
@@ -667,7 +728,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

@@ -59,7 +59,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -96,7 +96,7 @@
     <link rel="prev" title="Other Features" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 01:54:44"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -582,12 +582,12 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| BasicProvider, which can call by &#39;.get_backend&#39;:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x7d742cee0980&gt;
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x702ba899d5e0&gt;
 | BasicSimulator, which is a direct call:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x7d742ce7e0d0&gt;
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x702ba899ff80&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x7d742ce7e0d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x702ba899ff80&gt;
 </pre></div>
 </div>
 </div>
@@ -630,13 +630,18 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Via AerProvider, which can call by &#39;.get_backend&#39;:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
+| - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
 | - AerSimulator(&#39;aer_simulator_statevector&#39;)  AerSimulator(&#39;aer_simulator_statevector&#39;)
+| - AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)  AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_density_matrix&#39;)  AerSimulator(&#39;aer_simulator_density_matrix&#39;)
+| - AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)  AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)  AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)
 | - AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_unitary&#39;)  AerSimulator(&#39;aer_simulator_unitary&#39;)
+| - AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)  AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_superop&#39;)  AerSimulator(&#39;aer_simulator_superop&#39;)
+| - AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)  AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)
 | - QasmSimulator(&#39;qasm_simulator&#39;) ...... QasmSimulator(&#39;qasm_simulator&#39;)
 | - StatevectorSimulator(&#39;statevector_simulator&#39;)  StatevectorSimulator(&#39;statevector_simulator&#39;)
 | - UnitarySimulator(&#39;unitary_simulator&#39;)  UnitarySimulator(&#39;unitary_simulator&#39;)
@@ -684,7 +689,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Check the available devices: (&#39;CPU&#39;,)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Check the available devices: (&#39;CPU&#39;, &#39;GPU&#39;)
 | - Then set option as GPU
 | - And check again:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
@@ -825,7 +830,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Does we have GPU backend to access: False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Does we have GPU backend to access: True
 | - There is not GPU backend to access: &#39;aer_gpu&#39; unknown backend or backend callsign.
 </pre></div>
 </div>
@@ -843,7 +848,7 @@ document.write(`
  ### BackendWrapper Statesheet
 ------------------------------------------------------------
  #### Simulator
- - Aer GPU ........................... False
+ - Aer GPU ........................... True
  - Simulator Provider by ............. qiskit_aer
    sim
    No Callsign Added
@@ -942,65 +947,65 @@ document.write(`
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;sim&#39;: {&#39;sim&#39;: &lt;AerSimulator(&#39;aer_simulator&#39;)&gt;},
  &#39;real&#39;: {},
- &#39;fake&#39;: {&#39;fake_algiers&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.algiers.fake_algiers.FakeAlgiers at 0x7d73ebc3c910&gt;,
-  &#39;fake_almaden&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.almaden.fake_almaden.FakeAlmadenV2 at 0x7d73ebc3ca50&gt;,
-  &#39;fake_armonk&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.armonk.fake_armonk.FakeArmonkV2 at 0x7d73ebc3cb90&gt;,
-  &#39;fake_athens&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.athens.fake_athens.FakeAthensV2 at 0x7d73ebc3ccd0&gt;,
-  &#39;fake_auckland&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.auckland.fake_auckland.FakeAuckland at 0x7d73ebc3ce10&gt;,
-  &#39;fake_belem&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.belem.fake_belem.FakeBelemV2 at 0x7d73ebc3cf50&gt;,
-  &#39;fake_boeblingen&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.boeblingen.fake_boeblingen.FakeBoeblingenV2 at 0x7d73ebc3d090&gt;,
-  &#39;fake_bogota&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.bogota.fake_bogota.FakeBogotaV2 at 0x7d73ebc3d1d0&gt;,
-  &#39;fake_brisbane&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brisbane.fake_brisbane.FakeBrisbane at 0x7d73ebc3d310&gt;,
-  &#39;fake_brooklyn&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brooklyn.fake_brooklyn.FakeBrooklynV2 at 0x7d73ebc3d450&gt;,
-  &#39;fake_burlington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.burlington.fake_burlington.FakeBurlingtonV2 at 0x7d73ebc3d590&gt;,
-  &#39;fake_cairo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cairo.fake_cairo.FakeCairoV2 at 0x7d73ebc3d6d0&gt;,
-  &#39;fake_cambridge&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cambridge.fake_cambridge.FakeCambridgeV2 at 0x7d73ebc3d810&gt;,
-  &#39;fake_casablanca&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.casablanca.fake_casablanca.FakeCasablancaV2 at 0x7d73ebc3d950&gt;,
-  &#39;fake_cusco&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cusco.fake_cusco.FakeCusco at 0x7d73ebc3da90&gt;,
-  &#39;fake_essex&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.essex.fake_essex.FakeEssexV2 at 0x7d73ebc3dbd0&gt;,
-  &#39;fake_fez&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fez.fake_fez.FakeFez at 0x7d73ebc3dd10&gt;,
-  &#39;fake_fractional&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fractional.fake_fractional.FakeFractionalBackend at 0x7d73ebc3de50&gt;,
-  &#39;fake_geneva&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.geneva.fake_geneva.FakeGeneva at 0x7d73ebc3df90&gt;,
-  &#39;fake_guadalupe&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.guadalupe.fake_guadalupe.FakeGuadalupeV2 at 0x7d73ebc3e0d0&gt;,
-  &#39;fake_hanoi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.hanoi.fake_hanoi.FakeHanoiV2 at 0x7d73ebc3e210&gt;,
-  &#39;fake_jakarta&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.jakarta.fake_jakarta.FakeJakartaV2 at 0x7d73ebc3e350&gt;,
-  &#39;fake_johannesburg&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.johannesburg.fake_johannesburg.FakeJohannesburgV2 at 0x7d73ebc3e490&gt;,
-  &#39;fake_kawasaki&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kawasaki.fake_kawasaki.FakeKawasaki at 0x7d73ebc3e5d0&gt;,
-  &#39;fake_kolkata&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kolkata.fake_kolkata.FakeKolkataV2 at 0x7d73ebc3e710&gt;,
-  &#39;fake_kyiv&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyiv.fake_kyiv.FakeKyiv at 0x7d73ebc3e850&gt;,
-  &#39;fake_kyoto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyoto.fake_kyoto.FakeKyoto at 0x7d73ebc3e990&gt;,
-  &#39;fake_lagos&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lagos.fake_lagos.FakeLagosV2 at 0x7d73ebc3ead0&gt;,
-  &#39;fake_lima&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lima.fake_lima.FakeLimaV2 at 0x7d73ebc3ec10&gt;,
-  &#39;fake_london&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.london.fake_london.FakeLondonV2 at 0x7d73ebc3ed50&gt;,
-  &#39;fake_manhattan&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manhattan.fake_manhattan.FakeManhattanV2 at 0x7d73ebc3ee90&gt;,
-  &#39;fake_manila&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manila.fake_manila.FakeManilaV2 at 0x7d73ebc3efd0&gt;,
-  &#39;fake_melbourne&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.melbourne.fake_melbourne.FakeMelbourneV2 at 0x7d73ebc3f110&gt;,
-  &#39;fake_marrakesh&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.marrakesh.fake_marrakesh.FakeMarrakesh at 0x7d73ebc3f610&gt;,
-  &#39;fake_montreal&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.montreal.fake_montreal.FakeMontrealV2 at 0x7d73ebc3f750&gt;,
-  &#39;fake_mumbai&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.mumbai.fake_mumbai.FakeMumbaiV2 at 0x7d73ebc3f890&gt;,
-  &#39;fake_nairobi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.nairobi.fake_nairobi.FakeNairobiV2 at 0x7d73ebc3f9d0&gt;,
-  &#39;fake_osaka&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.osaka.fake_osaka.FakeOsaka at 0x7d73ebc3fb10&gt;,
-  &#39;fake_oslo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.oslo.fake_oslo.FakeOslo at 0x7d73ebc3fc50&gt;,
-  &#39;fake_ourense&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.ourense.fake_ourense.FakeOurenseV2 at 0x7d73ebc3fd90&gt;,
-  &#39;fake_paris&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.paris.fake_paris.FakeParisV2 at 0x7d73ebc3fed0&gt;,
-  &#39;fake_peekskill&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.peekskill.fake_peekskill.FakePeekskill at 0x7d73ebc3f4d0&gt;,
-  &#39;fake_perth&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.perth.fake_perth.FakePerth at 0x7d73eb370050&gt;,
-  &#39;fake_prague&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.prague.fake_prague.FakePrague at 0x7d73eb370190&gt;,
-  &#39;fake_poughkeepsie&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.poughkeepsie.fake_poughkeepsie.FakePoughkeepsieV2 at 0x7d73eb370cd0&gt;,
-  &#39;fake_quebec&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quebec.fake_quebec.FakeQuebec at 0x7d73eb370e10&gt;,
-  &#39;fake_quito&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quito.fake_quito.FakeQuitoV2 at 0x7d73eb370f50&gt;,
-  &#39;fake_rochester&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rochester.fake_rochester.FakeRochesterV2 at 0x7d73eb371090&gt;,
-  &#39;fake_rome&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rome.fake_rome.FakeRomeV2 at 0x7d73eb3711d0&gt;,
-  &#39;fake_santiago&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.santiago.fake_santiago.FakeSantiagoV2 at 0x7d73eb371310&gt;,
-  &#39;fake_sherbrooke&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sherbrooke.fake_sherbrooke.FakeSherbrooke at 0x7d73eb371450&gt;,
-  &#39;fake_singapore&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.singapore.fake_singapore.FakeSingaporeV2 at 0x7d73eb371590&gt;,
-  &#39;fake_sydney&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sydney.fake_sydney.FakeSydneyV2 at 0x7d73eb3716d0&gt;,
-  &#39;fake_torino&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.torino.fake_torino.FakeTorino at 0x7d73eb371810&gt;,
-  &#39;fake_toronto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.toronto.fake_toronto.FakeTorontoV2 at 0x7d73eb371950&gt;,
-  &#39;fake_valencia&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.valencia.fake_valencia.FakeValenciaV2 at 0x7d73eb371a90&gt;,
-  &#39;fake_vigo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.vigo.fake_vigo.FakeVigoV2 at 0x7d73eb371bd0&gt;,
-  &#39;fake_washington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.washington.fake_washington.FakeWashingtonV2 at 0x7d73eb371d10&gt;,
-  &#39;fake_yorktown&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.yorktown.fake_yorktown.FakeYorktownV2 at 0x7d73eb371e50&gt;},
+ &#39;fake&#39;: {&#39;fake_algiers&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.algiers.fake_algiers.FakeAlgiers at 0x702b14e74530&gt;,
+  &#39;fake_almaden&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.almaden.fake_almaden.FakeAlmadenV2 at 0x702b04a3a870&gt;,
+  &#39;fake_armonk&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.armonk.fake_armonk.FakeArmonkV2 at 0x702b03a591c0&gt;,
+  &#39;fake_athens&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.athens.fake_athens.FakeAthensV2 at 0x702b03a6c140&gt;,
+  &#39;fake_auckland&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.auckland.fake_auckland.FakeAuckland at 0x702b03c40980&gt;,
+  &#39;fake_belem&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.belem.fake_belem.FakeBelemV2 at 0x702b03a6cb30&gt;,
+  &#39;fake_boeblingen&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.boeblingen.fake_boeblingen.FakeBoeblingenV2 at 0x702b03c1f140&gt;,
+  &#39;fake_bogota&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.bogota.fake_bogota.FakeBogotaV2 at 0x702b03a9a330&gt;,
+  &#39;fake_brisbane&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brisbane.fake_brisbane.FakeBrisbane at 0x702b03ace090&gt;,
+  &#39;fake_brooklyn&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brooklyn.fake_brooklyn.FakeBrooklynV2 at 0x702b03acfce0&gt;,
+  &#39;fake_burlington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.burlington.fake_burlington.FakeBurlingtonV2 at 0x702b039a6630&gt;,
+  &#39;fake_cairo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cairo.fake_cairo.FakeCairoV2 at 0x702b038148f0&gt;,
+  &#39;fake_cambridge&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cambridge.fake_cambridge.FakeCambridgeV2 at 0x702b03814e00&gt;,
+  &#39;fake_casablanca&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.casablanca.fake_casablanca.FakeCasablancaV2 at 0x702b0382b470&gt;,
+  &#39;fake_cusco&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cusco.fake_cusco.FakeCusco at 0x702b0382b980&gt;,
+  &#39;fake_essex&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.essex.fake_essex.FakeEssexV2 at 0x702b03845eb0&gt;,
+  &#39;fake_fez&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fez.fake_fez.FakeFez at 0x702b03720800&gt;,
+  &#39;fake_fractional&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fractional.fake_fractional.FakeFractionalBackend at 0x702b03720d70&gt;,
+  &#39;fake_geneva&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.geneva.fake_geneva.FakeGeneva at 0x702b03720d10&gt;,
+  &#39;fake_guadalupe&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.guadalupe.fake_guadalupe.FakeGuadalupeV2 at 0x702b037b6150&gt;,
+  &#39;fake_hanoi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.hanoi.fake_hanoi.FakeHanoiV2 at 0x702b037e3a10&gt;,
+  &#39;fake_jakarta&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.jakarta.fake_jakarta.FakeJakartaV2 at 0x702b0360c590&gt;,
+  &#39;fake_johannesburg&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.johannesburg.fake_johannesburg.FakeJohannesburgV2 at 0x702b036380b0&gt;,
+  &#39;fake_kawasaki&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kawasaki.fake_kawasaki.FakeKawasaki at 0x702b0363a5d0&gt;,
+  &#39;fake_kolkata&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kolkata.fake_kolkata.FakeKolkataV2 at 0x702b03be0cb0&gt;,
+  &#39;fake_kyiv&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyiv.fake_kyiv.FakeKyiv at 0x702b03513e30&gt;,
+  &#39;fake_kyoto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyoto.fake_kyoto.FakeKyoto at 0x702b035439b0&gt;,
+  &#39;fake_lagos&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lagos.fake_lagos.FakeLagosV2 at 0x702b03416300&gt;,
+  &#39;fake_lima&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lima.fake_lima.FakeLimaV2 at 0x702b034ae030&gt;,
+  &#39;fake_london&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.london.fake_london.FakeLondonV2 at 0x702b034c0560&gt;,
+  &#39;fake_manhattan&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manhattan.fake_manhattan.FakeManhattanV2 at 0x702b034c2150&gt;,
+  &#39;fake_manila&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manila.fake_manila.FakeManilaV2 at 0x702b034c2660&gt;,
+  &#39;fake_melbourne&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.melbourne.fake_melbourne.FakeMelbourneV2 at 0x702b0333c920&gt;,
+  &#39;fake_marrakesh&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.marrakesh.fake_marrakesh.FakeMarrakesh at 0x702b0333e5a0&gt;,
+  &#39;fake_montreal&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.montreal.fake_montreal.FakeMontrealV2 at 0x702b03b99850&gt;,
+  &#39;fake_mumbai&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.mumbai.fake_mumbai.FakeMumbaiV2 at 0x702b033dff20&gt;,
+  &#39;fake_nairobi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.nairobi.fake_nairobi.FakeNairobiV2 at 0x702b0320ba40&gt;,
+  &#39;fake_osaka&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.osaka.fake_osaka.FakeOsaka at 0x702b03237560&gt;,
+  &#39;fake_oslo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.oslo.fake_oslo.FakeOslo at 0x702b03c40c20&gt;,
+  &#39;fake_ourense&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.ourense.fake_ourense.FakeOurenseV2 at 0x702b04375640&gt;,
+  &#39;fake_paris&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.paris.fake_paris.FakeParisV2 at 0x702b032e7ce0&gt;,
+  &#39;fake_peekskill&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.peekskill.fake_peekskill.FakePeekskill at 0x702b03104320&gt;,
+  &#39;fake_perth&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.perth.fake_perth.FakePerth at 0x702b0311fe00&gt;,
+  &#39;fake_prague&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.prague.fake_prague.FakePrague at 0x702b031463f0&gt;,
+  &#39;fake_poughkeepsie&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.poughkeepsie.fake_poughkeepsie.FakePoughkeepsieV2 at 0x702b03158950&gt;,
+  &#39;fake_quebec&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quebec.fake_quebec.FakeQuebec at 0x702b03180aa0&gt;,
+  &#39;fake_quito&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quito.fake_quito.FakeQuitoV2 at 0x702b03181d30&gt;,
+  &#39;fake_rochester&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rochester.fake_rochester.FakeRochesterV2 at 0x702b03064680&gt;,
+  &#39;fake_rome&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rome.fake_rome.FakeRomeV2 at 0x702b03066300&gt;,
+  &#39;fake_santiago&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.santiago.fake_santiago.FakeSantiagoV2 at 0x702b03066780&gt;,
+  &#39;fake_sherbrooke&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sherbrooke.fake_sherbrooke.FakeSherbrooke at 0x702b0307c470&gt;,
+  &#39;fake_singapore&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.singapore.fake_singapore.FakeSingaporeV2 at 0x702b0307e120&gt;,
+  &#39;fake_sydney&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sydney.fake_sydney.FakeSydneyV2 at 0x702b03a04bc0&gt;,
+  &#39;fake_torino&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.torino.fake_torino.FakeTorino at 0x702b02f54a70&gt;,
+  &#39;fake_toronto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.toronto.fake_toronto.FakeTorontoV2 at 0x702b03a24a70&gt;,
+  &#39;fake_valencia&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.valencia.fake_valencia.FakeValenciaV2 at 0x702b02f774d0&gt;,
+  &#39;fake_vigo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.vigo.fake_vigo.FakeVigoV2 at 0x702b02e2bf80&gt;,
+  &#39;fake_washington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.washington.fake_washington.FakeWashingtonV2 at 0x702b02e41b20&gt;,
+  &#39;fake_yorktown&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.yorktown.fake_yorktown.FakeYorktownV2 at 0x702b02e420f0&gt;},
  &#39;extra&#39;: {}}
 </pre></div>
 </div>
@@ -1055,10 +1060,14 @@ document.write(`
 --------------------------------------------
  ### Qiskit version
  - main
-   - qiskit-aer .............. 0.17.1
-   - qiskit-ibm-runtime ...... 0.40.1
+   - qiskit-aer .............. 0.17.0
+   - qiskit-aer-gpu .......... 0.15.1
+   - qiskit-aer-gpu-cu11 ..... 0.17.0
+   - qiskit-ibm-runtime ...... 0.39.0
  - deprecated
  - into-community
+--------------------------------------------
+ + qiskit-aer-gpu and qiskit-aer-gpu-cu11 should have the same version as qiskit-aer.
 --------------------------------------------
 </pre></div>
 </div>
@@ -1175,7 +1184,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 01:54:44.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

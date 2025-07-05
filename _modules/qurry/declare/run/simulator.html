@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -466,7 +466,7 @@ document.write(`
   <h1>Source code for qurry.declare.run.simulator</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Declaration - Run - Simulator (:mod:`qurry.declare.run.simulator`)</span>
 
-<span class="sd">This module reveals the full arguments of the :meth:`backend.run` method</span>
+<span class="sd">This module reveals the full arguments of :meth:`~qiskit.providers.backend.BackendV2.run`</span>
 <span class="sd">for the simulator backends to avoid the UNnEcEsSaRy and PAINFUL finding of</span>
 <span class="sd">how many arguments and what types of arguments you can pass to the method.</span>
 
@@ -482,13 +482,11 @@ document.write(`
 <div class="viewcode-block" id="BasicSimulatorRunArgs">
 <a class="viewcode-back" href="../../../../api/declare/run.html#qurry.declare.run.simulator.BasicSimulatorRunArgs">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BasicSimulatorRunArgs</span><span class="p">(</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for :meth:`backend.run` from :mod:`qiskit.providers.backend`.</span>
-<span class="sd">    For :cls:`BasicSimulator` from :mod:`qiskit.providers.basic_provider`:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;For `BasicSimulator` from :mod:`qiskit.providers.basic_provider`:</span>
 
-<span class="sd">    For qiskit&gt;=2.0, the signature of :meth:`backend.run` is:</span>
+<span class="sd">    For qiskit&gt;=2.0, the signature of :meth:`~qiskit.providers.backend.BackendV2.run` is:</span>
 
 <span class="sd">    .. code-block:: python</span>
-
 
 <span class="sd">        def run(</span>
 <span class="sd">            self, run_input: QuantumCircuit | list[QuantumCircuit], **run_options</span>
@@ -588,10 +586,11 @@ document.write(`
 <div class="viewcode-block" id="AerBackendRunArgs">
 <a class="viewcode-back" href="../../../../api/declare/run.html#qurry.declare.run.simulator.AerBackendRunArgs">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AerBackendRunArgs</span><span class="p">(</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for :meth:`backend.run` from :mod:`qiskit.providers.backend`.</span>
-<span class="sd">    For :cls:`AerBackend` from :mod:`qiskit_aer.backends.aerbackend`</span>
-<span class="sd">    or :cls:`AerBackend` from :mod:`qiskit.providers.aer.backends.aerbackend`,</span>
-<span class="sd">    the old import path.:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for :meth:`~qiskit.providers.backend.BackendV2.run`.</span>
+
+<span class="sd">    For `AerBackend` from :mod:`qiskit_aer.backends.aerbackend`</span>
+<span class="sd">    or `AerBackend` from :mod:`qiskit.providers.aer.backends.aerbackend`,</span>
+<span class="sd">    the old import path:</span>
 
 <span class="sd">    .. code-block:: python</span>
 
@@ -790,8 +789,9 @@ document.write(`
 <div class="viewcode-block" id="BasicAerBackendRunArgs">
 <a class="viewcode-back" href="../../../../api/declare/run.html#qurry.declare.run.simulator.BasicAerBackendRunArgs">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BasicAerBackendRunArgs</span><span class="p">(</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for :meth:`backend.run` from :mod:`qiskit.providers.backend`.</span>
-<span class="sd">    For :cls:`QasmSimulatorPy` from :mod:`qiskit.providers.basicaer`:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for :meth:`~qiskit.providers.backend.BackendV2.run`.</span>
+
+<span class="sd">    For `QasmSimulatorPy` from :mod:`qiskit.providers.basicaer`:</span>
 
 <span class="sd">    .. code-block:: python</span>
 
@@ -865,7 +865,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

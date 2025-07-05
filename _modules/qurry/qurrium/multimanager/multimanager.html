@@ -1,0 +1,1535 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrium.multimanager.multimanager &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrium/multimanager/multimanager';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurriu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrium.multimanager.multimanager</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;MultiManager - The manager of multiple experiments.</span>
+<span class="sd">(:mod:`qurry.qurrium.multimanager.multimanager`)&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tarfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Generic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">uuid</span><span class="w"> </span><span class="kn">import</span> <span class="n">uuid4</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multiprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_context</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.arguments</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiCommonparams</span><span class="p">,</span> <span class="n">PendingStrategyLiteral</span><span class="p">,</span> <span class="n">PendingTargetProviderLiteral</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.beforewards</span><span class="w"> </span><span class="kn">import</span> <span class="n">Before</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.afterwards</span><span class="w"> </span><span class="kn">import</span> <span class="n">After</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.process</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetimedict_process</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">experiment_writer</span><span class="p">,</span> <span class="n">multimanager_report_naming</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.chunk</span><span class="w"> </span><span class="kn">import</span> <span class="n">very_easy_chunk_size</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..container</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentContainer</span><span class="p">,</span> <span class="n">QuantityContainer</span><span class="p">,</span> <span class="n">_E</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.iocontrol</span><span class="w"> </span><span class="kn">import</span> <span class="n">naming</span><span class="p">,</span> <span class="n">IOComplex</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">qurry_progressbar</span><span class="p">,</span> <span class="n">GeneralSimulator</span><span class="p">,</span> <span class="n">DatetimeDict</span><span class="p">,</span> <span class="n">DEFAULT_POOL_SIZE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule</span><span class="w"> </span><span class="kn">import</span> <span class="n">quickJSON</span><span class="p">,</span> <span class="n">DEFAULT_ENCODING</span><span class="p">,</span> <span class="n">DEFAULT_MODE</span><span class="p">,</span> <span class="n">DEFAULT_INDENT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule.mori</span><span class="w"> </span><span class="kn">import</span> <span class="n">TagList</span><span class="p">,</span> <span class="n">GitSyncControl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...declare</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseRunArgs</span><span class="p">,</span> <span class="n">AnalyzeArgs</span><span class="p">,</span> <span class="n">SpecificAnalsisArgs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">QurryResetAccomplished</span><span class="p">,</span> <span class="n">QurryResetSecurityActivated</span>
+
+
+<div class="viewcode-block" id="MultiManager">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MultiManager</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">_E</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The manager of multiple experiments.&quot;&quot;&quot;</span>
+
+    <span class="vm">__name__</span> <span class="o">=</span> <span class="s2">&quot;MultiManager&quot;</span>
+
+    <span class="n">multicommons</span><span class="p">:</span> <span class="n">MultiCommonparams</span>
+    <span class="n">beforewards</span><span class="p">:</span> <span class="n">Before</span>
+    <span class="n">afterwards</span><span class="p">:</span> <span class="n">After</span>
+
+    <span class="n">quantity_container</span><span class="p">:</span> <span class="n">QuantityContainer</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The container of quantity.&quot;&quot;&quot;</span>
+    <span class="n">exps</span><span class="p">:</span> <span class="n">ExperimentContainer</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The experiments container.&quot;&quot;&quot;</span>
+
+    <span class="n">_unexports</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;allCounts&quot;</span><span class="p">,</span> <span class="s2">&quot;retrievedResult&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The content would not be exported.&quot;&quot;&quot;</span>
+    <span class="n">_not_sync</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;allCounts&quot;</span><span class="p">,</span> <span class="s2">&quot;retrievedResult&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The content would not be synchronized.&quot;&quot;&quot;</span>
+    <span class="n">after_lock</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Protect the `afterward` content to be overwritten. </span>
+<span class="sd">    When setitem is called and completed, it will be setted as `False` automatically.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mute_auto_lock</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Whether mute the auto-lock message.&quot;&quot;&quot;</span>
+
+    <span class="n">qurryinfo</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The qurryinfo of the multi-experiment.</span>
+
+<span class="sd">    This is a dictionary with experiment IDs as keys,</span>
+<span class="sd">    and the values are dictionaries containing the exported information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="MultiManager.reset_afterwards">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.reset_afterwards">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_afterwards</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="n">security</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">mute_warning</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset the measurement and release memory for overwrite.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            security (bool, optional): Security for reset. Defaults to `False`.</span>
+<span class="sd">            mute_warning (bool, optional): Mute warning. Defaults to `False`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Use &#39;.reset(security=True)&#39; to reset the afterwards.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">security</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">security</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">retrievedResult</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span> <span class="n">allCounts</span><span class="o">=</span><span class="p">{})</span>
+            <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">mute_warning</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Afterwards reset accomplished.&quot;</span><span class="p">,</span> <span class="n">QurryResetAccomplished</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Reset does not execute to prevent executing accidentally, &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;if you are sure to do this, then use &#39;.reset(security=True)&#39;.&quot;</span><span class="p">,</span>
+                <span class="n">QurryResetSecurityActivated</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.clear_all_exps_result">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.clear_all_exps_result">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear_all_exps_result</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="n">security</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">mute_warning</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear the result of all experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            security (bool, optional): Security for clearing. Defaults to `False`.</span>
+<span class="sd">            mute_warning (bool, optional): Mute the warning when clearing. Defaults to `False`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Use &#39;.clear_all_exps_result(security=True)&#39; to clear all results.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">security</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">security</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
+                <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Clear jobs result...&quot;</span><span class="p">,</span>
+                <span class="n">bar_format</span><span class="o">=</span><span class="s2">&quot;qurry-barless&quot;</span><span class="p">,</span>
+            <span class="p">):</span>
+                <span class="n">exp</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">clear_result</span><span class="p">(</span><span class="n">security</span><span class="o">=</span><span class="n">security</span><span class="p">,</span> <span class="n">mute_warning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">mute_warning</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;All experiments&#39; results are cleared.&quot;</span><span class="p">,</span>
+                    <span class="n">QurryResetAccomplished</span><span class="p">,</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Reset does not execute to prevent executing accidentally, &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;if you are sure to do this, then use &#39;.reset(security=True)&#39;.&quot;</span><span class="p">,</span>
+                <span class="n">QurryResetSecurityActivated</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">_fields</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_fields</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> is not a valid field of &#39;</span><span class="si">{</span><span class="n">Before</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">After</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; Valid fields are </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">_fields</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_fields</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">summoner_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ID of experiment of the MultiManager.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ID of experiment of the MultiManager.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Hash the MultiManager by its ID.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">summoner_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Name of experiment of the MultiManager.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Name of experiment of the MultiManager.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">naming_complex</span><span class="p">:</span> <span class="n">IOComplex</span><span class="p">,</span>
+        <span class="n">multicommons</span><span class="p">:</span> <span class="n">MultiCommonparams</span><span class="p">,</span>
+        <span class="n">beforewards</span><span class="p">:</span> <span class="n">Before</span><span class="p">,</span>
+        <span class="n">afterwards</span><span class="p">:</span> <span class="n">After</span><span class="p">,</span>
+        <span class="n">quantity_container</span><span class="p">:</span> <span class="n">QuantityContainer</span><span class="p">,</span>
+        <span class="n">outfields</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">gitignore</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">GitSyncControl</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the multi-experiment.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">gitignore</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span> <span class="o">=</span> <span class="n">GitSyncControl</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gitignore</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span> <span class="o">=</span> <span class="n">GitSyncControl</span><span class="p">(</span><span class="n">gitignore</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gitignore</span><span class="p">,</span> <span class="n">GitSyncControl</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span> <span class="o">=</span> <span class="n">gitignore</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gitignore must be list or GitSyncControl, not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">gitignore</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">exps</span> <span class="o">=</span> <span class="n">ExperimentContainer</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span> <span class="o">=</span> <span class="n">naming_complex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span> <span class="o">=</span> <span class="n">multicommons</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span> <span class="o">=</span> <span class="n">beforewards</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span> <span class="o">=</span> <span class="n">afterwards</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span> <span class="o">=</span> <span class="n">quantity_container</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span> <span class="o">=</span> <span class="n">outfields</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;id=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;tags=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">tags</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;jobstype=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;pending_strategy=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">pending_strategy</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;last_events=</span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">last_events</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;exps_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_oneline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;id=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;jobstype=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s1">&quot;, ..., &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;exps_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_oneline_no_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;jobstype=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s1">&quot;, ..., &#39;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;exps_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_pretty_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">cycle</span><span class="p">):</span>
+        <span class="n">max_events</span> <span class="o">=</span> <span class="mi">5</span>
+
+        <span class="k">if</span> <span class="n">cycle</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;id=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s1">&quot;, &#39;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;jobstype=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s1">&quot;, ..., &#39;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;exps_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span><span class="p">,</span> <span class="s2">&quot;)&gt;&quot;</span><span class="p">):</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;id=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s1">&quot;,&#39;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tags=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">tags</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;jobstype=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">jobstype</span><span class="si">}</span><span class="s1">&quot;,&#39;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;pending_strategy=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">pending_strategy</span><span class="si">}</span><span class="s1">&quot;,&#39;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;last_events={&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_events</span><span class="p">:</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;  ...,&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">last_events</span><span class="p">(</span><span class="n">max_events</span><span class="p">):</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  &#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&#39;: &#39;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&#39;,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;},&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exps_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MultiManager.register">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.register">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">current_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">exps_instance</span><span class="p">:</span> <span class="n">_E</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register the experiment to multimanager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            current_id (str): ID of experiment.</span>
+<span class="sd">            config (dict[str, Any]): The config of experiment.</span>
+<span class="sd">            exps_instance (ExperimentPrototype): The instance of experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span> <span class="o">==</span> <span class="n">current_id</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;ID is not consistent, exp_id: </span><span class="si">{</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2"> and &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;current_id: </span><span class="si">{</span><span class="n">current_id</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">exps_config</span><span class="p">[</span><span class="n">current_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuits_num</span><span class="p">[</span><span class="n">current_id</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">job_taglist</span><span class="p">[</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">tags</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_id</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Serial is not int, exp_id: </span><span class="si">{</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2"> and &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;serial: </span><span class="si">{</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;It should be int.&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">index_taglist</span><span class="p">[</span><span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">tags</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">exps_instance</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">current_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">exps_instance</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.build">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.build">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">config_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">experiment_instance</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">_E</span><span class="p">],</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Backend</span> <span class="o">=</span> <span class="n">GeneralSimulator</span><span class="p">(),</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">jobstype</span><span class="p">:</span> <span class="n">PendingTargetProviderLiteral</span> <span class="o">=</span> <span class="s2">&quot;local&quot;</span><span class="p">,</span>
+        <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span> <span class="o">=</span> <span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+        <span class="c1"># save parameters</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">skip_writing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess_write</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MultiManager[_E]&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build the multi-experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config_list (list[dict[str, Any]]):</span>
+<span class="sd">                The list of config of experiments.</span>
+<span class="sd">                This config is used to build the experiments.</span>
+<span class="sd">            experiment_instance (ExperimentPrototype): The instance of experiment.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name of experiment of the :class:`MultiManager`. Defaults to None.</span>
+<span class="sd">            shots (Optional[int], optional): The shots of experiments. Defaults to None.</span>
+<span class="sd">            backend (Backend, optional): The backend of experiments. Defaults to GeneralSimulator().</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional): The tags of experiments. Defaults to None.</span>
+<span class="sd">            manager_run_args (Optional[Union[BaseRunArgs, dict[str, Any]]], optional):</span>
+<span class="sd">                The arguments of manager run. Defaults to None.</span>
+<span class="sd">            jobstype (PendingTargetProviderLiteral, optional):</span>
+<span class="sd">                The jobstype of experiments. Defaults to &quot;local&quot;.</span>
+<span class="sd">            pending_strategy (PendingStrategyLiteral, optional):</span>
+<span class="sd">                The pending strategy of experiments. Defaults to &quot;tags&quot;.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Location of saving experiment. Defaults to Path(&quot;./&quot;).</span>
+<span class="sd">            skip_writing (bool, optional):</span>
+<span class="sd">                Whether skip writing. Defaults to False.</span>
+<span class="sd">            multiprocess_build (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for building. Defaults to False.</span>
+<span class="sd">            multiprocess_write (bool, optional):</span>
+<span class="sd">                Whether use multiprocess for writing. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            MultiManager: The container of experiments and multi-experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">summoner_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">summoner_name</span> <span class="o">=</span> <span class="s2">&quot;multiexps&quot;</span>
+        <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="k">if</span> <span class="n">manager_run_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">manager_run_args</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">naming_complex</span> <span class="o">=</span> <span class="n">naming</span><span class="p">(</span>
+            <span class="n">exps_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">multicommons</span><span class="p">,</span> <span class="n">outfields</span> <span class="o">=</span> <span class="n">MultiCommonparams</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;summoner_id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid4</span><span class="p">()),</span>
+                <span class="s2">&quot;summoner_name&quot;</span><span class="p">:</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="p">,</span>
+                <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">tags</span><span class="p">,</span>
+                <span class="s2">&quot;shots&quot;</span><span class="p">:</span> <span class="n">shots</span><span class="p">,</span>
+                <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="n">backend</span><span class="p">,</span>
+                <span class="s2">&quot;save_location&quot;</span><span class="p">:</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+                <span class="s2">&quot;export_location&quot;</span><span class="p">:</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;jobstype&quot;</span><span class="p">:</span> <span class="n">jobstype</span><span class="p">,</span>
+                <span class="s2">&quot;pending_strategy&quot;</span><span class="p">:</span> <span class="n">pending_strategy</span><span class="p">,</span>
+                <span class="s2">&quot;manager_run_args&quot;</span><span class="p">:</span> <span class="n">manager_run_args</span><span class="p">,</span>
+                <span class="s2">&quot;filetype&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;datetimes&quot;</span><span class="p">:</span> <span class="n">DatetimeDict</span><span class="p">(),</span>
+                <span class="s2">&quot;outfields&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span> <span class="o">==</span> <span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span>
+        <span class="p">),</span> <span class="s2">&quot;| save_location is not consistent with namingCpx.save_location.&quot;</span>
+
+        <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">naming_complex</span><span class="o">=</span><span class="n">naming_complex</span><span class="p">,</span>
+            <span class="n">multicommons</span><span class="o">=</span><span class="n">multicommons</span><span class="p">,</span>
+            <span class="n">beforewards</span><span class="o">=</span><span class="n">Before</span><span class="p">(</span>
+                <span class="n">exps_config</span><span class="o">=</span><span class="p">{},</span>
+                <span class="n">circuits_num</span><span class="o">=</span><span class="p">{},</span>
+                <span class="n">circuits_map</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">pending_pool</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">job_id</span><span class="o">=</span><span class="p">[],</span>
+                <span class="n">job_taglist</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">index_taglist</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+            <span class="p">),</span>
+            <span class="n">afterwards</span><span class="o">=</span><span class="n">After</span><span class="p">(</span>
+                <span class="n">retrievedResult</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">allCounts</span><span class="o">=</span><span class="p">{},</span>
+            <span class="p">),</span>
+            <span class="n">quantity_container</span><span class="o">=</span><span class="n">QuantityContainer</span><span class="p">(),</span>
+            <span class="n">outfields</span><span class="o">=</span><span class="n">outfields</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">initial_config_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">serial</span><span class="p">,</span> <span class="n">config</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">config_list</span><span class="p">):</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;export&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pbar&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;multiprocess&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">initial_config_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="o">**</span><span class="n">config</span><span class="p">,</span>
+                    <span class="s2">&quot;shots&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shots&quot;</span><span class="p">,</span> <span class="n">shots</span><span class="p">),</span>
+                    <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="n">backend</span><span class="p">,</span>
+                    <span class="s2">&quot;exp_name&quot;</span><span class="p">:</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">,</span>
+                    <span class="s2">&quot;save_location&quot;</span><span class="p">:</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+                    <span class="s2">&quot;serial&quot;</span><span class="p">:</span> <span class="n">serial</span><span class="p">,</span>
+                    <span class="s2">&quot;summoner_id&quot;</span><span class="p">:</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">,</span>
+                    <span class="s2">&quot;summoner_name&quot;</span><span class="p">:</span> <span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">multiprocess_build</span><span class="p">:</span>
+            <span class="n">chunks_num</span> <span class="o">=</span> <span class="n">very_easy_chunk_size</span><span class="p">(</span>
+                <span class="n">tasks_num</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">),</span>
+                <span class="n">num_process</span><span class="o">=</span><span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span>
+                <span class="n">max_chunk_size</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">)</span> <span class="o">//</span> <span class="n">DEFAULT_POOL_SIZE</span><span class="p">),</span> <span class="mi">20</span><span class="p">),</span>
+            <span class="p">)</span>
+
+            <span class="n">pool</span> <span class="o">=</span> <span class="n">get_context</span><span class="p">(</span><span class="s2">&quot;spawn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span> <span class="n">maxtasksperchild</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">pool</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+
+                <span class="n">exps_iterable</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">imap_unordered</span><span class="p">(</span>
+                        <span class="n">experiment_instance</span><span class="o">.</span><span class="n">build_for_multiprocess</span><span class="p">,</span>
+                        <span class="n">initial_config_list</span><span class="p">,</span>
+                        <span class="n">chunksize</span><span class="o">=</span><span class="n">chunks_num</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">),</span>
+                    <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;MultiManager building...&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">exps_iterable</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Loading </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> experiments...&quot;</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">new_exps</span><span class="p">,</span> <span class="n">config</span> <span class="ow">in</span> <span class="n">exps_iterable</span><span class="p">:</span>
+                    <span class="n">current_multimanager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+                        <span class="n">current_id</span><span class="o">=</span><span class="n">new_exps</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">,</span>
+                        <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+                        <span class="n">exps_instance</span><span class="o">=</span><span class="n">new_exps</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="n">exps_iterable</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Loading </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> experiments done&quot;</span>
+                <span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">exps_iterable</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="p">(</span><span class="n">experiment_instance</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">multiprocess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">config</span><span class="p">),</span> <span class="n">config</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">config</span> <span class="ow">in</span> <span class="n">initial_config_list</span>
+                <span class="p">),</span>
+                <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">initial_config_list</span><span class="p">),</span>
+                <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;MultiManager building...&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">new_exps</span><span class="p">,</span> <span class="n">config</span> <span class="ow">in</span> <span class="n">exps_iterable</span><span class="p">:</span>
+                <span class="n">current_multimanager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+                    <span class="n">current_id</span><span class="o">=</span><span class="n">new_exps</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">,</span>
+                    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+                    <span class="n">exps_instance</span><span class="o">=</span><span class="n">new_exps</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_writing</span><span class="p">:</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">multiprocess</span><span class="o">=</span><span class="n">multiprocess_write</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.read">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.read">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">experiment_instance</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">_E</span><span class="p">],</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+        <span class="n">is_read_or_retrieve</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">read_from_tarfile</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MultiManager[_E]&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the multi-experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            experiment_instance (ExperimentPrototype):</span>
+<span class="sd">                The instance of experiment.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name of experiment of the :class:`MultiManager`. Defaults to None.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                Location of saving experiment. Defaults to Path(&quot;./&quot;).</span>
+<span class="sd">            is_read_or_retrieve (bool, optional):</span>
+<span class="sd">                Whether read or retrieve. Defaults to False.</span>
+<span class="sd">            read_from_tarfile (bool, optional):</span>
+<span class="sd">                Whether read from tarfile. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            MultiManager: The container of experiments and multi-experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">naming_complex</span> <span class="o">=</span> <span class="n">naming</span><span class="p">(</span>
+            <span class="n">is_read</span><span class="o">=</span><span class="n">is_read_or_retrieve</span><span class="p">,</span>
+            <span class="n">exps_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">gitignore</span> <span class="o">=</span> <span class="n">GitSyncControl</span><span class="p">()</span>
+        <span class="n">gitignore</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span>
+
+        <span class="n">multiconfig_name_v5</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2">.multiConfig.json&quot;</span>
+        <span class="p">)</span>
+        <span class="n">multiconfig_name_v7</span> <span class="o">=</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span> <span class="o">/</span> <span class="s2">&quot;multi.config.json&quot;</span>
+
+        <span class="k">if</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| Found the tarfile &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarName</span><span class="si">}</span><span class="s2">&#39; &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;in &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="si">}</span><span class="s2">&#39;, decompressing is available.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">multiconfig_name_v5</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">multiconfig_name_v7</span><span class="o">.</span><span class="n">exists</span><span class="p">()):</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="s2">&quot;| No multi.config file found, &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;decompressing all files in the tarfile &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarName</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+                <span class="p">)</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">easydecompress</span><span class="p">(</span><span class="n">naming_complex</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">read_from_tarfile</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;| Decompressing all files in the tarfile &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarName</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;, replace all files in &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+                <span class="p">)</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">easydecompress</span><span class="p">(</span><span class="n">naming_complex</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">multiconfig_name_v5</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Found the multiConfig.json, reading in &#39;v5&#39; file structure.&quot;</span><span class="p">)</span>
+            <span class="n">raw_multiconfig</span> <span class="o">=</span> <span class="n">MultiCommonparams</span><span class="o">.</span><span class="n">rawread</span><span class="p">(</span>
+                <span class="n">mutlticonfig_name</span><span class="o">=</span><span class="n">multiconfig_name_v5</span><span class="p">,</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+                <span class="n">export_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">files</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">raw_multiconfig</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span>
+            <span class="n">old_files</span> <span class="o">=</span> <span class="n">raw_multiconfig</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">beforewards</span> <span class="o">=</span> <span class="n">Before</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                <span class="n">export_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                <span class="n">file_location</span><span class="o">=</span><span class="n">files</span><span class="p">,</span>
+                <span class="n">version</span><span class="o">=</span><span class="s2">&quot;v5&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">afterwards</span> <span class="o">=</span> <span class="n">After</span><span class="p">(</span>
+                <span class="n">retrievedResult</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">allCounts</span><span class="o">=</span><span class="p">{},</span>
+            <span class="p">)</span>
+            <span class="n">quantity_container</span> <span class="o">=</span> <span class="n">QuantityContainer</span><span class="p">()</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;tagMapQuantity&quot;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">),</span> <span class="s2">&quot;Quantity must be dict.&quot;</span>
+            <span class="k">for</span> <span class="n">qk</span> <span class="ow">in</span> <span class="n">files</span><span class="p">[</span><span class="s2">&quot;tagMapQuantity&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">quantity_container</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="n">key</span><span class="o">=</span><span class="n">qk</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">qk</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">save_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;v5&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">multiconfig_name_v7</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">raw_multiconfig</span> <span class="o">=</span> <span class="n">MultiCommonparams</span><span class="o">.</span><span class="n">rawread</span><span class="p">(</span>
+                <span class="n">mutlticonfig_name</span><span class="o">=</span><span class="n">multiconfig_name_v7</span><span class="p">,</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+                <span class="n">export_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">files</span> <span class="o">=</span> <span class="n">raw_multiconfig</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span>
+            <span class="n">old_files</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">beforewards</span> <span class="o">=</span> <span class="n">Before</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">export_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;v7&quot;</span><span class="p">)</span>
+            <span class="n">afterwards</span> <span class="o">=</span> <span class="n">After</span><span class="p">(</span>
+                <span class="n">retrievedResult</span><span class="o">=</span><span class="n">TagList</span><span class="p">(),</span>
+                <span class="n">allCounts</span><span class="o">=</span><span class="p">{},</span>
+            <span class="p">)</span>
+            <span class="n">quantity_container</span> <span class="o">=</span> <span class="n">QuantityContainer</span><span class="p">()</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">),</span> <span class="s2">&quot;Quantity must be dict.&quot;</span>
+            <span class="k">for</span> <span class="n">qk</span> <span class="ow">in</span> <span class="n">files</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">quantity_container</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="n">key</span><span class="o">=</span><span class="n">qk</span><span class="p">,</span>
+                    <span class="n">save_location</span><span class="o">=</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">qk</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| v5: </span><span class="si">{</span><span class="n">multiconfig_name_v5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| v7: </span><span class="si">{</span><span class="n">multiconfig_name_v7</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Can&#39;t find the multi.config file in &#39;</span><span class="si">{</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">multicommons</span><span class="p">,</span> <span class="n">outfields</span> <span class="o">=</span> <span class="n">MultiCommonparams</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">raw_multiconfig</span><span class="p">)</span>
+
+        <span class="n">datetimedict_process</span><span class="p">(</span>
+            <span class="n">multicommons</span><span class="o">=</span><span class="n">multicommons</span><span class="p">,</span>
+            <span class="n">naming_complex</span><span class="o">=</span><span class="n">naming_complex</span><span class="p">,</span>
+            <span class="n">multiconfig_name_v5</span><span class="o">=</span><span class="n">multiconfig_name_v5</span><span class="p">,</span>
+            <span class="n">multiconfig_name_v7</span><span class="o">=</span><span class="n">multiconfig_name_v7</span><span class="p">,</span>
+            <span class="n">is_read_or_retrieve</span><span class="o">=</span><span class="n">is_read_or_retrieve</span><span class="p">,</span>
+            <span class="n">read_from_tarfile</span><span class="o">=</span><span class="n">read_from_tarfile</span><span class="p">,</span>
+            <span class="n">old_files</span><span class="o">=</span><span class="n">old_files</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span> <span class="o">==</span> <span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span>
+        <span class="p">),</span> <span class="s2">&quot;| save_location is not consistent with namingCpx.save_location.&quot;</span>
+
+        <span class="n">current_multimanager</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">naming_complex</span><span class="o">=</span><span class="n">naming_complex</span><span class="p">,</span>
+            <span class="n">multicommons</span><span class="o">=</span><span class="n">multicommons</span><span class="p">,</span>
+            <span class="n">beforewards</span><span class="o">=</span><span class="n">beforewards</span><span class="p">,</span>
+            <span class="n">afterwards</span><span class="o">=</span><span class="n">afterwards</span><span class="p">,</span>
+            <span class="n">quantity_container</span><span class="o">=</span><span class="n">quantity_container</span><span class="p">,</span>
+            <span class="n">outfields</span><span class="o">=</span><span class="n">outfields</span><span class="p">,</span>
+            <span class="n">gitignore</span><span class="o">=</span><span class="n">gitignore</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">multiconfig_name_v5</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2"> auto-export &quot;</span>
+                <span class="o">+</span> <span class="s1">&#39;in &quot;v7&quot; format and remove &quot;v5&quot; format.&#39;</span>
+            <span class="p">)</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+            <span class="n">remove_v5_progress</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+                <span class="n">old_files</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+                <span class="n">bar_format</span><span class="o">=</span><span class="s2">&quot;| </span><span class="si">{percentage:3.0f}</span><span class="s2">%[</span><span class="si">{bar}</span><span class="s2">] - remove v5 - </span><span class="si">{desc}</span><span class="s2"> - </span><span class="si">{elapsed}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">pathstr</span> <span class="ow">in</span> <span class="n">remove_v5_progress</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pathstr</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">remove_v5_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">pathstr</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                        <span class="n">path</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pathstr</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">k2</span><span class="p">,</span> <span class="n">pathstr2</span> <span class="ow">in</span> <span class="n">pathstr</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">remove_v5_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">k2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">pathstr2</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                            <span class="n">path</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+        <span class="n">reading_results</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_E</span><span class="p">]</span> <span class="o">=</span> <span class="n">experiment_instance</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">name_or_id</span><span class="o">=</span><span class="n">current_multimanager</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">read_exps</span> <span class="ow">in</span> <span class="n">reading_results</span><span class="p">:</span>
+            <span class="n">current_multimanager</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">read_exps</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">read_exps</span>
+
+        <span class="k">return</span> <span class="n">current_multimanager</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.update_save_location">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.update_save_location">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_save_location</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">without_serial</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the save location of the multi-experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            save_location (Union[Path, str]): Location of saving experiment.</span>
+<span class="sd">            without_serial (bool, optional): Whether without serial number. Defaults to True.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Any]: The dict of multiConfig.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">save_location</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span> <span class="o">=</span> <span class="n">naming</span><span class="p">(</span>
+            <span class="n">without_serial</span><span class="o">=</span><span class="n">without_serial</span><span class="p">,</span>
+            <span class="n">exps_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="p">,</span>
+            <span class="n">export_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">_asdict</span><span class="p">()</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_write_multiconfig</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">multiconfig_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;multi.config.json&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;multi.config&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">multiconfig_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="s2">&quot;multi.config.json&quot;</span><span class="p">)</span>
+        <span class="n">multiconfig</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">_asdict</span><span class="p">(),</span>
+            <span class="s2">&quot;outfields&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">,</span>
+            <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">files</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">quickJSON</span><span class="p">(</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">multiconfig</span><span class="p">,</span>
+            <span class="n">filename</span><span class="o">=</span><span class="n">multiconfig_name</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="n">DEFAULT_MODE</span><span class="p">,</span>
+            <span class="n">jsonable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">,</span>
+            <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">multiconfig</span>
+
+<div class="viewcode-block" id="MultiManager.write">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.write">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">export_transpiled_circuit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_before_and_after</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_exps</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">skip_quantities</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">multiprocess</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the multi-experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            save_location (Union[Path, str], optional): Location of saving experiment.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            export_transpiled_circuit (bool, optional):</span>
+<span class="sd">                Export the transpiled circuit. Defaults to False.</span>
+<span class="sd">            skip_before_and_after (bool, optional):</span>
+<span class="sd">                Skip the beforewards and afterwards. Defaults to False.</span>
+<span class="sd">            skip_exps (bool, optional):</span>
+<span class="sd">                Skip the experiments. Defaults to False.</span>
+<span class="sd">            skip_quantities (bool, optional):</span>
+<span class="sd">                Skip the quantities container. Defaults to False.</span>
+<span class="sd">            multiprocess (bool, optional):</span>
+<span class="sd">                Whether to use multiprocess for exporting. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Any]: The dict of multiConfig.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Export multimanager...&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">save_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">save_location</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_save_location</span><span class="p">(</span><span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="s2">&quot;*.json&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="s2">&quot;qurryinfo.json&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_location</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span>
+
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="n">exporting_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_exporting_name</span><span class="p">()</span>
+        <span class="n">exporting_name</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">_exporting_name</span><span class="p">())</span>
+
+        <span class="c1"># pylint: enable=protected-access</span>
+
+        <span class="n">export_progress</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">_fields</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_fields</span><span class="p">,</span>
+            <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Exporting MultiManager content...&quot;</span><span class="p">,</span>
+            <span class="n">bar_format</span><span class="o">=</span><span class="s2">&quot;qurry-barless&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># beforewards amd afterwards</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">export_progress</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">skip_before_and_after</span> <span class="ow">or</span> <span class="p">(</span><span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_unexports</span><span class="p">):</span>
+                <span class="n">export_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> as </span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2"> - skip&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">TagList</span><span class="p">):</span>
+                <span class="n">export_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> as </span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">tmp</span><span class="p">:</span> <span class="n">TagList</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">export</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">save_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                    <span class="n">taglist_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+                <span class="n">export_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> as </span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">.json&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_not_sync</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exporting_name</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+                <span class="n">quickJSON</span><span class="p">(</span>
+                    <span class="n">content</span><span class="o">=</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">],</span>
+                    <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="n">DEFAULT_MODE</span><span class="p">,</span>
+                    <span class="n">jsonable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">indent</span><span class="o">=</span><span class="n">DEFAULT_INDENT</span><span class="p">,</span>
+                    <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">,</span>
+                    <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&#39; is type &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">])</span><span class="si">}</span><span class="s2">&#39; which is not supported to export.&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">export_progress</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">export_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span><span class="s2">&quot;Exporting done&quot;</span><span class="p">)</span>
+
+        <span class="c1"># tagMapQuantity or quantity</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_quantities</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="s2">&quot;*.quantity.json&quot;</span><span class="p">)</span>
+
+        <span class="c1"># multiConfig</span>
+        <span class="n">multiconfig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_write_multiconfig</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Export multi.config.json for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># gitignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gitignore</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span>
+
+        <span class="c1"># experiments</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_exps</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qurryinfo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qurryinfo</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                <span class="n">experiment_writer</span><span class="p">(</span>
+                    <span class="n">experiment_container</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">,</span>
+                    <span class="n">beforewards</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="p">,</span>
+                    <span class="n">multicommons</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="p">,</span>
+                    <span class="n">export_transpiled_circuit</span><span class="o">=</span><span class="n">export_transpiled_circuit</span><span class="p">,</span>
+                    <span class="n">multiprocess</span><span class="o">=</span><span class="n">multiprocess</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">multiconfig</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.compress">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.compress">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compress</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">compress_overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">remain_only_compressed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compress the export_location to tar.xz.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            compress_overwrite (bool, optional):</span>
+<span class="sd">                Reproduce all the compressed files. Defaults to False.</span>
+<span class="sd">            remain_only_compressed (bool, optional):</span>
+<span class="sd">                Remove uncompressed files. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Path: Path of the compressed file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">remain_only_compressed</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_serial</span><span class="p">(</span><span class="s2">&quot;uncompressedRemove&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_multiconfig</span><span class="p">()</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Compress multimanager of &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2">&#39;...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">easycompress</span><span class="p">(</span><span class="n">overwrite</span><span class="o">=</span><span class="n">compress_overwrite</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Compress multimanager of &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">expsName</span><span class="si">}</span><span class="s2">&#39;...done&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">remain_only_compressed</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| Remove uncompressed files in &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="si">}</span><span class="s2">&#39; ...&quot;</span><span class="p">,</span>
+                <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">export_location</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Remove uncompressed files in &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="si">}</span><span class="s2">&#39; ...done&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">loc</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.analyze">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.analyze">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">analysis_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;report&quot;</span><span class="p">,</span>
+        <span class="n">no_serialize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">specific_analysis_args</span><span class="p">:</span> <span class="n">SpecificAnalsisArgs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">analysis_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">AnalyzeArgs</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze the experiments.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exps_container (ExperimentContainer[_ExpInst]): The container of experiments.</span>
+<span class="sd">            analysis_name (str, optional): The name of analysis. Defaults to &quot;report&quot;.</span>
+<span class="sd">            no_serialize (bool, optional): Whether serialize the analysis. Defaults to False.</span>
+<span class="sd">            specific_analysis_args (SpecificAnalsisArgs, optional):</span>
+<span class="sd">                The specific analysis arguments. Defaults to None.</span>
+<span class="sd">            **analysis_args (Union[dict[str, Any], AnalyzeArgs]): The arguments of analysis.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The name of analysis.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">specific_analysis_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">specific_analysis_args</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">counts_check</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">k</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuits_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">counts_check</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Counts of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">counts_check</span><span class="p">)</span><span class="si">}</span><span class="s2"> experiments are empty, &quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;please check them before analysis: </span><span class="si">{</span><span class="n">counts_check</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">multimanager_report_naming</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">,</span> <span class="n">no_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">()</span>
+
+        <span class="n">all_counts_progress</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuits_map</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span>
+            <span class="n">bar_format</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;| </span><span class="si">{n_fmt}</span><span class="s2">/</span><span class="si">{total_fmt}</span><span class="s2"> - Analysis: </span><span class="si">{desc}</span><span class="s2"> - </span><span class="si">{elapsed}</span><span class="s2"> &lt; </span><span class="si">{remaining}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">all_counts_progress</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">specific_analysis_args</span><span class="p">:</span>
+                <span class="n">v_args</span> <span class="o">=</span> <span class="n">specific_analysis_args</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v_args</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">v_args</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                        <span class="n">all_counts_progress</span><span class="o">.</span><span class="n">set_description_str</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;Skipped </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2">.&quot;</span>
+                        <span class="p">)</span>
+                        <span class="k">continue</span>
+                    <span class="n">report</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span>
+                        <span class="o">**</span><span class="n">analysis_args</span><span class="p">,</span>
+                        <span class="o">**</span><span class="p">({</span><span class="s2">&quot;pbar&quot;</span><span class="p">:</span> <span class="n">all_counts_progress</span><span class="p">}),</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">report</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span>
+                        <span class="o">**</span><span class="n">v_args</span><span class="p">,</span>
+                        <span class="o">**</span><span class="p">({</span><span class="s2">&quot;pbar&quot;</span><span class="p">:</span> <span class="n">all_counts_progress</span><span class="p">}),</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">report</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span>
+                    <span class="o">**</span><span class="n">analysis_args</span><span class="p">,</span>
+                    <span class="o">**</span><span class="p">({</span><span class="s2">&quot;pbar&quot;</span><span class="p">:</span> <span class="n">all_counts_progress</span><span class="p">}),</span>
+                <span class="p">)</span>
+
+            <span class="n">main</span><span class="p">,</span> <span class="n">_tales</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">jsonable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">tags</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_only</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">name</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.remove_analysis">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.remove_analysis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Removes the analysis.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): The name of the analysis.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quantity_container</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| Removing analysis: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_only</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_remove&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.easycompress">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.easycompress">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">easycompress</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compress the export_location to tar.xz.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            overwrite (bool, optional): Reproduce all the compressed files. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Path: Path of the compressed file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">multicommons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_serial</span><span class="p">(</span><span class="s2">&quot;compressed&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_multiconfig</span><span class="p">()</span>
+
+        <span class="n">is_exists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_exists</span> <span class="ow">and</span> <span class="n">overwrite</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="p">,</span> <span class="s2">&quot;x:xz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tar</span><span class="p">:</span>
+                <span class="n">tar</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                    <span class="n">arcname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">),</span>
+                <span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="p">,</span> <span class="s2">&quot;w:xz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tar</span><span class="p">:</span>
+                <span class="n">tar</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">,</span>
+                    <span class="n">arcname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">export_location</span><span class="p">),</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span></div>
+
+
+<div class="viewcode-block" id="MultiManager.easydecompress">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager.easydecompress">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">easydecompress</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">naming_complex</span><span class="p">:</span> <span class="n">IOComplex</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Decompress the tar.xz file of experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            naming_complex (IOComplex): The naming complex of experiment.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Path: Path of the decompressed file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span><span class="p">,</span> <span class="s2">&quot;r:xz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tar</span><span class="p">:</span>
+            <span class="n">tar</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">naming_complex</span><span class="o">.</span><span class="n">save_location</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">naming_complex</span><span class="o">.</span><span class="n">tarLocation</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

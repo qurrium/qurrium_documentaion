@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrium.experiment.beforewards &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrium/experiment/beforewards';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurriu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrium.experiment.beforewards</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Experiment - Beforewards (:mod:`qurry.qurrium.experiment.beforewards`)&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.qasm</span><span class="w"> </span><span class="kn">import</span> <span class="n">qasm_loads</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_ENCODING</span>
+
+<span class="n">V5_TO_V7_FIELD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;jobID&quot;</span><span class="p">:</span> <span class="s2">&quot;job_id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;expName&quot;</span><span class="p">:</span> <span class="s2">&quot;exp_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sideProduct&quot;</span><span class="p">:</span> <span class="s2">&quot;side_product&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">DEPRECATED_PROPERTIES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;figTranspiled&quot;</span><span class="p">,</span> <span class="s2">&quot;fig_original&quot;</span><span class="p">,</span> <span class="s2">&quot;exp_name&quot;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="v5_to_v7_field_transpose">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.v5_to_v7_field_transpose">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">v5_to_v7_field_transpose</span><span class="p">(</span><span class="n">advent</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transpose the v5 field to v7 field.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">nk</span> <span class="ow">in</span> <span class="n">V5_TO_V7_FIELD</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">advent</span><span class="p">:</span>
+            <span class="n">advent</span><span class="p">[</span><span class="n">nk</span><span class="p">]</span> <span class="o">=</span> <span class="n">advent</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">advent</span></div>
+
+
+
+<div class="viewcode-block" id="v7_to_v11_field_transpose">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.v7_to_v11_field_transpose">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">v7_to_v11_field_transpose</span><span class="p">(</span><span class="n">advent</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transpose the v7 field to v11 field.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;job_id&quot;</span> <span class="ow">in</span> <span class="n">advent</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">]]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">advent</span><span class="p">[</span><span class="s2">&quot;job_id&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;job_id must be str or list[str].&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">advent</span></div>
+
+
+
+<div class="viewcode-block" id="Before">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Before</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The data of experiment will be independently exported in the folder &#39;advent&#39;,</span>
+<span class="sd">    which generated before the experiment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Experiment Preparation</span>
+    <span class="n">target</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The target circuits of experiment.&quot;&quot;&quot;</span>
+    <span class="n">target_qasm</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The OpenQASM of target circuits.&quot;&quot;&quot;</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The transpiled circuits of experiment.&quot;&quot;&quot;</span>
+    <span class="n">circuit_qasm</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The OpenQASM of transpiled circuits.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Export data</span>
+    <span class="n">job_id</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ID of job for pending on real machine (IBMQBackend).&quot;&quot;&quot;</span>
+
+    <span class="c1"># side product</span>
+    <span class="n">side_product</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The data of experiment will be independently exported in the folder &#39;tales&#39;.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Before.default_value">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before.default_value">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">default_value</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;These default value are used for autofill the missing value.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;target_qasm&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;circuit&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;circuit_qasm&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;job_id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;side_product&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="Before.read">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before.read">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">file_index</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Before&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the exported experiment file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            file_index (dict[str, str]): The index of exported experiment file.</span>
+<span class="sd">            save_location (Path): The location of exported experiment file.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[dict[str, Any], &quot;Before&quot;, dict[str, Any]]:</span>
+<span class="sd">                The experiment&#39;s arguments,</span>
+<span class="sd">                the experiment&#39;s common parameters,</span>
+<span class="sd">                and the experiment&#39;s side product.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">raw_data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_location</span> <span class="o">/</span> <span class="n">file_index</span><span class="p">[</span><span class="s2">&quot;advent&quot;</span><span class="p">],</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">raw_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">advent</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="s2">&quot;adventures&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">DEPRECATED_PROPERTIES</span><span class="p">:</span>
+            <span class="n">advent</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">advent</span> <span class="o">=</span> <span class="n">v5_to_v7_field_transpose</span><span class="p">(</span><span class="n">advent</span><span class="p">)</span>
+        <span class="n">advent</span> <span class="o">=</span> <span class="n">v7_to_v11_field_transpose</span><span class="p">(</span><span class="n">advent</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">dv</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">default_value</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">advent</span><span class="p">:</span>
+                <span class="n">advent</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dv</span>
+
+        <span class="k">assert</span> <span class="s2">&quot;side_product&quot;</span> <span class="ow">in</span> <span class="n">advent</span><span class="p">,</span> <span class="s2">&quot;The side product is not found.&quot;</span>
+
+        <span class="k">for</span> <span class="n">filekey</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_index</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">filekeydiv</span> <span class="o">=</span> <span class="n">filekey</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">filekeydiv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;tales&quot;</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_location</span> <span class="o">/</span> <span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">advent</span><span class="p">[</span><span class="s2">&quot;side_product&quot;</span><span class="p">][</span><span class="n">filekeydiv</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">advent</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Before.export">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before.export">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">export</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">export_transpiled_circuit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the experiment&#39;s data before executing.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            export_circuit (bool, optional):</span>
+<span class="sd">                Whether to export the transpiled circuit as txt. Defaults to False.</span>
+<span class="sd">                for It&#39;s space-saving purpose and performance improvement.</span>
+<span class="sd">                When set to True, the transpiled circuit will be draw as txt.</span>
+<span class="sd">                Otherwise, the circuit will be not exported but circuit qasm remains.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[dict[str, Any], dict[str, Any]]:</span>
+<span class="sd">                The experiment&#39;s arguments,</span>
+<span class="sd">                and the experiment&#39;s side product.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">adventures</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+            <span class="s2">&quot;target_qasm&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_qasm</span><span class="p">,</span>
+            <span class="s2">&quot;circuit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">circuit</span> <span class="k">if</span> <span class="n">export_transpiled_circuit</span> <span class="k">else</span> <span class="p">[],</span>
+            <span class="s2">&quot;circuit_qasm&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">circuit_qasm</span><span class="p">,</span>
+            <span class="s2">&quot;job_id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">job_id</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">adventures</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">side_product</span></div>
+
+
+<div class="viewcode-block" id="Before.revive_circuit">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before.revive_circuit">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">revive_circuit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">replace_circuits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Revive the circuit from the qasm, return the revived circuits.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            replace_circuits (bool, optional): Whether to replace the circuits. Defaults to False.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the .circuit is not empty.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[QuantumCircuit]: The revived circuits.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">revived_circuits</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">replace_circuits</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">circuit</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;.circuit is not empty.&quot;</span><span class="p">)</span>
+        <span class="n">is_none_circuits</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">qasm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">circuit_qasm</span><span class="p">):</span>
+            <span class="n">tmp_circ</span> <span class="o">=</span> <span class="n">qasm_loads</span><span class="p">(</span><span class="n">qasm</span><span class="p">)</span>
+            <span class="n">revived_circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_circ</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tmp_circ</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">is_none_circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">is_none_circuits</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The circuits </span><span class="si">{</span><span class="n">is_none_circuits</span><span class="si">}</span><span class="s2"> are not revived.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">revived_circuits</span></div>
+
+
+<div class="viewcode-block" id="Before.revive_target">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.Before.revive_target">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">revive_target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">replace_target</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Revive the target circuits from the qasm, return the revived target.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            replace_target (bool, optional):</span>
+<span class="sd">                Whether to replace the target circuits. Defaults to False.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the .target is not empty.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[Hashable, QuantumCircuit]: The revived target circuits.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">revived_target</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">replace_target</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The target is not empty.&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">qasm</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_qasm</span><span class="p">:</span>
+            <span class="n">revived_target</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="o">.</span><span class="n">from_qasm_str</span><span class="p">(</span><span class="n">qasm</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">revived_target</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="create_beforewards">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/beforewards.html#qurry.qurrium.experiment.beforewards.create_beforewards">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_beforewards</span><span class="p">(</span><span class="n">beforewards</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Before</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Before</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a :class:`Before` object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        beforewards (Optional[Before]):</span>
+<span class="sd">            The Beforewards object to create. Defaults to None.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Before: The Beforewards object.</span>
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If &#39;beforewards&#39; is not a Before object or None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">beforewards</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Before</span><span class="p">(</span>
+            <span class="n">target</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">target_qasm</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">circuit</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">circuit_qasm</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">job_id</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">side_product</span><span class="o">=</span><span class="p">{},</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">beforewards</span><span class="p">,</span> <span class="n">Before</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">beforewards</span>
+
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;beforewards must be a Before object or None, but got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">beforewards</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

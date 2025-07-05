@@ -1,5 +1,10 @@
 # `entangled_entropy_v1`
 
+```{eval-rst}
+.. automodule:: qurry.process.randomized_measure.entangled_entropy_v1
+    :members:
+```
+
 ## `entangled_entropy`
 
 ```{eval-rst}

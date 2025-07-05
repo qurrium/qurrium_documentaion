@@ -2,13 +2,6 @@
 
 Post-processing for magnetization square
 
-## `magsq_cell`
-
-```{eval-rst}
-.. automodule:: qurry.process.magnet_square.magsq_cell
-    :members:
-```
-
 ## `magsq_core`
 
 ```{eval-rst}

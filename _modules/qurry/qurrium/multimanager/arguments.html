@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrium.multimanager.arguments &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrium/multimanager/arguments';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurriu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrium.multimanager.arguments</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;MultiManager - Arguments (:mod:`qurry.qurrium.multimanager.arguments`)&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">TypedDict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_ENCODING</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...tools.datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">DatetimeDict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...declare</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseRunArgs</span>
+
+<span class="n">PendingStrategyLiteral</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;onetime&quot;</span><span class="p">,</span> <span class="s2">&quot;each&quot;</span><span class="p">,</span> <span class="s2">&quot;tags&quot;</span><span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;Type of pending strategy.&quot;&quot;&quot;</span>
+<span class="n">PENDING_STRATEGY</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">PendingStrategyLiteral</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;onetime&quot;</span><span class="p">,</span> <span class="s2">&quot;each&quot;</span><span class="p">,</span> <span class="s2">&quot;tags&quot;</span><span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;List of pending strategy.&quot;&quot;&quot;</span>
+<span class="n">PendingTargetProviderLiteral</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span>
+    <span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;IBMQ&quot;</span><span class="p">,</span> <span class="s2">&quot;IBM&quot;</span><span class="p">,</span> <span class="s2">&quot;IBMRuntime&quot;</span><span class="p">,</span> <span class="s2">&quot;Qulacs&quot;</span><span class="p">,</span> <span class="s2">&quot;AWS_Bracket&quot;</span><span class="p">,</span> <span class="s2">&quot;Azure_Q&quot;</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;Type of backend provider.&quot;&quot;&quot;</span>
+<span class="n">PENDING_TARGET_PROVIDER</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">PendingTargetProviderLiteral</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;IBMQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IBM&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IBMRuntime&quot;</span><span class="p">,</span>
+    <span class="c1"># &quot;Qulacs&quot;,</span>
+    <span class="c1"># &quot;AWS_Bracket&quot;,</span>
+    <span class="c1"># &quot;Azure_Q&quot;</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;List of backend provider.&quot;&quot;&quot;</span>
+
+
+<span class="n">V5_TO_V7_FIELD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;summonerID&quot;</span><span class="p">:</span> <span class="s2">&quot;summoner_id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;summonerName&quot;</span><span class="p">:</span> <span class="s2">&quot;summoner_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;saveLocation&quot;</span><span class="p">:</span> <span class="s2">&quot;save_location&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;exportLocation&quot;</span><span class="p">:</span> <span class="s2">&quot;export_location&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jobsType&quot;</span><span class="p">:</span> <span class="s2">&quot;jobstype&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;managerRunArgs&quot;</span><span class="p">:</span> <span class="s2">&quot;manager_run_args&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="v5_to_v7_field_transpose">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.v5_to_v7_field_transpose">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">v5_to_v7_field_transpose</span><span class="p">(</span><span class="n">rawread_multiconfig</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transpose the field name of V5 format to V7 format.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        rawread_multiconfig (dict[str, Any]):</span>
+<span class="sd">            The field name of :class:`MultiCommonparams` in V5 format.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict[str, Any]: The field name of :class:`MultiCommonparams` in V7 format.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">nk</span> <span class="ow">in</span> <span class="n">V5_TO_V7_FIELD</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">rawread_multiconfig</span><span class="p">:</span>
+            <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="n">nk</span><span class="p">]</span> <span class="o">=</span> <span class="n">rawread_multiconfig</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rawread_multiconfig</span></div>
+
+
+
+<div class="viewcode-block" id="MultiCommonparamsRawdDict">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparamsRawdDict">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MultiCommonparamsRawdDict</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rawread dictionary of :class:`MultiCommonparams`.&quot;&quot;&quot;</span>
+
+    <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Backend</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">export_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">files</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span>
+    <span class="n">jobstype</span><span class="p">:</span> <span class="n">PendingTargetProviderLiteral</span>
+    <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span>
+    <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+    <span class="n">datetimes</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">DatetimeDict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
+    <span class="n">outfields</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="MultiCommonparamsDict">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparamsDict">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MultiCommonparamsDict</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dictionary format of :class:`MultiCommonparams`.&quot;&quot;&quot;</span>
+
+    <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Backend</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">export_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">files</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span>
+    <span class="n">jobstype</span><span class="p">:</span> <span class="n">PendingTargetProviderLiteral</span>
+    <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span>
+    <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+    <span class="n">datetimes</span><span class="p">:</span> <span class="n">DatetimeDict</span></div>
+
+
+
+<div class="viewcode-block" id="MultiCommonparams">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparams">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MultiCommonparams</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiple jobs shared. `argsMultiMain` in V4 format.&quot;&quot;&quot;</span>
+
+    <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ID of experiment of the multiManager.&quot;&quot;&quot;</span>
+    <span class="n">summoner_name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Name of experiment of the multiManager.&quot;&quot;&quot;</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tags of experiment of the multiManager.&quot;&quot;&quot;</span>
+
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Number of shots to run the program (default: 1024), which multiple experiments shared.&quot;&quot;&quot;</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Backend</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Backend to execute the circuits on, which multiple experiments shared.&quot;&quot;&quot;</span>
+
+    <span class="n">save_location</span><span class="p">:</span> <span class="n">Path</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Location of saving experiment.&quot;&quot;&quot;</span>
+    <span class="n">export_location</span><span class="p">:</span> <span class="n">Path</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Location of exporting experiment, </span>
+<span class="sd">    export_location is the final result decided by experiment.&quot;&quot;&quot;</span>
+    <span class="n">files</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span>
+
+    <span class="n">jobstype</span><span class="p">:</span> <span class="n">PendingTargetProviderLiteral</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of jobs to run multiple experiments.</span>
+<span class="sd">    - jobstype: &quot;local&quot;, &quot;IBMQ&quot;, &quot;IBM&quot;, &quot;AWS_Bracket&quot;, &quot;Azure_Q&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pending_strategy</span><span class="p">:</span> <span class="n">PendingStrategyLiteral</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of pending strategy.</span>
+<span class="sd">    - pendingStrategy: &quot;default&quot;, &quot;onetime&quot;, &quot;each&quot;, &quot;tags&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">manager_run_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">BaseRunArgs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Other arguments will be passed to `IBMQJobManager()`&quot;&quot;&quot;</span>
+
+    <span class="c1"># header</span>
+    <span class="n">datetimes</span><span class="p">:</span> <span class="n">DatetimeDict</span>
+
+<div class="viewcode-block" id="MultiCommonparams.default_value">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparams.default_value">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">default_value</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiCommonparamsDict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;These default value are used for autofill the missing value.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;summoner_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;summoner_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;shots&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;save_location&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;export_location&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;jobstype&quot;</span><span class="p">:</span> <span class="s2">&quot;local&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pending_strategy&quot;</span><span class="p">:</span> <span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;manager_run_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;datetimes&quot;</span><span class="p">:</span> <span class="n">DatetimeDict</span><span class="p">(),</span>
+        <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="MultiCommonparams.rawread">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparams.rawread">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rawread</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">mutlticonfig_name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">export_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MultiCommonparamsRawdDict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build :class:`MultiCommonparams` from rawread file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mutlticonfig_name (Union[Path, str]):</span>
+<span class="sd">                The path of the rawread file.</span>
+<span class="sd">            save_location (Union[Path, str]):</span>
+<span class="sd">                The location of saving experiment.</span>
+<span class="sd">            export_location (Union[Path, str]):</span>
+<span class="sd">                The location of exporting experiment.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Union[MultiCommonparamsRawreadDict, dict[str, Any]]:</span>
+<span class="sd">                The :class:`MultiCommonparams` in dictionary format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">rawread_multiconfig</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">mutlticonfig_name</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">rawread_multiconfig</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">rawread_multiconfig</span> <span class="o">=</span> <span class="n">v5_to_v7_field_transpose</span><span class="p">(</span><span class="n">rawread_multiconfig</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">dv</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">default_value</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rawread_multiconfig</span><span class="p">:</span>
+                <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dv</span>
+        <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="s2">&quot;save_location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">save_location</span>
+        <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="s2">&quot;export_location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">export_location</span>
+
+        <span class="c1"># v6 jobstype data</span>
+        <span class="k">if</span> <span class="s2">&quot;jobstype&quot;</span> <span class="ow">in</span> <span class="n">rawread_multiconfig</span><span class="p">:</span>
+            <span class="n">v6jobstype</span> <span class="o">=</span> <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="s2">&quot;jobstype&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v6jobstype</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="s2">&quot;jobstype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v6jobstype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">rawread_multiconfig</span><span class="p">[</span><span class="s2">&quot;pending_strategy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v6jobstype</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">rawread_multiconfig</span></div>
+
+
+<div class="viewcode-block" id="MultiCommonparams.build">
+<a class="viewcode-back" href="../../../../api/qurrium/multimanager/arguments.html#qurry.qurrium.multimanager.arguments.MultiCommonparams.build">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">raw_multiconfig</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">MultiCommonparamsRawdDict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="s2">&quot;MultiCommonparams&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build `MultiCommonparams` from rawread file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            rawread_multiconfig (Union[MultiCommonparamsRawreadDict, dict[str, Any]]):</span>
+<span class="sd">                The `MultiCommonparams` in dictionary format.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[&quot;MultiCommonparams&quot;, dict[str, Any]]: The `MultiCommonparams` and outfields.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">multicommons</span><span class="p">:</span> <span class="n">MultiCommonparamsDict</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">default_value</span><span class="p">()</span>
+        <span class="n">outfields</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">raw_multiconfig</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_fields</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;datetimes&quot;</span><span class="p">:</span>
+                    <span class="n">multicommons</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">raw_multiconfig</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">multicommons</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_multiconfig</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;outfields&quot;</span><span class="p">:</span>
+                <span class="n">outfields</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">raw_multiconfig</span><span class="p">[</span><span class="n">k</span><span class="p">]}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">outfields</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_multiconfig</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;save_location&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;save_location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;save_location&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;export_location&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;export_location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;export_location&quot;</span><span class="p">])</span>
+
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;datetimes&quot;</span><span class="p">],</span> <span class="n">DatetimeDict</span>
+        <span class="p">),</span> <span class="s2">&quot;datetimes should be DatetimeDict.&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">cls</span><span class="p">(</span>
+                <span class="n">summoner_id</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;summoner_id&quot;</span><span class="p">],</span>
+                <span class="n">summoner_name</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;summoner_name&quot;</span><span class="p">],</span>
+                <span class="n">tags</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;tags&quot;</span><span class="p">],</span>
+                <span class="n">shots</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;shots&quot;</span><span class="p">],</span>
+                <span class="n">backend</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;backend&quot;</span><span class="p">],</span>
+                <span class="n">save_location</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;save_location&quot;</span><span class="p">],</span>
+                <span class="n">export_location</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;export_location&quot;</span><span class="p">],</span>
+                <span class="n">files</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">],</span>
+                <span class="n">jobstype</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;jobstype&quot;</span><span class="p">],</span>
+                <span class="n">pending_strategy</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;pending_strategy&quot;</span><span class="p">],</span>
+                <span class="n">manager_run_args</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;manager_run_args&quot;</span><span class="p">],</span>
+                <span class="n">datetimes</span><span class="o">=</span><span class="n">multicommons</span><span class="p">[</span><span class="s2">&quot;datetimes&quot;</span><span class="p">],</span>
+            <span class="p">),</span>
+            <span class="n">outfields</span><span class="p">,</span>
+        <span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

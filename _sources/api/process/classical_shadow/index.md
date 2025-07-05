@@ -2,6 +2,11 @@
 
 Post-processing for classical shadow.
 
+```{eval-rst}
+.. automodule:: qurry.process.classical_shadow
+    :members:
+```
+
 ```{toctree}
 :maxdepth: 1
 

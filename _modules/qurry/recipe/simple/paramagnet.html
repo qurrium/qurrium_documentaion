@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -466,16 +466,15 @@ document.write(`
   <h1>Source code for qurry.recipe.simple.paramagnet</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Paramagnet (:mod:`qurry.recipe.simple.paramagnet`)</span>
 
-<span class="sd">The circuits :cls:`TrivialParamagnet` and :cls:`TopologicalParamagnet`.</span>
+<span class="sd">The circuits :class:`~qurry.recipe.simple.paramagnet.TrivialParamagnet` and</span>
+<span class="sd">:class:`~qurry.recipe.simple.paramagnet.TopologicalParamagnet`,</span>
+<span class="sd">which has been mentioned in the following reference.</span>
 
 <span class="sd">Reference:</span>
-<span class="sd">    .. note::</span>
-
-<span class="sd">        - Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</span>
+<span class="sd">    -   Measurement of the Entanglement Spectrum of a Symmetry-Protected Topological State</span>
 <span class="sd">        Using the IBM Quantum Computer - Choo, Kenny and von Keyserlingk, Curt W. and</span>
 <span class="sd">        Regnault, Nicolas and Neupert, Titus</span>
-<span class="sd">        [doi:10.1103/PhysRevLett.121.086808](</span>
-<span class="sd">            https://doi.org/10.1103/PhysRevLett.121.086808)</span>
+<span class="sd">        `doi:10.1103/PhysRevLett.121.086808 &lt;https://doi.org/10.1103/PhysRevLett.121.086808&gt;`_</span>
 
 <span class="sd">    .. code-block:: bibtex</span>
 
@@ -495,7 +494,7 @@ document.write(`
 <span class="sd">            publisher = {American Physical Society},</span>
 <span class="sd">            doi = {10.1103/PhysRevLett.121.086808},</span>
 <span class="sd">            url = {https://link.aps.org/doi/10.1103/PhysRevLett.121.086808}</span>
-<span class="sd">}</span>
+<span class="sd">        }</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -507,8 +506,7 @@ document.write(`
 <div class="viewcode-block" id="TrivialParamagnet">
 <a class="viewcode-back" href="../../../../api/recipe/simple.html#qurry.recipe.simple.paramagnet.TrivialParamagnet">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">TrivialParamagnet</span><span class="p">(</span><span class="n">OneBody</span><span class="p">):</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The product state circuit :cls:`TrivialParamagnet`.</span>
-<span class="sd">    Introduce in https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808 .</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The product state circuit :class:`~qurry.recipe.simple.paramagnet.TrivialParamagnet`.</span>
 
 <span class="sd">    .. code-block:: text</span>
 
@@ -566,8 +564,7 @@ document.write(`
 <div class="viewcode-block" id="TopologicalParamagnet">
 <a class="viewcode-back" href="../../../../api/recipe/simple.html#qurry.recipe.simple.paramagnet.TopologicalParamagnet">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">TopologicalParamagnet</span><span class="p">(</span><span class="n">OneBody</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;The entangled circuit :cls:`Topological paramagnet`.</span>
-<span class="sd">    Introduce in https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808 .</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The entangled circuit :class:`~qurry.recipe.simple.paramagnet.TopologicalParamagnet`.</span>
 
 <span class="sd">    .. code-block:: text</span>
 
@@ -709,8 +706,8 @@ document.write(`
 <div class="viewcode-block" id="Cluster">
 <a class="viewcode-back" href="../../../../api/recipe/simple.html#qurry.recipe.simple.paramagnet.Cluster">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Cluster</span><span class="p">(</span><span class="n">TopologicalParamagnet</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;:cls:`Cluster`, another name of The entangled circuit :cls:`Topological paramagnet`.</span>
-<span class="sd">    Introduce in https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.086808 .</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;:class:`~qurry.recipe.simple.paramagnet.Cluster`, another name of the entangled circuit</span>
+<span class="sd">    :class:`~qurry.recipe.simple.paramagnet.TopologicalParamagnet`.</span>
 
 <span class="sd">    .. code-block:: text</span>
 
@@ -820,7 +817,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

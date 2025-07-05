@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,7 +63,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-03 12:28:51"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
   </head>
   
   
@@ -479,9 +479,11 @@ document.write(`
 <span class="c1"># pylint: disable=invalid-name</span>
 <span class="n">RhoMKCellMethod</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;numpy&quot;</span><span class="p">,</span> <span class="s2">&quot;numpy_precomputed&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span>
 <span class="sd">&quot;&quot;&quot;Type for rho_mk_cell method.</span>
-<span class="sd">It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;, &quot;jax_flatten&quot;, or &quot;numpy_flatten&quot;.</span>
+<span class="sd">It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;.</span>
+
 <span class="sd">- &quot;numpy&quot;: Use Numpy to calculate the rho_m.</span>
 <span class="sd">- &quot;numpy_precomputed&quot;: Use Numpy to calculate the rho_m with precomputed values.</span>
+
 <span class="sd">Currently, &quot;numpy_precomputed&quot; is the best option for performance.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="c1"># pylint: enable=invalid-name</span>
@@ -501,14 +503,14 @@ document.write(`
 <span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;:math:`\rho_{mk}` calculation for single cell.</span>
 
-<span class="sd">    The matrix :math:`\rho_{mk}^{i} is calculated by the following equation,</span>
-<span class="sd">    .. math::</span>
+<span class="sd">    The matrix :math:`\rho_{mk}^{i}` is calculated by the following equation,</span>
 
+<span class="sd">    .. math::</span>
 <span class="sd">        \rho_{mk}^{i} = \frac{3} U_{mi}^{\dagger} |b_k \rangle\langle b_k | U_{mi} - \mathbb{1}</span>
 
 <span class="sd">    The matrix :math:`\rho_{mk}` is calculated by the following equation,</span>
-<span class="sd">    .. math::</span>
 
+<span class="sd">    .. math::</span>
 <span class="sd">        \rho_{mk} = \bigotimes_{i=1}^{N_q} \rho_{mk}^{i}</span>
 
 <span class="sd">    where :math:`N_q` is the number of qubits,</span>
@@ -577,14 +579,14 @@ document.write(`
 <span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;:math:`\rho_{mk}` calculation for single cell.</span>
 
-<span class="sd">    The matrix :math:`\rho_{mk}^{i} is calculated by the following equation,</span>
-<span class="sd">    .. math::</span>
+<span class="sd">    The matrix :math:`\rho_{mk}^{i}` is calculated by the following equation,</span>
 
+<span class="sd">    .. math::</span>
 <span class="sd">        \rho_{mk}^{i} = \frac{3} U_{mi}^{\dagger} |b_k \rangle\langle b_k | U_{mi} - \mathbb{1}</span>
 
 <span class="sd">    The matrix :math:`\rho_{mk}` is calculated by the following equation,</span>
-<span class="sd">    .. math::</span>
 
+<span class="sd">    .. math::</span>
 <span class="sd">        \rho_{mk} = \bigotimes_{i=1}^{N_q} \rho_{mk}^{i}</span>
 
 <span class="sd">    where :math:`N_q` is the number of qubits,</span>
@@ -682,7 +684,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-03 12:28:51.
+  Last updated on 2025-07-06 01:19:03.
   <br/>
 </p></div>
       

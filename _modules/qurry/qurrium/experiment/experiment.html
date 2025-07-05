@@ -1,0 +1,1599 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qurry.qurrium.experiment.experiment &#8212; Qurrium  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=9312ff3a" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-NH0TTCC2VZ');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qurry/qurrium/experiment/experiment';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qurrium 📏</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../basic_usage/index.html">
+    Basic Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../multi_output/index.html">
+    Multi-Output
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../postprocessing/index.html">
+    Post-Processing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../appendix/index.html">
+    Other Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../more_info/index.html">
+    Installation and About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      <div class="sidebar-primary-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qurry.qurriu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qurry.qurrium.experiment.experiment</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;ExperimentPrototype - The instance of experiment (:mod:`qurry.qurrium.experiment.experiment`)&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">abstractmethod</span><span class="p">,</span> <span class="n">ABC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Generic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multiprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_context</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span><span class="p">,</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Backend</span><span class="p">,</span> <span class="n">JobV1</span> <span class="k">as</span> <span class="n">Job</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.transpiler.passmanager</span><span class="w"> </span><span class="kn">import</span> <span class="n">PassManager</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.arguments</span><span class="w"> </span><span class="kn">import</span> <span class="n">Commonparams</span><span class="p">,</span> <span class="n">_A</span><span class="p">,</span> <span class="n">create_exp_args</span><span class="p">,</span> <span class="n">create_exp_commons</span><span class="p">,</span> <span class="n">create_exp_outfields</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.beforewards</span><span class="w"> </span><span class="kn">import</span> <span class="n">Before</span><span class="p">,</span> <span class="n">create_beforewards</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.afterwards</span><span class="w"> </span><span class="kn">import</span> <span class="n">After</span><span class="p">,</span> <span class="n">create_afterwards</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.analyses</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnalysesContainer</span><span class="p">,</span> <span class="n">_R</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.export</span><span class="w"> </span><span class="kn">import</span> <span class="n">Export</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">exp_id_process</span><span class="p">,</span>
+    <span class="n">memory_usage_factor_expect</span><span class="p">,</span>
+    <span class="n">implementation_check</span><span class="p">,</span>
+    <span class="n">summonner_check</span><span class="p">,</span>
+    <span class="n">make_statesheet</span><span class="p">,</span>
+    <span class="n">create_save_location</span><span class="p">,</span>
+    <span class="n">decide_folder_and_filename</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_counts_and_exceptions</span><span class="p">,</span> <span class="n">qasm_dumps</span><span class="p">,</span> <span class="n">outfields_check</span><span class="p">,</span> <span class="n">outfields_hint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.chunk</span><span class="w"> </span><span class="kn">import</span> <span class="n">very_easy_chunk_size</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...tools</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ParallelManager</span><span class="p">,</span>
+    <span class="n">DatetimeDict</span><span class="p">,</span>
+    <span class="n">set_pbar_description</span><span class="p">,</span>
+    <span class="n">backend_name_getter</span><span class="p">,</span>
+    <span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span>
+    <span class="n">qurry_progressbar</span><span class="p">,</span>
+    <span class="n">GeneralSimulator</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule</span><span class="w"> </span><span class="kn">import</span> <span class="n">quickJSON</span><span class="p">,</span> <span class="n">DEFAULT_MODE</span><span class="p">,</span> <span class="n">DEFAULT_ENCODING</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...capsule.hoshi</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hoshi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...declare</span><span class="w"> </span><span class="kn">import</span> <span class="n">RunArgsType</span><span class="p">,</span> <span class="n">TranspileArgs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">QurryResetSecurityActivated</span><span class="p">,</span> <span class="n">QurryTranspileConfigurationIgnored</span>
+
+
+<div class="viewcode-block" id="ExperimentPrototype">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExperimentPrototype</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">_A</span><span class="p">,</span> <span class="n">_R</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The instance of experiment.&quot;&quot;&quot;</span>
+
+    <span class="vm">__name__</span> <span class="o">=</span> <span class="s2">&quot;ExperimentPrototype&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Name of the QurryExperiment which could be overwritten.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">arguments_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">_A</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The arguments instance for this experiment.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method should be implemented.&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analysis_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">_R</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The analysis instance for this experiment.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method should be implemented.&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_auto_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the experiment has auto analysis.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the experiment has auto analysis, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">analysis_instance</span><span class="o">.</span><span class="n">input_type</span><span class="p">()</span><span class="o">.</span><span class="n">_fields</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_hold_by_multimanager</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the experiment is hold by a multimanager.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the experiment is hold by a multimanager, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">summonner_check</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_name</span>
+        <span class="p">)</span>
+
+    <span class="n">args</span><span class="p">:</span> <span class="n">_A</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The arguments of the experiment.&quot;&quot;&quot;</span>
+    <span class="n">commons</span><span class="p">:</span> <span class="n">Commonparams</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The common parameters of the experiment.&quot;&quot;&quot;</span>
+    <span class="n">outfields</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The outfields of the experiment.&quot;&quot;&quot;</span>
+    <span class="n">beforewards</span><span class="p">:</span> <span class="n">Before</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The beforewards of the experiment.&quot;&quot;&quot;</span>
+    <span class="n">afterwards</span><span class="p">:</span> <span class="n">After</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The afterwards of the experiment.&quot;&quot;&quot;</span>
+    <span class="n">memory_usage_factor</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The factor of the memory usage of the experiment.</span>
+<span class="sd">    When the experiment is created, it will be set to -1 for no measurement yet.</span>
+<span class="sd">    When the experiment is built, it will be set to the memory usage of the experiment.</span>
+
+<span class="sd">    The memory usage is estimated by the number of instructions in the circuits and</span>
+<span class="sd">    the number of shots. The factor is calculated by the formula:</span>
+
+<span class="sd">    .. code-block:: text</span>
+
+<span class="sd">        factor = target_circuit_instructions_num + sqrt(shots) * target_circuit_instructions_num</span>
+
+<span class="sd">    where `target_circuit_instructions_num` is the number of instructions in the target circuits,</span>
+<span class="sd">    `transpiled_circuit_instructions_num` is the number of instructions in the circuits</span>
+<span class="sd">    which has been transpiled and will be run on the backend,</span>
+<span class="sd">    and `shots` is the number of shots.</span>
+
+<span class="sd">    The factor is rounded to the nearest integer.</span>
+<span class="sd">    The factor is used to estimate the memory usage of the experiment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">arguments</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">_A</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">commonparams</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Commonparams</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">outfields</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">beforewards</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Before</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">afterwards</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">After</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">reports</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnalysesContainer</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            arguments (Optional[Union[NamedTuple, dict[str, Any]]]):</span>
+<span class="sd">                The arguments of the experiment.</span>
+<span class="sd">            commonparams (Optional[Union[Commonparams, dict[str, Any]]]):</span>
+<span class="sd">                The common parameters of the experiment.</span>
+<span class="sd">            outfields (Optional[dict[str, Any]]): The outfields of the experiment.</span>
+<span class="sd">            beforewards (Optional[Before], optional):</span>
+<span class="sd">                The beforewards of the experiment. Defaults to None.</span>
+<span class="sd">            afterwards (Optional[After], optional):</span>
+<span class="sd">                The afterwards of the experiment. Defaults to None.</span>
+<span class="sd">            reports (Optional[AnalysesContainer], optional):</span>
+<span class="sd">                The reports of the experiment. Defaults to None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">arguments_deprecated</span> <span class="o">=</span> <span class="n">create_exp_args</span><span class="p">(</span><span class="n">arguments</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments_instance</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="p">,</span> <span class="n">commonparams_deprecated</span> <span class="o">=</span> <span class="n">create_exp_commons</span><span class="p">(</span><span class="n">commonparams</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span> <span class="o">=</span> <span class="n">create_exp_outfields</span><span class="p">(</span><span class="n">outfields</span><span class="p">)</span>
+        <span class="c1"># Add deprecated arguments to outfields only if they are not empty</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arguments_deprecated</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">[</span><span class="s2">&quot;arguments_deprecated&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">arguments_deprecated</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">commonparams_deprecated</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">[</span><span class="s2">&quot;commonparams_deprecated&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">commonparams_deprecated</span>
+        <span class="n">implementation_check</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="p">)</span>
+        <span class="n">summonner_check</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span> <span class="o">=</span> <span class="n">create_beforewards</span><span class="p">(</span><span class="n">beforewards</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span> <span class="o">=</span> <span class="n">create_afterwards</span><span class="p">(</span><span class="n">afterwards</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">:</span> <span class="n">AnalysesContainer</span><span class="p">[</span><span class="n">_R</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">reports</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reports</span><span class="p">,</span> <span class="n">AnalysesContainer</span><span class="p">)</span> <span class="k">else</span> <span class="n">AnalysesContainer</span><span class="p">()</span>
+        <span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The reports of the experiment.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ExperimentPrototype.params_control">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.params_control">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">params_control</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">targets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">]],</span> <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">custom_kwargs</span><span class="p">:</span> <span class="n">Any</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">_A</span><span class="p">,</span> <span class="n">Commonparams</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Control the experiment&#39;s parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            targets (list[tuple[Hashable, QuantumCircuit]]): The circuits of the experiment.</span>
+<span class="sd">            exp_name (str):</span>
+<span class="sd">                Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">            custom_kwargs (Any): Other custom arguments.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            NotImplementedError: This method should be implemented.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method should be implemented.&quot;</span><span class="p">)</span></div>
+
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_params_control_core</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">targets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">]],</span>
+        <span class="n">exp_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># multimanager</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">serial</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Hashable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">mute_outfields_warning</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">custom_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Control the experiment&#39;s general parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            targets (list[tuple[Hashable, QuantumCircuit]]): The circuits of the experiment.</span>
+<span class="sd">            exp_id (Optional[str], optional):</span>
+<span class="sd">                If input is `None`, then create an new experiment.</span>
+<span class="sd">                If input is a existed experiment ID, then use it.</span>
+<span class="sd">                Otherwise, use the experiment with given specific ID.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            shots (int, optional): Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Optional[Backend], optional): The quantum backend. Defaults to None.</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                The name of the experiment.</span>
+<span class="sd">                Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;experiment&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Given the experiment multiple tags to make a dictionary for recongnizing it.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            serial (Optional[int], optional):</span>
+<span class="sd">                Index of experiment in</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            summoner_id (Optional[Hashable], optional):</span>
+<span class="sd">                ID of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            mute_outfields_warning (bool, optional):</span>
+<span class="sd">                Mute the warning when there are unused arguments detected and stored in outfields.</span>
+<span class="sd">                Defaults to False.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            custom_kwargs (Any):</span>
+<span class="sd">                Other custom arguments.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ExperimentPrototype: The experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">run_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">run_args</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">transpile_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">transpile_args</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">backend</span> <span class="o">=</span> <span class="n">GeneralSimulator</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="p">()</span>
+
+        <span class="c1"># Given parameters and default parameters</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Prepaing parameters...&quot;</span><span class="p">)</span>
+
+        <span class="n">arguments</span><span class="p">,</span> <span class="n">commonparams</span><span class="p">,</span> <span class="n">outfields</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">params_control</span><span class="p">(</span>
+            <span class="n">targets</span><span class="o">=</span><span class="n">targets</span><span class="p">,</span>
+            <span class="n">exp_id</span><span class="o">=</span><span class="n">exp_id_process</span><span class="p">(</span><span class="n">exp_id</span><span class="p">),</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">run_args</span><span class="o">=</span><span class="n">run_args</span><span class="p">,</span>
+            <span class="n">transpile_args</span><span class="o">=</span><span class="n">transpile_args</span><span class="p">,</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="n">exp_name</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="n">save_location</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+            <span class="n">serial</span><span class="o">=</span><span class="n">serial</span><span class="p">,</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">datetimes</span><span class="o">=</span><span class="n">DatetimeDict</span><span class="p">(),</span>
+            <span class="o">**</span><span class="n">custom_kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">outfield_maybe</span><span class="p">,</span> <span class="n">outfields_unknown</span> <span class="o">=</span> <span class="n">outfields_check</span><span class="p">(</span>
+            <span class="n">outfields</span><span class="p">,</span> <span class="n">arguments</span><span class="o">.</span><span class="n">_fields</span> <span class="o">+</span> <span class="n">commonparams</span><span class="o">.</span><span class="n">_fields</span>
+        <span class="p">)</span>
+        <span class="n">outfields_hint</span><span class="p">(</span><span class="n">outfield_maybe</span><span class="p">,</span> <span class="n">outfields_unknown</span><span class="p">,</span> <span class="n">mute_outfields_warning</span><span class="p">)</span>
+
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Create experiment instance... &quot;</span><span class="p">)</span>
+        <span class="n">new_exps</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">arguments</span><span class="p">,</span> <span class="n">commonparams</span><span class="p">,</span> <span class="n">outfields</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">new_exps</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">),</span> <span class="s2">&quot;Require a valid backend.&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_exps</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;New experiment should have no circuit.&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_exps</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit_qasm</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;New experiment should have no qasm.&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_exps</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;New experiment should have no result.&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_exps</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;New experiment should have no counts.&quot;</span>
+
+        <span class="k">return</span> <span class="n">new_exps</span>
+
+<div class="viewcode-block" id="ExperimentPrototype.method">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.method">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">method</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">targets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">]],</span>
+        <span class="n">arguments</span><span class="p">:</span> <span class="n">_A</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">multiprocess</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The method to construct circuit.</span>
+<span class="sd">        Where should be overwritten by each construction of new measurement.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            targets (list[tuple[Hashable, QuantumCircuit]]): The circuits of the experiment.</span>
+<span class="sd">            arguments (_Arg): The arguments of the experiment.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment. Defaults to None.</span>
+<span class="sd">            multiprocess (bool, optional): Whether to use multiprocessing. Defaults to `True`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[list[QuantumCircuit], dict[str, Any]]:</span>
+<span class="sd">                The circuits of the experiment and the outfields.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method should be implemented.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.build">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.build">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">targets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">]],</span>
+        <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Backend</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">exp_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">run_args</span><span class="p">:</span> <span class="n">RunArgsType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">transpile_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TranspileArgs</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">passmanager_pair</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PassManager</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># multimanager</span>
+        <span class="n">serial</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Hashable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summoner_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># process tool</span>
+        <span class="n">qasm_version</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;qasm2&quot;</span><span class="p">,</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;qasm3&quot;</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">multiprocess</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            targets (list[tuple[Hashable, QuantumCircuit]]): The circuits of the experiment.</span>
+<span class="sd">            shots (int, optional): Shots of the job. Defaults to `1024`.</span>
+<span class="sd">            backend (Optional[Backend], optional): The quantum backend. Defaults to None.</span>
+<span class="sd">            exp_name (str, optional):</span>
+<span class="sd">                The name of the experiment.</span>
+<span class="sd">                Naming this experiment to recognize it when the jobs are pending to IBMQ Service.</span>
+<span class="sd">                This name is also used for creating a folder to store the exports.</span>
+<span class="sd">                Defaults to `&#39;experiment&#39;`.</span>
+<span class="sd">            run_args (RunArgsType, optional):</span>
+<span class="sd">                Arguments for :meth:`Backend.run`. Defaults to None.</span>
+<span class="sd">            transpile_args (Optional[TranspileArgs], optional):</span>
+<span class="sd">                Arguments of :func:`~qiskit.compiler.transpile`.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            passmanager_pair (Optional[tuple[str, PassManager]], optional):</span>
+<span class="sd">                The passmanager pair for transpile. Defaults to None.</span>
+<span class="sd">            tags (Optional[tuple[str, ...]], optional):</span>
+<span class="sd">                Given the experiment multiple tags to make a dictionary for recongnizing it.</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">            serial (Optional[int], optional):</span>
+<span class="sd">                Index of experiment in</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            summoner_id (Optional[Hashable], optional):</span>
+<span class="sd">                ID of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            summoner_name (Optional[str], optional):</span>
+<span class="sd">                Name of experiment of</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                **!!ATTENTION, this should only be used by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`!!**</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">            qasm_version (Literal[&quot;qasm2&quot;, &quot;qasm3&quot;], optional):</span>
+<span class="sd">                The export version of OpenQASM. Defaults to &#39;qasm3&#39;.</span>
+<span class="sd">            export (bool, optional):</span>
+<span class="sd">                Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment.</span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            multiprocess (bool, optional):</span>
+<span class="sd">                Whether to use multiprocessing. Defaults to `True`.</span>
+
+<span class="sd">            custom_and_main_kwargs (Any):</span>
+<span class="sd">                Other custom arguments.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ExperimentPrototype: The experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># preparing</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Parameter loading...&quot;</span><span class="p">)</span>
+
+        <span class="n">current_exp</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_params_control_core</span><span class="p">(</span>
+            <span class="n">targets</span><span class="o">=</span><span class="n">targets</span><span class="p">,</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">run_args</span><span class="o">=</span><span class="n">run_args</span><span class="p">,</span>
+            <span class="n">transpile_args</span><span class="o">=</span><span class="n">transpile_args</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="n">exp_name</span><span class="p">,</span>
+            <span class="n">serial</span><span class="o">=</span><span class="n">serial</span><span class="p">,</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="n">summoner_id</span><span class="p">,</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="n">summoner_name</span><span class="p">,</span>
+            <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">custom_and_main_kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">):</span>
+                <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Backend replacing...&quot;</span><span class="p">)</span>
+                <span class="n">current_exp</span><span class="o">.</span><span class="n">replace_backend</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;No vaild backend to run, exisited backend: &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="si">}</span><span class="s2"> as type &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;given backend: </span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2"> as type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+                <span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">),</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Invalid backend: </span><span class="si">{</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="si">}</span><span class="s2"> as &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+        <span class="c1"># circuit</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Circuit creating...&quot;</span><span class="p">)</span>
+        <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">targets</span><span class="p">)</span>
+        <span class="n">cirqs</span><span class="p">,</span> <span class="n">side_prodict</span> <span class="o">=</span> <span class="n">current_exp</span><span class="o">.</span><span class="n">method</span><span class="p">(</span>
+            <span class="n">targets</span><span class="o">=</span><span class="n">targets</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="n">current_exp</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">,</span> <span class="n">multiprocess</span><span class="o">=</span><span class="n">multiprocess</span>
+        <span class="p">)</span>
+        <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">side_product</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">side_prodict</span><span class="p">)</span>
+
+        <span class="c1"># qasm</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Exporting OpenQASM string...&quot;</span><span class="p">)</span>
+        <span class="n">targets_keys</span><span class="p">,</span> <span class="n">targets_values</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">targets</span><span class="p">)</span>
+        <span class="n">targets_keys</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+        <span class="n">targets_values</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">multiprocess</span><span class="p">:</span>
+            <span class="n">pool</span> <span class="o">=</span> <span class="n">ParallelManager</span><span class="p">()</span>
+            <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit_qasm</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="n">pool</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">qasm_dumps</span><span class="p">,</span> <span class="p">[(</span><span class="n">q</span><span class="p">,</span> <span class="n">qasm_version</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">cirqs</span><span class="p">])</span>
+            <span class="p">)</span>
+            <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">target_qasm</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="nb">zip</span><span class="p">(</span>
+                    <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">targets_keys</span><span class="p">],</span>
+                    <span class="n">pool</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">qasm_dumps</span><span class="p">,</span> <span class="p">[(</span><span class="n">q</span><span class="p">,</span> <span class="n">qasm_version</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">targets_values</span><span class="p">]),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit_qasm</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">qasm_dumps</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">qasm_version</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">cirqs</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">target_qasm</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="nb">zip</span><span class="p">(</span>
+                    <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">targets_keys</span><span class="p">],</span>
+                    <span class="p">[</span><span class="n">qasm_dumps</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">qasm_version</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">targets_values</span><span class="p">],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># transpile</span>
+        <span class="k">if</span> <span class="n">passmanager_pair</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">passmanager_name</span><span class="p">,</span> <span class="n">passmanager</span> <span class="o">=</span> <span class="n">passmanager_pair</span>
+            <span class="n">set_pbar_description</span><span class="p">(</span>
+                <span class="n">pbar</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Circuit transpiling by passmanager &#39;</span><span class="si">{</span><span class="n">passmanager_name</span><span class="si">}</span><span class="s2">&#39;...&quot;</span>
+            <span class="p">)</span>
+            <span class="n">transpiled_circs</span> <span class="o">=</span> <span class="n">passmanager</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+                <span class="n">circuits</span><span class="o">=</span><span class="n">cirqs</span><span class="p">,</span> <span class="n">num_processes</span><span class="o">=</span><span class="kc">None</span> <span class="k">if</span> <span class="n">multiprocess</span> <span class="k">else</span> <span class="mi">1</span>  <span class="c1"># type: ignore</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">transpile_args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Passmanager &#39;</span><span class="si">{</span><span class="n">passmanager_name</span><span class="si">}</span><span class="s2">&#39; is given, &quot;</span>
+                    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;the transpile_args will be ignored in &#39;</span><span class="si">{</span><span class="n">current_exp</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                    <span class="n">category</span><span class="o">=</span><span class="n">QurryTranspileConfigurationIgnored</span><span class="p">,</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Circuit transpiling...&quot;</span><span class="p">)</span>
+            <span class="n">transpile_args</span> <span class="o">=</span> <span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">transpile_args</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">transpile_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;num_processes&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">transpiled_circs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">QuantumCircuit</span><span class="p">]</span> <span class="o">=</span> <span class="n">transpile</span><span class="p">(</span>
+                <span class="n">cirqs</span><span class="p">,</span>
+                <span class="n">backend</span><span class="o">=</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span>
+                <span class="n">num_processes</span><span class="o">=</span><span class="kc">None</span> <span class="k">if</span> <span class="n">multiprocess</span> <span class="k">else</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">transpile_args</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Circuit loading...&quot;</span><span class="p">)</span>
+        <span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">transpiled_circs</span><span class="p">)</span>
+
+        <span class="c1"># memory usage factor</span>
+        <span class="n">current_exp</span><span class="o">.</span><span class="n">memory_usage_factor</span> <span class="o">=</span> <span class="n">memory_usage_factor_expect</span><span class="p">(</span>
+            <span class="n">target</span><span class="o">=</span><span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+            <span class="n">circuits</span><span class="o">=</span><span class="n">current_exp</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">,</span>
+            <span class="n">commonparams</span><span class="o">=</span><span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># commons</span>
+        <span class="n">note_and_date</span> <span class="o">=</span> <span class="n">current_exp</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_only</span><span class="p">(</span><span class="s2">&quot;build&quot;</span><span class="p">)</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span>
+            <span class="n">pbar</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Building Completed, denoted &#39;</span><span class="si">{</span><span class="n">note_and_date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; date: </span><span class="si">{</span><span class="n">note_and_date</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span>
+        <span class="p">)</span>
+
+        <span class="c1"># export may be slow, consider export at finish or something</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">save_location</span><span class="p">,</span> <span class="p">(</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span> <span class="ow">and</span> <span class="n">export</span><span class="p">:</span>
+            <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Setup data exporting...&quot;</span><span class="p">)</span>
+            <span class="n">current_exp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">current_exp</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.build_for_multiprocess">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.build_for_multiprocess">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_for_multiprocess</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build wrapper for multiprocess.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config (dict[str, Any]): The arguments of the experiment.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ExperimentPrototype: The experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;multiprocess&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pbar&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">&quot;multiprocess&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="o">**</span><span class="n">config</span><span class="p">),</span> <span class="n">config</span></div>
+
+
+    <span class="c1"># local execution</span>
+<div class="viewcode-block" id="ExperimentPrototype.run">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.run">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the result after running the job.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment. Defaults to None.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: No circuit ready.</span>
+<span class="sd">            ValueError: The circuit has not been constructed yet.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The ID of the experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The circuit has not been constructed yet.&quot;</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">),</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Current backend </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="si">}</span><span class="s2"> needs to be backend not &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">({</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">})</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="p">,</span> <span class="s2">&quot;run&quot;</span><span class="p">),</span> <span class="s2">&quot;Current backend is not runnable.&quot;</span>
+
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Executing...&quot;</span><span class="p">)</span>
+        <span class="n">event_name</span><span class="p">,</span> <span class="n">date</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_serial</span><span class="p">(</span><span class="s2">&quot;run&quot;</span><span class="p">)</span>
+        <span class="n">execution</span><span class="p">:</span> <span class="n">Job</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">shots</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">run_args</span>
+        <span class="p">)</span>
+        <span class="c1"># commons</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Executing completed &#39;</span><span class="si">{</span><span class="n">event_name</span><span class="si">}</span><span class="s2">&#39;, denoted date: </span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+        <span class="c1"># beforewards</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">job_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">execution</span><span class="o">.</span><span class="n">job_id</span><span class="p">())</span>
+        <span class="c1"># afterwards</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">execution</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_id</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.result">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.result">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">result</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">export</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the result of the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            export (bool, optional): Whether to export the experiment. Defaults to False.</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The ID of the experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The job has not been executed yet.&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;The job has been executed more than once.&quot;</span>
+
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Result loading...&quot;</span><span class="p">)</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">circuit</span><span class="p">)</span>
+        <span class="n">counts</span><span class="p">,</span> <span class="n">exceptions</span> <span class="o">=</span> <span class="n">get_counts_and_exceptions</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">exceptions</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;exceptions&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">[</span><span class="s2">&quot;exceptions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">result_id</span><span class="p">,</span> <span class="n">exception_item</span> <span class="ow">in</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">[</span><span class="s2">&quot;exceptions&quot;</span><span class="p">][</span><span class="n">result_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">exception_item</span>
+
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Counts loading...&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_auto_analysis</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_hold_by_multimanager</span><span class="p">:</span>
+                <span class="n">set_pbar_description</span><span class="p">(</span>
+                    <span class="n">pbar</span><span class="p">,</span>
+                    <span class="s2">&quot;Auto running analysis will take over by &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2">: &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_name</span><span class="si">}</span><span class="s2"> after all experiments are done.&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Running analysis for no input required...&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">analyze</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">export</span><span class="p">:</span>
+            <span class="c1"># export may be slow, consider export at finish or something</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">save_location</span><span class="p">,</span> <span class="p">(</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">)):</span>
+                <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Setup data exporting...&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_id</span></div>
+
+
+    <span class="c1"># remote execution</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_remote_result_taking</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">counts_tmp_container</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">summoner_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">idx_circs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">retrieve_times_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Take the result from remote execution.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            counts_tmp_container (dict[int, dict[str, int]]): The counts temporary container.</span>
+<span class="sd">            summoner_id (str): The summoner ID.</span>
+<span class="sd">            idx_circs (list[int]): The index of circuits.</span>
+<span class="sd">            retrieve_times_name (str): The retrieve times name.</span>
+<span class="sd">            current (str): The current time.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[dict[str, int]]: The counts.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">summoner_id</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">idx_circs</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counts_tmp_container</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_only</span><span class="p">(</span><span class="n">retrieve_times_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Summoner ID </span><span class="si">{</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2"> is not equal to&quot;</span>
+                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; current summoner ID </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;The counts will not be updated.&quot;</span><span class="p">,</span>
+                <span class="n">category</span><span class="o">=</span><span class="n">QurryResetSecurityActivated</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">counts</span>
+
+<div class="viewcode-block" id="ExperimentPrototype.replace_backend">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.replace_backend">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">replace_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">backend</span><span class="p">:</span> <span class="n">Backend</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replace the backend of the experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            backend (Backend): The new backend.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the new backend is not a valid backend.</span>
+<span class="sd">            ValueError: If the new backend is not a runnable backend.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">Backend</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Require a valid backend, but new backend: </span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2"> does not.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="s2">&quot;run&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Require a runnable backend, but new backend: </span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2"> does not.&quot;</span><span class="p">)</span>
+
+        <span class="n">old_backend</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">backend</span>
+        <span class="n">old_backend_name</span> <span class="o">=</span> <span class="n">backend_name_getter</span><span class="p">(</span><span class="n">old_backend</span><span class="p">)</span>
+        <span class="n">new_backend_name</span> <span class="o">=</span> <span class="n">backend_name_getter</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">add_serial</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;replace-</span><span class="si">{</span><span class="n">old_backend_name</span><span class="si">}</span><span class="s2">-to-</span><span class="si">{</span><span class="n">new_backend_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">_fields</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">_fields</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> is not a valid field of &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">Before</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">After</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># analysis</span>
+<div class="viewcode-block" id="ExperimentPrototype.quantities">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.quantities">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantities</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computing specific squantity.</span>
+<span class="sd">        Where should be overwritten by each construction of new measurement.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.analyze">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.analyze">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_R</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyzing the example circuit results in specific method.</span>
+<span class="sd">        Where should be overwritten by each construction of new measurement.</span>
+
+<span class="sd">        If the analysis requires additional parameters,</span>
+<span class="sd">        they should be passed as arguments to this method.</span>
+<span class="sd">        Also, they should be defined in the</span>
+<span class="sd">        :meth:`~qurry.qurrium.analysis.AnalysisPrototype.input_type`</span>
+<span class="sd">        for :meth:`result` will count the input fields from the analysis to determine</span>
+<span class="sd">        whether to call this method for no input required.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            _R: The result of the analysis.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method should be implemented.&quot;</span><span class="p">)</span></div>
+
+
+    <span class="c1"># show info</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">exp_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ID of experiment.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(exp_id=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;unused_args_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">)</span><span class="si">}</span><span class="s2">, analysis_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_no_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="si">}</span><span class="s2">, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;unused_args_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">)</span><span class="si">}</span><span class="s2">, analysis_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_repr_pretty_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">cycle</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">cycle</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(exp_id=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="si">}</span><span class="s2">, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;unused_args_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">)</span><span class="si">}</span><span class="s2">, analysis_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">)</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&quot;</span><span class="p">,</span> <span class="s2">&quot;)&gt;&quot;</span><span class="p">):</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exp_id=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="si">}</span><span class="s2">, &quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unused_args_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">)</span><span class="si">}</span><span class="s2">,&quot;</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">breakable</span><span class="p">()</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;analysis_num=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ExperimentPrototype.statesheet">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.statesheet">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">statesheet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">report_expanded</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">hoshi</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hoshi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Show the state of experiment.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            report_expanded (bool, optional): Show more infomation. Defaults to False.</span>
+<span class="sd">            hoshi (bool, optional): Showing name of Hoshi. Defaults to False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Hoshi: Statesheet of experiment.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">make_statesheet</span><span class="p">(</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span>
+            <span class="n">commons</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="p">,</span>
+            <span class="n">outfields</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">,</span>
+            <span class="n">beforewards</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="p">,</span>
+            <span class="n">afterwards</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="p">,</span>
+            <span class="n">reports</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="p">,</span>
+            <span class="n">report_expanded</span><span class="o">=</span><span class="n">report_expanded</span><span class="p">,</span>
+            <span class="n">hoshi</span><span class="o">=</span><span class="n">hoshi</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.export">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.export">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">export</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">export_transpiled_circuit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Export</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the data of experiment into specific namedtuples for exporting.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                The location to save the experiment. Defaults to None.</span>
+<span class="sd">            export_transpiled_circuit (bool, optional):</span>
+<span class="sd">                Whether to export the transpiled circuit as txt. Defaults to False.</span>
+<span class="sd">                When set to True, the transpiled circuit will be exported as txt.</span>
+<span class="sd">                Otherwise, the circuit will be not exported but circuit qasm remains.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Export: A namedtuple containing the data of experiment</span>
+<span class="sd">                which can be more easily to export as json file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">save_location</span> <span class="o">=</span> <span class="n">create_save_location</span><span class="p">(</span><span class="n">save_location</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">save_location</span> <span class="o">!=</span> <span class="n">save_location</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">commons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">)</span>
+
+        <span class="n">adventures</span><span class="p">,</span> <span class="n">tales</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">beforewards</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">export_transpiled_circuit</span><span class="p">)</span>
+        <span class="n">legacy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">afterwards</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+        <span class="n">reports</span><span class="p">,</span> <span class="n">tales_reports</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reports</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+
+        <span class="c1"># multi-experiment mode</span>
+        <span class="n">folder</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">decide_folder_and_filename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;folder&quot;</span><span class="p">:</span> <span class="n">folder</span><span class="p">,</span>
+            <span class="s2">&quot;qurryinfo&quot;</span><span class="p">:</span> <span class="n">folder</span> <span class="o">+</span> <span class="s2">&quot;qurryinfo.json&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;args/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.args.json&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;advent&quot;</span><span class="p">:</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;advent/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.advent.json&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;legacy&quot;</span><span class="p">:</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;legacy/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.legacy.json&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">tales</span><span class="p">:</span>
+            <span class="n">files</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;tales.</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;tales/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">.json&quot;</span>
+        <span class="n">files</span><span class="p">[</span><span class="s2">&quot;reports&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;reports/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.reports.json&quot;</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">tales_reports</span><span class="p">:</span>
+            <span class="n">files</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;reports.tales.</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;tales/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">.reports.json&quot;</span>
+
+        <span class="k">return</span> <span class="n">Export</span><span class="p">(</span>
+            <span class="n">exp_id</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">exp_id</span><span class="p">),</span>
+            <span class="n">exp_name</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">exp_name</span><span class="p">),</span>
+            <span class="n">serial</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">serial</span><span class="p">)),</span>
+            <span class="n">summoner_id</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span><span class="p">)),</span>
+            <span class="n">summoner_name</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_name</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_name</span><span class="p">)),</span>
+            <span class="n">filename</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span>
+            <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">files</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+            <span class="n">args</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">_asdict</span><span class="p">(),</span>
+            <span class="n">commons</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">export</span><span class="p">(),</span>
+            <span class="n">outfields</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outfields</span><span class="p">,</span>
+            <span class="n">adventures</span><span class="o">=</span><span class="n">adventures</span><span class="p">,</span>
+            <span class="n">legacy</span><span class="o">=</span><span class="n">legacy</span><span class="p">,</span>
+            <span class="n">tales</span><span class="o">=</span><span class="n">tales</span><span class="p">,</span>
+            <span class="n">reports</span><span class="o">=</span><span class="n">reports</span><span class="p">,</span>
+            <span class="n">tales_reports</span><span class="o">=</span><span class="n">tales_reports</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ExperimentPrototype.write">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.write">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">export_transpiled_circuit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">qurryinfo_hold_access</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">multiprocess</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the experiment data, if there is a previous export, then will overwrite.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            save_location (Optional[Union[Path, str]], optional):</span>
+<span class="sd">                Where to save the export content as `json` file.</span>
+<span class="sd">                If `save_location == None`, then use the value in `self.commons` to be exported,</span>
+<span class="sd">                if it&#39;s None too, then raise error. Defaults to None.</span>
+<span class="sd">            export_transpiled_circuit (bool, optional):</span>
+<span class="sd">                Whether to export the transpiled circuit as txt. Defaults to False.</span>
+<span class="sd">                When set to True, the transpiled circuit will be exported as txt.</span>
+<span class="sd">                Otherwise, the circuit will be not exported but circuit qasm remains.</span>
+<span class="sd">            qurryinfo_hold_access (str, optional):</span>
+<span class="sd">                Whether to hold the I/O of `qurryinfo`,</span>
+<span class="sd">                then export by :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`.</span>
+<span class="sd">                It should be ONLY control by</span>
+<span class="sd">                :class:`~qurry.qurrium.multimanager.multimanager.MultiManager`. Defaults to None.</span>
+<span class="sd">            multiprocess (bool, optional):</span>
+<span class="sd">                Whether to use multiprocessing. Defaults to `True`.</span>
+<span class="sd">            pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">                The progress bar for showing the progress of the experiment. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[str, dict[str, str]]: The id of the experiment and the files location.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">set_pbar_description</span><span class="p">(</span><span class="n">pbar</span><span class="p">,</span> <span class="s2">&quot;Preparing to export...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># experiment write</span>
+        <span class="n">export_material</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">save_location</span><span class="p">,</span> <span class="n">export_transpiled_circuit</span><span class="p">)</span>
+        <span class="n">exp_id</span><span class="p">,</span> <span class="n">files</span> <span class="o">=</span> <span class="n">export_material</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">multiprocess</span><span class="p">,</span> <span class="n">pbar</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="s2">&quot;qurryinfo&quot;</span> <span class="ow">in</span> <span class="n">files</span><span class="p">,</span> <span class="s2">&quot;qurryinfo location is not in files.&quot;</span>
+        <span class="c1"># qurryinfo write</span>
+        <span class="n">real_save_location</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">save_location</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">qurryinfo_hold_access</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">commons</span><span class="o">.</span><span class="n">summoner_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">):</span>
+            <span class="c1"># if qurryinfo_hold_access is set, then export by MultiManager</span>
+            <span class="k">return</span> <span class="n">exp_id</span><span class="p">,</span> <span class="n">files</span>
+        <span class="n">qurryinfo_location</span> <span class="o">=</span> <span class="n">real_save_location</span> <span class="o">/</span> <span class="n">files</span><span class="p">[</span><span class="s2">&quot;qurryinfo&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">qurryinfo_found</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+                <span class="n">qurryinfo_found</span><span class="p">[</span><span class="n">exp_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span>
+            <span class="n">quickJSON</span><span class="p">(</span><span class="n">qurryinfo_found</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">),</span> <span class="n">DEFAULT_MODE</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">quickJSON</span><span class="p">({</span><span class="n">exp_id</span><span class="p">:</span> <span class="n">files</span><span class="p">},</span> <span class="nb">str</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">),</span> <span class="n">DEFAULT_MODE</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">exp_id</span><span class="p">,</span> <span class="n">files</span></div>
+
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_core</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">exp_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">file_index</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Core of read function.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exp_id (str): The id of the experiment to be read.</span>
+<span class="sd">            file_index (dict[str, str]): The index of the experiment to be read.</span>
+<span class="sd">            save_location (Union[Path, str]): The location of the experiment to be read.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: &#39;save_location&#39; needs to be the type of &#39;str&#39; or &#39;Path&#39;.</span>
+<span class="sd">            FileNotFoundError: When `save_location` is not available.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            QurryExperiment: The experiment to be read.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">save_location</span> <span class="o">=</span> <span class="n">create_save_location</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_location</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;save_location&#39; does not exist, &#39;</span><span class="si">{</span><span class="n">save_location</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+        <span class="n">reading_return_args</span> <span class="o">=</span> <span class="n">Commonparams</span><span class="o">.</span><span class="n">read_with_arguments</span><span class="p">(</span>
+            <span class="n">exp_id</span><span class="o">=</span><span class="n">exp_id</span><span class="p">,</span> <span class="n">file_index</span><span class="o">=</span><span class="n">file_index</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span>
+        <span class="p">)</span>
+        <span class="n">exp_instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="o">**</span><span class="n">reading_return_args</span><span class="p">,</span>
+            <span class="n">beforewards</span><span class="o">=</span><span class="n">Before</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_index</span><span class="o">=</span><span class="n">file_index</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">),</span>
+            <span class="n">afterwards</span><span class="o">=</span><span class="n">After</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_index</span><span class="o">=</span><span class="n">file_index</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span><span class="p">),</span>
+            <span class="n">reports</span><span class="o">=</span><span class="n">AnalysesContainer</span><span class="p">(),</span>
+        <span class="p">)</span>
+        <span class="n">reports_read</span> <span class="o">=</span> <span class="n">exp_instance</span><span class="o">.</span><span class="n">analysis_instance</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+            <span class="n">file_index</span><span class="o">=</span><span class="n">file_index</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">save_location</span>
+        <span class="p">)</span>
+        <span class="n">exp_instance</span><span class="o">.</span><span class="n">reports</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">reports_read</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">exp_instance</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_core_multiprocess</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">all_arugments</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Core of read function for multiprocess.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            all_arugments (tuple[str, dict[str, str], Union[Path, str], str]):</span>
+<span class="sd">                The arguments of the experiment to be read.</span>
+
+<span class="sd">                - exp_id (str): The id of the experiment to be read.</span>
+<span class="sd">                - file_index (dict[str, str]): The index of the experiment to be read.</span>
+<span class="sd">                - save_location (Union[Path, str]): The location of the experiment to be read.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            QurryExperiment: The experiment to be read.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_read_core</span><span class="p">(</span><span class="o">*</span><span class="n">all_arugments</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ExperimentPrototype.read">
+<a class="viewcode-back" href="../../../../api/qurrium/experiment/experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.read">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">name_or_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">save_location</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">),</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the experiment from file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name_or_id (Union[Path, str]): The name or id of the experiment to be read.</span>
+<span class="sd">            save_location (Union[Path, str], optional):</span>
+<span class="sd">                The location of the experiment to be read. Defaults to Path(&#39;./&#39;).</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: &#39;save_location&#39; needs to be the type of &#39;str&#39; or &#39;Path&#39;.</span>
+<span class="sd">            FileNotFoundError: When `save_location` is not available.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[ExperimentPrototype]: The experiment to be read.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">save_location</span> <span class="o">=</span> <span class="n">create_save_location</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_location</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;save_location&#39; does not exist, &#39;</span><span class="si">{</span><span class="n">save_location</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+        <span class="n">export_location</span> <span class="o">=</span> <span class="n">save_location</span> <span class="o">/</span> <span class="n">name_or_id</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">export_location</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;ExportLoaction&#39; does not exist, &#39;</span><span class="si">{</span><span class="n">export_location</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+        <span class="n">qurryinfo_location</span> <span class="o">=</span> <span class="n">export_location</span> <span class="o">/</span> <span class="s2">&quot;qurryinfo.json&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&#39;qurryinfo.json&#39; does not exist at &#39;</span><span class="si">{</span><span class="n">save_location</span><span class="si">}</span><span class="s2">&#39;. &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;It&#39;s required for loading all experiment data.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">qurryinfo</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">qurryinfo_location</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">DEFAULT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">qurryinfo_found</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">qurryinfo</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">qurryinfo_found</span><span class="p">)</span>
+
+        <span class="n">num_exps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">qurryinfo</span><span class="p">)</span>
+        <span class="n">chunks_num</span> <span class="o">=</span> <span class="n">very_easy_chunk_size</span><span class="p">(</span>
+            <span class="n">tasks_num</span><span class="o">=</span><span class="n">num_exps</span><span class="p">,</span>
+            <span class="n">num_process</span><span class="o">=</span><span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span>
+            <span class="n">max_chunk_size</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_exps</span> <span class="o">//</span> <span class="n">DEFAULT_POOL_SIZE</span><span class="p">),</span> <span class="mi">40</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">reading_pool</span> <span class="o">=</span> <span class="n">get_context</span><span class="p">(</span><span class="s2">&quot;spawn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span>
+            <span class="n">processes</span><span class="o">=</span><span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span> <span class="n">maxtasksperchild</span><span class="o">=</span><span class="n">chunks_num</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">reading_pool</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+            <span class="n">exps_iterable</span> <span class="o">=</span> <span class="n">qurry_progressbar</span><span class="p">(</span>
+                <span class="n">pool</span><span class="o">.</span><span class="n">imap_unordered</span><span class="p">(</span>
+                    <span class="bp">cls</span><span class="o">.</span><span class="n">_read_core_multiprocess</span><span class="p">,</span>
+                    <span class="p">(</span>
+                        <span class="p">(</span><span class="n">exp_id</span><span class="p">,</span> <span class="n">file_index</span><span class="p">,</span> <span class="n">save_location</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">exp_id</span><span class="p">,</span> <span class="n">file_index</span> <span class="ow">in</span> <span class="n">qurryinfo</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                    <span class="p">),</span>
+                <span class="p">),</span>
+                <span class="n">total</span><span class="o">=</span><span class="n">num_exps</span><span class="p">,</span>
+                <span class="n">desc</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Loading </span><span class="si">{</span><span class="n">num_exps</span><span class="si">}</span><span class="s2"> experiments ...&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">exps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">exps_iterable</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">exps</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Huai-Chun Chang.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 2025-07-06 01:19:03.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
