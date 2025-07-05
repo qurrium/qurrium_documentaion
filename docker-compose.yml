@@ -15,6 +15,7 @@ services:
         echo "### Building Sphinx documentation for Qurrium"
         echo "======================================================================"
         echo "| Building docs for version: ${QURRIUM_VERSION}"
+        echo "| Actual Qurrium version: $(cat /.venv/lib/python3.13/site-packages/qurry/VERSION.txt)"
         echo "| Documentation version by branch or tag: ${DOC_VERSION}"
         echo "| git-hash: $(git log -n1 --format=%h --abbrev=7)"
         echo "----------------------------------------------------------------------"
