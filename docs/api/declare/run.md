@@ -1,7 +1,5 @@
 # `run`
 
-Arguments for :meth:`run` of :cls:`Backend` from :mod:`qiskit.providers.backend`
-
 ```{eval-rst}
 .. automodule:: qurry.declare.run
     :members:
@@ -22,12 +20,6 @@ Arguments for :meth:`run` of :cls:`Backend` from :mod:`qiskit.providers.backend`
 ```
 
 ## `simulator`
-
-This module reveals the full arguments of the :meth:`backend.run` method
-for the simulator backends to avoid the UNnEcEsSaRy and PAINFUL finding of
-how many arguments and what types of arguments you can pass to the method.
-
-This may be not accurate.
 
 ```{eval-rst}
 .. automodule:: qurry.declare.run.simulator
