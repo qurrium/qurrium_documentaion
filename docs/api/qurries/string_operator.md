@@ -1,7 +1,7 @@
-# `magnet_square`
+# `string_operator`
 
 ```{eval-rst}
-.. automodule:: qurry.qurries.magnet_square
+.. automodule:: qurry.qurries.string_operator
     :members:
 ```
 

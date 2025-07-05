@@ -1,7 +1,7 @@
-# `magnet_square`
+# `magnet_square_z`
 
 ```{eval-rst}
-.. automodule:: qurry.qurries.magnet_square
+.. automodule:: qurry.qurries.magnet_square_z
     :members:
 ```
 
