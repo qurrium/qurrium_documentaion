@@ -46,7 +46,14 @@ COPY tools/switcher.json /app/docs/_static/switcher.json
 
 # Install Qurrium package based on the specified version
 RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
-    uv pip install qurrium; \
+    # uv pip install qurrium; \
+    uv pip install -i https://test.pypi.org/simple/ qurry==0.13.1.dev1; \
+    echo "0.13.0" > /.venv/lib/python3.13/site-packages/qurry/VERSION.txtVERSION.txt; \
+    elif [ "$QURRIUM_VERSION" = "0.13.0" ]; then \
+    # The completed docstring for 0.13.0 is actually on 0.13.1.dev1
+    uv pip install -i https://test.pypi.org/simple/ qurry==0.13.1.dev1; \
+    echo "0.13.0" > /.venv/lib/python3.13/site-packages/qurry/VERSION.txtVERSION.txt; \
+    elif [ "$QURRIUM_VERSION" = "0.13.1" ]; then \
     elif [ "$QURRIUM_VERSION" = "dev" ]; then \
     uv pip install -i https://test.pypi.org/simple/ qurry; \
     elif [ -z "$QURRIUM_VERSION" ]; then \
