@@ -1,535 +1,754 @@
 
-<!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
-
+<!doctype html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Appendix 01 - Backend Wrapper" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.qurrium.org/appendix/a01_backend_wrapper.html" />
-<meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="In Qiskit, there are several simulator source like BasicAer from qiskit, Aer from qiskit-aer or GPU-based qiskit-aer. Also, there are fake backends from qiskit-ibm-runtime and deprecated qiskit.pro..." />
-<meta property="og:image:width" content="1146" />
-<meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_appendix_a01_backend_wrapper_68e52ee7.png" />
-<meta property="og:image:alt" content="In Qiskit, there are several simulator source like BasicAer from qiskit, Aer from qiskit-aer or GPU-based qiskit-aer. Also, there are fake backends from qiskit-ibm-runtime and deprecated qiskit.pro..." />
-<meta name="description" content="In Qiskit, there are several simulator source like BasicAer from qiskit, Aer from qiskit-aer or GPU-based qiskit-aer. Also, there are fake backends from qiskit-ibm-runtime and deprecated qiskit.pro..." />
-<meta name="twitter:card" content="summary_large_image" />
-<!-- HTML Meta Tags -->
-<title>Qurrium 📏 Documentation</title>
-<meta name='description' content='The python package that makes the randomized measurement easy.'>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="../more_info/index.html">
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Appendix 01 - Backend Wrapper - Qurrium  documentation</title>
+      
+    
+    
+      
+        
+      
+      
 
-<!-- Facebook Meta Tags -->
-<meta property='og:url' content='https://docs.qurrium.org'>
-<meta property='og:type' content='website'>
-<meta property='og:title' content='Qurrium 📏 Documentation'>
-<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
-<meta property='og:image' content=''>
 
-<!-- Twitter Meta Tags -->
-<meta name='twitter:card' content='summary_large_image'>
-<meta property='twitter:domain' content='docs.qurrium.org'>
-<meta property='twitter:url' content='https://docs.qurrium.org'>
-<meta name='twitter:title' content='Qurrium 📏 Documentation'>
-<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
-<meta name='twitter:image' content=''>
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    
+    
+      
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.6ec1c446c2c357833.min.css?v=e2e8fea8" />
+        <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=1b7243ba" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
 
-    <title>Appendix 01 - Backend Wrapper &#8212; Qurrium  documentation</title>
+
   
   
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NH0TTCC2VZ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NH0TTCC2VZ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=9312ff3a" />
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-NH0TTCC2VZ');
-            </script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-NH0TTCC2VZ');
-            </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/a01_backend_wrapper';</script>
-    <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = './_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.13.0';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
-        </script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installation and About" href="../more_info/index.html" />
-    <link rel="prev" title="Other Features" href="index.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2025-07-06 01:19:03"/>
+    
+    
+    
   </head>
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
     
-      <div class="navbar-item">
-
-  
     
-  
-
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-  
-  
-    <p class="title logo__title">Qurrium 📏</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../basic_usage/index.html">
-    Basic Usage
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../multi_output/index.html">
-    Multi-Output
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../postprocessing/index.html">
-    Post-Processing
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../api/index.html">
-    API
-  </a>
-</li>
-
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" current active">
-  <a class="nav-link dropdown-item nav-internal" href="index.html">
-    Other Features
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../more_info/index.html">
-    Installation and About
-  </a>
-</li>
-
-                </ul>
-            </li>
-            
-  </ul>
-</nav></div>
+    <div data-md-component="announce">
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
     
-    <div class="navbar-header-items__end">
+    
       
-        <div class="navbar-item navbar-persistent--container">
-          
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Qurrium  documentation" class="md-header__button md-logo" aria-label="Qurrium  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qurrium  documentation
+          </span>
         </div>
-      
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-      
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Appendix 01 - Backend Wrapper
+            
+          </span>
+        </div>
+      </div>
     </div>
     
-  </div>
+      
+        <form class="md-header__option" data-md-component="palette">
   
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
   
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
     </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
+  </div>
 </div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+      <div class="md-header__source">
+        <a href="https://github.com/qurrium/qurrium" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
-`);
-</script></div>
-          
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../basic_usage/index.html">
-    Basic Usage
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../multi_output/index.html">
-    Multi-Output
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../postprocessing/index.html">
-    Post-Processing
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../api/index.html">
-    API
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
-    Other Features
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../more_info/index.html">
-    Installation and About
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
+  <div class="md-source__repository">
+    qurrium
+  </div>
+</a>
       </div>
     
+  </nav>
+  
+</header>
     
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-        
-      </div>
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Backend Access</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Appendix 01 - Backend Wrapper</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
-    <br/>
-  </p>
-</div>
-      <div class="sidebar-primary-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
-</p></div>
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
+    <div class="md-container" data-md-component="container">
       
-      <main id="main-content" class="bd-main" role="main">
+      
+      
+      
         
+          
         
-          <div class="bd-content">
-            <div class="bd-article-container">
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Qurrium  documentation" class="md-nav__button md-logo" aria-label="Qurrium  documentation" data-md-component="logo">
       
-        <div class="header-article-item">
-
-
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+    </a>
+    Qurrium  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/qurrium/qurrium" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
     
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qurrium
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_usage/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Usage
+    
+  </span>
+  
+
       </a>
     </li>
+  
+
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Other Features</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Appendix 01...</li>
-  </ul>
-</nav>
-</div>
       
-    </div>
+      
   
   
-</div>
-</div>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_output/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-<wbr>Output
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postprocessing/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Post-<wbr>Processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
               
+  
+  
+  <span class="md-ellipsis">
+    Other Features
+    
+  </span>
+  
+
+            </a>
+            
               
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Other Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
-<div id="searchbox"></div>
-                <article class="bd-article">
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Appendix 01 -<wbr> Backend Wrapper
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Appendix 01 -<wbr> Backend Wrapper
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>01 -<wbr> All the methods in qiskit to get a simulator backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A01.01 - All the methods in qiskit to get a simulator backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basicaer-or-basicprovider-from-qiskit-0-46-0" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      1.<wbr> Basic<wbr>Aer or Basic<wbr>Provider from qiskit &lt;= 0.<wbr>46.<wbr>0:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aer-from-qiskit-aer" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      2.<wbr> Aer from qiskit-<wbr>aer:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-qiskit-aer-gpu" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      3.<wbr> Access qiskit-<wbr>aer-<wbr>gpu:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a01-02-fackbackend" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>02 -<wbr> Fack<wbr>Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A01.02 - FackBackend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-qiskit-0-46-0" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      1.<wbr> From qiskit &lt;= 0.<wbr>46.<wbr>0:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-qiskit-ibm-runtime" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      2.<wbr> From qiskit-<wbr>ibm-<wbr>runtime:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a01-03-backend-wrapper" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>03 -<wbr> Backend Wrapper
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../more_info/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation and About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>01 -<wbr> All the methods in qiskit to get a simulator backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A01.01 - All the methods in qiskit to get a simulator backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basicaer-or-basicprovider-from-qiskit-0-46-0" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      1.<wbr> Basic<wbr>Aer or Basic<wbr>Provider from qiskit &lt;= 0.<wbr>46.<wbr>0:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aer-from-qiskit-aer" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      2.<wbr> Aer from qiskit-<wbr>aer:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-qiskit-aer-gpu" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      3.<wbr> Access qiskit-<wbr>aer-<wbr>gpu:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a01-02-fackbackend" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>02 -<wbr> Fack<wbr>Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A01.02 - FackBackend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-qiskit-0-46-0" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      1.<wbr> From qiskit &lt;= 0.<wbr>46.<wbr>0:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-qiskit-ibm-runtime" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      2.<wbr> From qiskit-<wbr>ibm-<wbr>runtime:<wbr>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a01-03-backend-wrapper" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      A01.<wbr>03 -<wbr> Backend Wrapper
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
                   
-  <section id="appendix-01-backend-wrapper">
-<h1>Appendix 01 - Backend Wrapper<a class="headerlink" href="#appendix-01-backend-wrapper" title="Link to this heading">#</a></h1>
+
+
+<h1 id="appendix-01-backend-wrapper">Appendix 01 - Backend Wrapper<a class="headerlink" href="#appendix-01-backend-wrapper" title="Link to this heading">¶</a></h1>
 <p>In Qiskit, there are several simulator source like <code class="docutils literal notranslate"><span class="pre">BasicAer</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit</span></code>, <code class="docutils literal notranslate"><span class="pre">Aer</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code> or GPU-based <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code>. Also, there are fake backends from <code class="docutils literal notranslate"><span class="pre">qiskit-ibm-runtime</span></code> and deprecated <code class="docutils literal notranslate"><span class="pre">qiskit.provider.fake_provider</span></code>. To make it easier to use, we can create a wrapper for each simulator. This notebook will show how to create a wrapper for the simulators.</p>
-<div class="admonition seealso">
+<div class="seealso admonition">
 <p class="admonition-title">See also</p>
 <p>The complete source code of this tutorial can be found in</p>
-<p><a class="reference download internal" download="" href="../_downloads/646376893402db2e1f54132f9e018f99/a01_backend_wrapper.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">./a01_backend_wrapper.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/0c9d925ad6efd66ea6d009c9e8c6ba39/a01_backend_wrapper.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">./a01_backend_wrapper.ipynb</span></code></a></p>
 </div>
 <hr class="docutils" />
-<section id="a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend">
-<h2>A01.01 - All the methods in <code class="docutils literal notranslate"><span class="pre">qiskit</span></code> to get a simulator backend<a class="headerlink" href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend" title="Link to this heading">#</a></h2>
-<section id="basicaer-or-basicprovider-from-qiskit-0-46-0">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">BasicAer</span></code> or <code class="docutils literal notranslate"><span class="pre">BasicProvider</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:<a class="headerlink" href="#basicaer-or-basicprovider-from-qiskit-0-46-0" title="Link to this heading">#</a></h3>
+<h2 id="a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend">A01.01 - All the methods in <code class="docutils literal notranslate"><span class="pre">qiskit</span></code> to get a simulator backend<a class="headerlink" href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend" title="Link to this heading">¶</a></h2>
+<h3 id="basicaer-or-basicprovider-from-qiskit-0-46-0">1. <code class="docutils literal notranslate"><span class="pre">BasicAer</span></code> or <code class="docutils literal notranslate"><span class="pre">BasicProvider</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:<a class="headerlink" href="#basicaer-or-basicprovider-from-qiskit-0-46-0" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Ref: https://docs.quantum.ibm.com/api/qiskit/0.19/providers_basicaer</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasicAer</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers.basicaer</span><span class="w"> </span><span class="kn">import</span> <span class="n">QasmSimulatorPy</span>
 
@@ -551,18 +770,18 @@ document.write(`
     <span class="n">display</span><span class="p">(</span><span class="n">qasm_simulator</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| - Your qiskit version does not support BasicAer.&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Your qiskit version does not support BasicAer.
-</pre></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| - Your qiskit version does not support BasicAer.
+</code></pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers.basic_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasicProvider</span><span class="p">,</span> <span class="n">BasicSimulator</span>
 
     <span class="n">basic_provider</span> <span class="o">=</span> <span class="n">BasicProvider</span><span class="p">()</span>
@@ -577,30 +796,28 @@ document.write(`
     <span class="n">display</span><span class="p">(</span><span class="n">basic_simulator</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| - Your qiskit version does not support BasicProvider.&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| BasicProvider, which can call by &#39;.get_backend&#39;:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x702ba899d5e0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| BasicProvider, which can call by &#39;.get_backend&#39;:
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x7b5bc0b28980&gt;
 | BasicSimulator, which is a direct call:
-| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x702ba899ff80&gt;
-</pre></div>
+| - &lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator object at 0x7b5bc0ac2350&gt;
+</code></pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x702ba899ff80&gt;
-</pre></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>&lt;qiskit.providers.basic_provider.basic_simulator.BasicSimulator at 0x7b5bc0ac2350&gt;
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="aer-from-qiskit-aer">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">Aer</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code>:<a class="headerlink" href="#aer-from-qiskit-aer" title="Link to this heading">#</a></h3>
+<h3 id="aer-from-qiskit-aer">2. <code class="docutils literal notranslate"><span class="pre">Aer</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code>:<a class="headerlink" href="#aer-from-qiskit-aer" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Ref: https://qiskit.github.io/qiskit-aer/getting_started.html</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_aer</span><span class="w"> </span><span class="kn">import</span> <span class="n">AerProvider</span><span class="p">,</span> <span class="n">AerSimulator</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Via AerProvider, which can call by &#39;.get_backend&#39;:&quot;</span><span class="p">)</span>
@@ -624,45 +841,38 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span>
         <span class="s2">&quot;| - You do not install qiskit_aer yet, install by using &#39;pip install qiskit-aer&#39;.&quot;</span>
     <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Via AerProvider, which can call by &#39;.get_backend&#39;:
-| - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| Via AerProvider, which can call by &#39;.get_backend&#39;:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
 | - AerSimulator(&#39;aer_simulator_statevector&#39;)  AerSimulator(&#39;aer_simulator_statevector&#39;)
-| - AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)  AerSimulator(&#39;aer_simulator_statevector_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_density_matrix&#39;)  AerSimulator(&#39;aer_simulator_density_matrix&#39;)
-| - AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)  AerSimulator(&#39;aer_simulator_density_matrix_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)  AerSimulator(&#39;aer_simulator_matrix_product_state&#39;)
 | - AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)  AerSimulator(&#39;aer_simulator_extended_stabilizer&#39;)
 | - AerSimulator(&#39;aer_simulator_unitary&#39;)  AerSimulator(&#39;aer_simulator_unitary&#39;)
-| - AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)  AerSimulator(&#39;aer_simulator_unitary_gpu&#39;)
 | - AerSimulator(&#39;aer_simulator_superop&#39;)  AerSimulator(&#39;aer_simulator_superop&#39;)
-| - AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)  AerSimulator(&#39;aer_simulator_tensor_network_gpu&#39;)
 | - QasmSimulator(&#39;qasm_simulator&#39;) ...... QasmSimulator(&#39;qasm_simulator&#39;)
 | - StatevectorSimulator(&#39;statevector_simulator&#39;)  StatevectorSimulator(&#39;statevector_simulator&#39;)
 | - UnitarySimulator(&#39;unitary_simulator&#39;)  UnitarySimulator(&#39;unitary_simulator&#39;)
 | Via AerSimulator, which is a direct call:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
-</pre></div>
+</code></pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AerSimulator(&#39;aer_simulator&#39;)
-</pre></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>AerSimulator(&#39;aer_simulator&#39;)
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="access-qiskit-aer-gpu">
-<h3>3. Access <code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu</span></code>:<a class="headerlink" href="#access-qiskit-aer-gpu" title="Link to this heading">#</a></h3>
+<h3 id="access-qiskit-aer-gpu">3. Access <code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu</span></code>:<a class="headerlink" href="#access-qiskit-aer-gpu" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Ref: https://qiskit.github.io/qiskit-aer/getting_started.html</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_aer</span><span class="w"> </span><span class="kn">import</span> <span class="n">AerSimulator</span>
 
     <span class="n">aer_simulator_gpu</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span>
@@ -685,31 +895,27 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span>
         <span class="s2">&quot;| - You do not install qiskit_aer yet, install by using &#39;pip install qiskit-aer&#39;.&quot;</span>
     <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Check the available devices: (&#39;CPU&#39;, &#39;GPU&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| - Check the available devices: (&#39;CPU&#39;,)
 | - Then set option as GPU
 | - And check again:
 | - AerSimulator(&#39;aer_simulator&#39;) ........ AerSimulator(&#39;aer_simulator&#39;)
-</pre></div>
+</code></pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AerSimulator(&#39;aer_simulator&#39;)
-</pre></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>AerSimulator(&#39;aer_simulator&#39;)
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 <hr class="docutils" />
-<section id="a01-02-fackbackend">
-<h2>A01.02 - FackBackend<a class="headerlink" href="#a01-02-fackbackend" title="Link to this heading">#</a></h2>
-<section id="from-qiskit-0-46-0">
-<h3>1. From <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:<a class="headerlink" href="#from-qiskit-0-46-0" title="Link to this heading">#</a></h3>
+<h2 id="a01-02-fackbackend">A01.02 - FackBackend<a class="headerlink" href="#a01-02-fackbackend" title="Link to this heading">¶</a></h2>
+<h3 id="from-qiskit-0-46-0">1. From <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:<a class="headerlink" href="#from-qiskit-0-46-0" title="Link to this heading">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.providers.fake_provider</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
         <span class="n">FakeProvider</span> <span class="k">as</span> <span class="n">FakeProviderDep</span><span class="p">,</span>
         <span class="n">FakeProviderForBackendV2</span> <span class="k">as</span> <span class="n">FakeProviderForBackendV2Dep</span><span class="p">,</span>
@@ -724,24 +930,22 @@ document.write(`
     <span class="nb">print</span><span class="p">([</span><span class="n">b</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">fake_provider_v2_old</span><span class="o">.</span><span class="n">backends</span><span class="p">()])</span>
 <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| - Your qiskit version does not support fake_provider.&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - Your qiskit version does not support fake_provider.
-</pre></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| - Your qiskit version does not support fake_provider.
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="from-qiskit-ibm-runtime">
-<h3>2. From <code class="docutils literal notranslate"><span class="pre">qiskit-ibm-runtime</span></code>:<a class="headerlink" href="#from-qiskit-ibm-runtime" title="Link to this heading">#</a></h3>
+<h3 id="from-qiskit-ibm-runtime">2. From <code class="docutils literal notranslate"><span class="pre">qiskit-ibm-runtime</span></code>:<a class="headerlink" href="#from-qiskit-ibm-runtime" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>In version <code class="docutils literal notranslate"><span class="pre">0.17.0</span></code>, due to <a class="reference external" href="https://github.com/Qiskit/qiskit-ibm-runtime/issues/1318">this issue #1318</a>, <code class="docutils literal notranslate"><span class="pre">FakeBackend</span></code> is not available.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_ibm_runtime.fake_provider</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
         <span class="n">FakeProviderForBackendV2</span> <span class="k">as</span> <span class="n">FakeProviderForBackendV2Indep</span><span class="p">,</span>
     <span class="p">)</span>
@@ -782,36 +986,36 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span>
         <span class="s2">&quot;| - For more detail, see: https://github.com/Qiskit/qiskit-ibm-runtime/issues/1318&quot;</span>
     <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| - BackendV2
-[&#39;fake_algiers&#39;, &#39;fake_almaden&#39;, &#39;fake_armonk&#39;, &#39;fake_athens&#39;, &#39;fake_auckland&#39;, &#39;fake_belem&#39;, &#39;fake_boeblingen&#39;, &#39;fake_bogota&#39;, &#39;fake_brisbane&#39;, &#39;fake_brooklyn&#39;, &#39;fake_burlington&#39;, &#39;fake_cairo&#39;, &#39;fake_cambridge&#39;, &#39;fake_casablanca&#39;, &#39;fake_cusco&#39;, &#39;fake_essex&#39;, &#39;fake_fez&#39;, &#39;fake_fractional&#39;, &#39;fake_geneva&#39;, &#39;fake_guadalupe&#39;, &#39;fake_hanoi&#39;, &#39;fake_jakarta&#39;, &#39;fake_johannesburg&#39;, &#39;fake_kawasaki&#39;, &#39;fake_kolkata&#39;, &#39;fake_kyiv&#39;, &#39;fake_kyoto&#39;, &#39;fake_lagos&#39;, &#39;fake_lima&#39;, &#39;fake_london&#39;, &#39;fake_manhattan&#39;, &#39;fake_manila&#39;, &#39;fake_melbourne&#39;, &#39;fake_marrakesh&#39;, &#39;fake_montreal&#39;, &#39;fake_mumbai&#39;, &#39;fake_nairobi&#39;, &#39;fake_osaka&#39;, &#39;fake_oslo&#39;, &#39;fake_ourense&#39;, &#39;fake_paris&#39;, &#39;fake_peekskill&#39;, &#39;fake_perth&#39;, &#39;fake_prague&#39;, &#39;fake_poughkeepsie&#39;, &#39;fake_quebec&#39;, &#39;fake_quito&#39;, &#39;fake_rochester&#39;, &#39;fake_rome&#39;, &#39;fake_santiago&#39;, &#39;fake_sherbrooke&#39;, &#39;fake_singapore&#39;, &#39;fake_sydney&#39;, &#39;fake_torino&#39;, &#39;fake_toronto&#39;, &#39;fake_valencia&#39;, &#39;fake_vigo&#39;, &#39;fake_washington&#39;, &#39;fake_yorktown&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| - Your qiskit version does not support fake_provider.
 | - Since 0.33.0, FakeProvider for BackendV! has been deprecated.
 | - Or your qiskit version does not support fake_provider.
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 <hr class="docutils" />
-<section id="a01-03-backend-wrapper">
-<h2>A01.03 - Backend Wrapper<a class="headerlink" href="#a01-03-backend-wrapper" title="Link to this heading">#</a></h2>
+<h2 id="a01-03-backend-wrapper">A01.03 - Backend Wrapper<a class="headerlink" href="#a01-03-backend-wrapper" title="Link to this heading">¶</a></h2>
 <p>As previously mentioned, getting a simulator backend is complicated. So <code class="docutils literal notranslate"><span class="pre">Qurry</span></code> introduce a wrapper to make it easier to get a simulator backend.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qurry</span><span class="w"> </span><span class="kn">import</span> <span class="n">BackendWrapper</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">qurry</span><span class="w"> </span><span class="kn">import</span> <span class="n">BackendWrapper</span>
 
 <span class="n">backend_wrapper</span> <span class="o">=</span> <span class="n">BackendWrapper</span><span class="p">()</span>
 <span class="n">backend_wrapper</span><span class="p">(</span><span class="s2">&quot;sim&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;
-</pre></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>/.venv/lib/python3.13/site-packages/qurry/tools/backend/import_fake.py:148: QurryDependenciesNotWorking: &quot;No fake provider available. It may be caused by version conflict.  For qiskit&lt;1.0.0 please install qiskit-ibm-runtime&lt;0.21.0 by  &#39;pip install qiskit-ibm-runtime&lt;0.21.0&#39;.  If you are still using qiskit 0.46.X and lower originally,  then install newer qiskit-ibm-runtime at same time,  please check whether the version of qiskit  has been updated to 1.0 by the installation  because since qiskit-ibm-runtime 0.21.0+  has been updated its dependency to qiskit 1.0.  If you already have qiskit-ibm-runtimes installed and lower than 0.21.0,  it is only available to use qiskit 0.46.X as dependency  for the migration of fake_provider is not completed around this version.  Many of the fake backends are not available in qiskit-ibm-runtime.  (This made me a lot problem to handle the fake backends in Qurry.)  (If you see this error raised, good luck to you to fix environment. :smile:.)&quot;
+  warnings.warn(LUCKY_MSG, category=QurryDependenciesNotWorking)
+</code></pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -820,35 +1024,35 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Does we have GPU backend to access:&quot;</span><span class="p">,</span> <span class="n">backend_wrapper</span><span class="o">.</span><span class="n">is_aer_gpu</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Does we have GPU backend to access:&quot;</span><span class="p">,</span> <span class="n">backend_wrapper</span><span class="o">.</span><span class="n">is_aer_gpu</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="c1"># If you have GPU, you can use this backend.</span>
     <span class="n">display</span><span class="p">(</span><span class="n">backend_wrapper</span><span class="p">(</span><span class="s2">&quot;aer_gpu&quot;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| - There is not GPU backend to access:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Does we have GPU backend to access: True
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>| Does we have GPU backend to access: False
 | - There is not GPU backend to access: &#39;aer_gpu&#39; unknown backend or backend callsign.
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">backend_wrapper</span><span class="o">.</span><span class="n">statesheet</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">backend_wrapper</span><span class="o">.</span><span class="n">statesheet</span><span class="p">())</span>
 <span class="n">backend_wrapper</span><span class="o">.</span><span class="n">available_backends</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------------------
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>------------------------------------------------------------
  ### BackendWrapper Statesheet
 ------------------------------------------------------------
  #### Simulator
- - Aer GPU ........................... True
+ - Aer GPU ........................... False
  - Simulator Provider by ............. qiskit_aer
    sim
    No Callsign Added
@@ -858,171 +1062,34 @@ document.write(`
    No Callsign Added
 ------------------------------------------------------------
  #### Fake
-   fake_algiers, fake_almaden, fake_armonk,
-   fake_athens, fake_auckland, fake_belem,
-   fake_boeblingen, fake_bogota, fake_brisbane,
-   fake_brooklyn, fake_burlington, fake_cairo,
-   fake_cambridge, fake_casablanca, fake_cusco,
-   fake_essex, fake_fez, fake_fractional,
-   fake_geneva, fake_guadalupe, fake_hanoi,
-   fake_jakarta, fake_johannesburg, fake_kawasaki,
-   fake_kolkata, fake_kyiv, fake_kyoto,
-   fake_lagos, fake_lima, fake_london,
-   fake_manhattan, fake_manila, fake_melbourne,
-   fake_marrakesh, fake_montreal, fake_mumbai,
-   fake_nairobi, fake_osaka, fake_oslo,
-   fake_ourense, fake_paris, fake_peekskill,
-   fake_perth, fake_prague, fake_poughkeepsie,
-   fake_quebec, fake_quito, fake_rochester,
-   fake_rome, fake_santiago, fake_sherbrooke,
-   fake_singapore, fake_sydney, fake_torino,
-   fake_toronto, fake_valencia, fake_vigo,
-   fake_washington, fake_yorktown
- - Available Fake Backends Callsign
-   - fake_algiers ...................... fake_algiers
-   - fake_almaden ...................... fake_almaden
-   - fake_armonk ....................... fake_armonk
-   - fake_athens ....................... fake_athens
-   - fake_auckland ..................... fake_auckland
-   - fake_belem ........................ fake_belem
-   - fake_boeblingen ................... fake_boeblingen
-   - fake_bogota ....................... fake_bogota
-   - fake_brisbane ..................... fake_brisbane
-   - fake_brooklyn ..................... fake_brooklyn
-   - fake_burlington ................... fake_burlington
-   - fake_cairo ........................ fake_cairo
-   - fake_cambridge .................... fake_cambridge
-   - fake_casablanca ................... fake_casablanca
-   - fake_cusco ........................ fake_cusco
-   - fake_essex ........................ fake_essex
-   - fake_fez .......................... fake_fez
-   - fake_fractional ................... fake_fractional
-   - fake_geneva ....................... fake_geneva
-   - fake_guadalupe .................... fake_guadalupe
-   - fake_hanoi ........................ fake_hanoi
-   - fake_jakarta ...................... fake_jakarta
-   - fake_johannesburg ................. fake_johannesburg
-   - fake_kawasaki ..................... fake_kawasaki
-   - fake_kolkata ...................... fake_kolkata
-   - fake_kyiv ......................... fake_kyiv
-   - fake_kyoto ........................ fake_kyoto
-   - fake_lagos ........................ fake_lagos
-   - fake_lima ......................... fake_lima
-   - fake_london ....................... fake_london
-   - fake_manhattan .................... fake_manhattan
-   - fake_manila ....................... fake_manila
-   - fake_melbourne .................... fake_melbourne
-   - fake_marrakesh .................... fake_marrakesh
-   - fake_montreal ..................... fake_montreal
-   - fake_mumbai ....................... fake_mumbai
-   - fake_nairobi ...................... fake_nairobi
-   - fake_osaka ........................ fake_osaka
-   - fake_oslo ......................... fake_oslo
-   - fake_ourense ...................... fake_ourense
-   - fake_paris ........................ fake_paris
-   - fake_peekskill .................... fake_peekskill
-   - fake_perth ........................ fake_perth
-   - fake_prague ....................... fake_prague
-   - fake_poughkeepsie ................. fake_poughkeepsie
-   - fake_quebec ....................... fake_quebec
-   - fake_quito ........................ fake_quito
-   - fake_rochester .................... fake_rochester
-   - fake_rome ......................... fake_rome
-   - fake_santiago ..................... fake_santiago
-   - fake_sherbrooke ................... fake_sherbrooke
-   - fake_singapore .................... fake_singapore
-   - fake_sydney ....................... fake_sydney
-   - fake_torino ....................... fake_torino
-   - fake_toronto ...................... fake_toronto
-   - fake_valencia ..................... fake_valencia
-   - fake_vigo ......................... fake_vigo
-   - fake_washington ................... fake_washington
-   - fake_yorktown ..................... fake_yorktown
-   - fake_qasm ......................... fake_qasm_simulator
+   No Backends Available. Choose fake version when initializing the backend wrapper.
+   No Callsign Added
 ------------------------------------------------------------
  #### Extra
    No Backends Available.
    No Callsign Added
-</pre></div>
+</code></pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;sim&#39;: {&#39;sim&#39;: &lt;AerSimulator(&#39;aer_simulator&#39;)&gt;},
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code>{&#39;sim&#39;: {&#39;sim&#39;: &lt;AerSimulator(&#39;aer_simulator&#39;)&gt;},
  &#39;real&#39;: {},
- &#39;fake&#39;: {&#39;fake_algiers&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.algiers.fake_algiers.FakeAlgiers at 0x702b14e74530&gt;,
-  &#39;fake_almaden&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.almaden.fake_almaden.FakeAlmadenV2 at 0x702b04a3a870&gt;,
-  &#39;fake_armonk&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.armonk.fake_armonk.FakeArmonkV2 at 0x702b03a591c0&gt;,
-  &#39;fake_athens&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.athens.fake_athens.FakeAthensV2 at 0x702b03a6c140&gt;,
-  &#39;fake_auckland&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.auckland.fake_auckland.FakeAuckland at 0x702b03c40980&gt;,
-  &#39;fake_belem&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.belem.fake_belem.FakeBelemV2 at 0x702b03a6cb30&gt;,
-  &#39;fake_boeblingen&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.boeblingen.fake_boeblingen.FakeBoeblingenV2 at 0x702b03c1f140&gt;,
-  &#39;fake_bogota&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.bogota.fake_bogota.FakeBogotaV2 at 0x702b03a9a330&gt;,
-  &#39;fake_brisbane&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brisbane.fake_brisbane.FakeBrisbane at 0x702b03ace090&gt;,
-  &#39;fake_brooklyn&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.brooklyn.fake_brooklyn.FakeBrooklynV2 at 0x702b03acfce0&gt;,
-  &#39;fake_burlington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.burlington.fake_burlington.FakeBurlingtonV2 at 0x702b039a6630&gt;,
-  &#39;fake_cairo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cairo.fake_cairo.FakeCairoV2 at 0x702b038148f0&gt;,
-  &#39;fake_cambridge&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cambridge.fake_cambridge.FakeCambridgeV2 at 0x702b03814e00&gt;,
-  &#39;fake_casablanca&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.casablanca.fake_casablanca.FakeCasablancaV2 at 0x702b0382b470&gt;,
-  &#39;fake_cusco&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.cusco.fake_cusco.FakeCusco at 0x702b0382b980&gt;,
-  &#39;fake_essex&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.essex.fake_essex.FakeEssexV2 at 0x702b03845eb0&gt;,
-  &#39;fake_fez&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fez.fake_fez.FakeFez at 0x702b03720800&gt;,
-  &#39;fake_fractional&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.fractional.fake_fractional.FakeFractionalBackend at 0x702b03720d70&gt;,
-  &#39;fake_geneva&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.geneva.fake_geneva.FakeGeneva at 0x702b03720d10&gt;,
-  &#39;fake_guadalupe&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.guadalupe.fake_guadalupe.FakeGuadalupeV2 at 0x702b037b6150&gt;,
-  &#39;fake_hanoi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.hanoi.fake_hanoi.FakeHanoiV2 at 0x702b037e3a10&gt;,
-  &#39;fake_jakarta&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.jakarta.fake_jakarta.FakeJakartaV2 at 0x702b0360c590&gt;,
-  &#39;fake_johannesburg&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.johannesburg.fake_johannesburg.FakeJohannesburgV2 at 0x702b036380b0&gt;,
-  &#39;fake_kawasaki&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kawasaki.fake_kawasaki.FakeKawasaki at 0x702b0363a5d0&gt;,
-  &#39;fake_kolkata&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kolkata.fake_kolkata.FakeKolkataV2 at 0x702b03be0cb0&gt;,
-  &#39;fake_kyiv&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyiv.fake_kyiv.FakeKyiv at 0x702b03513e30&gt;,
-  &#39;fake_kyoto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.kyoto.fake_kyoto.FakeKyoto at 0x702b035439b0&gt;,
-  &#39;fake_lagos&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lagos.fake_lagos.FakeLagosV2 at 0x702b03416300&gt;,
-  &#39;fake_lima&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.lima.fake_lima.FakeLimaV2 at 0x702b034ae030&gt;,
-  &#39;fake_london&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.london.fake_london.FakeLondonV2 at 0x702b034c0560&gt;,
-  &#39;fake_manhattan&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manhattan.fake_manhattan.FakeManhattanV2 at 0x702b034c2150&gt;,
-  &#39;fake_manila&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.manila.fake_manila.FakeManilaV2 at 0x702b034c2660&gt;,
-  &#39;fake_melbourne&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.melbourne.fake_melbourne.FakeMelbourneV2 at 0x702b0333c920&gt;,
-  &#39;fake_marrakesh&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.marrakesh.fake_marrakesh.FakeMarrakesh at 0x702b0333e5a0&gt;,
-  &#39;fake_montreal&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.montreal.fake_montreal.FakeMontrealV2 at 0x702b03b99850&gt;,
-  &#39;fake_mumbai&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.mumbai.fake_mumbai.FakeMumbaiV2 at 0x702b033dff20&gt;,
-  &#39;fake_nairobi&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.nairobi.fake_nairobi.FakeNairobiV2 at 0x702b0320ba40&gt;,
-  &#39;fake_osaka&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.osaka.fake_osaka.FakeOsaka at 0x702b03237560&gt;,
-  &#39;fake_oslo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.oslo.fake_oslo.FakeOslo at 0x702b03c40c20&gt;,
-  &#39;fake_ourense&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.ourense.fake_ourense.FakeOurenseV2 at 0x702b04375640&gt;,
-  &#39;fake_paris&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.paris.fake_paris.FakeParisV2 at 0x702b032e7ce0&gt;,
-  &#39;fake_peekskill&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.peekskill.fake_peekskill.FakePeekskill at 0x702b03104320&gt;,
-  &#39;fake_perth&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.perth.fake_perth.FakePerth at 0x702b0311fe00&gt;,
-  &#39;fake_prague&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.prague.fake_prague.FakePrague at 0x702b031463f0&gt;,
-  &#39;fake_poughkeepsie&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.poughkeepsie.fake_poughkeepsie.FakePoughkeepsieV2 at 0x702b03158950&gt;,
-  &#39;fake_quebec&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quebec.fake_quebec.FakeQuebec at 0x702b03180aa0&gt;,
-  &#39;fake_quito&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.quito.fake_quito.FakeQuitoV2 at 0x702b03181d30&gt;,
-  &#39;fake_rochester&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rochester.fake_rochester.FakeRochesterV2 at 0x702b03064680&gt;,
-  &#39;fake_rome&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.rome.fake_rome.FakeRomeV2 at 0x702b03066300&gt;,
-  &#39;fake_santiago&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.santiago.fake_santiago.FakeSantiagoV2 at 0x702b03066780&gt;,
-  &#39;fake_sherbrooke&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sherbrooke.fake_sherbrooke.FakeSherbrooke at 0x702b0307c470&gt;,
-  &#39;fake_singapore&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.singapore.fake_singapore.FakeSingaporeV2 at 0x702b0307e120&gt;,
-  &#39;fake_sydney&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.sydney.fake_sydney.FakeSydneyV2 at 0x702b03a04bc0&gt;,
-  &#39;fake_torino&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.torino.fake_torino.FakeTorino at 0x702b02f54a70&gt;,
-  &#39;fake_toronto&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.toronto.fake_toronto.FakeTorontoV2 at 0x702b03a24a70&gt;,
-  &#39;fake_valencia&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.valencia.fake_valencia.FakeValenciaV2 at 0x702b02f774d0&gt;,
-  &#39;fake_vigo&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.vigo.fake_vigo.FakeVigoV2 at 0x702b02e2bf80&gt;,
-  &#39;fake_washington&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.washington.fake_washington.FakeWashingtonV2 at 0x702b02e41b20&gt;,
-  &#39;fake_yorktown&#39;: &lt;qiskit_ibm_runtime.fake_provider.backends.yorktown.fake_yorktown.FakeYorktownV2 at 0x702b02e420f0&gt;},
+ &#39;fake&#39;: {},
  &#39;extra&#39;: {}}
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qurry.process</span><span class="w"> </span><span class="kn">import</span> <span class="n">AVAIBILITY_STATESHEET</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">qurry.process</span><span class="w"> </span><span class="kn">import</span> <span class="n">AVAIBILITY_STATESHEET</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">qurry.tools.qiskit_version</span><span class="w"> </span><span class="kn">import</span> <span class="n">QISKIT_VERSION_STATESHEET</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">AVAIBILITY_STATESHEET</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">QISKIT_VERSION_STATESHEET</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> | Qurrium version: 0.13.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><code> | Qurrium version: 0.13.0
 ---------------------------------------------------------------------------
  ### Qurrium Post-Processing
    - Backend Availability ................... Python Cython Rust   JAX   
@@ -1060,138 +1127,179 @@ document.write(`
 --------------------------------------------
  ### Qiskit version
  - main
-   - qiskit-aer .............. 0.17.0
-   - qiskit-aer-gpu .......... 0.15.1
-   - qiskit-aer-gpu-cu11 ..... 0.17.0
-   - qiskit-ibm-runtime ...... 0.39.0
+   - qiskit-aer ......... 0.17.1
  - deprecated
  - into-community
 --------------------------------------------
- + qiskit-aer-gpu and qiskit-aer-gpu-cu11 should have the same version as qiskit-aer.
---------------------------------------------
-</pre></div>
+</code></pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 
 
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Other Features</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../more_info/index.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installation and About</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div>
-                </footer>
-              
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-07-06 15:45:36
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
             </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a01-01-all-the-methods-in-qiskit-to-get-a-simulator-backend">A01.01 - All the methods in <code class="docutils literal notranslate"><span class="pre">qiskit</span></code> to get a simulator backend</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basicaer-or-basicprovider-from-qiskit-0-46-0">1. <code class="docutils literal notranslate"><span class="pre">BasicAer</span></code> or <code class="docutils literal notranslate"><span class="pre">BasicProvider</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aer-from-qiskit-aer">2. <code class="docutils literal notranslate"><span class="pre">Aer</span></code> from <code class="docutils literal notranslate"><span class="pre">qiskit-aer</span></code>:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-qiskit-aer-gpu">3. Access <code class="docutils literal notranslate"><span class="pre">qiskit-aer-gpu</span></code>:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a01-02-fackbackend">A01.02 - FackBackend</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-qiskit-0-46-0">1. From <code class="docutils literal notranslate"><span class="pre">qiskit</span> <span class="pre">&lt;=</span> <span class="pre">0.46.0</span></code>:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-qiskit-ibm-runtime">2. From <code class="docutils literal notranslate"><span class="pre">qiskit-ibm-runtime</span></code>:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a01-03-backend-wrapper">A01.03 - Backend Wrapper</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/appendix/a01_backend_wrapper.ipynb">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Other Features">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Other Features
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../more_info/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Installation and About">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Installation and About
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2025, Huai-Chun Chang.
+        
     </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.4.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/qurrium/qurrium_documentaion" target="_blank" rel="noopener" title="Documentation on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96m0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32m32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16m16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/qurrium/qurrium" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://pypi.org/project/qurrium/" target="_blank" rel="noopener" title="PyPI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://test.pypi.org/project/qurry/" target="_blank" rel="noopener" title="Test PyPI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
   </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2025, Huai-Chun Chang.
-      <br/>
-    
-  </p>
-</div>
+</footer>
       
     </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 2025-07-06 01:19:03.
-  <br/>
-</p></div>
-      
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
     </div>
-  
-</div>
-
-  </footer>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.sticky", "content.tabs.link", "content.code.copy", "content.action.view", "content.tooltips", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike", "staticVersions": [{"aliases": ["dev"], "title": "0.13.1 (dev)", "version": "https://docs.qurrium.org/dev"}, {"aliases": ["stable"], "title": "0.13.0 (stable)", "version": "https://docs.qurrium.org/"}, {"aliases": [], "title": "0.12.2", "version": "https://docs.qurrium.org/0.12.2"}, {"aliases": [], "title": "0.12.0", "version": "https://docs.qurrium.org/0.12.0"}, {"aliases": [], "title": "0.11.0", "version": "https://docs.qurrium.org/0.11.0"}], "versionPath": null}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    
   </body>
 </html>

@@ -1,15 +1,8 @@
----
-myst:
-  html_meta:
-    "description lang=en": |
-      Top-level documentation for pydata-sphinx theme, with links to the rest
-      of the site..
-html_theme.sidebar_secondary.remove: true
----
+```{eval-rst}
+:hero: Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap
+```
 
 # Qurrium
-
-**_The python package for measuring quantum entanglement entropy and wave function overlap_**
 
 **_Make the randomized measurement easy_**
 
@@ -95,23 +88,30 @@ Check [Platform Support](./more_info/platform_support.md) for more detail.
 
 ```{toctree}
 :maxdepth: 2
-:caption: Basic Usage
+:hidden:
 
 basic_usage/index
 ```
 
 ```{toctree}
 :maxdepth: 2
-:caption: Multiple Output
+:hidden:
 
 multi_output/index
 ```
 
 ```{toctree}
 :maxdepth: 2
-:caption: Post Processing
+:hidden:
 
 postprocessing/index
+```
+
+```{toctree}
+:maxdepth: 2
+:hidden:
+
+api/index
 ```
 
 ---
@@ -163,14 +163,14 @@ The author [@harui2019](https://github.com/harui2019/) is grateful to the NTU hu
 
 ```{toctree}
 :maxdepth: 1
-:caption: Other Features
+:hidden:
 
 appendix/index
 ```
 
 ```{toctree}
 :maxdepth: 2
-:caption: More Information
+:hidden:
 
 more_info/index
 ```

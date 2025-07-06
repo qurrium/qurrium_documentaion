@@ -36,40 +36,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-multi_exps1 = experiment_workflow.multiOutput(
-    config_list,
-    summoner_name="qurrium.waves_executer",  # you can name it whatever you want
-    multiprocess_build=True,
-    # Using multiprocessing to build the experiments,
-    # it will be faster but take all the CPU
-    skip_build_write=True,
-    # Skip the writing of the experiment as files during the build,
-    save_location=".",
-    # Save the experiment as files in the current directory
-    multiprocess_write=True,
-    # Writing the experiment as files using multiprocessing,
-)
-multi_exps1
+for exp_id, exp_instance in experiment_workflow.multimanagers[multi_exps1].exps.items():
+    print(f"| {exp_id}:", exp_instance.afterwards.counts)
+    print("-" * 20)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m multi_exps1 = [43mexperiment_workflow[49m[43m.[49m[43mmultiOutput[49m[43m([49m
-[32m      2[39m [43m    [49m[43mconfig_list[49m[43m,[49m
-[32m      3[39m [43m    [49m[43msummoner_name[49m[43m=[49m[33;43m"[39;49m[33;43mqurrium.waves_executer[39;49m[33;43m"[39;49m[43m,[49m[43m  [49m[38;5;66;43;03m# you can name it whatever you want[39;49;00m
-[32m      4[39m [43m    [49m[43mmultiprocess_build[49m[43m=[49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
-[32m      5[39m [43m    [49m[38;5;66;43;03m# Using multiprocessing to build the experiments,[39;49;00m
-[32m      6[39m [43m    [49m[38;5;66;43;03m# it will be faster but take all the CPU[39;49;00m
-[32m      7[39m [43m    [49m[43mskip_build_write[49m[43m=[49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
-[32m      8[39m [43m    [49m[38;5;66;43;03m# Skip the writing of the experiment as files during the build,[39;49;00m
-[32m      9[39m [43m    [49m[43msave_location[49m[43m=[49m[33;43m"[39;49m[33;43m.[39;49m[33;43m"[39;49m[43m,[49m
-[32m     10[39m [43m    [49m[38;5;66;43;03m# Save the experiment as files in the current directory[39;49;00m
-[32m     11[39m [43m    [49m[43mmultiprocess_write[49m[43m=[49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
-[32m     12[39m [43m    [49m[38;5;66;43;03m# Writing the experiment as files using multiprocessing,[39;49;00m
-[32m     13[39m [43m)[49m
-[32m     14[39m multi_exps1
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[7][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mfor[39;00m exp_id, exp_instance [38;5;129;01min[39;00m [43mexperiment_workflow[49m[43m.[49m[43mmultimanagers[49m[43m[[49m[43mmulti_exps1[49m[43m][49m[43m.[49m[43mexps[49m.items():
+[32m      2[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m| [39m[38;5;132;01m{[39;00mexp_id[38;5;132;01m}[39;00m[33m:[39m[33m"[39m, exp_instance.afterwards.counts)
+[32m      3[39m     [38;5;28mprint[39m([33m"[39m[33m-[39m[33m"[39m * [32m20[39m)
 
-[31mTypeError[39m: QurriumPrototype.multiOutput() got an unexpected keyword argument 'multiprocess_build'
+[31mAttributeError[39m: 'MultiManager' object has no attribute 'exps'
 
