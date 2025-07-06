@@ -36,3 +36,8 @@
   --color-widget-background: rgb(206, 214, 221);
   background-color: var(--color-widget-background);
 }
+
+.widget-subarea {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
