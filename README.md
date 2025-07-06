@@ -3,7 +3,7 @@
 This repository contains the documentation and tutorials for Qurrium 📏.
 Created by Sphinx.
 
-See the [Qurrium Documentation](https://docs.qurrium.org/en/latest/) for more details.
+See the [Qurrium Documentation](https://docs.qurrium.org/latest/) for more details.
 
 ## Docker Usage
 
@@ -17,6 +17,8 @@ You will need to pass 2 environment arguments to docker container.
   - `(the git branch or git tag)`
 
 ### Image Building
+
+For example when `QURRIUM_VERSION=stable` and `DOC_VERSION=master`
 
 - Building:
 
@@ -38,4 +40,12 @@ For example when `QURRIUM_VERSION=stable` and `DOC_VERSION=master`
 
 ```sh
 QURRIUM_VERSION=stable DOC_VERSION=master docker compose up --build
+```
+
+## About Sphinx Theme
+
+This documentation experience 3 themes currently:
+
+```log
+jupyter-book -> pydata-sphinx-theme -> sphinx-immaterial
 ```
