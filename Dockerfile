@@ -36,8 +36,8 @@ RUN git checkout ${DOC_VERSION} && git fetch && git pull
 WORKDIR /
 
 # Install Python dependencies
-COPY requirements.txt /app/requirements.txt
-RUN uv pip install -r /app/requirements.txt
+COPY requirements.txt /requirements.txt
+RUN uv pip install -r /requirements.txt
 
 # Copy additional configuration files
 COPY docs/conf.py /app/docs/conf.py
