@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("../../_static/versions.json")
+  fetch(window.location.origin + "/_static/versions.json")
     .then((response) => response.json())
     .then((versions) => {
       const currentPath = window.location.pathname;
