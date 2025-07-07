@@ -7,8 +7,15 @@ black[jupyter]
 jupyter
 # extensions
 sphinxext-opengraph
+sphinxcontrib-bibtex
+sphinxcontrib-googleanalytics
 # theme
-pydata-sphinx-theme
+myst-nb
+myst-parser
+jupyter-book
+# pydata-sphinx-theme
+# sphinx-immaterial
+furo
 # basic requirements
 matplotlib
 numpy

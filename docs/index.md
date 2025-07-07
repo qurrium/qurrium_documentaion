@@ -1,8 +1,6 @@
-```{eval-rst}
-:hero: Qurrium 📏 - The python package for measuring quantum entanglement entropy and wave function overlap
-```
-
 # Qurrium
+
+**_The python package for measuring quantum entanglement entropy and wave function overlap_**
 
 **_Make the randomized measurement easy_**
 
@@ -12,11 +10,53 @@ The major function includes the measurement of quantum Renyi Entropy and Wave Fu
 When interfaced with **IBM Qiskit**, the package automates the workflow from creating experiment objects, job submission and recall and postprocessing.  
 There are several additional features, such as measurement of magnetization and error mitigation. Please check them out!
 
-![Available Python Version](https://img.shields.io/badge/Python-3.9_|_3.10_|_3.11_|_3.12_|_3.13-blue?logo=python&logoColor=white) [![Downloads](https://static.pepy.tech/badge/qurrium)](https://pepy.tech/project/qurrium)
+[![PyPI Downloads](https://static.pepy.tech/badge/qurrium/month)](https://pepy.tech/projects/qurrium)
 
-![Available System](https://img.shields.io/badge/Ubuntu-18.04+-purple?logo=Ubuntu&logoColor=white) ![Available System](https://img.shields.io/badge/Ubuntu_on_WSL-18.04+-purple?logo=Ubuntu&logoColor=white)
-![Available System](https://img.shields.io/badge/Windows-10_|_11-purple?logo=Windows&logoColor=white)
-![Available System](https://img.shields.io/badge/MacOS-11+-purple?logo=Apple&logoColor=white)
+## Installation
+
+```bash
+pip install qurrium
+```
+
+Check [Installation](./more_info/install.md) for more detail.
+
+## Environment
+
+**Qurrium currently <ins>SUPPORT qiskit 0.46.0+ and qiskit 1.0.0+</ins>, other lower versions are no longer available.
+The package has been tested on the following systems.**
+
+- **Ubuntu 18.04+ LTS (All ManyLinux 2014 compatible distro)**
+- **Windows 10/11**
+- **MacOS 11+**
+- with required modules:
+  - [qiskit](https://pypi.org/project/qiskit/),
+  - [tqdm](https://pypi.org/project/tqdm/),
+  - [requests](https://pypi.org/project/requests/)
+
+Check [Platform Support](./more_info/platform_support.md) for more detail.
+
+---
+
+## Measurement -- made randomized measurement easy.
+
+```{toctree}
+:maxdepth: 1
+:caption: Tutorials
+
+Basic Usage <basic_usage/index>
+Multiple Output <multi_output/index>
+Post-Processing <postprocessing/index>
+Other Features <appendix/index>
+
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: API
+
+API Reference <api/index>
+
+```
 
 ## Citation
 
@@ -56,65 +96,6 @@ If you use this tool in your research, please cite the following paper in your p
 ```
 
 Check [About](./more_info/about.md) for more detail.
-
-## Installation
-
-```bash
-pip install qurrium
-```
-
-Check [Installation](./more_info/install.md) for more detail.
-
----
-
-## Environment
-
-**Qurrium currently <ins>SUPPORT qiskit 0.46.0+ and qiskit 1.0.0+</ins>, other lower versions are no longer available.
-The package has been tested on the following systems.**
-
-- **Ubuntu 18.04+ LTS (All ManyLinux 2014 compatible distro)**
-- **Windows 10/11**
-- **MacOS 11+**
-- with required modules:
-  - [qiskit](https://pypi.org/project/qiskit/),
-  - [tqdm](https://pypi.org/project/tqdm/),
-  - [requests](https://pypi.org/project/requests/)
-
-Check [Platform Support](./more_info/platform_support.md) for more detail.
-
----
-
-## Measurement -- made randomized measurement easy.
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-
-basic_usage/index
-```
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-
-multi_output/index
-```
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-
-postprocessing/index
-```
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-
-api/index
-```
-
----
 
 ## Acknowledgments
 
@@ -157,20 +138,15 @@ The author [@harui2019](https://github.com/harui2019/) is grateful to the NTU hu
   >
 </a>
 
----
-
-### Stay connected. More features coming soon...
-
 ```{toctree}
 :maxdepth: 1
 :hidden:
+:caption: Information
 
-appendix/index
+More Information <more_info/index>
+
 ```
 
-```{toctree}
-:maxdepth: 2
-:hidden:
+---
 
-more_info/index
-```
+### Stay connected. More features coming soon...
