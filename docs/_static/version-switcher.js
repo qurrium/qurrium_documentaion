@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let currentVersion = null;
       for (const [ver, path] of Object.entries(versions)) {
+        if (currentPath.length > 1 && path.length === 1) {
+          // If the current path is not the root and the version path is the root,
+          // skip this version as it doesn't match the current path.
+          continue;
+        }
         if (currentPath.startsWith(path)) {
           currentVersion = ver;
           break;
