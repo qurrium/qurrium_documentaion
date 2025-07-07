@@ -41,8 +41,8 @@ RUN uv pip install -r /requirements.txt
 
 # Copy additional configuration files
 COPY docs/conf.py /app/docs/conf.py
-RUN rm /app/docs/_static/switcher.json
-COPY tools/switcher.json /app/docs/_static/switcher.json
+# RUN rm /app/docs/_static/switcher.json
+# COPY tools/switcher.json /app/docs/_static/switcher.json
 
 # Install Qurrium package based on the specified version
 RUN if [ "$QURRIUM_VERSION" = "stable" ]; then \
