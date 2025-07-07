@@ -44,8 +44,34 @@ QURRIUM_VERSION=stable DOC_VERSION=master docker compose up --build
 
 ## About Sphinx Theme
 
-This documentation experience 3 themes currently:
+This documentation experience 4 themes changes:
 
 ```log
-jupyter-book -> pydata-sphinx-theme -> sphinx-immaterial
+jupyter-book -> pydata-sphinx-theme -> sphinx-immaterial -> furo
 ```
+
+- [jupyter-book](https://jupyterbook.org/en/stable/intro.html)
+
+  - Less customization on Sphinx.
+  - Also they are migrating to MyST which leaves Sphinx.
+
+- [pydata-sphinx-theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html)
+
+  - Multi-version switching.
+  - Also as a frontend engineer, I have some reservations on its design.
+  - Its navigation bar does not work with tablet screen, which becomes 2 stacks sometimes. I don't think we can call this responsive.
+    - [For I even make a responsive website from 2K to watch screen](https://course.opennccu.com)
+  - **IT'S BootStrap**.
+
+- [sphinx-immaterial](https://jbms.github.io/sphinx-immaterial/)
+
+  - Multi-version switching.
+  - MkDocs is awesome.
+  - Material UI is awesome.
+  - **Unfortunately it will break `sphinxext-opengraph` currently.**
+  - Also it not yet introduce the social cards feature from MkDocs.
+
+- [furo](https://pradyunsg.me/furo/)
+  - Simple.
+  - New qiskit-sphinx-theme base on theme.
+  - No multi-version swtiching 🫠.

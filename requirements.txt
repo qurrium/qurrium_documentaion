@@ -10,12 +10,14 @@ sphinx
 sphinx-book-theme
 sphinxext-opengraph
 sphinxcontrib-bibtex
+sphinxcontrib-googleanalytics
 # theme
 myst-nb
 myst-parser
 jupyter-book
 # pydata-sphinx-theme
-sphinx-immaterial
+# sphinx-immaterial
+furo
 # basic requirements
 ipykernel
 matplotlib
