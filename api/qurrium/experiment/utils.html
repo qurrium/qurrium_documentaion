@@ -49,7 +49,7 @@
         <title>utils - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -451,7 +451,7 @@
 <p>Experiment Utilities (<a class="reference internal" href="#module-qurry.qurrium.experiment.utils" title="qurry.qurrium.experiment.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.experiment.utils</span></code></a>)</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.utils.create_save_location">
-<span class="sig-prename descclassname"><span class="pre">qurry.qurrium.experiment.utils.</span></span><span class="sig-name descname"><span class="pre">create_save_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">commons</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arguments.html#qurry.qurrium.experiment.arguments.Commonparams" title="qurry.qurrium.experiment.arguments.Commonparams"><span class="pre">Commonparams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="reference internal" href="../../../_modules/qurry/qurrium/experiment/utils.html#create_save_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.experiment.utils.create_save_location" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">qurry.qurrium.experiment.utils.</span></span><span class="sig-name descname"><span class="pre">create_save_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.13)"><span class="pre">Path</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">commons</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arguments.html#qurry.qurrium.experiment.arguments.Commonparams" title="qurry.qurrium.experiment.arguments.Commonparams"><span class="pre">Commonparams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.13)"><span class="pre">Path</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/qurrium/experiment/utils.html#create_save_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.experiment.utils.create_save_location" title="Link to this definition">¶</a></dt>
 <dd><p>Create a save location for the experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -567,13 +567,9 @@ It is used to get the default save location if <cite>save_location</cite> is Non
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.utils.memory_usage_factor_expect">
 <span class="sig-prename descclassname"><span class="pre">qurry.qurrium.experiment.utils.</span></span><span class="sig-name descname"><span class="pre">memory_usage_factor_expect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><span class="pre">Hashable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.circuit.QuantumCircuit" title="(in Qiskit v2.1)"><span class="pre">QuantumCircuit</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.circuit.QuantumCircuit" title="(in Qiskit v2.1)"><span class="pre">QuantumCircuit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commonparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arguments.html#qurry.qurrium.experiment.arguments.Commonparams" title="qurry.qurrium.experiment.arguments.Commonparams"><span class="pre">Commonparams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/qurrium/experiment/utils.html#memory_usage_factor_expect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.experiment.utils.memory_usage_factor_expect" title="Link to this definition">¶</a></dt>
-<dd><p>Estimate the memory usage of
-<a class="reference internal" href="experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype" title="qurry.qurrium.experiment.experiment.ExperimentPrototype"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentPrototype</span></code></a> by the circuits.</p>
+<dd><p>Estimate the memory usage of <a href="#id1"><span class="problematic" id="id2">:cls:`ExperimentPrototype`</span></a> by the circuits.</p>
 <p>The memory usage is estimated by the number of instructions in the circuits and
 the number of shots. The factor is calculated by the formula:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>factor = target_circuit_instructions_num + sqrt(shots) * target_circuit_instructions_num
-</pre></div>
-</div>
 <p>where <cite>target_circuit_instructions_num</cite> is the number of instructions in the target circuits,
 <cite>transpiled_circuit_instructions_num</cite> is the number of instructions in the circuits
 which has been transpiled and will be run on the backend,
@@ -657,7 +653,7 @@ The factor is used to estimate the memory usage of the experiment.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -716,6 +712,6 @@ The factor is used to estimate the memory usage of the experiment.</p>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

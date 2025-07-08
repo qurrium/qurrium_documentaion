@@ -49,7 +49,7 @@
         <title>container - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -459,8 +459,11 @@
 <span class="sig-name descname"><span class="pre">average_classical_snapshots_rho</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowBasic.average_classical_snapshots_rho" title="Link to this definition">¶</a></dt>
 <dd><p>The dictionary of average classical snapshots,
 which uses the notation rho in
-<a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">Predicting many properties of a quantum system from very few measurements</a></p>
-<p>The numpy.array shape is <cite>(2, 2)</cite>.</p>
+[Predicting many properties of a quantum system from very few measurements](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>).</p>
+</div></blockquote>
+<p>The numpy.array shape is (2, 2).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -488,8 +491,10 @@ which uses the notation rho in
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowEstimation</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowEstimation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation" title="Link to this definition">¶</a></dt>
 <dd><p>The esitimations of the classical shadow from classical snapshots.</p>
 <p>Here, we use the notations that use in the supplementary material of
-<cite>Predicting many properties of a quantum system from very few measurements
-&lt;https://doi.org/10.1038/s41567-020-0932-7&gt;</cite></p>
+[Predicting many properties of a quantum system from very few measurements](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>),</p>
+</div></blockquote>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_predict_epsilon">
 <span class="sig-name descname"><span class="pre">accuracy_predict_epsilon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.accuracy_predict_epsilon" title="Link to this definition">¶</a></dt>
@@ -497,11 +502,11 @@ which uses the notation rho in
 and mentioned in Theorem S1 in the supplementary material,
 the equation (S13) in the supplementary material.</p>
 <p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
-in the supplementary material, the equation (S13) is as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
-|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+in the supplementary material, the equation (S13) is as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span>
+<span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operatorsm
@@ -548,24 +553,24 @@ the equation (S13) in the supplementary material.</p>
 <div class="math notranslate nohighlight">
 \[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
 </div>
-<p>where <span class="math notranslate nohighlight">\(O\)</span> is the any operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits.
-So we set the shadow norm as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\begin{split}\chi = || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}} \\
-\chi_{\infty} = 4^n || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\infty}^2 \\
-\chi^2 \leq \chi_{\infty}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(O\)</span> is the any operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,</p>
+<p>So we set the shadow norm as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">chi</span> <span class="o">=</span> <span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span> \\
+\<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span> <span class="o">=</span> <span class="mi">4</span><span class="o">^</span><span class="n">n</span> <span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span> \\
+\<span class="n">chi</span><span class="o">^</span><span class="mi">2</span> \<span class="n">leq</span> \<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span>
+</pre></div>
 </div>
-<p>and we can simplify the equation to:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi^2
-    \leq \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi_{\infty}^2\]</div>
+<p>and we can simplify the equation to:
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi</span><span class="o">^</span><span class="mi">2</span>
+    \<span class="n">leq</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
-<p>Then get:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\epsilon \leq \sqrt{\frac{34}{N}} \max_{1 \leq i \leq M} \chi_\infty\]</div>
+<p>Then get:
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">epsilon</span> \<span class="n">leq</span> \<span class="n">sqrt</span><span class="p">{</span>\<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span><span class="n">N</span><span class="p">}}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi_</span>\<span class="n">infty</span>
+</pre></div>
 </div>
 </dd></dl>
 
@@ -582,11 +587,11 @@ So we set the shadow norm as follows,</p>
 The maximum shadow norm is used to calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span>
 from the equation (S13) in the supplementary material.</p>
 <p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
-in the supplementary material, the equation (S13) is as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
-|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+in the supplementary material, the equation (S13) is as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span>
+<span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operatorsm
@@ -604,10 +609,10 @@ and mentioned in Algorithm 1 in the paper,
 Theorem S1 in the supplementary material,
 the equation (S13) in the supplementary material.</p>
 <p>We can calculate the number of esitmator K from the equation (S13)
-in the supplementary material, the equation (S13) is as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[K = 2 \log(2M / \delta)\]</div>
+in the supplementary material, the equation (S13) is as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">2</span> \<span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="n">M</span> <span class="o">/</span> \<span class="n">delta</span><span class="p">)</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\delta\)</span> is the probabiltiy complement of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators.</p>
@@ -619,10 +624,10 @@ And recalculate the probabiltiy complement of accuracy from this new value of <s
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowEstimation.shadow_norm_upperbound">
 <span class="sig-name descname"><span class="pre">shadow_norm_upperbound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowEstimation.shadow_norm_upperbound" title="Link to this definition">¶</a></dt>
-<dd><p>The largest shadow norm upper bound is defined as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
+<dd><p>The largest shadow norm upper bound is defined as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span> \<span class="n">leq</span> <span class="mi">4</span><span class="o">^</span><span class="n">n</span> <span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(O\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,
 which mentioned in the paper at Theorem 1 (informal version).</p>
@@ -638,7 +643,10 @@ which is the significantly lower bound than the worst case scenario.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.container.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowMeanRho</span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/container.html#ClassicalShadowMeanRho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho" title="Link to this definition">¶</a></dt>
 <dd><p>The esitimations of the classical shadow from classical snapshots.</p>
 <p>Here, we use the notations that use in the supplementary material of
-<a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">Predicting many properties of a quantum system from very few measurements</a></p>
+[Predicting many properties of a quantum system from very few measurements](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>),</p>
+</div></blockquote>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.container.ClassicalShadowMeanRho.mean_of_rho">
 <span class="sig-name descname"><span class="pre">mean_of_rho</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.process.classical_shadow.container.ClassicalShadowMeanRho.mean_of_rho" title="Link to this definition">¶</a></dt>
@@ -702,7 +710,7 @@ which is the significantly lower bound than the worst case scenario.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -781,6 +789,6 @@ which is the significantly lower bound than the worst case scenario.</p>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

@@ -49,7 +49,7 @@
         <title>availability - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -448,17 +448,16 @@
         <article role="main" id="furo-main-content">
           <section id="module-qurry.process.availability">
 <span id="availability"></span><h1><code class="docutils literal notranslate"><span class="pre">availability</span></code><a class="headerlink" href="#module-qurry.process.availability" title="Link to this heading">¶</a></h1>
-<p>Availability for the post-processing module. (<a class="reference internal" href="#module-qurry.process.availability" title="qurry.process.availability"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.availability</span></code></a>)</p>
+<p>Availability for the post-processing module.
+(<a class="reference internal" href="#module-qurry.process.availability" title="qurry.process.availability"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.process.availability</span></code></a>)</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="qurry.process.availability.BACKEND_TYPES">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.availability.</span></span><span class="sig-name descname"><span class="pre">BACKEND_TYPES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Cython'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Rust'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'Python'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Python',</span> <span class="pre">'Cython',</span> <span class="pre">'Rust',</span> <span class="pre">'JAX']</span></em><a class="headerlink" href="#qurry.process.availability.BACKEND_TYPES" title="Link to this definition">¶</a></dt>
-<dd><p>The backend types for post-processing.</p>
-<ul class="simple">
-<li><p>Python: The default backend for post-processing.</p></li>
-<li><p>Cython: The Cython backend for post-processing.</p></li>
-<li><p>Rust: The Rust backend for post-processing.</p></li>
-<li><p>JAX: The Python backend for post-processing with JAX.</p></li>
-</ul>
+<dd><p>The backend types for post-processing.
+- Python: The default backend for post-processing.
+- Cython: The Cython backend for post-processing.
+- Rust: The Rust backend for post-processing.
+- JAX: The Python backend for post-processing with JAX.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -476,8 +475,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>module_location</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The location of the module.</p></li>
-<li><p><strong>(</strong><strong>list</strong><strong>[</strong><strong>tuple</strong><strong>[</strong> (<em>import_statement</em>) – PostProcessingBackendLabel, bool, Optional[QurryPostProcessingError]</p></li>
-<li><p><strong>]</strong><strong>]</strong><strong>)</strong> – The import statement for the post-processing backend.</p></li>
+<li><p><strong>(</strong> (<em>import_statement</em>) – list[tuple[PostProcessingBackendLabel, bool, Optional[QurryPostProcessingError]]]</p></li>
+<li><p><strong>)</strong> – The import statement for the post-processing backend.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -552,7 +551,7 @@ the availablility of the post-processing backend and the errors.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -607,6 +606,6 @@ the availablility of the post-processing backend and the errors.</p>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

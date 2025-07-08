@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/api/qurrium/utils/inputfixer.html" />
 <meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="Input Fixer ( qurry.qurrium.utils.inputfixer) If you want to compare long strings, we recommend using RapidFuzz instead of our implementation. The reference implementation of Damerau-Levenshtein di..." />
+<meta property="og:description" content="Input Fixer ( qurry.qurrium.utils.inputfixer)" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_utils_inputfixer_59b0d75e.png" />
-<meta property="og:image:alt" content="Input Fixer ( qurry.qurrium.utils.inputfixer) If you want to compare long strings, we recommend using RapidFuzz instead of our implementation. The reference implementation of Damerau-Levenshtein di..." />
-<meta name="description" content="Input Fixer ( qurry.qurrium.utils.inputfixer) If you want to compare long strings, we recommend using RapidFuzz instead of our implementation. The reference implementation of Damerau-Levenshtein di..." />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_utils_inputfixer_deb256d5.png" />
+<meta property="og:image:alt" content="Input Fixer ( qurry.qurrium.utils.inputfixer)" />
+<meta name="description" content="Input Fixer ( qurry.qurrium.utils.inputfixer)" />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -49,7 +49,7 @@
         <title>inputfixer - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -449,30 +449,13 @@
           <section id="module-qurry.qurrium.utils.inputfixer">
 <span id="inputfixer"></span><h1><code class="docutils literal notranslate"><span class="pre">inputfixer</span></code><a class="headerlink" href="#module-qurry.qurrium.utils.inputfixer" title="Link to this heading">¶</a></h1>
 <p>Input Fixer (<a class="reference internal" href="#module-qurry.qurrium.utils.inputfixer" title="qurry.qurrium.utils.inputfixer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.utils.inputfixer</span></code></a>)</p>
-<p>If you want to compare long strings,
-we recommend using <a class="reference external" href="https://github.com/maxbachmann/RapidFuzz">RapidFuzz</a>
-instead of our implementation.</p>
-<p>The reference implementation of Damerau-Levenshtein distance:</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>The very original implementation by Michael Homer:</dt><dd><p><a class="reference external" href="https://web.archive.org/web/20150909134357/http://mwh.geek.nz:80/2009/04/26/python-damerau-levenshtein-distance">https://web.archive.org/web/20150909134357/http://mwh.geek.nz:80/2009/04/26/python-damerau-levenshtein-distance</a></p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>A Cython implementation of the same algorithm, where our implementation is based on:</dt><dd><p><a class="reference external" href="https://github.com/lanl/pyxDamerauLevenshtein">https://github.com/lanl/pyxDamerauLevenshtein</a></p>
-</dd>
-</dl>
-</li>
-</ul>
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.qurrium.utils.inputfixer.damerau_levenshtein_distance">
 <span class="sig-prename descclassname"><span class="pre">qurry.qurrium.utils.inputfixer.</span></span><span class="sig-name descname"><span class="pre">damerau_levenshtein_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.13)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.13)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/qurrium/utils/inputfixer.html#damerau_levenshtein_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.utils.inputfixer.damerau_levenshtein_distance" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the Damerau-Levenshtein distance between sequences.
 This distance is the number of additions, deletions, substitutions,</p>
 <p>If you want to compare long strings,
-we recommend using <a class="reference external" href="https://github.com/maxbachmann/RapidFuzz">RapidFuzz</a>
-instead of this function.
+we recommend using <cite>RapidFuzz</cite> instead of this function.
 This function is designed for input suggestion for short string.
 which is hard to handle very long string.</p>
 <dl class="field-list simple">
@@ -509,16 +492,15 @@ lengths of the two sequences.</p>
 <span class="go">2</span>
 </pre></div>
 </div>
-<p>It works with arbitrary sequences too:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dameraulevenshtein</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-<span class="go">2</span>
-</pre></div>
-</div>
-<p>This implementation is based on <a class="reference external" href="https://web.archive.org/web/20150909134357/http://mwh.geek.nz:80/2009/04/26/python-damerau-levenshtein-distance/">Michael Homer’s implementation</a>,
-and based on <a class="reference external" href="https://github.com/lanl/pyxDamerauLevenshtein">pyxDamerauLevenshtein</a>,
+<p>It works with arbitrary sequences too:
+&gt;&gt;&gt; dameraulevenshtein(‘abcd’, [‘b’, ‘a’, ‘c’, ‘d’, ‘e’])
+2</p>
+<p>This implementation is based on Michael Homer’s implementation
+(<a class="reference external" href="https://web.archive.org/web/20150909134357/http://mwh.geek.nz:80/2009/04/26/python-damerau-levenshtein-distance/">https://web.archive.org/web/20150909134357/http://mwh.geek.nz:80/2009/04/26/python-damerau-levenshtein-distance/</a>)
+and inspired by <a class="reference external" href="https://github.com/lanl/pyxDamerauLevenshtein">https://github.com/lanl/pyxDamerauLevenshtein</a>,
 a Cython implementation of same algorithm.</p>
 <p>For more powerful string comparison, including Levenshtein distance,
-We recommend using <a class="reference external" href="https://github.com/maxbachmann/RapidFuzz">RapidFuzz</a>,
+We recommend using the <a class="reference external" href="https://github.com/maxbachmann/RapidFuzz">https://github.com/maxbachmann/RapidFuzz</a>,
 It’s a library that wraps the C++ Levenshtein algorithm and other string processing functions.
 The most efficient Python implementation (using Cython) currently.</p>
 <dl class="field-list simple">
@@ -617,7 +599,7 @@ by Damerau-Levenshtein distance.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -672,6 +654,6 @@ by Damerau-Levenshtein distance.</p>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

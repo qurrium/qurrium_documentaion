@@ -49,7 +49,7 @@
         <title>trace_expect_process - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -454,14 +454,13 @@
 <dl class="py data">
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.trace_expect_process.TraceRhoMethod">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.trace_expect_process.</span></span><span class="sig-name descname"><span class="pre">TraceRhoMethod</span></span><a class="headerlink" href="#qurry.process.classical_shadow.trace_expect_process.TraceRhoMethod" title="Link to this definition">¶</a></dt>
-<dd><p>The method to calculate the trace of Rho square.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>“trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2))
+<dd><p>The method to calculate the trace of Rho square.
+- “trace_of_matmul”:</p>
+<blockquote>
+<div><p>Use np.trace(np.matmul(rho_m1, rho_m2))
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
-</dd>
-</dl>
-</li>
+</div></blockquote>
+<ul class="simple">
 <li><dl class="simple">
 <dt>“quick_trace_of_matmul” or “einsum_ij_ji”:</dt><dd><p>Use np.einsum(“ij,ji”, rho_m1, rho_m2)
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
@@ -507,18 +506,40 @@ The dictionary of Rho M I.</p></li>
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.trace_expect_process.trace_rho_square_core">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.trace_expect_process.</span></span><span class="sig-name descname"><span class="pre">trace_rho_square_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho_m_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'trace_of_matmul'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'quick_trace_of_matmul'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_ij_ji'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex128</span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/trace_expect_process.html#trace_rho_square_core"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.trace_expect_process.trace_rho_square_core" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the trace of Rho square.</p>
+<dl>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Predicting many properties of a quantum system from very few measurements -</p></li>
+</ul>
+<p>Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
+[doi:10.1038/s41567-020-0932-7](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The randomized measurement toolbox -</p></li>
+</ul>
+<p>Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,
+Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
+[doi:10.1038/s42254-022-00535-2](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">https://doi.org/10.1038/s42254-022-00535-2</a>)</p>
+</div></blockquote>
+</div>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rho_m_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><em>np.ndarray</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>, </em><em>np.dtype</em><em>[</em><em>np.complex128</em><em>]</em><em>]</em><em>]</em>) – The dictionary of Rho M.</p></li>
-<li><p><strong>trace_method</strong> (<em>TraceMethod</em><em> , </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.</p>
-<ul>
-<li><dl class="simple">
-<dt>”trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2))
+<li><p><strong>trace_method</strong> (<em>TraceMethod</em><em> , </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.
+- “trace_of_matmul”:</p>
+<blockquote>
+<div><p>Use np.trace(np.matmul(rho_m1, rho_m2))
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
-</dd>
-</dl>
-</li>
+</div></blockquote>
+<ul>
 <li><dl class="simple">
 <dt>”quick_trace_of_matmul” or “einsum_ij_ji”:</dt><dd><p>Use np.einsum(“ij,ji”, rho_m1, rho_m2)
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
@@ -585,7 +606,7 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -639,6 +660,6 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

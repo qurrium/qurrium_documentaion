@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/api/qurrium/experiment/export.html" />
 <meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="The module of exporting the experiment data. ( qurry.qurrium.experiment.export)" />
+<meta property="og:description" content="The module of exporting the experiment data. ( qurry.qurrium.container.export)" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_experiment_export_ec045217.png" />
-<meta property="og:image:alt" content="The module of exporting the experiment data. ( qurry.qurrium.experiment.export)" />
-<meta name="description" content="The module of exporting the experiment data. ( qurry.qurrium.experiment.export)" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_experiment_export_03b9c1c5.png" />
+<meta property="og:image:alt" content="The module of exporting the experiment data. ( qurry.qurrium.container.export)" />
+<meta name="description" content="The module of exporting the experiment data. ( qurry.qurrium.container.export)" />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -49,7 +49,7 @@
         <title>export - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -448,7 +448,7 @@
         <article role="main" id="furo-main-content">
           <section id="module-qurry.qurrium.experiment.export">
 <span id="export"></span><h1><code class="docutils literal notranslate"><span class="pre">export</span></code><a class="headerlink" href="#module-qurry.qurrium.experiment.export" title="Link to this heading">¶</a></h1>
-<p>The module of exporting the experiment data. (<a class="reference internal" href="#module-qurry.qurrium.experiment.export" title="qurry.qurrium.experiment.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.experiment.export</span></code></a>)</p>
+<p>The module of exporting the experiment data. (<code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.container.export</span></code>)</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.export.Export">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.qurrium.experiment.export.</span></span><span class="sig-name descname"><span class="pre">Export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">summoner_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">summoner_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commons</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arguments.html#qurry.qurrium.experiment.arguments.CommonparamsDict" title="qurry.qurrium.experiment.arguments.CommonparamsDict"><span class="pre">CommonparamsDict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adventures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legacy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tales</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><span class="pre">Hashable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tales_reports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><span class="pre">Hashable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/qurry/qurrium/experiment/export.html#Export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.experiment.export.Export" title="Link to this definition">¶</a></dt>
@@ -489,8 +489,10 @@ then this name will never apply as filename.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.export.Export.filename">
 <span class="sig-name descname"><span class="pre">filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#qurry.qurrium.experiment.export.Export.filename" title="Link to this definition">¶</a></dt>
-<dd><p>The name of file to be exported, it will be decided by
-<a class="reference internal" href="experiment.html#qurry.qurrium.experiment.experiment.ExperimentPrototype.export" title="qurry.qurrium.experiment.experiment.ExperimentPrototype.export"><code class="xref py py-meth docutils literal notranslate"><span class="pre">export()</span></code></a> when it’s called.</p>
+<dd><p>The name of file to be exported,
+it will be decided by the <a class="reference internal" href="../../capsule/mori.html#qurry.capsule.mori.gitsync.GitSyncControl.export" title="qurry.capsule.mori.gitsync.GitSyncControl.export"><code class="xref py py-meth docutils literal notranslate"><span class="pre">export()</span></code></a> when it’s called.
+More info in the pydoc of <a href="#id1"><span class="problematic" id="id2">:prop:`files`</span></a> or <a class="reference internal" href="../../capsule/mori.html#qurry.capsule.mori.gitsync.GitSyncControl.export" title="qurry.capsule.mori.gitsync.GitSyncControl.export"><code class="xref py py-meth docutils literal notranslate"><span class="pre">export()</span></code></a>,
+which will be packed into <cite>.args.json</cite>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -500,58 +502,13 @@ then this name will never apply as filename.</p>
 <p>### Single experiment:</p>
 <p>For the <a class="reference internal" href="#qurry.qurrium.experiment.export.Export.write" title="qurry.qurrium.experiment.export.Export.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> function actually exports 4 different files
 respecting to <cite>adventure</cite>, <cite>legacy</cite>, <cite>tales</cite>, and <cite>reports</cite> like:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;folder&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;qurryinfo&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/qurryinfo.json&#39;</span><span class="p">,</span>
-
-    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/args/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.args.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;advent&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/advent/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.advent.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;legacy&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/legacy/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.legacy.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;tales.dummyx1&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyx1.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;tales.dummyx2&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyx2.json&#39;</span><span class="p">,</span>
-    <span class="o">...</span>
-    <span class="s1">&#39;tales.dummyxn&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyxn.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/reports/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.reports.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports.tales.dummyz1&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyz1.reports.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports.tales.dummyz2&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyz2.reports.json&#39;</span><span class="p">,</span>
-    <span class="o">...</span>
-    <span class="s1">&#39;reports.tales.dummyzm&#39;</span><span class="p">:</span> <span class="s1">&#39;./bla_exp/tales/bla_exp.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyzm.reports.json&#39;</span><span class="p">,</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <p>which <cite>bla_exp</cite> is the example filename.</p>
 <p>### Multi-experiment:</p>
-<p>If this experiment is called by
-<a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>,
-then the it will be named after <cite>summoner_name</cite> as known as the name of
-<a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;folder&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;qurryinfo&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/qurryinfo.json&#39;</span><span class="p">,</span>
-
-    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/args/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.args.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;advent&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/advent/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.advent.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;legacy&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/legacy/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.legacy.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;tales.dummyx1&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyx1.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;tales.dummyx2&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyx2.json&#39;</span><span class="p">,</span>
-    <span class="o">...</span>
-    <span class="s1">&#39;tales.dummyxn&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyxn.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports&#39;</span><span class="p">:</span> <span class="s1">&#39;./BLABLA_project/reports/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.reports.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports.tales.dummyz1&#39;</span><span class="p">:</span>
-        <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyz1.reports.json&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;reports.tales.dummyz2&#39;</span><span class="p">:</span>
-        <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyz2.reports.json&#39;</span><span class="p">,</span>
-    <span class="o">...</span>
-    <span class="s1">&#39;reports.tales.dummyzm&#39;</span><span class="p">:</span>
-        <span class="s1">&#39;./BLABLA_project/tales/index=</span><span class="si">{serial}</span><span class="s1">.id=</span><span class="si">{exp_id}</span><span class="s1">.dummyzm.reports.json&#39;</span><span class="p">,</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>which <cite>BLBLA_project</cite> is the example
-<a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a> name
-stored at <cite>summoner_name</cite> in
-<a class="reference internal" href="arguments.html#qurry.qurrium.experiment.arguments.Commonparams.summoner_name" title="qurry.qurrium.experiment.arguments.Commonparams.summoner_name"><code class="xref py py-class docutils literal notranslate"><span class="pre">summoner_name</span></code></a>.
-At this senerio, the <cite>exp_name</cite> will never apply as filename.</p>
+<p>If this experiment is called by <a href="#id3"><span class="problematic" id="id4">:cls:`MultiManager`</span></a>,
+then the it will be named after <cite>summoner_name</cite> as known as the name of <a href="#id5"><span class="problematic" id="id6">:cls:`MultiManager`</span></a>.</p>
+<p>which <cite>BLBLA_project</cite> is the example <a href="#id7"><span class="problematic" id="id8">:cls:`MultiManager`</span></a> name
+stored at <a href="#id9"><span class="problematic" id="id10">:prop:`commonparams.summoner_name`</span></a>.
+At this senerio, the <a href="#id11"><span class="problematic" id="id12">:prop:`exp_name`</span></a> will never apply as filename.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -572,36 +529,25 @@ At this senerio, the <cite>exp_name</cite> will never apply as filename.</p>
 <span class="sig-name descname"><span class="pre">reports</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><span class="pre">Hashable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.qurrium.experiment.export.Export.reports" title="Link to this definition">¶</a></dt>
 <dd><p>Recording the data of ‘reports’, which will be packed into <cite>.reports.json</cite>.</p>
 <p>### Reports format:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span><span class="n">quantities</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="s1">&#39;header&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="p">},</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span><span class="n">quantities</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="s1">&#39;header&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="p">},</span>
-    <span class="o">...</span>
-    <span class="p">{</span><span class="n">serial</span><span class="p">}:</span> <span class="p">{</span> <span class="o">...</span><span class="n">quantities</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="s1">&#39;header&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span> <span class="p">},</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <p><em>~ The guild concludes the results. ~</em></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.export.Export.serial">
 <span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.qurrium.experiment.export.Export.serial" title="Link to this definition">¶</a></dt>
-<dd><p>Index of experiment in <a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>,
-which will be packed into <cite>.args.json</cite>.</p>
+<dd><p>Index of experiment in a multiOutput, which will be packed into <cite>.args.json</cite>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.export.Export.summoner_id">
 <span class="sig-name descname"><span class="pre">summoner_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.qurrium.experiment.export.Export.summoner_id" title="Link to this definition">¶</a></dt>
-<dd><p>ID of experiment of the <a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>,
-which will be packed into <cite>.args.json</cite>.</p>
+<dd><p>ID of experiment of the multiManager, which will be packed into <cite>.args.json</cite>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="qurry.qurrium.experiment.export.Export.summoner_name">
 <span class="sig-name descname"><span class="pre">summoner_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.qurrium.experiment.export.Export.summoner_name" title="Link to this definition">¶</a></dt>
-<dd><p>Name of experiment of the <a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>,
-which will be packed into <cite>.args.json</cite>.</p>
+<dd><p>Name of experiment of the multiManager, which will be packed into <cite>.args.json</cite>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -618,29 +564,6 @@ which will be packed into <cite>.*.tales.json</cite>.
 <dd><p>Recording the data of ‘side_product’ in ‘reports’ for API,
 which will be packed into <cite>.*.reprts.json</cite>.</p>
 <p>### Tales Reports format:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tales_reports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;dummyz1&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="mi">2</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="o">...</span>
-        <span class="p">{</span><span class="n">serial</span><span class="p">}:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="s1">&#39;dummyz2&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="mi">2</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="o">...</span>
-        <span class="p">{</span><span class="n">serial</span><span class="p">}:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="o">...</span>
-    <span class="s1">&#39;dummyz&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="mi">2</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-        <span class="o">...</span>
-        <span class="p">{</span><span class="n">serial</span><span class="p">}:</span> <span class="p">{</span> <span class="o">...</span> <span class="p">},</span>
-    <span class="p">},</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <p><em>~ Tales of braves circulate ~</em></p>
 </dd></dl>
 
@@ -711,7 +634,7 @@ the second element is the dictionary of files of experiment.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -781,6 +704,6 @@ the second element is the dictionary of files of experiment.</p>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

@@ -49,7 +49,7 @@
         <title>classical_shadow - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -455,94 +455,25 @@
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.classical_shadow.</span></span><span class="sig-name descname"><span class="pre">classical_shadow_complex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_unitary_um</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">given_operators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy_prob_comp_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_shadow_norm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'numpy_precomputed'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy_flatten'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'jax_flatten'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'numpy_precomputed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'trace_of_matmul'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'quick_trace_of_matmul'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_ij_ji'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate_trace_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="container.html#qurry.process.classical_shadow.container.ClassicalShadowComplex" title="qurry.process.classical_shadow.container.ClassicalShadowComplex"><span class="pre">ClassicalShadowComplex</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/classical_shadow.html#classical_shadow_complex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.classical_shadow.classical_shadow_complex" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the expectation value of Rho and the purity by classical shadow.</p>
 <dl>
-<dt>Reference:</dt><dd><ul class="simple">
-<li><p>Predicting many properties of a quantum system from very few measurements -
-Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
-<a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">doi:10.1038/s41567-020-0932-7</a></p></li>
-<li><p>The randomized measurement toolbox -
-Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,
-Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
-<a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">doi:10.1038/s42254-022-00535-2</a></p></li>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Predicting many properties of a quantum system from very few measurements -</p></li>
 </ul>
-<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">cite-key</span><span class="p">,</span>
-<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
-<span class="s">        Predicting the properties of complex,</span>
-<span class="s">        large-scale quantum systems is essential for developing quantum technologies.</span>
-<span class="s">        We present an efficient method for constructing an approximate classical</span>
-<span class="s">        description of a quantum state using very few measurements of the state.</span>
-<span class="s">        different properties; order</span>
-<span class="s">        {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
-<span class="s">        measurements suffice to accurately predict M different functions of the state</span>
-<span class="s">        with high success probability. The number of measurements is independent of</span>
-<span class="s">        the system size and saturates information-theoretic lower bounds. Moreover,</span>
-<span class="s">        target properties to predict can be</span>
-<span class="s">        selected after the measurements are completed.</span>
-<span class="s">        We support our theoretical findings with extensive numerical experiments.</span>
-<span class="s">        We apply classical shadows to predict quantum fidelities,</span>
-<span class="s">        entanglement entropies, two-point correlation functions,</span>
-<span class="s">        expectation values of local observables and the energy variance of</span>
-<span class="s">        many-body local Hamiltonians.</span>
-<span class="s">        The numerical results highlight the advantages of classical shadows relative to</span>
-<span class="s">        previously known methods.}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang, Hsin-Yuan and Kueng, Richard and Preskill, John}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020/10/01}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-added</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-modified</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">isbn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1745-2481}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Nature Physics}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1050--1057}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Predicting many properties of a quantum system from very few measurements}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{16}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">bdsk-url-1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span>
-<span class="p">}</span>
-
-<span class="nc">@article</span><span class="p">{</span><span class="nl">cite-key</span><span class="p">,</span>
-<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
-<span class="s">        Programmable quantum simulators and quantum computers are opening unprecedented</span>
-<span class="s">        opportunities for exploring and exploiting the properties of highly entangled</span>
-<span class="s">        complex quantum systems. The complexity of large quantum systems is the source</span>
-<span class="s">        of computational power but also makes them difficult to control precisely or</span>
-<span class="s">        characterize accurately using measured classical data. We review protocols</span>
-<span class="s">        for probing the properties of complex many-qubit systems using measurement</span>
-<span class="s">        schemes that are practical using today&#39;s quantum platforms. In these protocols,</span>
-<span class="s">        a quantum state is repeatedly prepared and measured in a randomly chosen basis;</span>
-<span class="s">        then a classical computer processes the measurement outcomes to estimate the</span>
-<span class="s">        desired property. The randomization of the measurement procedure has distinct</span>
-<span class="s">        advantages. For example, a single data set can be used multiple times to pursue</span>
-<span class="s">        a variety of applications, and imperfections in the measurements are mapped to</span>
-<span class="s">        a simplified noise model that can more</span>
-<span class="s">        easily be mitigated. We discuss a range of</span>
-<span class="s">        cases that have already been realized in quantum devices, including Hamiltonian</span>
-<span class="s">        simulation tasks, probes of quantum chaos, measurements of non-local order</span>
-<span class="s">        parameters, and comparison of quantum states produced in distantly separated</span>
-<span class="s">        laboratories. By providing a workable method for translating a complex quantum</span>
-<span class="s">        state into a succinct classical representation that preserves a rich variety of</span>
-<span class="s">        relevant physical properties, the randomized measurement toolbox strengthens our</span>
-<span class="s">        ability to grasp and control the quantum world.}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
-<span class="s">        Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,</span>
-<span class="s">        Richard and Preskill, John and Vermersch, Beno{\^\i}t and Zoller, Peter}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2023/01/01}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-added</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:06:15 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-modified</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:06:15 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1038/s42254-022-00535-2}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Elben2023}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">isbn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2522-5820}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Nature Reviews Physics}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{9--24}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{The randomized measurement toolbox}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s42254-022-00535-2}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{5}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2023}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">bdsk-url-1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s42254-022-00535-2}</span>
-<span class="p">}</span>
-</pre></div>
+<p>Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
+[doi:10.1038/s41567-020-0932-7](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The randomized measurement toolbox -</p></li>
+</ul>
+<p>Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,
+Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
+[doi:10.1038/s42254-022-00535-2](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">https://doi.org/10.1038/s42254-022-00535-2</a>)</p>
+</div></blockquote>
 </div>
 </dd>
 </dl>
@@ -559,23 +490,19 @@ Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
 If it is None, it will be calculated by the largest shadow norm upper bound.
 If it is not None, it must be a positive float number.
 It is <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> in equation.</p></li>
-<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “numpy_precomputed”.
-It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.</p>
-<ul>
-<li><p>”numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>”numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-<li><p>”numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.</p></li>
-</ul>
-<p>Currently, “numpy_precomputed” is the best option for performance.</p>
-</p></li>
-<li><p><strong>trace_method</strong> (<em>TraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.</p>
-<ul>
-<li><dl class="simple">
-<dt>”trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2))
+<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – The method to use for the calculation. Defaults to “numpy_precomputed”.
+It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.
+- “numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.
+Currently, “numpy_precomputed” is the best option for performance.</p></li>
+<li><p><strong>trace_method</strong> (<em>TraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.
+- “trace_of_matmul”:</p>
+<blockquote>
+<div><p>Use np.trace(np.matmul(rho_m1, rho_m2))
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
-</dd>
-</dl>
-</li>
+</div></blockquote>
+<ul>
 <li><dl class="simple">
 <dt>”quick_trace_of_matmul” or “einsum_ij_ji”:</dt><dd><p>Use np.einsum(“ij,ji”, rho_m1, rho_m2)
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
@@ -594,13 +521,12 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
 </li>
 </ul>
 </p></li>
-<li><p><strong>estimate_trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.</p>
+<li><p><strong>estimate_trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.
+- “einsum_aij_bji_to_ab_numpy”:</p>
+<blockquote>
+<div><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+</div></blockquote>
 <ul>
-<li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_numpy”:</dt><dd><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
-</dd>
-</dl>
-</li>
 <li><dl class="simple">
 <dt>”einsum_aij_bji_to_ab_jax”:</dt><dd><p>Use jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
@@ -625,48 +551,25 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.classical_shadow.</span></span><span class="sig-name descname"><span class="pre">esitimation_of_given_operators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_unitary_um</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">given_operators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy_prob_comp_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_shadow_norm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'numpy_precomputed'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy_flatten'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'jax_flatten'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'numpy_precomputed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate_trace_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'einsum_aij_bji_to_ab_jax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="container.html#qurry.process.classical_shadow.container.ClassicalShadowEstimation" title="qurry.process.classical_shadow.container.ClassicalShadowEstimation"><span class="pre">ClassicalShadowEstimation</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/classical_shadow.html#esitimation_of_given_operators"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.classical_shadow.esitimation_of_given_operators" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the expectation value of given operators.</p>
 <dl>
-<dt>Reference:</dt><dd><ul class="simple">
-<li><p>Predicting many properties of a quantum system from very few measurements -
-Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
-<a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">doi:10.1038/s41567-020-0932-7</a></p></li>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Predicting many properties of a quantum system from very few measurements -</p></li>
 </ul>
-<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">cite-key</span><span class="p">,</span>
-<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
-<span class="s">        Predicting the properties of complex,</span>
-<span class="s">        large-scale quantum systems is essential for developing quantum technologies.</span>
-<span class="s">        We present an efficient method for constructing an approximate classical</span>
-<span class="s">        description of a quantum state using very few measurements of the state.</span>
-<span class="s">        different properties; order</span>
-<span class="s">        {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
-<span class="s">        measurements suffice to accurately predict M different functions of the state</span>
-<span class="s">        with high success probability. The number of measurements is independent of</span>
-<span class="s">        the system size and saturates information-theoretic lower bounds. Moreover,</span>
-<span class="s">        target properties to predict can be</span>
-<span class="s">        selected after the measurements are completed.</span>
-<span class="s">        We support our theoretical findings with extensive numerical experiments.</span>
-<span class="s">        We apply classical shadows to predict quantum fidelities,</span>
-<span class="s">        entanglement entropies, two-point correlation functions,</span>
-<span class="s">        expectation values of local observables and the energy variance of</span>
-<span class="s">        many-body local Hamiltonians.</span>
-<span class="s">        The numerical results highlight the advantages of classical shadows relative to</span>
-<span class="s">        previously known methods.}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang, Hsin-Yuan and Kueng, Richard and Preskill, John}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020/10/01}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-added</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-modified</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">isbn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1745-2481}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Nature Physics}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1050--1057}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Predicting many properties of a quantum system from very few measurements}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{16}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">bdsk-url-1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span>
-<span class="p">}</span>
-</pre></div>
+<p>Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
+[doi:10.1038/s41567-020-0932-7](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The randomized measurement toolbox -</p></li>
+</ul>
+<p>Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,
+Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
+[doi:10.1038/s42254-022-00535-2](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">https://doi.org/10.1038/s42254-022-00535-2</a>)</p>
+</div></blockquote>
 </div>
 </dd>
 </dl>
@@ -683,22 +586,18 @@ Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
 If it is None, it will be calculated by the largest shadow norm upper bound.
 If it is not None, it must be a positive float number.
 It is <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> in equation.</p></li>
-<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “numpy_precomputed”.
-It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.</p>
+<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – The method to use for the calculation. Defaults to “numpy_precomputed”.
+It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.
+- “numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.
+Currently, “numpy_precomputed” is the best option for performance.</p></li>
+<li><p><strong>estimate_trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.
+- “einsum_aij_bji_to_ab_numpy”:</p>
+<blockquote>
+<div><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+</div></blockquote>
 <ul>
-<li><p>”numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>”numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-<li><p>”numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.</p></li>
-</ul>
-<p>Currently, “numpy_precomputed” is the best option for performance.</p>
-</p></li>
-<li><p><strong>estimate_trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.</p>
-<ul>
-<li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_numpy”:</dt><dd><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
-</dd>
-</dl>
-</li>
 <li><dl class="simple">
 <dt>”einsum_aij_bji_to_ab_jax”:</dt><dd><p>Use jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
@@ -723,48 +622,25 @@ It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.classical_shadow.</span></span><span class="sig-name descname"><span class="pre">mean_of_rho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_unitary_um</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_classical_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'numpy_precomputed'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'numpy_flatten'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'jax_flatten'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'numpy_precomputed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tqdm</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="container.html#qurry.process.classical_shadow.container.ClassicalShadowMeanRho" title="qurry.process.classical_shadow.container.ClassicalShadowMeanRho"><span class="pre">ClassicalShadowMeanRho</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/classical_shadow.html#mean_of_rho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.classical_shadow.mean_of_rho" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the mean of Rho.</p>
 <dl>
-<dt>Reference:</dt><dd><ul class="simple">
-<li><p>Predicting many properties of a quantum system from very few measurements -
-Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
-<a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">doi:10.1038/s41567-020-0932-7</a></p></li>
+<dt>Reference:</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Predicting many properties of a quantum system from very few measurements -</p></li>
 </ul>
-<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">cite-key</span><span class="p">,</span>
-<span class="w">    </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
-<span class="s">        Predicting the properties of complex,</span>
-<span class="s">        large-scale quantum systems is essential for developing quantum technologies.</span>
-<span class="s">        We present an efficient method for constructing an approximate classical</span>
-<span class="s">        description of a quantum state using very few measurements of the state.</span>
-<span class="s">        different properties; order</span>
-<span class="s">        {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
-<span class="s">        measurements suffice to accurately predict M different functions of the state</span>
-<span class="s">        with high success probability. The number of measurements is independent of</span>
-<span class="s">        the system size and saturates information-theoretic lower bounds. Moreover,</span>
-<span class="s">        target properties to predict can be</span>
-<span class="s">        selected after the measurements are completed.</span>
-<span class="s">        We support our theoretical findings with extensive numerical experiments.</span>
-<span class="s">        We apply classical shadows to predict quantum fidelities,</span>
-<span class="s">        entanglement entropies, two-point correlation functions,</span>
-<span class="s">        expectation values of local observables and the energy variance of</span>
-<span class="s">        many-body local Hamiltonians.</span>
-<span class="s">        The numerical results highlight the advantages of classical shadows relative to</span>
-<span class="s">        previously known methods.}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang, Hsin-Yuan and Kueng, Richard and Preskill, John}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020/10/01}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-added</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">date-modified</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024-12-03 15:00:55 +0800}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Huang2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">isbn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1745-2481}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Nature Physics}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1050--1057}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Predicting many properties of a quantum system from very few measurements}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{16}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2020}</span><span class="p">,</span>
-<span class="w">    </span><span class="na">bdsk-url-1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1038/s41567-020-0932-7}</span>
-<span class="p">}</span>
-</pre></div>
+<p>Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
+[doi:10.1038/s41567-020-0932-7](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s41567-020-0932-7">https://doi.org/10.1038/s41567-020-0932-7</a>)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The randomized measurement toolbox -</p></li>
+</ul>
+<p>Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,
+Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter
+[doi:10.1038/s42254-022-00535-2](</p>
+<blockquote>
+<div><p><a class="reference external" href="https://doi.org/10.1038/s42254-022-00535-2">https://doi.org/10.1038/s42254-022-00535-2</a>)</p>
+</div></blockquote>
 </div>
 </dd>
 </dl>
@@ -775,15 +651,12 @@ Huang, Hsin-Yuan and Kueng, Richard and Preskill, John
 <li><p><strong>counts</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – The list of the counts.</p></li>
 <li><p><strong>random_unitary_um</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>Union</em><em>[</em><em>Literal</em><em>[</em><em>0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>]</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The shadow direction of the unitary operators.</p></li>
 <li><p><strong>selected_classical_registers</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
-<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “numpy_precomputed”.
-It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.</p>
-<ul>
-<li><p>”numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>”numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-<li><p>”numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.</p></li>
-</ul>
-<p>Currently, “numpy_precomputed” is the best option for performance.</p>
-</p></li>
+<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – The method to use for the calculation. Defaults to “numpy_precomputed”.
+It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.
+- “numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.
+Currently, “numpy_precomputed” is the best option for performance.</p></li>
 <li><p><strong>backend</strong> (<em>PostProcessingBackendLabel</em><em>, </em><em>optional</em>) – The backend for the postprocessing.
 Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
 <li><p><strong>pbar</strong> (<em>Optional</em><em>[</em><em>tqdm.tqdm</em><em>]</em><em>, </em><em>optional</em>) – The progress bar. Defaults to None.</p></li>
@@ -809,23 +682,19 @@ Defaults to DEFAULT_PROCESS_BACKEND.</p></li>
 <li><p><strong>counts</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – The list of the counts.</p></li>
 <li><p><strong>random_unitary_um</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>Union</em><em>[</em><em>Literal</em><em>[</em><em>0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>]</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The shadow direction of the unitary operators.</p></li>
 <li><p><strong>selected_classical_registers</strong> (<em>Iterable</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
-<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “numpy_precomputed”.
-It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.</p>
-<ul>
-<li><p>”numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>”numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-<li><p>”numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.</p></li>
-</ul>
-<p>Currently, “numpy_precomputed” is the best option for performance.</p>
-</p></li>
-<li><p><strong>trace_method</strong> (<em>TraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.</p>
-<ul>
-<li><dl class="simple">
-<dt>”trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2))
+<li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – The method to use for the calculation. Defaults to “numpy_precomputed”.
+It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.
+- “numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.
+Currently, “numpy_precomputed” is the best option for performance.</p></li>
+<li><p><strong>trace_method</strong> (<em>TraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace of Rho square.
+- “trace_of_matmul”:</p>
+<blockquote>
+<div><p>Use np.trace(np.matmul(rho_m1, rho_m2))
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
-</dd>
-</dl>
-</li>
+</div></blockquote>
+<ul>
 <li><dl class="simple">
 <dt>”quick_trace_of_matmul” or “einsum_ij_ji”:</dt><dd><p>Use np.einsum(“ij,ji”, rho_m1, rho_m2)
 to calculate the each summation item in <cite>rho_m_list</cite>.</p>
@@ -888,7 +757,7 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -944,6 +813,6 @@ to calculate the each summation item in <cite>rho_m_list</cite>.</p>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/api/capsule/utils.html" />
 <meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="Utilities for CapSule. Utility functions and type definitions for capsule. ( qurry.capsule.utils)" />
+<meta property="og:description" content="Utilities for CapSule. Utility functions and type definitions for Mori capsule. ( qurry.capsule.mori.utils)" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_capsule_utils_4cbbd773.png" />
-<meta property="og:image:alt" content="Utilities for CapSule. Utility functions and type definitions for capsule. ( qurry.capsule.utils)" />
-<meta name="description" content="Utilities for CapSule. Utility functions and type definitions for capsule. ( qurry.capsule.utils)" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_capsule_utils_54b079ac.png" />
+<meta property="og:image:alt" content="Utilities for CapSule. Utility functions and type definitions for Mori capsule. ( qurry.capsule.mori.utils)" />
+<meta name="description" content="Utilities for CapSule. Utility functions and type definitions for Mori capsule. ( qurry.capsule.mori.utils)" />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -49,7 +49,7 @@
         <title>utils - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -449,200 +449,30 @@
           <section id="utils">
 <h1><code class="docutils literal notranslate"><span class="pre">utils</span></code><a class="headerlink" href="#utils" title="Link to this heading">¶</a></h1>
 <p>Utilities for CapSule.</p>
-<p id="module-qurry.capsule.utils">Utility functions and type definitions for <a class="reference internal" href="index.html#module-qurry.capsule" title="qurry.capsule"><code class="xref py py-mod docutils literal notranslate"><span class="pre">capsule</span></code></a>.
-(<a class="reference internal" href="#module-qurry.capsule.utils" title="qurry.capsule.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.capsule.utils</span></code></a>)</p>
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_ENCODING">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_ENCODING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'utf-8'</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_ENCODING" title="Link to this definition">¶</a></dt>
-<dd><p>Default encoding for file operations.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_ENSURE_ASCII">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_ENSURE_ASCII</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_ENSURE_ASCII" title="Link to this definition">¶</a></dt>
-<dd><p>Default ensure_ascii for JSON serialization.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_INDENT">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_INDENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_INDENT" title="Link to this definition">¶</a></dt>
-<dd><p>Default indentation for JSON serialization.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_JSON_DUMP_ARGS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs" title="qurry.capsule.utils.JSONDumpArgs"><span class="pre">JSONDumpArgs</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ensure_ascii':</span> <span class="pre">False,</span> <span class="pre">'indent':</span> <span class="pre">2}</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS" title="Link to this definition">¶</a></dt>
-<dd><p>Default arguments for JSON dump function.</p>
-<p>This includes:
-- <cite>indent</cite>: The indentation level for pretty-printing JSON, default is 2.
-- <cite>ensure_ascii</cite>: Whether to escape non-ASCII characters, default is False.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_MODE">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_MODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'w+'</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_MODE" title="Link to this definition">¶</a></dt>
-<dd><p>Default mode for file operations.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_OPEN_ARGS">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_OPEN_ARGS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs"><span class="pre">OpenArgs</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'encoding':</span> <span class="pre">'utf-8',</span> <span class="pre">'mode':</span> <span class="pre">'w+'}</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_OPEN_ARGS" title="Link to this definition">¶</a></dt>
-<dd><p>Default arguments for open function.</p>
-<p>This includes:
-- <cite>mode</cite>: The mode in which the file is opened, default is ‘w+’.
-- <cite>encoding</cite>: The encoding used for the file, default is ‘utf-8’.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="qurry.capsule.utils.DEFAULT_PRINT_ARGS">
-<span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_PRINT_ARGS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.PrintArgs" title="qurry.capsule.utils.PrintArgs"><span class="pre">PrintArgs</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#qurry.capsule.utils.DEFAULT_PRINT_ARGS" title="Link to this definition">¶</a></dt>
-<dd><p>Default arguments for print function.</p>
-</dd></dl>
-
+<p id="module-qurry.capsule.utils">Utility functions and type definitions for Mori capsule.
+(<code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.capsule.mori.utils</span></code>)</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">JSONDumpArgs</span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#JSONDumpArgs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs" title="Link to this definition">¶</a></dt>
 <dd><p>Default arguments for print function.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.allow_nan">
-<span class="sig-name descname"><span class="pre">allow_nan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.allow_nan" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to allow NaN and Infinity values.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.check_circular">
-<span class="sig-name descname"><span class="pre">check_circular</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.check_circular" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to check for circular references.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.cls">
-<span class="sig-name descname"><span class="pre">cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">JSONEncoder</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.cls" title="Link to this definition">¶</a></dt>
-<dd><p>Custom JSONEncoder class to use for serialization.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.default">
-<span class="sig-name descname"><span class="pre">default</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.13)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.default" title="Link to this definition">¶</a></dt>
-<dd><p>Function to call for objects that are not serializable.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.ensure_ascii">
-<span class="sig-name descname"><span class="pre">ensure_ascii</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.ensure_ascii" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to escape non-ASCII characters.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.indent">
-<span class="sig-name descname"><span class="pre">indent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.indent" title="Link to this definition">¶</a></dt>
-<dd><p>Indentation level for pretty-printing JSON, default is 2.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.separators">
-<span class="sig-name descname"><span class="pre">separators</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.separators" title="Link to this definition">¶</a></dt>
-<dd><p>‘).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple of separators for JSON serialization, default is (’, ‘, ‘</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.skipkeys">
-<span class="sig-name descname"><span class="pre">skipkeys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.skipkeys" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to skip keys that are not serializable.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.JSONDumpArgs.sort_keys">
-<span class="sig-name descname"><span class="pre">sort_keys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.JSONDumpArgs.sort_keys" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to sort the keys in the JSON output.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">OpenArgs</span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#OpenArgs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.OpenArgs" title="Link to this definition">¶</a></dt>
 <dd><p>Default arguments for open function.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.buffering">
-<span class="sig-name descname"><span class="pre">buffering</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.buffering" title="Link to this definition">¶</a></dt>
-<dd><p>Buffering policy for the file</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.closefd">
-<span class="sig-name descname"><span class="pre">closefd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.closefd" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to close the file descriptor when the file is closed</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.encoding">
-<span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.encoding" title="Link to this definition">¶</a></dt>
-<dd><p>Encoding used for the file</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.errors">
-<span class="sig-name descname"><span class="pre">errors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.errors" title="Link to this definition">¶</a></dt>
-<dd><p>Error handling scheme for the file</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.mode">
-<span class="sig-name descname"><span class="pre">mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.mode" title="Link to this definition">¶</a></dt>
-<dd><p>Mode in which the file is opened</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.newline">
-<span class="sig-name descname"><span class="pre">newline</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.newline" title="Link to this definition">¶</a></dt>
-<dd><p>Newline character handling for the file</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.OpenArgs.opener">
-<span class="sig-name descname"><span class="pre">opener</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.13)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#qurry.capsule.utils.OpenArgs.opener" title="Link to this definition">¶</a></dt>
-<dd><p>Custom opener for the file, if needed</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="qurry.capsule.utils.PrintArgs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">PrintArgs</span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#PrintArgs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.PrintArgs" title="Link to this definition">¶</a></dt>
 <dd><p>Default arguments for print function.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.PrintArgs.end">
-<span class="sig-name descname"><span class="pre">end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#qurry.capsule.utils.PrintArgs.end" title="Link to this definition">¶</a></dt>
-<dd><p>String appended after the last value, default is newline.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.PrintArgs.flush">
-<span class="sig-name descname"><span class="pre">flush</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#qurry.capsule.utils.PrintArgs.flush" title="Link to this definition">¶</a></dt>
-<dd><p>Whether to flush the output buffer after printing.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="qurry.capsule.utils.PrintArgs.sep">
-<span class="sig-name descname"><span class="pre">sep</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#qurry.capsule.utils.PrintArgs.sep" title="Link to this definition">¶</a></dt>
-<dd><p>String inserted between values, default is space.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.capsule.utils.create_json_dump_args">
 <span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">create_json_dump_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dump_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs" title="qurry.capsule.utils.JSONDumpArgs"><span class="pre">JSONDumpArgs</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs" title="qurry.capsule.utils.JSONDumpArgs"><span class="pre">JSONDumpArgs</span></a></span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#create_json_dump_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.create_json_dump_args" title="Link to this definition">¶</a></dt>
 <dd><p>Create JSON dump arguments.</p>
-<p>If <cite>json_dump_args</cite> is not provided or a null dictionary,
-it will return <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS" title="qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_JSON_DUMP_ARGS</span></code></a>.
-Otherwise, it will merge the provided <cite>json_dump_args</cite> with <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS" title="qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_JSON_DUMP_ARGS</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>json_dump_args</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>]</em><em>, </em><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs" title="qurry.capsule.utils.JSONDumpArgs"><em>JSONDumpArgs</em></a><em>]</em>) – Arguments for json.dump function.</p>
@@ -659,26 +489,20 @@ Otherwise, it will merge the provided <cite>json_dump_args</cite> with <a class=
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.capsule.utils.create_open_args">
 <span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">create_open_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">open_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs"><span class="pre">OpenArgs</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_read_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs"><span class="pre">OpenArgs</span></a></span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#create_open_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.create_open_args" title="Link to this definition">¶</a></dt>
-<dd><p>Create open arguments.</p>
-<p>If <cite>open_args</cite> is not provided or a null dictionary,
-it will return <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_OPEN_ARGS" title="qurry.capsule.utils.DEFAULT_OPEN_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_OPEN_ARGS</span></code></a>
-Otherwise, it will merge the provided <cite>open_args</cite> with <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_OPEN_ARGS" title="qurry.capsule.utils.DEFAULT_OPEN_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_OPEN_ARGS</span></code></a>.</p>
-<p>If <cite>is_read_only</cite> is True, the mode will be set to ‘r’.</p>
+<dd><p>Create open arguments.
+:param open_args: Arguments for open function.
+:type open_args: Union[dict[str, Any], OpenArgs]
+:param is_read_only: Whether the file is read-only. Defaults to False.
+:type is_read_only: bool, optional</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>open_args</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>]</em><em>, </em><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs"><em>OpenArgs</em></a><em>]</em>) – Arguments for open function.</p></li>
-<li><p><strong>is_read_only</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether the file is read-only. Defaults to False.</p></li>
-</ul>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If ‘open_args’ is not a dict.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If ‘open_args’ is not a dict.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The open arguments.</p>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The open arguments.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs">OpenArgs</a></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qurry.capsule.utils.OpenArgs" title="qurry.capsule.utils.OpenArgs">OpenArgs</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -687,9 +511,6 @@ Otherwise, it will merge the provided <cite>open_args</cite> with <a class="refe
 <dt class="sig sig-object py" id="qurry.capsule.utils.create_print_args">
 <span class="sig-prename descclassname"><span class="pre">qurry.capsule.utils.</span></span><span class="sig-name descname"><span class="pre">create_print_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">print_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#qurry.capsule.utils.PrintArgs" title="qurry.capsule.utils.PrintArgs"><span class="pre">PrintArgs</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#qurry.capsule.utils.PrintArgs" title="qurry.capsule.utils.PrintArgs"><span class="pre">PrintArgs</span></a></span></span><a class="reference internal" href="../../_modules/qurry/capsule/utils.html#create_print_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.capsule.utils.create_print_args" title="Link to this definition">¶</a></dt>
 <dd><p>Create print arguments.</p>
-<p>If <cite>print_args</cite> is not provided or a null dictionary,
-it will return <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_PRINT_ARGS" title="qurry.capsule.utils.DEFAULT_PRINT_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_PRINT_ARGS</span></code></a>.
-Otherwise, it will merge the provided <cite>print_args</cite> with <a class="reference internal" href="#qurry.capsule.utils.DEFAULT_PRINT_ARGS" title="qurry.capsule.utils.DEFAULT_PRINT_ARGS"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEFAULT_PRINT_ARGS</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>print_args</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>]</em><em>, </em><a class="reference internal" href="#qurry.capsule.utils.PrintArgs" title="qurry.capsule.utils.PrintArgs"><em>PrintArgs</em></a><em>]</em>) – Arguments for print function.</p>
@@ -740,7 +561,7 @@ Otherwise, it will merge the provided <cite>print_args</cite> with <a class="ref
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -776,41 +597,9 @@ Otherwise, it will merge the provided <cite>print_args</cite> with <a class="ref
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a><ul>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_ENCODING"><code class="docutils literal notranslate"><span class="pre">DEFAULT_ENCODING</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_ENSURE_ASCII"><code class="docutils literal notranslate"><span class="pre">DEFAULT_ENSURE_ASCII</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_INDENT"><code class="docutils literal notranslate"><span class="pre">DEFAULT_INDENT</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_JSON_DUMP_ARGS"><code class="docutils literal notranslate"><span class="pre">DEFAULT_JSON_DUMP_ARGS</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_MODE"><code class="docutils literal notranslate"><span class="pre">DEFAULT_MODE</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_OPEN_ARGS"><code class="docutils literal notranslate"><span class="pre">DEFAULT_OPEN_ARGS</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.DEFAULT_PRINT_ARGS"><code class="docutils literal notranslate"><span class="pre">DEFAULT_PRINT_ARGS</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs</span></code></a><ul>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.allow_nan"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.allow_nan</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.check_circular"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.check_circular</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.cls"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.cls</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.default"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.default</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.ensure_ascii"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.ensure_ascii</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.indent"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.indent</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.separators"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.separators</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.skipkeys"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.skipkeys</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs.sort_keys"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs.sort_keys</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs"><code class="docutils literal notranslate"><span class="pre">OpenArgs</span></code></a><ul>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.buffering"><code class="docutils literal notranslate"><span class="pre">OpenArgs.buffering</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.closefd"><code class="docutils literal notranslate"><span class="pre">OpenArgs.closefd</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.encoding"><code class="docutils literal notranslate"><span class="pre">OpenArgs.encoding</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.errors"><code class="docutils literal notranslate"><span class="pre">OpenArgs.errors</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.mode"><code class="docutils literal notranslate"><span class="pre">OpenArgs.mode</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.newline"><code class="docutils literal notranslate"><span class="pre">OpenArgs.newline</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs.opener"><code class="docutils literal notranslate"><span class="pre">OpenArgs.opener</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#qurry.capsule.utils.PrintArgs"><code class="docutils literal notranslate"><span class="pre">PrintArgs</span></code></a><ul>
-<li><a class="reference internal" href="#qurry.capsule.utils.PrintArgs.end"><code class="docutils literal notranslate"><span class="pre">PrintArgs.end</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.PrintArgs.flush"><code class="docutils literal notranslate"><span class="pre">PrintArgs.flush</span></code></a></li>
-<li><a class="reference internal" href="#qurry.capsule.utils.PrintArgs.sep"><code class="docutils literal notranslate"><span class="pre">PrintArgs.sep</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#qurry.capsule.utils.JSONDumpArgs"><code class="docutils literal notranslate"><span class="pre">JSONDumpArgs</span></code></a></li>
+<li><a class="reference internal" href="#qurry.capsule.utils.OpenArgs"><code class="docutils literal notranslate"><span class="pre">OpenArgs</span></code></a></li>
+<li><a class="reference internal" href="#qurry.capsule.utils.PrintArgs"><code class="docutils literal notranslate"><span class="pre">PrintArgs</span></code></a></li>
 <li><a class="reference internal" href="#qurry.capsule.utils.create_json_dump_args"><code class="docutils literal notranslate"><span class="pre">create_json_dump_args()</span></code></a></li>
 <li><a class="reference internal" href="#qurry.capsule.utils.create_open_args"><code class="docutils literal notranslate"><span class="pre">create_open_args()</span></code></a></li>
 <li><a class="reference internal" href="#qurry.capsule.utils.create_print_args"><code class="docutils literal notranslate"><span class="pre">create_print_args()</span></code></a></li>
@@ -829,6 +618,6 @@ Otherwise, it will merge the provided <cite>print_args</cite> with <a class="ref
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

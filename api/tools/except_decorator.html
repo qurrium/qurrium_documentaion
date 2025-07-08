@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/api/tools/except_decorator.html" />
 <meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="Exception Decorator ( qurry.tools.except_decorator)" />
+<meta property="og:description" content="Eception Decorator ( qurry.tools.except_decorator)" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_tools_except_decorator_41582495.png" />
-<meta property="og:image:alt" content="Exception Decorator ( qurry.tools.except_decorator)" />
-<meta name="description" content="Exception Decorator ( qurry.tools.except_decorator)" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_tools_except_decorator_064b8511.png" />
+<meta property="og:image:alt" content="Eception Decorator ( qurry.tools.except_decorator)" />
+<meta name="description" content="Eception Decorator ( qurry.tools.except_decorator)" />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -49,7 +49,7 @@
         <title>except_decorator - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -448,34 +448,34 @@
         <article role="main" id="furo-main-content">
           <section id="module-qurry.tools.except_decorator">
 <span id="except-decorator"></span><h1><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code><a class="headerlink" href="#module-qurry.tools.except_decorator" title="Link to this heading">¶</a></h1>
-<p>Exception Decorator (<a class="reference internal" href="#module-qurry.tools.except_decorator" title="qurry.tools.except_decorator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.tools.except_decorator</span></code></a>)</p>
+<p>Eception Decorator (<a class="reference internal" href="#module-qurry.tools.except_decorator" title="qurry.tools.except_decorator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.tools.except_decorator</span></code></a>)</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="qurry.tools.except_decorator.unproven_feature">
 <span class="sig-prename descclassname"><span class="pre">qurry.tools.except_decorator.</span></span><span class="sig-name descname"><span class="pre">unproven_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qurry/tools/except_decorator.html#unproven_feature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.tools.except_decorator.unproven_feature" title="Link to this definition">¶</a></dt>
 <dd><p>The decorator to mark a function or class as an unproven feature.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@unproven_feature</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">my_experimental_function</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="nd">@unproven_feature</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;This is a custom message.&quot;</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">MyExperimentalClass</span><span class="p">:</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>message</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – <p>The warning message to be displayed.
+<dd class="field-odd"><p><strong>message</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – The warning message to be displayed.
 If not provided, a default message will be used.
-The default message is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;This feature &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; is unproven, we can not guarantee the correctness.&quot;</span>
-</pre></div>
-</div>
-</p>
+The default message is:
+“This feature is unproven and may be unstable or behave inconsistently.
+Use with caution.”</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The decorated function or class, which will issue a warning when called or instantiated.</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[Callable, Type]</p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@unproven_feature</span>
+<span class="gp">... </span><span class="k">def</span><span class="w"> </span><span class="nf">my_experimental_function</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@unproven_feature</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;This is a custom message.&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">class</span><span class="w"> </span><span class="nc">MyExperimentalClass</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -515,7 +515,7 @@ The default message is:</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -567,6 +567,6 @@ The default message is:</p>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

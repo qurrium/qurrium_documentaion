@@ -49,7 +49,7 @@
         <title>expectation_process - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -457,21 +457,21 @@
 and mentioned in Theorem S1 in the supplementary material,
 the equation (S13) in the supplementary material.</p>
 <p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
-in the supplementary material, the equation (S13) is as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
-|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+in the supplementary material, the equation (S13) is as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span>
+<span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators,
 and <span class="math notranslate nohighlight">\(N\)</span> is the number of classical snapshots.
 The <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> is maximum shadow norm,</p>
 <p>Due to maximum shadow norm is complex, we suppose 1 for it should be under the order of 1.
-Thus, we can simplify the equation to:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2}\]</div>
+Thus, we can simplify the equation to:
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span>
+</pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -495,10 +495,10 @@ It is <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.accuracy_prob_comp_delta_calc">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">accuracy_prob_comp_delta_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_of_given_operators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_of_esitmators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#accuracy_prob_comp_delta_calc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.accuracy_prob_comp_delta_calc" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the accuracy probability component delta.</p>
-<p>The accuracy probability component delta is calculated by the following equation,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[K = 2 \log(2M / \delta) \Rightarrow \delta = 2M \exp(-K / 2)\]</div>
+<p>The accuracy probability component delta is calculated by the following equation,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">2</span> \<span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="n">M</span> <span class="o">/</span> \<span class="n">delta</span><span class="p">)</span> \<span class="n">Rightarrow</span> \<span class="n">delta</span> <span class="o">=</span> <span class="mi">2</span><span class="n">M</span> \<span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">K</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the number of estimators,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators.</p>
@@ -524,10 +524,10 @@ It is <span class="math notranslate nohighlight">\(K\)</span> in the equation.</
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.dim_check">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">dim_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#dim_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.dim_check" title="Link to this definition">¶</a></dt>
 <dd><p>Check the dimension of the operator.</p>
-<p>The dimension of the operator is defined as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\text{dim}(X) = 2^n\]</div>
+<p>The dimension of the operator is defined as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">text</span><span class="p">{</span><span class="n">dim</span><span class="p">}(</span><span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="n">n</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(X\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits.</p>
 <dl class="field-list simple">
@@ -553,14 +553,14 @@ It is <span class="math notranslate nohighlight">\(K\)</span> in the equation.</
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.inverted_quantum_channel">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">inverted_quantum_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#inverted_quantum_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.inverted_quantum_channel" title="Link to this definition">¶</a></dt>
 <dd><p>Inverted quantum channel.</p>
-<p>The inverted quantum channel is defined as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\mathcal{M}_{n}^{-1}(X) = (2^n + 1)X - \mathbb{I}\]</div>
+<p>The inverted quantum channel is defined as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">mathcal</span><span class="p">{</span><span class="n">M</span><span class="p">}</span><span class="n">_</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">}(</span><span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="n">X</span> <span class="o">-</span> \<span class="n">mathbb</span><span class="p">{</span><span class="n">I</span><span class="p">}</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\mathcal{M}_{n}^{-1}\)</span> is the inverted quantum channel,
-which mentioned in the paper before Algorithm 1,
-<span class="math notranslate nohighlight">\(X\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits.</p>
+which mentioned in the paper before Algorithm 1.</p>
+<p>where <span class="math notranslate nohighlight">\(X\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>op</strong> (<em>np.ndarray</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>, </em><em>np.dtype</em><em>[</em><em>np.complex128</em><em>]</em><em>]</em>) – The operator to be inverted.</p>
@@ -584,10 +584,10 @@ which mentioned in the paper before Algorithm 1,
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.largest_shadow_norm_squared_upperbound">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">largest_shadow_norm_squared_upperbound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#largest_shadow_norm_squared_upperbound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.largest_shadow_norm_squared_upperbound" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the largest shadow norm upper bound.</p>
-<p>The largest shadow norm upper bound is defined as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
+<p>The largest shadow norm upper bound is defined as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span> \<span class="n">leq</span> <span class="mi">4</span><span class="o">^</span><span class="n">n</span> <span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(O\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,
 which mentioned in the paper at Theorem 1 (informal version).</p>
@@ -611,10 +611,10 @@ which is the significantly lower bound than the worst case scenario.</p>
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.num_of_esitmator_calc">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">num_of_esitmator_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_classical_snapshot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_of_given_operators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy_prob_comp_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#num_of_esitmator_calc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.num_of_esitmator_calc" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the number of estimators.</p>
-<p>The number of estimators is calculated by the following equation,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[K = 2 \log(2M / \delta)\]</div>
+<p>The number of estimators is calculated by the following equation,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">2</span> \<span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="n">M</span> <span class="o">/</span> \<span class="n">delta</span><span class="p">)</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\delta\)</span> is the probabiltiy complement of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators.</p>
@@ -666,13 +666,12 @@ and the value is the classical snapshot.</p></li>
 If it is None, it will be calculated by the largest shadow norm upper bound.
 If it is not None, it must be a positive float number.
 It is <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> in equation.</p></li>
-<li><p><strong>trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.</p>
+<li><p><strong>trace_method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to calculate the trace for searching esitmator.
+- “einsum_aij_bji_to_ab_numpy”:</p>
+<blockquote>
+<div><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+</div></blockquote>
 <ul>
-<li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_numpy”:</dt><dd><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
-</dd>
-</dl>
-</li>
 <li><dl class="simple">
 <dt>”einsum_aij_bji_to_ab_jax”:</dt><dd><p>Use jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
@@ -742,10 +741,10 @@ float, int, float, float, float, float</p>
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.expectation_process.traceless">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.expectation_process.</span></span><span class="sig-name descname"><span class="pre">traceless</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/expectation_process.html#traceless"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.expectation_process.traceless" title="Link to this definition">¶</a></dt>
 <dd><p>Make the operator traceless.</p>
-<p>The traceless operator is defined as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\text{traceless}(O) = O - \frac{\text{tr}(O)}{2^n} \mathbb{I}\]</div>
+<p>The traceless operator is defined as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">text</span><span class="p">{</span><span class="n">traceless</span><span class="p">}(</span><span class="n">O</span><span class="p">)</span> <span class="o">=</span> <span class="n">O</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> \<span class="n">mathbb</span><span class="p">{</span><span class="n">I</span><span class="p">}</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(O\)</span> is the operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,
 which mentioned in the supplementary material Lemma S1.</p>
@@ -770,39 +769,39 @@ which used the notation <span class="math notranslate nohighlight">\(\epsilon\)<
 and mentioned in Theorem S1 in the supplementary material,
 the equation (S13) in the supplementary material.</p>
 <p>We can calculate the prediction of accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span> from the equation (S13)
-in the supplementary material, the equation (S13) is as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M}
-|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\]</div>
+in the supplementary material, the equation (S13) is as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span>
+<span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the prediction of accuracy,
 and <span class="math notranslate nohighlight">\(M\)</span> is the number of given operators,
 and <span class="math notranslate nohighlight">\(N\)</span> is the number of classical snapshots.
 The <span class="math notranslate nohighlight">\(|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2\)</span> is maximum shadow norm,</p>
-<p>And we also know the largest upper bound of the shadow norm is</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[|| O ||_{\text{shadow}}^2 \leq 4^n || O ||_{\infty}^2\]</div>
+<p>And we also know the largest upper bound of the shadow norm is
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span> \<span class="n">leq</span> <span class="mi">4</span><span class="o">^</span><span class="n">n</span> <span class="o">||</span> <span class="n">O</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(O\)</span> is the any operator, and <span class="math notranslate nohighlight">\(n\)</span> is the number of qubits,</p>
-<p>So we set the shadow norm as follows,</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\begin{split}\chi = || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}} \\
-\chi_{\infty} = 4^n || O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\infty}^2 \\
-\chi^2 \leq \chi_{\infty}\end{split}\]</div>
+<p>So we set the shadow norm as follows,
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">chi</span> <span class="o">=</span> <span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">shadow</span><span class="p">}}</span> \\
+\<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span> <span class="o">=</span> <span class="mi">4</span><span class="o">^</span><span class="n">n</span> <span class="o">||</span> <span class="n">O_i</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">tr</span><span class="p">}(</span><span class="n">O_i</span><span class="p">)}{</span><span class="mi">2</span><span class="o">^</span><span class="n">n</span><span class="p">}</span> <span class="o">||</span><span class="n">_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span> \\
+\<span class="n">chi</span><span class="o">^</span><span class="mi">2</span> \<span class="n">leq</span> \<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span>
+</pre></div>
 </div>
-<p>and we can simplify the equation to:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[N = \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi^2
-    \leq \frac{34}{\epsilon^2} \max_{1 \leq i \leq M} \chi_{\infty}^2\]</div>
+<p>and we can simplify the equation to:
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi</span><span class="o">^</span><span class="mi">2</span>
+    \<span class="n">leq</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span>\<span class="n">epsilon</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi_</span><span class="p">{</span>\<span class="n">infty</span><span class="p">}</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
 </div>
-<p>Then get:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\epsilon \leq \sqrt{\frac{34}{N}} \max_{1 \leq i \leq M} \chi_\infty\]</div>
+<p>Then get:
+.. math:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">epsilon</span> \<span class="n">leq</span> \<span class="n">sqrt</span><span class="p">{</span>\<span class="n">frac</span><span class="p">{</span><span class="mi">34</span><span class="p">}{</span><span class="n">N</span><span class="p">}}</span> \<span class="n">max_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">leq</span> <span class="n">i</span> \<span class="n">leq</span> <span class="n">M</span><span class="p">}</span> \<span class="n">chi_</span>\<span class="n">infty</span>
+</pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -858,7 +857,7 @@ It is <span class="math notranslate nohighlight">\(N\)</span> in the equation.</
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -919,6 +918,6 @@ It is <span class="math notranslate nohighlight">\(N\)</span> in the equation.</
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

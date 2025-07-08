@@ -49,7 +49,7 @@
         <title>matrix_calcution - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -477,39 +477,19 @@ This is the fastest implementation to calculate the trace of Rho.</p>
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.matrix_calcution.ClassicalShadowPythonMethod">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.matrix_calcution.</span></span><span class="sig-name descname"><span class="pre">ClassicalShadowPythonMethod</span></span><a class="headerlink" href="#qurry.process.classical_shadow.matrix_calcution.ClassicalShadowPythonMethod" title="Link to this definition">¶</a></dt>
 <dd><p>The method to use for the calculation of classical shadow.
-It can be either “jax” or “numpy”.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>“jax”:</dt><dd><p>Use JAX to calculate the Kronecker product.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>“numpy”:</dt><dd><p>Use Numpy to calculate the Kronecker product.</p>
-</dd>
-</dl>
-</li>
-</ul>
+It can be either “jax” or “numpy”.
+- “jax”: Use JAX to calculate the Kronecker product.
+- “numpy”: Use Numpy to calculate the Kronecker product.</p>
 <p>alias of <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code></a>[‘jax’, ‘numpy’]</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.matrix_calcution.DEFAULT_PYTHON_METHOD">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.matrix_calcution.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_PYTHON_METHOD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'jax'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'numpy'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'jax'</span></em><a class="headerlink" href="#qurry.process.classical_shadow.matrix_calcution.DEFAULT_PYTHON_METHOD" title="Link to this definition">¶</a></dt>
-<dd><p>The default backend to use for the calculation of classical shadow.
-It can be either “jax” or “numpy”.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>“jax”:</dt><dd><p>Use JAX to calculate the Kronecker product.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>“numpy”:</dt><dd><p>Use Numpy to calculate the Kronecker product.</p>
-</dd>
-</dl>
-</li>
-</ul>
+<dd><p>The default backend to use for the calculation of classical shadow.</p>
+<p>It can be either “jax” or “numpy”.
+- “jax”: Use JAX to calculate the Kronecker product.
+- “numpy”: Use Numpy to calculate the Kronecker product.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -518,7 +498,7 @@ It can be either “jax” or “numpy”.</p>
 <dd><p>The method to calculate the trace of single Rho square.</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>“trace_of_matmul”:</dt><dd><p>Use np.trace(np.matmul(rho_m1, rho_m2)) to calculate the trace.</p>
+<dt>“trace_of_matmul”: Use</dt><dd><p>np.trace(np.matmul(rho_m1, rho_m2)) to calculate the trace.</p>
 </dd>
 </dl>
 </li>
@@ -571,23 +551,25 @@ It can be either “jax” or “numpy”.</p>
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.matrix_calcution.prediction_einsum_aij_bji_to_ab_jax">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.matrix_calcution.</span></span><span class="sig-name descname"><span class="pre">prediction_einsum_aij_bji_to_ab_jax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">given_operators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">complex128</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/qurry/process/classical_shadow/matrix_calcution.html#prediction_einsum_aij_bji_to_ab_jax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.process.classical_shadow.matrix_calcution.prediction_einsum_aij_bji_to_ab_jax" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the prediction of given operators by einsum_aij_bji_to_ab_jax.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>given_operators (np.ndarray[tuple[int, int, int], np.dtype[np.complex128]]):</dt><dd><p>The given operators.</p>
+</dd>
+<dt>estimators (np.ndarray[tuple[int, int, int], np.dtype[np.complex128]]):</dt><dd><p>The estimators.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>given_operators</strong> (<em>np.ndarray</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>, </em><em>np.dtype</em><em>[</em><em>np.complex128</em><em>]</em><em>]</em>) – The given operators.</p></li>
-<li><p><strong>estimators</strong> (<em>np.ndarray</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>, </em><em>np.dtype</em><em>[</em><em>np.complex128</em><em>]</em><em>]</em>) – The estimators.</p></li>
-</ul>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing:
+- A list of median values for each given operator.
+- A list of the corresponding median estimators for each given operator.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><p>A tuple containing:</p>
-<ul class="simple">
-<li><p>A list of median values for each given operator.</p></li>
-<li><p>A list of the corresponding median estimators for each given operator.</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.complex128], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.ndarray[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>], np.dtype[np.complex128]]]]</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.complex128], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.ndarray[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>], np.dtype[np.complex128]]]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -604,12 +586,9 @@ It can be either “jax” or “numpy”.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><p>A tuple containing:</p>
-<ul class="simple">
-<li><p>A list of median values for each given operator.</p></li>
-<li><p>A list of the corresponding median estimators for each given operator.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p>A tuple containing:
+- A list of median values for each given operator.
+- A list of the corresponding median estimators for each given operator.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.complex128], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[np.ndarray[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>], np.dtype[np.complex128]]]]</p>
@@ -657,13 +636,13 @@ It can be either “jax” or “numpy”.</p>
 <dd><p>Select the method to calculate the trace of Rho square.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to DEFAULT_ALL_TRACE_RHO_METHOD.</p>
+<dd class="field-odd"><p><strong>method</strong> (<em>AllTraceRhoMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to DEFAULT_ALL_TRACE_RHO_METHOD.
+It can be either “einsum_aij_bji_to_ab_numpy” or “einsum_aij_bji_to_ab_jax”.
+- “einsum_aij_bji_to_ab_numpy”:</p>
+<blockquote>
+<div><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
+</div></blockquote>
 <ul class="simple">
-<li><dl class="simple">
-<dt>”einsum_aij_bji_to_ab_numpy”:</dt><dd><p>Use np.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
-</dd>
-</dl>
-</li>
 <li><dl class="simple">
 <dt>”einsum_aij_bji_to_ab_jax”:</dt><dd><p>Use jnp.einsum(“aij,bji-&gt;ab”, rho_m_list, rho_m_list) to calculate the trace.</p>
 </dd>
@@ -738,16 +717,28 @@ np.ndarray[tuple[int, int], np.dtype[np.complex128]],</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>(</strong><strong>tupletuple</strong><strong>[</strong> (<em>rho_m1_and_rho_m2</em>) – np.ndarray[tuple[int, int], np.dtype[np.complex128]],
-np.ndarray[tuple[int, int], np.dtype[np.complex128]],</p></li>
-<li><p><strong>]</strong><strong>)</strong> – The tuple of rho_m1 and rho_m2.</p></li>
+<li><p><strong>(</strong><strong>tupletuple</strong><strong>[</strong> (<em>rho_m1_and_rho_m2</em>)</p></li>
+<li><p><strong>np.ndarray</strong><strong>[</strong><strong>tuple</strong><strong>[</strong><strong>int</strong></p></li>
+<li><p><strong>int</strong><strong>]</strong></p></li>
+<li><p><strong>np.dtype</strong><strong>[</strong><strong>np.complex128</strong><strong>]</strong><strong>]</strong></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The trace of Rho.</p>
+</dl>
+<p>:param :
+:param np.ndarray[tuple[int:
+:param int]:
+:param np.dtype[np.complex128]]:
+:param :</p>
+<dl class="simple">
+<dt>]):</dt><dd><p>The tuple of rho_m1 and rho_m2.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.complex128</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The trace of Rho.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.complex128</p>
 </dd>
 </dl>
 </dd></dl>
@@ -810,7 +801,7 @@ np.ndarray[tuple[int, int], np.dtype[np.complex128]],</p></li>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -878,6 +869,6 @@ np.ndarray[tuple[int, int], np.dtype[np.complex128]],</p></li>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

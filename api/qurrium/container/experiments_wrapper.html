@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://docs.qurrium.org/api/qurrium/container/experiments_wrapper.html" />
 <meta property="og:site_name" content="Qurrium" />
-<meta property="og:description" content="ExperimentContainerWrapper ( qurry.qurrium.container.experiments_wrapper)" />
+<meta property="og:description" content="ExperimentContainer ( qurry.qurrium.container.experiments)" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_container_experiments_wrapper_73a7bb83.png" />
-<meta property="og:image:alt" content="ExperimentContainerWrapper ( qurry.qurrium.container.experiments_wrapper)" />
-<meta name="description" content="ExperimentContainerWrapper ( qurry.qurrium.container.experiments_wrapper)" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_api_qurrium_container_experiments_wrapper_d2aa172f.png" />
+<meta property="og:image:alt" content="ExperimentContainer ( qurry.qurrium.container.experiments)" />
+<meta name="description" content="ExperimentContainer ( qurry.qurrium.container.experiments)" />
 <meta name="twitter:card" content="summary_large_image" />
 <!-- HTML Meta Tags -->
 <title>Qurrium 📏 Documentation</title>
@@ -49,7 +49,7 @@
         <title>experiments_wrapper - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -448,13 +448,12 @@
         <article role="main" id="furo-main-content">
           <section id="module-qurry.qurrium.container.experiments_wrapper">
 <span id="experiments-wrapper"></span><h1><code class="docutils literal notranslate"><span class="pre">experiments_wrapper</span></code><a class="headerlink" href="#module-qurry.qurrium.container.experiments_wrapper" title="Link to this heading">¶</a></h1>
-<p>ExperimentContainerWrapper (<a class="reference internal" href="#module-qurry.qurrium.container.experiments_wrapper" title="qurry.qurrium.container.experiments_wrapper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.container.experiments_wrapper</span></code></a>)</p>
+<p>ExperimentContainer (<a class="reference internal" href="experiments.html#module-qurry.qurrium.container.experiments" title="qurry.qurrium.container.experiments"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qurry.qurrium.container.experiments</span></code></a>)</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qurry.qurrium.container.experiments_wrapper.ExperimentContainerWrapper">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qurry.qurrium.container.experiments_wrapper.</span></span><span class="sig-name descname"><span class="pre">ExperimentContainerWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orphan_exps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="experiments.html#qurry.qurrium.container.experiments.ExperimentContainer" title="qurry.qurrium.container.experiments.ExperimentContainer"><span class="pre">ExperimentContainer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">_E</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multimanagers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><span class="pre">MultiManager</span></a><span class="p"><span class="pre">[</span></span><span class="pre">_E</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/qurry/qurrium/container/experiments_wrapper.html#ExperimentContainerWrapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qurry.qurrium.container.experiments_wrapper.ExperimentContainerWrapper" title="Link to this definition">¶</a></dt>
-<dd><p>A wrapper for <a class="reference internal" href="experiments.html#qurry.qurrium.container.experiments.ExperimentContainer" title="qurry.qurrium.container.experiments.ExperimentContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentContainer</span></code></a>
-for <code class="xref py py-class docutils literal notranslate"></code>.
-and its corresponding <a class="reference internal" href="../multimanager/multimanager.html#qurry.qurrium.multimanager.multimanager.MultiManager" title="qurry.qurrium.multimanager.multimanager.MultiManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiManager</span></code></a>.</p>
+<dd><p>A wrapper for <a href="#id1"><span class="problematic" id="id2">:cls:`ExperimentContainer`</span></a> from <a href="#id3"><span class="problematic" id="id4">:cls:`QurriumPrototype`</span></a>
+and its corresponding <a href="#id5"><span class="problematic" id="id6">:cls:`MultiManager`</span></a>.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="qurry.qurrium.container.experiments_wrapper.ExperimentContainerWrapper.all_exps_container">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_exps_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="experiments.html#qurry.qurrium.container.experiments.ExperimentContainer" title="qurry.qurrium.container.experiments.ExperimentContainer"><span class="pre">ExperimentContainer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">_E</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#qurry.qurrium.container.experiments_wrapper.ExperimentContainerWrapper.all_exps_container" title="Link to this definition">¶</a></dt>
@@ -539,7 +538,7 @@ and its corresponding <a class="reference internal" href="../multimanager/multim
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -596,6 +595,6 @@ and its corresponding <a class="reference internal" href="../multimanager/multim
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

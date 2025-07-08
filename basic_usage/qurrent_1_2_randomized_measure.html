@@ -49,7 +49,7 @@
         <title>1.2 Entanglement Entropy by Randomized Measurement - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -582,7 +582,7 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;79f0a60d-ebdc-4060-8a3f-d61442e3b135&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;d3bf5830-5a87-4f7a-b999-a0d636c6cb07&#39;
 </pre></div>
 </div>
 </div>
@@ -595,9 +595,9 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureRandomizedExperiment(exp_id=79f0a60d-ebdc-4060-8a3f-d61442e3b135, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureRandomizedExperiment(exp_id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07, 
   EntropyMeasureRandomizedArguments(exp_name=&#39;experiment.N_U_100.qurrent_randomized&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;79f0a60d-ebdc-4060-8a3f-d61442e3b135&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:39:53&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:39:53&#39;})),
+  Commonparams(exp_id=&#39;d3bf5830-5a87-4f7a-b999-a0d636c6cb07&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-08 16:59:41&#39;, &#39;run.001&#39;: &#39;2025-07-08 16:59:41&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -618,7 +618,7 @@ q_7: ─────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EMRAnalysis(
   serial=0,
   EMRAnalysisInput(num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, shots=4096, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  EMRAnalysisContent(purity=1.0725527453422545, entropy=-0.10104859744284642, and others)),
+  EMRAnalysisContent(purity=1.0818525683879852, entropy=-0.11350390642180241, and others)),
   unused_args_num=0
   )&gt;
 </pre></div>
@@ -633,27 +633,27 @@ q_7: ─────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;purity&#39;: np.float64(1.0725527453422545),
- &#39;entropy&#39;: np.float64(-0.10104859744284642),
- &#39;puritySD&#39;: np.float64(0.9510010922522164),
- &#39;entropySD&#39;: np.float64(1.2791954201137679),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;purity&#39;: np.float64(1.0818525683879852),
+ &#39;entropy&#39;: np.float64(-0.11350390642180241),
+ &#39;puritySD&#39;: np.float64(0.9047121303994405),
+ &#39;entropySD&#39;: np.float64(1.2064709574098542),
  &#39;num_classical_registers&#39;: 8,
  &#39;classical_registers&#39;: [0, 1, 2, 3],
  &#39;classical_registers_actually&#39;: [0, 1, 2, 3],
  &#39;all_system_source&#39;: &#39;independent&#39;,
- &#39;purityAllSys&#39;: np.float64(1.1792697274684907),
- &#39;entropyAllSys&#39;: np.float64(-0.2378937352604768),
- &#39;puritySDAllSys&#39;: np.float64(1.5648799134037092),
- &#39;entropySDAllSys&#39;: np.float64(1.9144428437934313),
+ &#39;purityAllSys&#39;: np.float64(0.9814594411849975),
+ &#39;entropyAllSys&#39;: np.float64(0.026999445341914383),
+ &#39;puritySDAllSys&#39;: np.float64(1.2117104526181024),
+ &#39;entropySDAllSys&#39;: np.float64(1.7811522184501039),
  &#39;num_classical_registers_all_sys&#39;: 8,
  &#39;classical_registers_all_sys&#39;: None,
  &#39;classical_registers_actually_all_sys&#39;: [0, 1, 2, 3, 4, 5, 6, 7],
- &#39;errorRate&#39;: np.float64(-0.08626550438075824),
- &#39;mitigatedPurity&#39;: np.float64(0.9184966734483911),
- &#39;mitigatedEntropy&#39;: np.float64(0.12265359860049267),
+ &#39;errorRate&#39;: np.float64(0.009350347947765595),
+ &#39;mitigatedPurity&#39;: np.float64(1.1011859063770018),
+ &#39;mitigatedEntropy&#39;: np.float64(-0.13905805070709734),
  &#39;counts_num&#39;: 100,
- &#39;taking_time&#39;: 0.020567186,
- &#39;taking_time_all_sys&#39;: 0.051010764,
+ &#39;taking_time&#39;: 0.001137362,
+ &#39;taking_time_all_sys&#39;: 0.010858034,
  &#39;counts_used&#39;: None,
  &#39;input&#39;: {&#39;num_qubits&#39;: 8,
   &#39;selected_qubits&#39;: [0, 1, 2, 3],
@@ -661,7 +661,7 @@ q_7: ─────
   &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7},
   &#39;shots&#39;: 4096,
   &#39;unitary_located&#39;: [0, 1, 2, 3, 4, 5, 6, 7]},
- &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 21:39:58&#39;, &#39;log&#39;: {}}}
+ &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-08 16:59:42&#39;, &#39;log&#39;: {}}}
 </pre></div>
 </div>
 </div>
@@ -678,7 +678,7 @@ q_7: ─────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78c94bcec440&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x700e05c21130&gt;})
 </pre></div>
 </div>
 </div>
@@ -788,9 +788,9 @@ q_7: ─────────────────────────
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x78c94bcec440&gt;,
-  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x78c94bce9550&gt;,
-  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x78c94bcee270&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x700e05c21130&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x700e05afcc80&gt;,
+  &#39;ghz_8.2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x700e05afc3e0&gt;})
 </pre></div>
 </div>
 </div>
@@ -804,7 +804,7 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;867129cc-d424-4651-96dd-da736410d4c9&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;6c8ad942-ec28-4d7c-80bf-9f0875fb7540&#39;
 </pre></div>
 </div>
 </div>
@@ -816,9 +816,9 @@ q_7: ─────────────────────────
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureRandomizedExperiment(exp_id=867129cc-d424-4651-96dd-da736410d4c9, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EntropyMeasureRandomizedExperiment(exp_id=6c8ad942-ec28-4d7c-80bf-9f0875fb7540, 
   EntropyMeasureRandomizedArguments(exp_name=&#39;experiment.N_U_100.qurrent_randomized&#39;, times=100, qubits_measured=[0, 1, 2, 3, 4, 5, 6, 7], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, actual_num_qubits=8, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7], random_unitary_seeds=None),
-  Commonparams(exp_id=&#39;867129cc-d424-4651-96dd-da736410d4c9&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:40:39&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:40:39&#39;})),
+  Commonparams(exp_id=&#39;6c8ad942-ec28-4d7c-80bf-9f0875fb7540&#39;, target_keys=[&#39;ghz_8.2&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-08 17:00:07&#39;, &#39;run.001&#39;: &#39;2025-07-08 17:00:07&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -838,7 +838,7 @@ q_7: ─────────────────────────
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EMRAnalysis(
   serial=0,
   EMRAnalysisInput(num_qubits=8, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}, shots=4096, unitary_located=[0, 1, 2, 3, 4, 5, 6, 7]),
-  EMRAnalysisContent(purity=0.47768798828125, entropy=1.0658594949568692, and others)),
+  EMRAnalysisContent(purity=0.45413352966308596, entropy=1.138811536889995, and others)),
   unused_args_num=0
   )&gt;
 </pre></div>
@@ -861,14 +861,14 @@ q_7: ─────────────────────────
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_100.qurrent_randomized.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/args/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/advent/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/legacy/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.legacy.json&#39;,
- &#39;tales.unitaryOP&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.unitaryOP.json&#39;,
- &#39;tales.randomized&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.randomized.json&#39;,
- &#39;reports&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/reports/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.reports.json&#39;,
- &#39;reports.tales.purityCells&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.purityCells.reports.json&#39;,
- &#39;reports.tales.purityCellsAllSys&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=79f0a60d-ebdc-4060-8a3f-d61442e3b135.purityCellsAllSys.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/args/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/advent/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/legacy/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.legacy.json&#39;,
+ &#39;tales.unitaryOP&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.unitaryOP.json&#39;,
+ &#39;tales.randomized&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.randomized.json&#39;,
+ &#39;reports&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/reports/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.reports.json&#39;,
+ &#39;reports.tales.purityCells&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.purityCells.reports.json&#39;,
+ &#39;reports.tales.purityCellsAllSys&#39;: &#39;experiment.N_U_100.qurrent_randomized.001/tales/experiment.N_U_100.qurrent_randomized.001.id=d3bf5830-5a87-4f7a-b999-a0d636c6cb07.purityCellsAllSys.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -962,7 +962,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -1025,6 +1025,6 @@ by &lt;Hoshi&gt;
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>

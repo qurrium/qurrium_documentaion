@@ -49,7 +49,7 @@
         <title>rho_m_core - Qurrium 📏 Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
@@ -70,8 +70,8 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -79,8 +79,8 @@
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
   --color-brand-primary: #8DD3C7;
   --color-brand-content: #31D4B9;
   --color-brand-visited: #FEFFB3;
@@ -454,13 +454,11 @@
 <dt class="sig sig-object py" id="qurry.process.classical_shadow.rho_m_core.RhoMCoreMethod">
 <span class="sig-prename descclassname"><span class="pre">qurry.process.classical_shadow.rho_m_core.</span></span><span class="sig-name descname"><span class="pre">RhoMCoreMethod</span></span><a class="headerlink" href="#qurry.process.classical_shadow.rho_m_core.RhoMCoreMethod" title="Link to this definition">¶</a></dt>
 <dd><p>Type for rho_m_core method.
-It can be either “numpy”, “numpy_precomputed” or “numpy_flatten”.</p>
-<ul class="simple">
-<li><p>“numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>“numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-<li><p>“numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.</p></li>
-</ul>
-<p>Currently, “numpy_precomputed” is the best option for performance.</p>
+It can be either “numpy”, “numpy_precomputed” or “numpy_flatten”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.
+- “numpy_flatten”: Use Numpy to calculate the rho_m with a flattening workflow.
+Currently, “numpy_precomputed” is the best option for performance.</p>
 <p>alias of <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code></a>[‘numpy’, ‘numpy_precomputed’] | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code></a>[‘numpy_flatten’, ‘jax_flatten’]</p>
 </dd></dl>
 
@@ -476,13 +474,12 @@ It can be either “numpy”, “numpy_precomputed” or “numpy_flatten”.</p
 <li><p><strong>random_unitary_um</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>Union</em><em>[</em><em>Literal</em><em>[</em><em>0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>]</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The shadow direction of the unitary operators.</p></li>
 <li><p><strong>selected_classical_registers</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
 <li><p><strong>rho_method</strong> (<em>RhoMCoreMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “numpy_precomputed”.
-It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.</p>
+It can be either “numpy”, “numpy_precomputed”, “jax_flatten”, or “numpy_flatten”.
+- “numpy”:</p>
+<blockquote>
+<div><p>Use Numpy to calculate the rho_m.</p>
+</div></blockquote>
 <ul>
-<li><dl class="simple">
-<dt>”numpy”:</dt><dd><p>Use Numpy to calculate the rho_m.</p>
-</dd>
-</dl>
-</li>
 <li><dl class="simple">
 <dt>”numpy_precomputed”:</dt><dd><p>Use Numpy to calculate the rho_m with precomputed values.</p>
 </dd>
@@ -523,12 +520,9 @@ float</p>
 <li><p><strong>counts</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – The list of the counts.</p></li>
 <li><p><strong>random_unitary_um</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>Union</em><em>[</em><em>Literal</em><em>[</em><em>0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>]</em><em>, </em><em>int</em><em>]</em><em>]</em><em>]</em>) – The shadow direction of the unitary operators.</p></li>
 <li><p><strong>selected_classical_registers</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The list of <strong>the index of the selected_classical_registers</strong>.</p></li>
-<li><p><strong>rho_method</strong> (<em>RhoMKCellMethod</em><em>, </em><em>optional</em>) – <p>The method to use for the calculation. Defaults to “Python_precomputed”.</p>
-<ul>
-<li><p>”numpy”: Use Numpy to calculate the rho_m.</p></li>
-<li><p>”numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
-</ul>
-</p></li>
+<li><p><strong>rho_method</strong> (<em>RhoMKCellMethod</em><em>, </em><em>optional</em>) – The method to use for the calculation. Defaults to “Python_precomputed”.
+- “numpy”: Use Numpy to calculate the rho_m.
+- “numpy_precomputed”: Use Numpy to calculate the rho_m with precomputed values.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -582,7 +576,7 @@ float</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 22:26:58</div>
+              Last updated on 2025-07-08 17:10:30</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -636,6 +630,6 @@ float</p>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../../_static/version-switcher.js?v=be75742b"></script>
+    <script src="../../../_static/version-switcher.js?v=f4d7acf3"></script>
     </body>
 </html>
