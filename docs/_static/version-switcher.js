@@ -8,8 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let longestMatchLength = -1;
       let rootKey = null;
 
-      for (const [ver, path] of Object.entries(versions)) {
+      Object.entries(versions).forEach(([ver, path], i) => {
         const normalizedPath = path.endsWith("/") ? path : path + "/";
+        if (normalizedPath === "/") {
+          rootKey = ver; // Store the root version key
+        }
+
         if (
           currentPath.startsWith(normalizedPath) &&
           normalizedPath.length > longestMatchLength
@@ -17,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
           currentVersion = ver;
           longestMatchLength = normalizedPath.length;
         }
-      }
+      });
 
       if (!rootKey) {
         throw new Error("No root version found in versions.json");
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       select.id = "version-switcher";
       select.name = "version";
 
-      for (const [ver, path] of Object.entries(versions)) {
+      Object.entries(versions).forEach(([ver, path], i) => {
         const option = document.createElement("option");
         option.value = path;
         option.textContent = ver;
@@ -40,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
           option.selected = true;
         }
         select.appendChild(option);
-      }
+      });
 
       select.addEventListener("change", () => {
         const selectedPath = select.value; // ex: "/v1.1/"
