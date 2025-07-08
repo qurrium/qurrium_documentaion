@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -519,7 +528,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;d319a77a-5875-450a-bf9f-1e542c9d5358&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;8d766be5-a966-412e-b90d-f3d80dbfbe92&#39;
 </pre></div>
 </div>
 </div>
@@ -532,9 +541,9 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=d319a77a-5875-450a-bf9f-1e542c9d5358, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=8d766be5-a966-412e-b90d-f3d80dbfbe92, 
   ZDirMagnetSquareArguments(exp_name=&#39;experiment.qurmagsq_magnet_square_zdir&#39;, num_qubits=6),
-  Commonparams(exp_id=&#39;d319a77a-5875-450a-bf9f-1e542c9d5358&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 18:47:49&#39;, &#39;run.001&#39;: &#39;2025-07-07 18:47:49&#39;})),
+  Commonparams(exp_id=&#39;8d766be5-a966-412e-b90d-f3d80dbfbe92&#39;, target_keys=[0], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:34:08&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:34:08&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -588,9 +597,9 @@ q_3: ───────────────┤ X ├
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| magnetization square 1.0
 | num_qubits: 6
 | shots: 4096
-| taking_time: 0.000800539
+| taking_time: 0.003090763
 | input: {}
-| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 18:47:49&#39;, &#39;log&#39;: {}}
+| header: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 21:34:08&#39;, &#39;log&#39;: {}}
 </pre></div>
 </div>
 </div>
@@ -616,7 +625,7 @@ It contains the magnetization square cells they correspond to the magnetization 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{9: 1.0, 17: 1.0, 15: 1.0, 2: 1.0, 5: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 0: 1.0, 24: 1.0, 1: 1.0, 14: 1.0, 13: 1.0, 16: 1.0, 6: 1.0, 18: 1.0, 19: 1.0, 8: 1.0, 11: 1.0, 27: 1.0, 29: 1.0, 4: 1.0, 12: 1.0, 7: 1.0, 20: 1.0, 26: 1.0, 3: 1.0, 28: 1.0, 10: 1.0, 25: 1.0}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{9: 1.0, 5: 1.0, 14: 1.0, 25: 1.0, 29: 1.0, 0: 1.0, 26: 1.0, 4: 1.0, 23: 1.0, 19: 1.0, 21: 1.0, 13: 1.0, 12: 1.0, 3: 1.0, 11: 1.0, 17: 1.0, 6: 1.0, 18: 1.0, 22: 1.0, 27: 1.0, 24: 1.0, 8: 1.0, 2: 1.0, 10: 1.0, 15: 1.0, 16: 1.0, 20: 1.0, 7: 1.0, 28: 1.0, 1: 1.0}
 </pre></div>
 </div>
 </div>
@@ -632,7 +641,7 @@ It contains the magnetization square cells they correspond to the magnetization 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({ 0: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3f83b10&gt;})
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({ 0: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeb167b10&gt;})
 </pre></div>
 </div>
 </div>
@@ -729,16 +738,16 @@ q_3: ───────────────┤ X ├
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3f83b10&gt;,
-  &#39;trivialPM_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7d66c3ef4590&gt;,
-  &#39;trivialPM_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7d66c3f83750&gt;,
-  &#39;trivialPM_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7d66c3f83890&gt;,
-  &#39;trivialPM_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7d6720f37820&gt;,
-  &#39;cat_2&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3ef46e0&gt;,
-  &#39;cat_4&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3f839d0&gt;,
-  &#39;cat_6&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3f83b10&gt;,
-  &#39;cat_8&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3e8d940&gt;,
-  &#39;cat_4.9&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x7d66c3f839d0&gt;})
+  0: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeb167b10&gt;,
+  &#39;trivialPM_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x740eeaed8590&gt;,
+  &#39;trivialPM_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x740eeb167750&gt;,
+  &#39;trivialPM_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x740eeb167890&gt;,
+  &#39;trivialPM_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x740eeae71810&gt;,
+  &#39;cat_2&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeaed86e0&gt;,
+  &#39;cat_4&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeb1679d0&gt;,
+  &#39;cat_6&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeb167b10&gt;,
+  &#39;cat_8&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeae71940&gt;,
+  &#39;cat_4.9&#39;: &lt;qurry.recipe.simple.cat.Cat object at 0x740eeb1679d0&gt;})
 </pre></div>
 </div>
 </div>
@@ -752,7 +761,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;8801858e-9b6c-4b0c-a53c-a3c97f6c49de&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;f7b13801-8067-4ede-b1cd-d5238fd12568&#39;
 </pre></div>
 </div>
 </div>
@@ -764,9 +773,9 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=8801858e-9b6c-4b0c-a53c-a3c97f6c49de, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZDirMagnetSquareExperiment(exp_id=f7b13801-8067-4ede-b1cd-d5238fd12568, 
   ZDirMagnetSquareArguments(exp_name=&#39;experiment.qurmagsq_magnet_square_zdir&#39;, num_qubits=4),
-  Commonparams(exp_id=&#39;8801858e-9b6c-4b0c-a53c-a3c97f6c49de&#39;, target_keys=[&#39;cat_4&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 18:47:53&#39;, &#39;run.001&#39;: &#39;2025-07-07 18:47:53&#39;})),
+  Commonparams(exp_id=&#39;f7b13801-8067-4ede-b1cd-d5238fd12568&#39;, target_keys=[&#39;cat_4&#39;], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:34:13&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:34:13&#39;})),
   unused_args_num=0,
   analysis_num=1))&gt;
 </pre></div>
@@ -807,10 +816,10 @@ q_3: ───────────────┤ X ├
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/args/experiment.qurmagsq_magnet_square_zdir.001.id=d319a77a-5875-450a-bf9f-1e542c9d5358.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/advent/experiment.qurmagsq_magnet_square_zdir.001.id=d319a77a-5875-450a-bf9f-1e542c9d5358.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/legacy/experiment.qurmagsq_magnet_square_zdir.001.id=d319a77a-5875-450a-bf9f-1e542c9d5358.legacy.json&#39;,
- &#39;reports&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/reports/experiment.qurmagsq_magnet_square_zdir.001.id=d319a77a-5875-450a-bf9f-1e542c9d5358.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/args/experiment.qurmagsq_magnet_square_zdir.001.id=8d766be5-a966-412e-b90d-f3d80dbfbe92.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/advent/experiment.qurmagsq_magnet_square_zdir.001.id=8d766be5-a966-412e-b90d-f3d80dbfbe92.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/legacy/experiment.qurmagsq_magnet_square_zdir.001.id=8d766be5-a966-412e-b90d-f3d80dbfbe92.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.qurmagsq_magnet_square_zdir.001/reports/experiment.qurmagsq_magnet_square_zdir.001.id=8d766be5-a966-412e-b90d-f3d80dbfbe92.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -904,7 +913,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:33:51</div>
+              Last updated on 2025-07-07 22:26:58</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -967,6 +976,6 @@ by &lt;Hoshi&gt;
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>

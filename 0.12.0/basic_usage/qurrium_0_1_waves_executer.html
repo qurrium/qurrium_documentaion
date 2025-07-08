@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -394,7 +403,7 @@ q_1: ┤ H ├
      └───┘
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Failed Job result skip, Job ID/which counts: 47aa0622-82e3-42fc-aa49-641ffc6f3017 0 &#39;No counts for experiment &quot;0&quot;&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Failed Job result skip, Job ID/which counts: a420b1ba-059c-4683-a00b-c5eca171ae21 0 &#39;No counts for experiment &quot;0&quot;&#39;
 </pre></div>
 </div>
 </div>
@@ -413,7 +422,7 @@ q_1: ┤ H ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;34e35443-d4f3-4662-a6e8-36ad4bf05df7&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;8a615094-0959-45f8-8363-5fa952ff0fac&#39;
 </pre></div>
 </div>
 </div>
@@ -426,9 +435,9 @@ q_1: ┤ H ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;WavesExecuterExperiment(exp_id=34e35443-d4f3-4662-a6e8-36ad4bf05df7, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;WavesExecuterExperiment(exp_id=8a615094-0959-45f8-8363-5fa952ff0fac, 
   WavesExecuterArguments(exp_name=&#39;experiment.waves_executer&#39;),
-  Commonparams(exp_id=&#39;34e35443-d4f3-4662-a6e8-36ad4bf05df7&#39;, target_keys=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], shots=1024, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 18:48:40&#39;, &#39;run.001&#39;: &#39;2025-07-07 18:48:40&#39;})),
+  Commonparams(exp_id=&#39;8a615094-0959-45f8-8363-5fa952ff0fac&#39;, target_keys=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], shots=1024, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:35:13&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:35:13&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -470,7 +479,7 @@ So <code class="docutils literal notranslate"><span class="pre">.analyze()</span
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;utlmatic_answer&#39;: 42,
  &#39;input&#39;: {&#39;ultimate_question&#39;: &#39;&#39;},
  &#39;header&#39;: {&#39;serial&#39;: 0,
-  &#39;datetime&#39;: &#39;2025-07-07 18:48:41&#39;,
+  &#39;datetime&#39;: &#39;2025-07-07 21:35:14&#39;,
   &#39;summoner&#39;: None,
   &#39;log&#39;: {}}}
 </pre></div>
@@ -489,25 +498,25 @@ So <code class="docutils literal notranslate"><span class="pre">.analyze()</span
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd8d040&gt;,
-  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd40ad0&gt;,
-  2: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd40c20&gt;,
-  3: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3150&gt;,
-  4: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153c50&gt;,
-  5: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a8180153d90&gt;,
-  6: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3310&gt;,
-  7: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153ed0&gt;,
-  8: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fdf8050&gt;,
-  9: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3230&gt;,
-  10: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61350&gt;,
-  11: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd61cd0&gt;,
-  12: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd33f0&gt;,
-  13: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61e00&gt;,
-  14: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd61f30&gt;,
-  15: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3770&gt;,
-  16: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd29eb0&gt;,
-  17: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd29b50&gt;,
-  18: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd35b0&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77669d040&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77664cad0&gt;,
+  2: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77664cc20&gt;,
+  3: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df150&gt;,
+  4: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763c50&gt;,
+  5: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776763d90&gt;,
+  6: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df310&gt;,
+  7: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763ed0&gt;,
+  8: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776420050&gt;,
+  9: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df230&gt;,
+  10: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666d350&gt;,
+  11: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77666dcd0&gt;,
+  12: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df3f0&gt;,
+  13: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666de00&gt;,
+  14: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77666df30&gt;,
+  15: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df770&gt;,
+  16: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776639eb0&gt;,
+  17: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776639b50&gt;,
+  18: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df5b0&gt;})
 </pre></div>
 </div>
 </div>
@@ -599,44 +608,44 @@ meas: 2/═════════╩══╩═
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd8d040&gt;,
-  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd40ad0&gt;,
-  2: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd40c20&gt;,
-  3: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3150&gt;,
-  4: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153c50&gt;,
-  5: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a8180153d90&gt;,
-  6: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3310&gt;,
-  7: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153ed0&gt;,
-  8: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fdf8050&gt;,
-  9: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3230&gt;,
-  10: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61350&gt;,
-  11: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd61cd0&gt;,
-  12: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd33f0&gt;,
-  13: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61e00&gt;,
-  14: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd61f30&gt;,
-  15: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3770&gt;,
-  16: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd29eb0&gt;,
-  17: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd29b50&gt;,
-  18: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd35b0&gt;,
-  &#39;trivial_paramagnet_2_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd40ad0&gt;,
-  &#39;ghz_2_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd40c20&gt;,
-  &#39;neel_2_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3150&gt;,
-  &#39;trivial_paramagnet_4_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153c50&gt;,
-  &#39;ghz_4_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a8180153d90&gt;,
-  &#39;neel_4_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3310&gt;,
-  &#39;trivial_paramagnet_6_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a8180153ed0&gt;,
-  &#39;ghz_6_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fdf8050&gt;,
-  &#39;neel_6_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3230&gt;,
-  &#39;trivial_paramagnet_8_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61350&gt;,
-  &#39;ghz_8_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd40ad0&gt;,
-  &#39;neel_8_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd33f0&gt;,
-  &#39;trivial_paramagnet_10_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd61e00&gt;,
-  &#39;ghz_10_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd61f30&gt;,
-  &#39;neel_10_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd3770&gt;,
-  &#39;trivial_paramagnet_12_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd29eb0&gt;,
-  &#39;ghz_12_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7a817fd29b50&gt;,
-  &#39;neel_12_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7a817fdd35b0&gt;,
-  &#39;ghz_8_ms.37&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7a817fd40ad0&gt;})
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77669d040&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77664cad0&gt;,
+  2: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77664cc20&gt;,
+  3: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df150&gt;,
+  4: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763c50&gt;,
+  5: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776763d90&gt;,
+  6: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df310&gt;,
+  7: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763ed0&gt;,
+  8: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776420050&gt;,
+  9: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df230&gt;,
+  10: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666d350&gt;,
+  11: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77666dcd0&gt;,
+  12: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df3f0&gt;,
+  13: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666de00&gt;,
+  14: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77666df30&gt;,
+  15: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df770&gt;,
+  16: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776639eb0&gt;,
+  17: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776639b50&gt;,
+  18: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df5b0&gt;,
+  &#39;trivial_paramagnet_2_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77664cad0&gt;,
+  &#39;ghz_2_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77664cc20&gt;,
+  &#39;neel_2_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df150&gt;,
+  &#39;trivial_paramagnet_4_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763c50&gt;,
+  &#39;ghz_4_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776763d90&gt;,
+  &#39;neel_4_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df310&gt;,
+  &#39;trivial_paramagnet_6_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776763ed0&gt;,
+  &#39;ghz_6_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776420050&gt;,
+  &#39;neel_6_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df230&gt;,
+  &#39;trivial_paramagnet_8_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666d350&gt;,
+  &#39;ghz_8_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77664cad0&gt;,
+  &#39;neel_8_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df3f0&gt;,
+  &#39;trivial_paramagnet_10_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77666de00&gt;,
+  &#39;ghz_10_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a77666df30&gt;,
+  &#39;neel_10_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df770&gt;,
+  &#39;trivial_paramagnet_12_ms&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a776639eb0&gt;,
+  &#39;ghz_12_ms&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x71a776639b50&gt;,
+  &#39;neel_12_ms&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x71a7766df5b0&gt;,
+  &#39;ghz_8_ms.37&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x71a77664cad0&gt;})
 </pre></div>
 </div>
 </div>
@@ -650,7 +659,7 @@ meas: 2/═════════╩══╩═
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;b63d97bf-4797-4c56-b4e7-bc726ef3782b&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a0d42411-7785-448c-8100-99d129d4232a&#39;
 </pre></div>
 </div>
 </div>
@@ -662,9 +671,9 @@ meas: 2/═════════╩══╩═
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;WavesExecuterExperiment(exp_id=b63d97bf-4797-4c56-b4e7-bc726ef3782b, 
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;WavesExecuterExperiment(exp_id=a0d42411-7785-448c-8100-99d129d4232a, 
   WavesExecuterArguments(exp_name=&#39;experiment.waves_executer&#39;),
-  Commonparams(exp_id=&#39;b63d97bf-4797-4c56-b4e7-bc726ef3782b&#39;, target_keys=[&#39;trivial_paramagnet_2_ms&#39;, &#39;ghz_2_ms&#39;, &#39;neel_2_ms&#39;, &#39;trivial_paramagnet_4_ms&#39;, &#39;ghz_4_ms&#39;, &#39;neel_4_ms&#39;, &#39;trivial_paramagnet_6_ms&#39;, &#39;ghz_6_ms&#39;, &#39;neel_6_ms&#39;, &#39;trivial_paramagnet_8_ms&#39;, &#39;ghz_8_ms&#39;, &#39;neel_8_ms&#39;, &#39;trivial_paramagnet_10_ms&#39;, &#39;ghz_10_ms&#39;, &#39;neel_10_ms&#39;, &#39;trivial_paramagnet_12_ms&#39;, &#39;ghz_12_ms&#39;, &#39;neel_12_ms&#39;], shots=1024, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 18:48:43&#39;, &#39;run.001&#39;: &#39;2025-07-07 18:48:43&#39;})),
+  Commonparams(exp_id=&#39;a0d42411-7785-448c-8100-99d129d4232a&#39;, target_keys=[&#39;trivial_paramagnet_2_ms&#39;, &#39;ghz_2_ms&#39;, &#39;neel_2_ms&#39;, &#39;trivial_paramagnet_4_ms&#39;, &#39;ghz_4_ms&#39;, &#39;neel_4_ms&#39;, &#39;trivial_paramagnet_6_ms&#39;, &#39;ghz_6_ms&#39;, &#39;neel_6_ms&#39;, &#39;trivial_paramagnet_8_ms&#39;, &#39;ghz_8_ms&#39;, &#39;neel_8_ms&#39;, &#39;trivial_paramagnet_10_ms&#39;, &#39;ghz_10_ms&#39;, &#39;neel_10_ms&#39;, &#39;trivial_paramagnet_12_ms&#39;, &#39;ghz_12_ms&#39;, &#39;neel_12_ms&#39;], shots=1024, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), default_analysis=[], save_location=PosixPath(&#39;.&#39;), filename=&#39;&#39;, files={}, serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:35:16&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:35:16&#39;})),
   unused_args_num=0,
   analysis_num=0))&gt;
 </pre></div>
@@ -705,8 +714,8 @@ meas: 2/═════════╩══╩═
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;01&#39;: 260, &#39;11&#39;: 273, &#39;10&#39;: 239, &#39;00&#39;: 252},
- {&#39;11&#39;: 517, &#39;00&#39;: 507},
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;11&#39;: 241, &#39;10&#39;: 248, &#39;00&#39;: 283, &#39;01&#39;: 252},
+ {&#39;11&#39;: 522, &#39;00&#39;: 502},
  {&#39;01&#39;: 1024}]
 </pre></div>
 </div>
@@ -727,11 +736,11 @@ meas: 2/═════════╩══╩═
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.waves_executer.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.waves_executer.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.waves_executer.001/args/experiment.waves_executer.001.id=34e35443-d4f3-4662-a6e8-36ad4bf05df7.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.waves_executer.001/advent/experiment.waves_executer.001.id=34e35443-d4f3-4662-a6e8-36ad4bf05df7.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.waves_executer.001/legacy/experiment.waves_executer.001.id=34e35443-d4f3-4662-a6e8-36ad4bf05df7.legacy.json&#39;,
- &#39;reports&#39;: &#39;experiment.waves_executer.001/reports/experiment.waves_executer.001.id=34e35443-d4f3-4662-a6e8-36ad4bf05df7.reports.json&#39;,
- &#39;reports.tales.dummy&#39;: &#39;experiment.waves_executer.001/tales/experiment.waves_executer.001.id=34e35443-d4f3-4662-a6e8-36ad4bf05df7.dummy.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.waves_executer.001/args/experiment.waves_executer.001.id=8a615094-0959-45f8-8363-5fa952ff0fac.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.waves_executer.001/advent/experiment.waves_executer.001.id=8a615094-0959-45f8-8363-5fa952ff0fac.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.waves_executer.001/legacy/experiment.waves_executer.001.id=8a615094-0959-45f8-8363-5fa952ff0fac.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.waves_executer.001/reports/experiment.waves_executer.001.id=8a615094-0959-45f8-8363-5fa952ff0fac.reports.json&#39;,
+ &#39;reports.tales.dummy&#39;: &#39;experiment.waves_executer.001/tales/experiment.waves_executer.001.id=8a615094-0959-45f8-8363-5fa952ff0fac.dummy.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -820,7 +829,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:32:33</div>
+              Last updated on 2025-07-07 22:19:12</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -884,6 +893,6 @@ by &lt;Hoshi&gt;
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>

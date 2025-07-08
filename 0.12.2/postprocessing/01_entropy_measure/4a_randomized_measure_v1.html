@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -492,7 +501,7 @@ The returned <code class="docutils literal notranslate"><span class="pre">dict</
  &#39;measureActually&#39;: (2, 8),
  &#39;purity&#39;: np.float64(1.0627930164337158),
  &#39;puritySD&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.033771156}
+ &#39;takingTime&#39;: 0.018515423}
 | result of randomized_entangled_entropy_v1[purityCells]
 1.0627930164337158
 1.0627930164337158
@@ -628,34 +637,34 @@ The returned <code class="docutils literal notranslate"><span class="pre">dict</
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6. - 00:00 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6. - 00:08 &lt; 00:52
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6. - 00:07 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8). - 00:08 &lt; 00:52
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8). - 00:07 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8). - 00:17 &lt; 00:43
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8). - 00:16 &lt; 00:43
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7. - 00:17 &lt; 00:43     
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7. - 00:16 &lt; 00:43     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7. - 00:26 &lt; 00:35
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7. - 00:25 &lt; 00:35
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7). - 00:26 &lt; 00:35
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7). - 00:25 &lt; 00:35
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7). - 00:35 &lt; 00:27
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7). - 00:36 &lt; 00:28
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5). - 00:35 &lt; 00:27
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5). - 00:36 &lt; 00:28
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5). - 00:45 &lt; 00:18
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5). - 00:44 &lt; 00:18
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1). - 00:45 &lt; 00:18
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1). - 00:44 &lt; 00:18
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1). - 00:53 &lt; 00:08
@@ -762,7 +771,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:31:45</div>
+              Last updated on 2025-07-07 22:21:33</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -822,6 +831,6 @@ by &lt;Hoshi&gt;
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>

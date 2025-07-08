@@ -1,0 +1,1130 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NH0TTCC2VZ');
+    </script>
+    <link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" />
+        <link rel="canonical" href="https://docs.qurrium.org/_modules/qurry/process/classical_shadow/classical_shadow.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>qurry.process.classical_shadow.classical_shadow - Qurrium 📏 Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=707f2c81" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../index.html"><div class="brand">Qurrium 📏 Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Qurrium 📏 Documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../basic_usage/index.html">Basic Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Basic Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrech_2_1_hadamard_test.html">2.1 Wave Function Overlap by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrech_2_2_randomized_measure.html">2.2 Wave Function Overlap by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../basic_usage/qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../multi_output/index.html">Multiple Output</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Multiple Output</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multi_output/qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multi_output/qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multi_output/qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multi_output/qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/01_entropy_measure/1_hadamard.html">1.1 Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/01_entropy_measure/2_randomized_measure.html">1.2 Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/01_entropy_measure/3_randomized_measure.html">1.3 Randomized Measurement with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/01_entropy_measure/4_randomized_measure_v1.html">1.4 Randomized Measurement V1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/01_entropy_measure/5_randomized_measure_v1.html">1.5 Randomized Measurement V1 with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/02_wave_func_overlap/1_hadamard.html">2.1 Hadamaed Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/02_wave_func_overlap/2_randomized_measure.html">2.2 Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../postprocessing/02_wave_func_overlap/3_randomized_measure_v1.html">2.3 Randomized Measurement V1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../appendix/index.html">Other Features</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Other Features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../appendix/a01_backend_wrapper.html">Appendix 01 - Backend Wrapper</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/process/randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of randomized_measure</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/process/classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of classical_shadow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/process/classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/process/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/declare/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/progressbar.html"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/tools/backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/recipe/n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/recipe/simple.html"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/mori.html"><code class="docutils literal notranslate"><span class="pre">mori</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/hoshi.html"><code class="docutils literal notranslate"><span class="pre">hoshi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/quick.html"><code class="docutils literal notranslate"><span class="pre">quick</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/jsonablize.html"><code class="docutils literal notranslate"><span class="pre">jsonablize</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/exception.html"><code class="docutils literal notranslate"><span class="pre">exception</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/capsule/index.html">CapSule?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrent/hadamard_test.html"><code class="docutils literal notranslate"><span class="pre">hadamard_test</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrent/randomized_measure.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrent/randomized_measure_v1.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrent/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrech/hadamard_test.html"><code class="docutils literal notranslate"><span class="pre">hadamard_test</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrech/randomized_measure.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrech/randomized_measure_v1.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/magnet_square_z.html"><code class="docutils literal notranslate"><span class="pre">magnet_square_z</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/samplingqurry.html"><code class="docutils literal notranslate"><span class="pre">samplingqurry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/wavesqurry.html"><code class="docutils literal notranslate"><span class="pre">wavesqurry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/position_distribution.html"><code class="docutils literal notranslate"><span class="pre">position_distribution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurries/twisted_operator.html"><code class="docutils literal notranslate"><span class="pre">twisted_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrium/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/qurrium/utils/index.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/build.html"><code class="docutils literal notranslate"><span class="pre">build</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/construct.html"><code class="docutils literal notranslate"><span class="pre">construct</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/iocontrol.html"><code class="docutils literal notranslate"><span class="pre">iocontrol</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/qasm.html"><code class="docutils literal notranslate"><span class="pre">qasm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/chunk.html"><code class="docutils literal notranslate"><span class="pre">chunk</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/inputfixer.html"><code class="docutils literal notranslate"><span class="pre">inputfixer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/randomized.html"><code class="docutils literal notranslate"><span class="pre">randomized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/utils/random_unitary.html"><code class="docutils literal notranslate"><span class="pre">random_unitary</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/qurrium/analysis.html"><code class="docutils literal notranslate"><span class="pre">analysis</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/qurrium/experiment/index.html"><code class="docutils literal notranslate"><span class="pre">experiment</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of experiment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/arguments.html"><code class="docutils literal notranslate"><span class="pre">arguments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/afterwards.html"><code class="docutils literal notranslate"><span class="pre">afterwards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/beforewards.html"><code class="docutils literal notranslate"><span class="pre">beforewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/analyses.html"><code class="docutils literal notranslate"><span class="pre">analyses</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/export.html"><code class="docutils literal notranslate"><span class="pre">export</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/experiment/experiment.html"><code class="docutils literal notranslate"><span class="pre">experiment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/qurrium/multimanager/index.html"><code class="docutils literal notranslate"><span class="pre">multimanager</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of multimanager</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/arguments.html"><code class="docutils literal notranslate"><span class="pre">arguments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/afterwards.html"><code class="docutils literal notranslate"><span class="pre">afterwards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/beforewards.html"><code class="docutils literal notranslate"><span class="pre">beforewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/process.html"><code class="docutils literal notranslate"><span class="pre">process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/multimanager/multimanager.html"><code class="docutils literal notranslate"><span class="pre">multimanager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/qurrium/container/index.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of container</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/waves_static.html"><code class="docutils literal notranslate"><span class="pre">waves_static</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/waves_dynamic.html"><code class="docutils literal notranslate"><span class="pre">waves_dynamic</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/multiquantity.html"><code class="docutils literal notranslate"><span class="pre">multiquantity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/passmanagers.html"><code class="docutils literal notranslate"><span class="pre">passmanagers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/experiments.html"><code class="docutils literal notranslate"><span class="pre">experiments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/experiments_wrapper.html"><code class="docutils literal notranslate"><span class="pre">experiments_wrapper</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/qurrium/container/multimanagers.html"><code class="docutils literal notranslate"><span class="pre">multimanagers</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/template.html"><code class="docutils literal notranslate"><span class="pre">template</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../more_info/index.html">More Information</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of More Information</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../more_info/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../more_info/platform_support.html">Platform Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../more_info/about.html">About</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for qurry.process.classical_shadow.classical_shadow</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Post Processing - Classical Shadow - Classical Shadow</span>
+<span class="sd">(:mod:`qurry.process.classical_shadow.classical_shadow`)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Iterable</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.rho_m_core</span><span class="w"> </span><span class="kn">import</span> <span class="n">rho_m_core</span><span class="p">,</span> <span class="n">RhoMCoreMethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.trace_expect_process</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">mean_rho_core</span><span class="p">,</span>
+    <span class="n">trace_rho_square_core</span><span class="p">,</span>
+    <span class="n">DEFAULT_ALL_TRACE_RHO_METHOD</span><span class="p">,</span>
+    <span class="n">AllTraceRhoMethod</span><span class="p">,</span>
+    <span class="n">TraceRhoMethod</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.expectation_process</span><span class="w"> </span><span class="kn">import</span> <span class="n">prediction_algorithm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.container</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ClassicalShadowMeanRho</span><span class="p">,</span>
+    <span class="n">ClassicalShadowEstimation</span><span class="p">,</span>
+    <span class="n">ClassicalShadowPurity</span><span class="p">,</span>
+    <span class="n">ClassicalShadowComplex</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">NUMERICAL_ERROR_TOLERANCE</span>
+
+
+<div class="viewcode-block" id="mean_of_rho">
+<a class="viewcode-back" href="../../../../api/process/classical_shadow/classical_shadow.html#qurry.process.classical_shadow.classical_shadow.mean_of_rho">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">mean_of_rho</span><span class="p">(</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">counts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+    <span class="n">random_unitary_um</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">selected_classical_registers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="c1"># other config</span>
+    <span class="n">rho_method</span><span class="p">:</span> <span class="n">RhoMCoreMethod</span> <span class="o">=</span> <span class="s2">&quot;numpy_precomputed&quot;</span><span class="p">,</span>
+    <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassicalShadowMeanRho</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the mean of Rho.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        -   Predicting many properties of a quantum system from very few measurements -</span>
+<span class="sd">            Huang, Hsin-Yuan and Kueng, Richard and Preskill, John</span>
+<span class="sd">            `doi:10.1038/s41567-020-0932-7 &lt;https://doi.org/10.1038/s41567-020-0932-7&gt;`_</span>
+
+<span class="sd">        .. code-block:: bibtex</span>
+
+<span class="sd">            @article{cite-key,</span>
+<span class="sd">                abstract = {</span>
+<span class="sd">                    Predicting the properties of complex,</span>
+<span class="sd">                    large-scale quantum systems is essential for developing quantum technologies.</span>
+<span class="sd">                    We present an efficient method for constructing an approximate classical</span>
+<span class="sd">                    description of a quantum state using very few measurements of the state.</span>
+<span class="sd">                    different properties; order</span>
+<span class="sd">                    {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
+<span class="sd">                    measurements suffice to accurately predict M different functions of the state</span>
+<span class="sd">                    with high success probability. The number of measurements is independent of</span>
+<span class="sd">                    the system size and saturates information-theoretic lower bounds. Moreover,</span>
+<span class="sd">                    target properties to predict can be</span>
+<span class="sd">                    selected after the measurements are completed.</span>
+<span class="sd">                    We support our theoretical findings with extensive numerical experiments.</span>
+<span class="sd">                    We apply classical shadows to predict quantum fidelities,</span>
+<span class="sd">                    entanglement entropies, two-point correlation functions,</span>
+<span class="sd">                    expectation values of local observables and the energy variance of</span>
+<span class="sd">                    many-body local Hamiltonians.</span>
+<span class="sd">                    The numerical results highlight the advantages of classical shadows relative to</span>
+<span class="sd">                    previously known methods.},</span>
+<span class="sd">                author = {Huang, Hsin-Yuan and Kueng, Richard and Preskill, John},</span>
+<span class="sd">                date = {2020/10/01},</span>
+<span class="sd">                date-added = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                date-modified = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                doi = {10.1038/s41567-020-0932-7},</span>
+<span class="sd">                id = {Huang2020},</span>
+<span class="sd">                isbn = {1745-2481},</span>
+<span class="sd">                journal = {Nature Physics},</span>
+<span class="sd">                number = {10},</span>
+<span class="sd">                pages = {1050--1057},</span>
+<span class="sd">                title = {Predicting many properties of a quantum system from very few measurements},</span>
+<span class="sd">                url = {https://doi.org/10.1038/s41567-020-0932-7},</span>
+<span class="sd">                volume = {16},</span>
+<span class="sd">                year = {2020},</span>
+<span class="sd">                bdsk-url-1 = {https://doi.org/10.1038/s41567-020-0932-7}</span>
+<span class="sd">            }</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shots (int):</span>
+<span class="sd">            The number of shots.</span>
+<span class="sd">        counts (list[dict[str, int]]):</span>
+<span class="sd">            The list of the counts.</span>
+<span class="sd">        random_unitary_um (dict[int, dict[int, Union[Literal[0, 1, 2], int]]]):</span>
+<span class="sd">            The shadow direction of the unitary operators.</span>
+<span class="sd">        selected_classical_registers (list[int]):</span>
+<span class="sd">            The list of **the index of the selected_classical_registers**.</span>
+
+<span class="sd">        rho_method (RhoMCoreMethod, optional):</span>
+<span class="sd">            The method to use for the calculation. Defaults to &quot;numpy_precomputed&quot;.</span>
+<span class="sd">            It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;, &quot;jax_flatten&quot;, or &quot;numpy_flatten&quot;.</span>
+
+<span class="sd">            - &quot;numpy&quot;: Use Numpy to calculate the rho_m.</span>
+<span class="sd">            - &quot;numpy_precomputed&quot;: Use Numpy to calculate the rho_m with precomputed values.</span>
+<span class="sd">            - &quot;numpy_flatten&quot;: Use Numpy to calculate the rho_m with a flattening workflow.</span>
+
+<span class="sd">            Currently, &quot;numpy_precomputed&quot; is the best option for performance.</span>
+<span class="sd">        backend (PostProcessingBackendLabel, optional):</span>
+<span class="sd">            The backend for the postprocessing.</span>
+<span class="sd">            Defaults to DEFAULT_PROCESS_BACKEND.</span>
+<span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">            The progress bar. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClassicalShadowMeanRho: The expectation value of Rho.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="n">selected_classical_registers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;The selected_classical_registers should be Iterable, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">rho_m_list</span><span class="p">,</span> <span class="n">selected_classical_registers_sorted</span><span class="p">,</span> <span class="n">taken</span> <span class="o">=</span> <span class="n">rho_m_core</span><span class="p">(</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+        <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span>
+        <span class="n">random_unitary_um</span><span class="o">=</span><span class="n">random_unitary_um</span><span class="p">,</span>
+        <span class="n">selected_classical_registers</span><span class="o">=</span><span class="n">selected_classical_registers</span><span class="p">,</span>
+        <span class="n">rho_method</span><span class="o">=</span><span class="n">rho_method</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">pbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| taking time of all rho_m: </span><span class="si">{</span><span class="n">taken</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> sec&quot;</span><span class="p">)</span>
+
+    <span class="n">expect_rho</span> <span class="o">=</span> <span class="n">mean_rho_core</span><span class="p">(</span>
+        <span class="n">rho_m_list</span><span class="o">=</span><span class="n">rho_m_list</span><span class="p">,</span>
+        <span class="n">selected_classical_registers_sorted</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ClassicalShadowMeanRho</span><span class="p">(</span>
+        <span class="n">average_classical_snapshots_rho</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">rho_m_list</span><span class="p">)),</span>
+        <span class="n">classical_registers_actually</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+        <span class="n">taking_time</span><span class="o">=</span><span class="n">taken</span><span class="p">,</span>
+        <span class="c1"># The mean of Rho</span>
+        <span class="n">mean_of_rho</span><span class="o">=</span><span class="n">expect_rho</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="trace_rho_square">
+<a class="viewcode-back" href="../../../../api/process/classical_shadow/classical_shadow.html#qurry.process.classical_shadow.classical_shadow.trace_rho_square">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">trace_rho_square</span><span class="p">(</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">counts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+    <span class="n">random_unitary_um</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">selected_classical_registers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="c1"># other config</span>
+    <span class="n">rho_method</span><span class="p">:</span> <span class="n">RhoMCoreMethod</span> <span class="o">=</span> <span class="s2">&quot;numpy_precomputed&quot;</span><span class="p">,</span>
+    <span class="n">trace_method</span><span class="p">:</span> <span class="n">TraceRhoMethod</span> <span class="o">=</span> <span class="n">DEFAULT_ALL_TRACE_RHO_METHOD</span><span class="p">,</span>
+    <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassicalShadowPurity</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Trace of Rho square.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shots (int):</span>
+<span class="sd">            The number of shots.</span>
+<span class="sd">        counts (list[dict[str, int]]):</span>
+<span class="sd">            The list of the counts.</span>
+<span class="sd">        random_unitary_um (dict[int, dict[int, Union[Literal[0, 1, 2], int]]]):</span>
+<span class="sd">            The shadow direction of the unitary operators.</span>
+<span class="sd">        selected_classical_registers (Iterable[int]):</span>
+<span class="sd">            The list of **the index of the selected_classical_registers**.</span>
+
+<span class="sd">        rho_method (RhoMCoreMethod, optional):</span>
+<span class="sd">            The method to use for the calculation. Defaults to &quot;numpy_precomputed&quot;.</span>
+<span class="sd">            It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;, &quot;jax_flatten&quot;, or &quot;numpy_flatten&quot;.</span>
+
+<span class="sd">            - &quot;numpy&quot;: Use Numpy to calculate the rho_m.</span>
+<span class="sd">            - &quot;numpy_precomputed&quot;: Use Numpy to calculate the rho_m with precomputed values.</span>
+<span class="sd">            - &quot;numpy_flatten&quot;: Use Numpy to calculate the rho_m with a flattening workflow.</span>
+
+<span class="sd">            Currently, &quot;numpy_precomputed&quot; is the best option for performance.</span>
+<span class="sd">        trace_method (TraceRhoMethod, optional):</span>
+<span class="sd">            The method to calculate the trace of Rho square.</span>
+
+<span class="sd">            - &quot;trace_of_matmul&quot;:</span>
+<span class="sd">                Use np.trace(np.matmul(rho_m1, rho_m2))</span>
+<span class="sd">                to calculate the each summation item in `rho_m_list`.</span>
+<span class="sd">            - &quot;quick_trace_of_matmul&quot; or &quot;einsum_ij_ji&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;ij,ji&quot;, rho_m1, rho_m2)</span>
+<span class="sd">                to calculate the each summation item in `rho_m_list`.</span>
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_numpy&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+
+<span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">            The progress bar. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The trace of Rho.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="n">selected_classical_registers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;The selected_classical_registers should be Iterable, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;The method of classical shadow require at least 2 counts for the calculation. &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;The number of counts is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">rho_m_list</span><span class="p">,</span> <span class="n">selected_classical_registers_sorted</span><span class="p">,</span> <span class="n">taken</span> <span class="o">=</span> <span class="n">rho_m_core</span><span class="p">(</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+        <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span>
+        <span class="n">random_unitary_um</span><span class="o">=</span><span class="n">random_unitary_um</span><span class="p">,</span>
+        <span class="n">selected_classical_registers</span><span class="o">=</span><span class="n">selected_classical_registers</span><span class="p">,</span>
+        <span class="n">rho_method</span><span class="o">=</span><span class="n">rho_method</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">pbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| taking time of all rho_m: </span><span class="si">{</span><span class="n">taken</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> sec&quot;</span><span class="p">)</span>
+
+    <span class="n">trace_rho_sum</span> <span class="o">=</span> <span class="n">trace_rho_square_core</span><span class="p">(</span><span class="n">rho_m_list</span><span class="o">=</span><span class="n">rho_m_list</span><span class="p">,</span> <span class="n">trace_method</span><span class="o">=</span><span class="n">trace_method</span><span class="p">)</span>
+    <span class="n">trace_rho_sum_real</span> <span class="o">=</span> <span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">real</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">NUMERICAL_ERROR_TOLERANCE</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;The imaginary part of the trace of Rho square is not zero. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;The imaginary part is </span><span class="si">{</span><span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">imag</span><span class="si">}</span><span class="s2">. method: </span><span class="si">{</span><span class="n">trace_method</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">rho_method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="ne">RuntimeWarning</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">entropy</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">trace_rho_sum_real</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ClassicalShadowPurity</span><span class="p">(</span>
+        <span class="n">average_classical_snapshots_rho</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">rho_m_list</span><span class="p">)),</span>
+        <span class="n">classical_registers_actually</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+        <span class="n">taking_time</span><span class="o">=</span><span class="n">taken</span><span class="p">,</span>
+        <span class="c1"># The trace of Rho square</span>
+        <span class="n">purity</span><span class="o">=</span><span class="n">trace_rho_sum_real</span><span class="p">,</span>
+        <span class="n">entropy</span><span class="o">=</span><span class="n">entropy</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="esitimation_of_given_operators">
+<a class="viewcode-back" href="../../../../api/process/classical_shadow/classical_shadow.html#qurry.process.classical_shadow.classical_shadow.esitimation_of_given_operators">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">esitimation_of_given_operators</span><span class="p">(</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">counts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+    <span class="n">random_unitary_um</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">selected_classical_registers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="c1"># estimation of given operators</span>
+    <span class="n">given_operators</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">]]],</span>
+    <span class="n">accuracy_prob_comp_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>
+    <span class="n">max_shadow_norm</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="c1"># other config</span>
+    <span class="n">rho_method</span><span class="p">:</span> <span class="n">RhoMCoreMethod</span> <span class="o">=</span> <span class="s2">&quot;numpy_precomputed&quot;</span><span class="p">,</span>
+    <span class="n">estimate_trace_method</span><span class="p">:</span> <span class="n">AllTraceRhoMethod</span> <span class="o">=</span> <span class="n">DEFAULT_ALL_TRACE_RHO_METHOD</span><span class="p">,</span>
+    <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassicalShadowEstimation</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the expectation value of given operators.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        -   Predicting many properties of a quantum system from very few measurements -</span>
+<span class="sd">            Huang, Hsin-Yuan and Kueng, Richard and Preskill, John</span>
+<span class="sd">            `doi:10.1038/s41567-020-0932-7 &lt;https://doi.org/10.1038/s41567-020-0932-7&gt;`_</span>
+
+<span class="sd">        .. code-block:: bibtex</span>
+
+<span class="sd">            @article{cite-key,</span>
+<span class="sd">                abstract = {</span>
+<span class="sd">                    Predicting the properties of complex,</span>
+<span class="sd">                    large-scale quantum systems is essential for developing quantum technologies.</span>
+<span class="sd">                    We present an efficient method for constructing an approximate classical</span>
+<span class="sd">                    description of a quantum state using very few measurements of the state.</span>
+<span class="sd">                    different properties; order</span>
+<span class="sd">                    {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
+<span class="sd">                    measurements suffice to accurately predict M different functions of the state</span>
+<span class="sd">                    with high success probability. The number of measurements is independent of</span>
+<span class="sd">                    the system size and saturates information-theoretic lower bounds. Moreover,</span>
+<span class="sd">                    target properties to predict can be</span>
+<span class="sd">                    selected after the measurements are completed.</span>
+<span class="sd">                    We support our theoretical findings with extensive numerical experiments.</span>
+<span class="sd">                    We apply classical shadows to predict quantum fidelities,</span>
+<span class="sd">                    entanglement entropies, two-point correlation functions,</span>
+<span class="sd">                    expectation values of local observables and the energy variance of</span>
+<span class="sd">                    many-body local Hamiltonians.</span>
+<span class="sd">                    The numerical results highlight the advantages of classical shadows relative to</span>
+<span class="sd">                    previously known methods.},</span>
+<span class="sd">                author = {Huang, Hsin-Yuan and Kueng, Richard and Preskill, John},</span>
+<span class="sd">                date = {2020/10/01},</span>
+<span class="sd">                date-added = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                date-modified = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                doi = {10.1038/s41567-020-0932-7},</span>
+<span class="sd">                id = {Huang2020},</span>
+<span class="sd">                isbn = {1745-2481},</span>
+<span class="sd">                journal = {Nature Physics},</span>
+<span class="sd">                number = {10},</span>
+<span class="sd">                pages = {1050--1057},</span>
+<span class="sd">                title = {Predicting many properties of a quantum system from very few measurements},</span>
+<span class="sd">                url = {https://doi.org/10.1038/s41567-020-0932-7},</span>
+<span class="sd">                volume = {16},</span>
+<span class="sd">                year = {2020},</span>
+<span class="sd">                bdsk-url-1 = {https://doi.org/10.1038/s41567-020-0932-7}</span>
+<span class="sd">            }</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shots (int):</span>
+<span class="sd">            The number of shots.</span>
+<span class="sd">        counts (list[dict[str, int]]):</span>
+<span class="sd">            The list of the counts.</span>
+<span class="sd">        random_unitary_um (dict[int, dict[int, Union[Literal[0, 1, 2], int]]]):</span>
+<span class="sd">            The shadow direction of the unitary operators.</span>
+<span class="sd">        selected_classical_registers (Iterable[int]):</span>
+<span class="sd">            The list of **the index of the selected_classical_registers**.</span>
+
+<span class="sd">        given_operators (list[np.ndarray[tuple[int, int], np.dtype[np.complex128]]]):</span>
+<span class="sd">            The list of the operators to estimate.</span>
+<span class="sd">        accuracy_prob_comp_delta (float, optional):</span>
+<span class="sd">            The accuracy probability component delta. Defaults to 0.01.</span>
+<span class="sd">        max_shadow_norm (Optional[float], optional):</span>
+<span class="sd">            The maximum shadow norm. Defaults to None.</span>
+<span class="sd">            If it is None, it will be calculated by the largest shadow norm upper bound.</span>
+<span class="sd">            If it is not None, it must be a positive float number.</span>
+<span class="sd">            It is :math:`|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2` in equation.</span>
+
+<span class="sd">        rho_method (RhoMCoreMethod, optional):</span>
+<span class="sd">            The method to use for the calculation. Defaults to &quot;numpy_precomputed&quot;.</span>
+<span class="sd">            It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;, &quot;jax_flatten&quot;, or &quot;numpy_flatten&quot;.</span>
+
+<span class="sd">            - &quot;numpy&quot;: Use Numpy to calculate the rho_m.</span>
+<span class="sd">            - &quot;numpy_precomputed&quot;: Use Numpy to calculate the rho_m with precomputed values.</span>
+<span class="sd">            - &quot;numpy_flatten&quot;: Use Numpy to calculate the rho_m with a flattening workflow.</span>
+
+<span class="sd">            Currently, &quot;numpy_precomputed&quot; is the best option for performance.</span>
+<span class="sd">        estimate_trace_method (AllTraceRhoMethod, optional):</span>
+<span class="sd">            The method to calculate the trace for searching esitmator.</span>
+
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_numpy&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_jax&quot;:</span>
+<span class="sd">                Use jnp.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+
+<span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">            The progress bar. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClassicalShadowEstimation: The estimation of the given operators.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="n">selected_classical_registers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;The selected_classical_registers should be Iterable, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">rho_m_list</span><span class="p">,</span> <span class="n">selected_classical_registers_sorted</span><span class="p">,</span> <span class="n">taken</span> <span class="o">=</span> <span class="n">rho_m_core</span><span class="p">(</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+        <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span>
+        <span class="n">random_unitary_um</span><span class="o">=</span><span class="n">random_unitary_um</span><span class="p">,</span>
+        <span class="n">selected_classical_registers</span><span class="o">=</span><span class="n">selected_classical_registers</span><span class="p">,</span>
+        <span class="n">rho_method</span><span class="o">=</span><span class="n">rho_method</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">pbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| taking time of all rho_m: </span><span class="si">{</span><span class="n">taken</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> sec&quot;</span><span class="p">)</span>
+    <span class="n">average_classical_snapshots_rho</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">rho_m_list</span><span class="p">))</span>
+
+    <span class="p">(</span>
+        <span class="n">estimate_of_given_operators</span><span class="p">,</span>
+        <span class="n">corresponding_rhos</span><span class="p">,</span>
+        <span class="n">actual_accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">num_of_estimators</span><span class="p">,</span>
+        <span class="n">accuracy_predict_epsilon</span><span class="p">,</span>
+        <span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">epsilon_upperbound</span><span class="p">,</span>
+        <span class="n">shadow_norm_upperbound</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="n">prediction_algorithm</span><span class="p">(</span>
+        <span class="n">classical_snapshots_rho</span><span class="o">=</span><span class="n">average_classical_snapshots_rho</span><span class="p">,</span>
+        <span class="n">given_operators</span><span class="o">=</span><span class="n">given_operators</span><span class="p">,</span>
+        <span class="n">accuracy_prob_comp_delta</span><span class="o">=</span><span class="n">accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">max_shadow_norm</span><span class="o">=</span><span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">trace_method</span><span class="o">=</span><span class="n">estimate_trace_method</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ClassicalShadowEstimation</span><span class="p">(</span>
+        <span class="n">average_classical_snapshots_rho</span><span class="o">=</span><span class="n">average_classical_snapshots_rho</span><span class="p">,</span>
+        <span class="n">classical_registers_actually</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+        <span class="n">taking_time</span><span class="o">=</span><span class="n">taken</span><span class="p">,</span>
+        <span class="c1"># esitimation of given operators</span>
+        <span class="n">estimate_of_given_operators</span><span class="o">=</span><span class="n">estimate_of_given_operators</span><span class="p">,</span>
+        <span class="n">corresponding_rhos</span><span class="o">=</span><span class="n">corresponding_rhos</span><span class="p">,</span>
+        <span class="n">accuracy_prob_comp_delta</span><span class="o">=</span><span class="n">actual_accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">num_of_estimators_k</span><span class="o">=</span><span class="n">num_of_estimators</span><span class="p">,</span>
+        <span class="n">accuracy_predict_epsilon</span><span class="o">=</span><span class="n">accuracy_predict_epsilon</span><span class="p">,</span>
+        <span class="n">maximum_shadow_norm</span><span class="o">=</span><span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">epsilon_upperbound</span><span class="o">=</span><span class="n">epsilon_upperbound</span><span class="p">,</span>
+        <span class="n">shadow_norm_upperbound</span><span class="o">=</span><span class="n">shadow_norm_upperbound</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="classical_shadow_complex">
+<a class="viewcode-back" href="../../../../api/process/classical_shadow/classical_shadow.html#qurry.process.classical_shadow.classical_shadow.classical_shadow_complex">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">classical_shadow_complex</span><span class="p">(</span>
+    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">counts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+    <span class="n">random_unitary_um</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="nb">int</span><span class="p">]]],</span>
+    <span class="n">selected_classical_registers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="c1"># estimation of given operators</span>
+    <span class="n">given_operators</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">accuracy_prob_comp_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>
+    <span class="n">max_shadow_norm</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="c1"># other config</span>
+    <span class="n">rho_method</span><span class="p">:</span> <span class="n">RhoMCoreMethod</span> <span class="o">=</span> <span class="s2">&quot;numpy_precomputed&quot;</span><span class="p">,</span>
+    <span class="n">trace_method</span><span class="p">:</span> <span class="n">TraceRhoMethod</span> <span class="o">=</span> <span class="n">DEFAULT_ALL_TRACE_RHO_METHOD</span><span class="p">,</span>
+    <span class="n">estimate_trace_method</span><span class="p">:</span> <span class="n">AllTraceRhoMethod</span> <span class="o">=</span> <span class="n">DEFAULT_ALL_TRACE_RHO_METHOD</span><span class="p">,</span>
+    <span class="n">pbar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassicalShadowComplex</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the expectation value of Rho and the purity by classical shadow.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        -   Predicting many properties of a quantum system from very few measurements -</span>
+<span class="sd">            Huang, Hsin-Yuan and Kueng, Richard and Preskill, John</span>
+<span class="sd">            `doi:10.1038/s41567-020-0932-7 &lt;https://doi.org/10.1038/s41567-020-0932-7&gt;`_</span>
+
+<span class="sd">        -   The randomized measurement toolbox -</span>
+<span class="sd">            Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,</span>
+<span class="sd">            Richard and Preskill, John and Vermersch, Benoît and Zoller, Peter</span>
+<span class="sd">            `doi:10.1038/s42254-022-00535-2 &lt;https://doi.org/10.1038/s42254-022-00535-2&gt;`_</span>
+
+<span class="sd">        .. code-block:: bibtex</span>
+
+<span class="sd">            @article{cite-key,</span>
+<span class="sd">                abstract = {</span>
+<span class="sd">                    Predicting the properties of complex,</span>
+<span class="sd">                    large-scale quantum systems is essential for developing quantum technologies.</span>
+<span class="sd">                    We present an efficient method for constructing an approximate classical</span>
+<span class="sd">                    description of a quantum state using very few measurements of the state.</span>
+<span class="sd">                    different properties; order</span>
+<span class="sd">                    {\$}{\$}{\{}{$\backslash$}mathrm{\{}log{\}}{\}}{$\backslash$},(M){\$}{\$}</span>
+<span class="sd">                    measurements suffice to accurately predict M different functions of the state</span>
+<span class="sd">                    with high success probability. The number of measurements is independent of</span>
+<span class="sd">                    the system size and saturates information-theoretic lower bounds. Moreover,</span>
+<span class="sd">                    target properties to predict can be</span>
+<span class="sd">                    selected after the measurements are completed.</span>
+<span class="sd">                    We support our theoretical findings with extensive numerical experiments.</span>
+<span class="sd">                    We apply classical shadows to predict quantum fidelities,</span>
+<span class="sd">                    entanglement entropies, two-point correlation functions,</span>
+<span class="sd">                    expectation values of local observables and the energy variance of</span>
+<span class="sd">                    many-body local Hamiltonians.</span>
+<span class="sd">                    The numerical results highlight the advantages of classical shadows relative to</span>
+<span class="sd">                    previously known methods.},</span>
+<span class="sd">                author = {Huang, Hsin-Yuan and Kueng, Richard and Preskill, John},</span>
+<span class="sd">                date = {2020/10/01},</span>
+<span class="sd">                date-added = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                date-modified = {2024-12-03 15:00:55 +0800},</span>
+<span class="sd">                doi = {10.1038/s41567-020-0932-7},</span>
+<span class="sd">                id = {Huang2020},</span>
+<span class="sd">                isbn = {1745-2481},</span>
+<span class="sd">                journal = {Nature Physics},</span>
+<span class="sd">                number = {10},</span>
+<span class="sd">                pages = {1050--1057},</span>
+<span class="sd">                title = {Predicting many properties of a quantum system from very few measurements},</span>
+<span class="sd">                url = {https://doi.org/10.1038/s41567-020-0932-7},</span>
+<span class="sd">                volume = {16},</span>
+<span class="sd">                year = {2020},</span>
+<span class="sd">                bdsk-url-1 = {https://doi.org/10.1038/s41567-020-0932-7}</span>
+<span class="sd">            }</span>
+
+<span class="sd">            @article{cite-key,</span>
+<span class="sd">                abstract = {</span>
+<span class="sd">                    Programmable quantum simulators and quantum computers are opening unprecedented</span>
+<span class="sd">                    opportunities for exploring and exploiting the properties of highly entangled</span>
+<span class="sd">                    complex quantum systems. The complexity of large quantum systems is the source</span>
+<span class="sd">                    of computational power but also makes them difficult to control precisely or</span>
+<span class="sd">                    characterize accurately using measured classical data. We review protocols</span>
+<span class="sd">                    for probing the properties of complex many-qubit systems using measurement</span>
+<span class="sd">                    schemes that are practical using today&#39;s quantum platforms. In these protocols,</span>
+<span class="sd">                    a quantum state is repeatedly prepared and measured in a randomly chosen basis;</span>
+<span class="sd">                    then a classical computer processes the measurement outcomes to estimate the</span>
+<span class="sd">                    desired property. The randomization of the measurement procedure has distinct</span>
+<span class="sd">                    advantages. For example, a single data set can be used multiple times to pursue</span>
+<span class="sd">                    a variety of applications, and imperfections in the measurements are mapped to</span>
+<span class="sd">                    a simplified noise model that can more</span>
+<span class="sd">                    easily be mitigated. We discuss a range of</span>
+<span class="sd">                    cases that have already been realized in quantum devices, including Hamiltonian</span>
+<span class="sd">                    simulation tasks, probes of quantum chaos, measurements of non-local order</span>
+<span class="sd">                    parameters, and comparison of quantum states produced in distantly separated</span>
+<span class="sd">                    laboratories. By providing a workable method for translating a complex quantum</span>
+<span class="sd">                    state into a succinct classical representation that preserves a rich variety of</span>
+<span class="sd">                    relevant physical properties, the randomized measurement toolbox strengthens our</span>
+<span class="sd">                    ability to grasp and control the quantum world.},</span>
+<span class="sd">                author = {</span>
+<span class="sd">                    Elben, Andreas and Flammia, Steven T. and Huang, Hsin-Yuan and Kueng,</span>
+<span class="sd">                    Richard and Preskill, John and Vermersch, Beno{\^\i}t and Zoller, Peter},</span>
+<span class="sd">                date = {2023/01/01},</span>
+<span class="sd">                date-added = {2024-12-03 15:06:15 +0800},</span>
+<span class="sd">                date-modified = {2024-12-03 15:06:15 +0800},</span>
+<span class="sd">                doi = {10.1038/s42254-022-00535-2},</span>
+<span class="sd">                id = {Elben2023},</span>
+<span class="sd">                isbn = {2522-5820},</span>
+<span class="sd">                journal = {Nature Reviews Physics},</span>
+<span class="sd">                number = {1},</span>
+<span class="sd">                pages = {9--24},</span>
+<span class="sd">                title = {The randomized measurement toolbox},</span>
+<span class="sd">                url = {https://doi.org/10.1038/s42254-022-00535-2},</span>
+<span class="sd">                volume = {5},</span>
+<span class="sd">                year = {2023},</span>
+<span class="sd">                bdsk-url-1 = {https://doi.org/10.1038/s42254-022-00535-2}</span>
+<span class="sd">            }</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shots (int):</span>
+<span class="sd">            The number of shots.</span>
+<span class="sd">        counts (list[dict[str, int]]):</span>
+<span class="sd">            The list of the counts.</span>
+<span class="sd">        random_unitary_um (dict[int, dict[int, Union[Literal[0, 1, 2], int]]]):</span>
+<span class="sd">            The shadow direction of the unitary operators.</span>
+<span class="sd">        selected_classical_registers (Iterable[int]):</span>
+<span class="sd">            The list of **the index of the selected_classical_registers**.</span>
+
+<span class="sd">        given_operators (list[np.ndarray[tuple[int, int], np.dtype[np.complex128]]]):</span>
+<span class="sd">            The list of the operators to estimate. Defaults to None.</span>
+<span class="sd">        accuracy_prob_comp_delta (float, optional):</span>
+<span class="sd">            The accuracy probability component delta. Defaults to 0.01.</span>
+<span class="sd">        max_shadow_norm (Optional[float], optional):</span>
+<span class="sd">            The maximum shadow norm. Defaults to None.</span>
+<span class="sd">            If it is None, it will be calculated by the largest shadow norm upper bound.</span>
+<span class="sd">            If it is not None, it must be a positive float number.</span>
+<span class="sd">            It is :math:`|| O_i - \frac{\text{tr}(O_i)}{2^n} ||_{\text{shadow}}^2` in equation.</span>
+
+<span class="sd">        rho_method (RhoMCoreMethod, optional):</span>
+<span class="sd">            The method to use for the calculation. Defaults to &quot;numpy_precomputed&quot;.</span>
+<span class="sd">            It can be either &quot;numpy&quot;, &quot;numpy_precomputed&quot;, &quot;jax_flatten&quot;, or &quot;numpy_flatten&quot;.</span>
+
+<span class="sd">            - &quot;numpy&quot;: Use Numpy to calculate the rho_m.</span>
+<span class="sd">            - &quot;numpy_precomputed&quot;: Use Numpy to calculate the rho_m with precomputed values.</span>
+<span class="sd">            - &quot;numpy_flatten&quot;: Use Numpy to calculate the rho_m with a flattening workflow.</span>
+
+<span class="sd">            Currently, &quot;numpy_precomputed&quot; is the best option for performance.</span>
+<span class="sd">        trace_method (TraceRhoMethod, optional):</span>
+<span class="sd">            The method to calculate the trace of Rho square.</span>
+
+<span class="sd">            - &quot;trace_of_matmul&quot;:</span>
+<span class="sd">                Use np.trace(np.matmul(rho_m1, rho_m2))</span>
+<span class="sd">                to calculate the each summation item in `rho_m_list`.</span>
+<span class="sd">            - &quot;quick_trace_of_matmul&quot; or &quot;einsum_ij_ji&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;ij,ji&quot;, rho_m1, rho_m2)</span>
+<span class="sd">                to calculate the each summation item in `rho_m_list`.</span>
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_numpy&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_jax&quot;:</span>
+<span class="sd">                Use jnp.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+
+<span class="sd">        estimate_trace_method (AllTraceRhoMethod, optional):</span>
+<span class="sd">            The method to calculate the trace for searching esitmator.</span>
+
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_numpy&quot;:</span>
+<span class="sd">                Use np.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+<span class="sd">            - &quot;einsum_aij_bji_to_ab_jax&quot;:</span>
+<span class="sd">                Use jnp.einsum(&quot;aij,bji-&gt;ab&quot;, rho_m_list, rho_m_list) to calculate the trace.</span>
+
+<span class="sd">        pbar (Optional[tqdm.tqdm], optional):</span>
+<span class="sd">            The progress bar. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClassicalShadowComplex:</span>
+<span class="sd">            The expectation value of Rho and the purity calculated by classical shadow.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="n">selected_classical_registers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;The selected_classical_registers should be Iterable, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">selected_classical_registers</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">rho_m_list</span><span class="p">,</span> <span class="n">selected_classical_registers_sorted</span><span class="p">,</span> <span class="n">taken</span> <span class="o">=</span> <span class="n">rho_m_core</span><span class="p">(</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+        <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span>
+        <span class="n">random_unitary_um</span><span class="o">=</span><span class="n">random_unitary_um</span><span class="p">,</span>
+        <span class="n">selected_classical_registers</span><span class="o">=</span><span class="n">selected_classical_registers</span><span class="p">,</span>
+        <span class="n">rho_method</span><span class="o">=</span><span class="n">rho_method</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">pbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| taking time of all rho_m: </span><span class="si">{</span><span class="n">taken</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> sec&quot;</span><span class="p">)</span>
+
+    <span class="n">expect_rho</span> <span class="o">=</span> <span class="n">mean_rho_core</span><span class="p">(</span>
+        <span class="n">rho_m_list</span><span class="o">=</span><span class="n">rho_m_list</span><span class="p">,</span>
+        <span class="n">selected_classical_registers_sorted</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">trace_rho_sum</span> <span class="o">=</span> <span class="n">trace_rho_square_core</span><span class="p">(</span><span class="n">rho_m_list</span><span class="o">=</span><span class="n">rho_m_list</span><span class="p">,</span> <span class="n">trace_method</span><span class="o">=</span><span class="n">trace_method</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">NUMERICAL_ERROR_TOLERANCE</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;The imaginary part of the trace of Rho square is not zero, &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;error larger than the tolerance of </span><span class="si">{</span><span class="n">NUMERICAL_ERROR_TOLERANCE</span><span class="si">}</span><span class="s2">. &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;The imaginary part is </span><span class="si">{</span><span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">imag</span><span class="si">}</span><span class="s2">. method: </span><span class="si">{</span><span class="n">trace_method</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">rho_method</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span>
+            <span class="ne">RuntimeWarning</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">trace_rho_sum_real</span> <span class="o">=</span> <span class="n">trace_rho_sum</span><span class="o">.</span><span class="n">real</span>
+    <span class="n">entropy</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">trace_rho_sum_real</span><span class="p">)</span>
+
+    <span class="n">average_classical_snapshots_rho</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">rho_m_list</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">given_operators</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">given_operators</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ClassicalShadowComplex</span><span class="p">(</span>
+            <span class="n">average_classical_snapshots_rho</span><span class="o">=</span><span class="n">average_classical_snapshots_rho</span><span class="p">,</span>
+            <span class="n">classical_registers_actually</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+            <span class="n">taking_time</span><span class="o">=</span><span class="n">taken</span><span class="p">,</span>
+            <span class="c1"># The mean of Rho</span>
+            <span class="n">mean_of_rho</span><span class="o">=</span><span class="n">expect_rho</span><span class="p">,</span>
+            <span class="c1"># The trace of Rho square</span>
+            <span class="n">purity</span><span class="o">=</span><span class="n">trace_rho_sum_real</span><span class="p">,</span>
+            <span class="n">entropy</span><span class="o">=</span><span class="n">entropy</span><span class="p">,</span>
+            <span class="c1"># esitimation of given operators</span>
+            <span class="n">estimate_of_given_operators</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">corresponding_rhos</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">accuracy_prob_comp_delta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+            <span class="n">num_of_estimators_k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">accuracy_predict_epsilon</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+            <span class="n">maximum_shadow_norm</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+            <span class="n">epsilon_upperbound</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+            <span class="n">shadow_norm_upperbound</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="p">(</span>
+        <span class="n">estimate_of_given_operators</span><span class="p">,</span>
+        <span class="n">corresponding_rhos</span><span class="p">,</span>
+        <span class="n">actual_accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">num_of_estimators</span><span class="p">,</span>
+        <span class="n">accuracy_predict_epsilon</span><span class="p">,</span>
+        <span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">epsilon_upperbound</span><span class="p">,</span>
+        <span class="n">shadow_norm_upperbound</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="n">prediction_algorithm</span><span class="p">(</span>
+        <span class="n">classical_snapshots_rho</span><span class="o">=</span><span class="n">average_classical_snapshots_rho</span><span class="p">,</span>
+        <span class="n">given_operators</span><span class="o">=</span><span class="n">given_operators</span><span class="p">,</span>
+        <span class="n">accuracy_prob_comp_delta</span><span class="o">=</span><span class="n">accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">max_shadow_norm</span><span class="o">=</span><span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">trace_method</span><span class="o">=</span><span class="n">estimate_trace_method</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">ClassicalShadowComplex</span><span class="p">(</span>
+        <span class="n">average_classical_snapshots_rho</span><span class="o">=</span><span class="n">average_classical_snapshots_rho</span><span class="p">,</span>
+        <span class="n">classical_registers_actually</span><span class="o">=</span><span class="n">selected_classical_registers_sorted</span><span class="p">,</span>
+        <span class="n">taking_time</span><span class="o">=</span><span class="n">taken</span><span class="p">,</span>
+        <span class="c1"># The mean of Rho</span>
+        <span class="n">mean_of_rho</span><span class="o">=</span><span class="n">expect_rho</span><span class="p">,</span>
+        <span class="c1"># The trace of Rho square</span>
+        <span class="n">purity</span><span class="o">=</span><span class="n">trace_rho_sum_real</span><span class="p">,</span>
+        <span class="n">entropy</span><span class="o">=</span><span class="n">entropy</span><span class="p">,</span>
+        <span class="c1"># esitimation of given operators</span>
+        <span class="n">estimate_of_given_operators</span><span class="o">=</span><span class="n">estimate_of_given_operators</span><span class="p">,</span>
+        <span class="n">corresponding_rhos</span><span class="o">=</span><span class="n">corresponding_rhos</span><span class="p">,</span>
+        <span class="n">accuracy_prob_comp_delta</span><span class="o">=</span><span class="n">actual_accuracy_prob_comp_delta</span><span class="p">,</span>
+        <span class="n">num_of_estimators_k</span><span class="o">=</span><span class="n">num_of_estimators</span><span class="p">,</span>
+        <span class="n">accuracy_predict_epsilon</span><span class="o">=</span><span class="n">accuracy_predict_epsilon</span><span class="p">,</span>
+        <span class="n">maximum_shadow_norm</span><span class="o">=</span><span class="n">max_shadow_norm</span><span class="p">,</span>
+        <span class="n">epsilon_upperbound</span><span class="o">=</span><span class="n">epsilon_upperbound</span><span class="p">,</span>
+        <span class="n">shadow_norm_upperbound</span><span class="o">=</span><span class="n">shadow_norm_upperbound</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Huai-Chun Chang
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on 2025-07-07 22:27:02</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/qurrium/qurrium" aria-label="GitHub">
+                <i class="fa-brands fa-solid fa-github fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://github.com/qurrium/qurrium_documentaion" aria-label="GitHub of Documentation">
+                <i class="fa-solid fa-book fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://pypi.org/project/qurrium/" aria-label="PyPI">
+                <i class="fa-brands fa-python fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://test.pypi.org/project/qurry/" aria-label="Test PyPI">
+                <i class="fa-brands fa-python fa-2x"></i>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../../_static/version-switcher.js?v=be75742b"></script>
+    </body>
+</html>

@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -666,8 +675,8 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.002486483,
- &#39;takingTimeAllSys&#39;: 0.008465175}
+ &#39;takingTime&#39;: 0.002556636,
+ &#39;takingTimeAllSys&#39;: 0.009052502}
 
 | result of randomized_entangled_entropy[purityCells]
 1.0627930164337158
@@ -743,7 +752,7 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
  &#39;purityAllSys&#39;: np.float64(0.5189998149871826),
  &#39;puritySD&#39;: np.float64(0.0),
  &#39;puritySDAllSys&#39;: np.float64(0.0),
- &#39;takingTime&#39;: 0.001960224,
+ &#39;takingTime&#39;: 0.002264942,
  &#39;takingTimeAllSys&#39;: 0}
 
 | result of randomized_entangled_entropy[purityCells]
@@ -878,25 +887,25 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| partition: 6
-| - takingTime: 0.001931165
-| - takingTimeAllSys: 0.008691407
+| - takingTime: 0.002204289
+| - takingTimeAllSys: 0.009922388
 | partition: (2, 8)
-| - takingTime: 0.002051174
+| - takingTime: 0.002324295
 | - takingTimeAllSys: 0
 | partition: 7
-| - takingTime: 0.004242322
+| - takingTime: 0.004282037
 | - takingTimeAllSys: 0
 | partition: (0, 7)
-| - takingTime: 0.003810356
+| - takingTime: 0.003742579
 | - takingTimeAllSys: 0
 | partition: (-2, 5)
-| - takingTime: 0.004677996
+| - takingTime: 0.004143805
 | - takingTimeAllSys: 0
 | partition: (-5, -1)
-| - takingTime: 0.001014629
+| - takingTime: 0.000878575
 | - takingTimeAllSys: 0
 | partition: (3, -2)
-| - takingTime: 0.000804828
+| - takingTime: 0.000844903
 | - takingTimeAllSys: 0
 </pre></div>
 </div>
@@ -956,88 +965,88 @@ The return <code class="docutils literal notranslate"><span class="pre">dict</sp
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 6 by Python. - 00:00 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:08 &lt; ?
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:11 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:08 &lt; ?
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:11 &lt; ?
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:08 &lt; 00:52
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:11 &lt; 01:10
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:08 &lt; 00:52                                                   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (2, 8) by Python. - 00:11 &lt; 01:10                                                   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:13 &lt; 00:52
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (2, 8) on None - 00:18 &lt; 01:10
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:13 &lt; 00:52
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:18 &lt; 01:10
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:13 &lt; 00:31
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (2, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:18 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:13 &lt; 00:31                                                        
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree 7 by Python. - 00:18 &lt; 00:44                                                        
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:18 &lt; 00:31
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (1, 8) on None - 00:25 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:18 &lt; 00:31
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:44
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:18 &lt; 00:22
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (1, 8), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:18 &lt; 00:22                                                   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (0, 7) by Python. - 00:25 &lt; 00:31                                                   
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:21 &lt; 00:22
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (0, 7) on None - 00:32 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:21 &lt; 00:22
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:32 &lt; 00:31
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:21 &lt; 00:14
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (0, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:32 &lt; 00:23
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:21 &lt; 00:14                                                  
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-2, 5) by Python. - 00:32 &lt; 00:23                                                  
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:25 &lt; 00:14
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (-2, 5) on None - 00:40 &lt; 00:23
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:14
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:40 &lt; 00:23
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:25 &lt; 00:08
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: cycling-(-2, 5), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:40 &lt; 00:15
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:25 &lt; 00:08                                                          
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (-5, -1) by Python. - 00:40 &lt; 00:15                                                          
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:28 &lt; 00:08 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 7) on None - 00:46 &lt; 00:15 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:28 &lt; 00:08
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:46 &lt; 00:15
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:28 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 7), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:46 &lt; 00:07
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:28 &lt; 00:04                                                  
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Calculate specific degree (3, -2) by Python. - 00:46 &lt; 00:07                                                  
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:32 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Preparing error mitigation of (3, 6) on None - 00:52 &lt; 00:07
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:32 &lt; 00:04
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:52 &lt; 00:07
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:32 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:52 &lt; 00:00
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:32 &lt; 00:00
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Partition: (3, 6), Measure: (0, 8), backend: Python, 16 workers, 100 overlaps with mitigation. - 00:52 &lt; 00:00
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1134,7 +1143,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:33:51</div>
+              Last updated on 2025-07-07 22:26:58</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -1195,6 +1204,6 @@ by &lt;Hoshi&gt;
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>

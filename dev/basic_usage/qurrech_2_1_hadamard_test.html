@@ -1,0 +1,1015 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="2.1 Wave Function Overlap by Hadamard Test" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.qurrium.org/basic_usage/qurrech_2_1_hadamard_test.html" />
+<meta property="og:site_name" content="Qurrium" />
+<meta property="og:description" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://docs.qurrium.org/_images/social_previews/summary_basic_usage_qurrech_2_1_hadamard_test_34f39fb9.png" />
+<meta property="og:image:alt" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
+<meta name="description" content="Basic Usage: a. Import the instances: b. Preparing quantum circuit: c. Execute the circuit: i. Directly input the circuit: After executing, it will return a uuid of experiment. You can use this uui..." />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- HTML Meta Tags -->
+<title>Qurrium 📏 Documentation</title>
+<meta name='description' content='The python package that makes the randomized measurement easy.'>
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content='https://docs.qurrium.org'>
+<meta property='og:type' content='website'>
+<meta property='og:title' content='Qurrium 📏 Documentation'>
+<meta property='og:description' content='The python package that makes the randomized measurement easy.'>
+<meta property='og:image' content=''>
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta property='twitter:domain' content='docs.qurrium.org'>
+<meta property='twitter:url' content='https://docs.qurrium.org'>
+<meta name='twitter:title' content='Qurrium 📏 Documentation'>
+<meta name='twitter:description' content='The python package that makes the randomized measurement easy.'>
+<meta name='twitter:image' content=''>
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH0TTCC2VZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NH0TTCC2VZ');
+    </script>
+    <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="2.2 Wave Function Overlap by Randomized Measurement" href="qurrech_2_2_randomized_measure.html" /><link rel="prev" title="1.3 Entanglement Entropy by Classical Shadow" href="qurrent_1_3_classical_shadow.html" />
+        <link rel="canonical" href="https://docs.qurrium.org/basic_usage/qurrech_2_1_hadamard_test.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>2.1 Wave Function Overlap by Hadamard Test - Qurrium 📏 Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Qurrium 📏 Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Qurrium 📏 Documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Basic Usage</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Basic Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">2.1 Wave Function Overlap by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurrech_2_2_randomized_measure.html">2.2 Wave Function Overlap by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurmagsq_3_1_zdir_magnet_square.html">3.1 Magnetization Square on Z Direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurmagsq_3_2_magnet_square.html">3.2 Magnetization Square for Any Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurmagsq_3_3_classical_shadow.html">3.3 Magnetization Square by Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../multi_output/index.html">Multiple Output</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Multiple Output</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multi_output/qurrent_1_1_hadamard_test.html">1.1 Entanglement Entropy by Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multi_output/qurrent_1_2_randomized_measure.html">1.2 Entanglement Entropy by Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multi_output/qurrent_1_3_classical_shadow.html">1.3 Entanglement Entropy by Classical Shadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multi_output/qurrium_0_1_waves_executer.html">0.1 WavesExecuter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/01_entropy_measure/1_hadamard.html">1.1 Hadamard Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/01_entropy_measure/2_randomized_measure.html">1.2 Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/01_entropy_measure/3_randomized_measure.html">1.3 Randomized Measurement with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/01_entropy_measure/4_randomized_measure_v1.html">1.4 Randomized Measurement V1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/01_entropy_measure/5_randomized_measure_v1.html">1.5 Randomized Measurement V1 with Error Mitigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/02_wave_func_overlap/1_hadamard.html">2.1 Hadamaed Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/02_wave_func_overlap/2_randomized_measure.html">2.2 Randomized Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/02_wave_func_overlap/3_randomized_measure_v1.html">2.3 Randomized Measurement V1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Other Features</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Other Features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/a01_backend_wrapper.html">Appendix 01 - Backend Wrapper</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/availability.html"><code class="docutils literal notranslate"><span class="pre">availability</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/status.html"><code class="docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/hadamard.html"><code class="docutils literal notranslate"><span class="pre">hadamard</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/process/randomized_measure/index.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of randomized_measure</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/randomized_measure/entangled_entropy.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/randomized_measure/wavefunction_overlap.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/randomized_measure/entangled_entropy_v1.html"><code class="docutils literal notranslate"><span class="pre">entangled_entropy_v1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/randomized_measure/wavefunction_overlap_v1.html"><code class="docutils literal notranslate"><span class="pre">wavefunction_overlap_v1</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/process/classical_shadow/index.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of classical_shadow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/unitary_set.html"><code class="docutils literal notranslate"><span class="pre">unitary_set</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/matrix_calcution.html"><code class="docutils literal notranslate"><span class="pre">matrix_calcution</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/rho_mk_cell.html"><code class="docutils literal notranslate"><span class="pre">rho_mk_cell</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/rho_m_flatten.html"><code class="docutils literal notranslate"><span class="pre">rho_m_flatten</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/rho_m_core.html"><code class="docutils literal notranslate"><span class="pre">rho_m_core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/trace_expect_process.html"><code class="docutils literal notranslate"><span class="pre">trace_expect_process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/expectation_process.html"><code class="docutils literal notranslate"><span class="pre">expectation_process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/container.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/process/classical_shadow/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/process/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/declare/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/declare/run.html"><code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/declare/transpile.html"><code class="docutils literal notranslate"><span class="pre">transpile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/qiskit_version.html"><code class="docutils literal notranslate"><span class="pre">qiskit_version</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/progressbar.html"><code class="docutils literal notranslate"><span class="pre">progressbar</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/parallelmanager.html"><code class="docutils literal notranslate"><span class="pre">parallelmanager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/except_decorator.html"><code class="docutils literal notranslate"><span class="pre">except_decorator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/command.html"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/tools/backend.html"><code class="docutils literal notranslate"><span class="pre">backend</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/recipe/n_body.html"><code class="docutils literal notranslate"><span class="pre">n_body</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/recipe/simple.html"><code class="docutils literal notranslate"><span class="pre">simple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/mori.html"><code class="docutils literal notranslate"><span class="pre">mori</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/hoshi.html"><code class="docutils literal notranslate"><span class="pre">hoshi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/quick.html"><code class="docutils literal notranslate"><span class="pre">quick</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/jsonablize.html"><code class="docutils literal notranslate"><span class="pre">jsonablize</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/exception.html"><code class="docutils literal notranslate"><span class="pre">exception</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/capsule/index.html">CapSule?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrent/hadamard_test.html"><code class="docutils literal notranslate"><span class="pre">hadamard_test</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrent/randomized_measure.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrent/randomized_measure_v1.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrent/classical_shadow.html"><code class="docutils literal notranslate"><span class="pre">classical_shadow</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrech/hadamard_test.html"><code class="docutils literal notranslate"><span class="pre">hadamard_test</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrech/randomized_measure.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrech/randomized_measure_v1.html"><code class="docutils literal notranslate"><span class="pre">randomized_measure_v1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/magnet_square.html"><code class="docutils literal notranslate"><span class="pre">magnet_square</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/magnet_square_z.html"><code class="docutils literal notranslate"><span class="pre">magnet_square_z</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/string_operator.html"><code class="docutils literal notranslate"><span class="pre">string_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/samplingqurry.html"><code class="docutils literal notranslate"><span class="pre">samplingqurry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/wavesqurry.html"><code class="docutils literal notranslate"><span class="pre">wavesqurry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/position_distribution.html"><code class="docutils literal notranslate"><span class="pre">position_distribution</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurries/twisted_operator.html"><code class="docutils literal notranslate"><span class="pre">twisted_operator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrium/qurrium.html"><code class="docutils literal notranslate"><span class="pre">qurrium</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/qurrium/utils/index.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/build.html"><code class="docutils literal notranslate"><span class="pre">build</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/construct.html"><code class="docutils literal notranslate"><span class="pre">construct</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/iocontrol.html"><code class="docutils literal notranslate"><span class="pre">iocontrol</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/qasm.html"><code class="docutils literal notranslate"><span class="pre">qasm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/chunk.html"><code class="docutils literal notranslate"><span class="pre">chunk</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/inputfixer.html"><code class="docutils literal notranslate"><span class="pre">inputfixer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/randomized.html"><code class="docutils literal notranslate"><span class="pre">randomized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/utils/random_unitary.html"><code class="docutils literal notranslate"><span class="pre">random_unitary</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/qurrium/analysis.html"><code class="docutils literal notranslate"><span class="pre">analysis</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/qurrium/experiment/index.html"><code class="docutils literal notranslate"><span class="pre">experiment</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of experiment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/arguments.html"><code class="docutils literal notranslate"><span class="pre">arguments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/afterwards.html"><code class="docutils literal notranslate"><span class="pre">afterwards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/beforewards.html"><code class="docutils literal notranslate"><span class="pre">beforewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/analyses.html"><code class="docutils literal notranslate"><span class="pre">analyses</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/export.html"><code class="docutils literal notranslate"><span class="pre">export</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/experiment/experiment.html"><code class="docutils literal notranslate"><span class="pre">experiment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/qurrium/multimanager/index.html"><code class="docutils literal notranslate"><span class="pre">multimanager</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of multimanager</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/arguments.html"><code class="docutils literal notranslate"><span class="pre">arguments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/afterwards.html"><code class="docutils literal notranslate"><span class="pre">afterwards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/beforewards.html"><code class="docutils literal notranslate"><span class="pre">beforewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/process.html"><code class="docutils literal notranslate"><span class="pre">process</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/utils.html"><code class="docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/multimanager/multimanager.html"><code class="docutils literal notranslate"><span class="pre">multimanager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/qurrium/container/index.html"><code class="docutils literal notranslate"><span class="pre">container</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of container</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/waves_static.html"><code class="docutils literal notranslate"><span class="pre">waves_static</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/waves_dynamic.html"><code class="docutils literal notranslate"><span class="pre">waves_dynamic</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/multiquantity.html"><code class="docutils literal notranslate"><span class="pre">multiquantity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/passmanagers.html"><code class="docutils literal notranslate"><span class="pre">passmanagers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/experiments.html"><code class="docutils literal notranslate"><span class="pre">experiments</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/experiments_wrapper.html"><code class="docutils literal notranslate"><span class="pre">experiments_wrapper</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/qurrium/container/multimanagers.html"><code class="docutils literal notranslate"><span class="pre">multimanagers</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/exception.html"><code class="docutils literal notranslate"><span class="pre">exceptions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/template.html"><code class="docutils literal notranslate"><span class="pre">template</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../more_info/index.html">More Information</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of More Information</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../more_info/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../more_info/platform_support.html">Platform Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../more_info/about.html">About</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/basic_usage/qurrech_2_1_hadamard_test.ipynb" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="wave-function-overlap-by-hadamard-test">
+<h1>2.1 Wave Function Overlap by Hadamard Test<a class="headerlink" href="#wave-function-overlap-by-hadamard-test" title="Link to this heading">¶</a></h1>
+<hr class="docutils" />
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">¶</a></h2>
+<section id="a-import-the-instances">
+<h3>a. Import the instances<a class="headerlink" href="#a-import-the-instances" title="Link to this heading">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qurry</span><span class="w"> </span><span class="kn">import</span> <span class="n">WaveFunctionOverlap</span>
+
+<span class="n">experiment_hadamard</span> <span class="o">=</span> <span class="n">WaveFunctionOverlap</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;hadamard&quot;</span><span class="p">)</span>
+
+<span class="c1"># or another short name</span>
+<span class="c1"># from qurry import EchoListen</span>
+<span class="c1"># experiment_hadamard = EchoListen(method=&quot;hadamard&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b-preparing-quantum-circuit">
+<h3>b. Preparing quantum circuit<a class="headerlink" href="#b-preparing-quantum-circuit" title="Link to this heading">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qurry.recipe</span><span class="w"> </span><span class="kn">import</span> <span class="n">TrivialParamagnet</span><span class="p">,</span> <span class="n">GHZ</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample01</span> <span class="o">=</span> <span class="n">TrivialParamagnet</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| trivial paramagnet in 8 qubits:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample01</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| trivial paramagnet in 8 qubits:
+     ┌───┐
+q_0: ┤ H ├
+     ├───┤
+q_1: ┤ H ├
+     ├───┤
+q_2: ┤ H ├
+     ├───┤
+q_3: ┤ H ├
+     ├───┤
+q_4: ┤ H ├
+     ├───┤
+q_5: ┤ H ├
+     ├───┤
+q_6: ┤ H ├
+     ├───┤
+q_7: ┤ H ├
+     └───┘
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample02</span> <span class="o">=</span> <span class="n">GHZ</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| GHZ in 8 qubits:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample02</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| GHZ in 8 qubits:
+     ┌───┐                                   
+q_0: ┤ H ├──■────────────────────────────────
+     └───┘┌─┴─┐                              
+q_1: ─────┤ X ├──■───────────────────────────
+          └───┘┌─┴─┐                         
+q_2: ──────────┤ X ├──■──────────────────────
+               └───┘┌─┴─┐                    
+q_3: ───────────────┤ X ├──■─────────────────
+                    └───┘┌─┴─┐               
+q_4: ────────────────────┤ X ├──■────────────
+                         └───┘┌─┴─┐          
+q_5: ─────────────────────────┤ X ├──■───────
+                              └───┘┌─┴─┐     
+q_6: ──────────────────────────────┤ X ├──■──
+                                   └───┘┌─┴─┐
+q_7: ───────────────────────────────────┤ X ├
+                                        └───┘
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample03</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">sample03</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| Custom circuit:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample03</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Custom circuit:
+     ┌───┐
+q_0: ┤ X ├
+     └───┘
+q_1: ─────
+     ┌───┐
+q_2: ┤ X ├
+     └───┘
+q_3: ─────
+     ┌───┐
+q_4: ┤ X ├
+     └───┘
+q_5: ─────
+     ┌───┐
+q_6: ┤ X ├
+     └───┘
+q_7: ─────
+          
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c-execute-the-circuit">
+<h3>c. Execute the circuit<a class="headerlink" href="#c-execute-the-circuit" title="Link to this heading">¶</a></h3>
+<section id="i-directly-input-the-circuit">
+<h4>i. Directly input the circuit<a class="headerlink" href="#i-directly-input-the-circuit" title="Link to this heading">¶</a></h4>
+<p>After executing, it will return a uuid of experiment. You can use this uuid to get the result of the experiment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp1</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">sample01</span><span class="p">,</span> <span class="n">sample01</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">4096</span><span class="p">)</span>
+<span class="n">exp1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;b8fd1e61-4657-4c09-8e60-2765572978d7&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each experiment result will be stored in a container <code class="docutils literal notranslate"><span class="pre">.exps</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=b8fd1e61-4657-4c09-8e60-2765572978d7, 
+  EchoListenHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrech_hadamard&#39;, degree=(4, 8)),
+  Commonparams(exp_id=&#39;b8fd1e61-4657-4c09-8e60-2765572978d7&#39;, target_keys=[0, 1], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:36:29&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:36:29&#39;})),
+  unused_args_num=0,
+  analysis_num=1))&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>For <code class="docutils literal notranslate"><span class="pre">EntropyMeasure(method=&quot;hadamard&quot;)</span></code>, its <code class="docutils literal notranslate"><span class="pre">.analyze</span></code> in <code class="docutils literal notranslate"><span class="pre">EntropyMeasureHadamardExperiment</span></code> does not require any arguments, so its post-processing will be executed automatically after <code class="docutils literal notranslate"><span class="pre">.measure</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp1</span><span class="p">]</span><span class="o">.</span><span class="n">reports</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AnalysisContainer(length=1, {
+  0: &lt;ELHAnalysis(serial=0, ELHAnalysisInput(), ELHAnalysisContent(echo=1.0)), unused_args_num=1&gt;})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report01</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp1</span><span class="p">]</span><span class="o">.</span><span class="n">reports</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">report01</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ELHAnalysis(
+  serial=0,
+  ELHAnalysisInput(),
+  ELHAnalysisContent(echo=1.0)),
+  unused_args_num=1
+  )&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result will be <code class="docutils literal notranslate"><span class="pre">1.0</span></code> for overlapping with the same state.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main01</span><span class="p">,</span> <span class="n">side_product01</span> <span class="o">=</span> <span class="n">report01</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+<span class="n">main01</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;echo&#39;: 1.0,
+ &#39;input&#39;: {},
+ &#39;header&#39;: {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 21:36:29&#39;, &#39;log&#39;: {}}}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ii-add-the-circuits-to-container-waves-then-call-them-later">
+<h4>ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.<a class="headerlink" href="#ii-add-the-circuits-to-container-waves-then-call-them-later" title="Link to this heading">¶</a></h4>
+<p>Since we have executed an experiment, the circuit we input in <code class="docutils literal notranslate"><span class="pre">exp1</span></code> is stored in the container <code class="docutils literal notranslate"><span class="pre">.waves</span></code> with serial number <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">waves</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b2810ec8440&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b2810ec8440&gt;})
+</pre></div>
+</div>
+</div>
+</div>
+<p>But we can also add the circuit to the container <code class="docutils literal notranslate"><span class="pre">.waves</span></code> with a custom name.
+The name should be unique, otherwise it will be overwritten.
+The method <code class="docutils literal notranslate"><span class="pre">add</span></code> will return the actual name of the circuit in the container.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sample02</span><span class="p">,</span> <span class="s2">&quot;ghz_8&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">waves</span><span class="p">[</span><span class="s2">&quot;ghz_8&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ghz_8
+     ┌───┐                                   
+q_0: ┤ H ├──■────────────────────────────────
+     └───┘┌─┴─┐                              
+q_1: ─────┤ X ├──■───────────────────────────
+          └───┘┌─┴─┐                         
+q_2: ──────────┤ X ├──■──────────────────────
+               └───┘┌─┴─┐                    
+q_3: ───────────────┤ X ├──■─────────────────
+                    └───┘┌─┴─┐               
+q_4: ────────────────────┤ X ├──■────────────
+                         └───┘┌─┴─┐          
+q_5: ─────────────────────────┤ X ├──■───────
+                              └───┘┌─┴─┐     
+q_6: ──────────────────────────────┤ X ├──■──
+                                   └───┘┌─┴─┐
+q_7: ───────────────────────────────────┤ X ├
+                                        └───┘
+</pre></div>
+</div>
+</div>
+</div>
+<p>If there is a circuit with the same name, it will be replaced by the new one.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sample03</span><span class="p">,</span> <span class="s2">&quot;ghz_8&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">waves</span><span class="p">[</span><span class="s2">&quot;ghz_8&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ghz_8
+     ┌───┐
+q_0: ┤ X ├
+     └───┘
+q_1: ─────
+     ┌───┐
+q_2: ┤ X ├
+     └───┘
+q_3: ─────
+     ┌───┐
+q_4: ┤ X ├
+     └───┘
+q_5: ─────
+     ┌───┐
+q_6: ┤ X ├
+     └───┘
+q_7: ─────
+          
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otherwise, you will need to use <code class="docutils literal notranslate"><span class="pre">replace=&quot;duplicate&quot;</span></code> to prevent it from being replaced.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">duplicated_case01</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sample02</span><span class="p">,</span> <span class="s2">&quot;ghz_8&quot;</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="s2">&quot;duplicate&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">duplicated_case01</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">waves</span><span class="p">[</span><span class="n">duplicated_case01</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ghz_8.3
+     ┌───┐                                   
+q_0: ┤ H ├──■────────────────────────────────
+     └───┘┌─┴─┐                              
+q_1: ─────┤ X ├──■───────────────────────────
+          └───┘┌─┴─┐                         
+q_2: ──────────┤ X ├──■──────────────────────
+               └───┘┌─┴─┐                    
+q_3: ───────────────┤ X ├──■─────────────────
+                    └───┘┌─┴─┐               
+q_4: ────────────────────┤ X ├──■────────────
+                         └───┘┌─┴─┐          
+q_5: ─────────────────────────┤ X ├──■───────
+                              └───┘┌─┴─┐     
+q_6: ──────────────────────────────┤ X ├──■──
+                                   └───┘┌─┴─┐
+q_7: ───────────────────────────────────┤ X ├
+                                        └───┘
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have prepared the circuit and stored it in the container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">waves</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
+  0: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b2810ec8440&gt;,
+  1: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b2810ec8440&gt;,
+  &#39;ghz_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b2810ec5470&gt;,
+  &#39;ghz_8.3&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b2810eca270&gt;})
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we can execute the circuit and get the result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp2</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="s2">&quot;ghz_8.3&quot;</span><span class="p">,</span> <span class="n">sample01</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">4096</span><span class="p">)</span>
+<span class="n">exp2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;40de6d56-b8c7-4453-9023-25723521ac6b&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;EchoListenHadamardExperiment(exp_id=40de6d56-b8c7-4453-9023-25723521ac6b, 
+  EchoListenHadamardArguments(exp_name=&#39;experiment.degree_4_8.qurrech_hadamard&#39;, degree=(4, 8)),
+  Commonparams(exp_id=&#39;40de6d56-b8c7-4453-9023-25723521ac6b&#39;, target_keys=[&#39;ghz_8.3&#39;, 4], shots=4096, backend=&lt;AerSimulator(&#39;aer_simulator&#39;)&gt;, run_args={}, transpile_args={}, tags=(), save_location=PosixPath(&#39;.&#39;), serial=None, summoner_id=None, summoner_name=None, datetimes=DatetimeDict({&#39;build&#39;: &#39;2025-07-07 21:36:35&#39;, &#39;run.001&#39;: &#39;2025-07-07 21:36:35&#39;})),
+  unused_args_num=0,
+  analysis_num=1))&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report02</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp2</span><span class="p">]</span><span class="o">.</span><span class="n">analyze</span><span class="p">()</span>
+<span class="n">report02</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ELHAnalysis(
+  serial=1,
+  ELHAnalysisInput(),
+  ELHAnalysisContent(echo=0.068359375)),
+  unused_args_num=1
+  )&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="d-export-them-after-all">
+<h3>d. Export them after all<a class="headerlink" href="#d-export-them-after-all" title="Link to this heading">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp1_id</span><span class="p">,</span> <span class="n">exp1_files_info</span> <span class="o">=</span> <span class="n">experiment_hadamard</span><span class="o">.</span><span class="n">exps</span><span class="p">[</span><span class="n">exp1</span><span class="p">]</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+    <span class="n">save_location</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>  <span class="c1"># where to save files</span>
+<span class="p">)</span>
+<span class="n">exp1_files_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001&#39;,
+ &#39;qurryinfo&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/qurryinfo.json&#39;,
+ &#39;args&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/args/experiment.degree_4_8.qurrech_hadamard.001.id=b8fd1e61-4657-4c09-8e60-2765572978d7.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/advent/experiment.degree_4_8.qurrech_hadamard.001.id=b8fd1e61-4657-4c09-8e60-2765572978d7.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/legacy/experiment.degree_4_8.qurrech_hadamard.001.id=b8fd1e61-4657-4c09-8e60-2765572978d7.legacy.json&#39;,
+ &#39;reports&#39;: &#39;experiment.degree_4_8.qurrech_hadamard.001/reports/experiment.degree_4_8.qurrech_hadamard.001.id=b8fd1e61-4657-4c09-8e60-2765572978d7.reports.json&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="post-process-availablities-and-version-info">
+<h2>Post-Process Availablities and Version Info<a class="headerlink" href="#post-process-availablities-and-version-info" title="Link to this heading">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qurry.process</span><span class="w"> </span><span class="kn">import</span> <span class="n">AVAIBILITY_STATESHEET</span>
+
+<span class="n">AVAIBILITY_STATESHEET</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> | Qurrium version: 0.13.1.dev1
+---------------------------------------------------------------------------
+ ### Qurrium Post-Processing
+   - Backend Availability ................... Python Cython Rust   JAX   
+ - randomized_measure
+   - entangled_entropy.entropy_core_2 ....... Yes    Depr.  Yes    No    
+   - entangle_entropy.purity_cell_2 ......... Yes    Depr.  Yes    No    
+   - entangled_entropy_v1.entropy_core ...... Yes    Depr.  Yes    No    
+   - entangle_entropy_v1.purity_cell ........ Yes    Depr.  Yes    No    
+   - wavefunction_overlap.echo_core_2 ....... Yes    Depr.  Yes    No    
+   - wavefunction_overlap.echo_cell_2 ....... Yes    Depr.  Yes    No    
+   - wavefunction_overlap_v1.echo_core ...... Yes    Depr.  Yes    No    
+   - wavefunction_overlap_v1.echo_cell ...... Yes    Depr.  Yes    No    
+ - hadamard_test
+   - purity_echo_core ....................... Yes    No     Yes    No    
+ - magnet_square
+   - magnsq_core ............................ Yes    No     Yes    No    
+ - string_operator
+   - strop_core ............................. Yes    No     Yes    No    
+ - classical_shadow
+   - rho_m_core ............................. Yes    No     No     Yes   
+ - utils
+   - randomized ............................. Yes    Depr.  Yes    No    
+   - counts_process ......................... Yes    No     Yes    No    
+   - bit_slice .............................. Yes    No     Yes    No    
+   - dummy .................................. Yes    No     Yes    No    
+   - test ................................... Yes    No     Yes    No    
+---------------------------------------------------------------------------
+   + Yes ...... Working normally.
+   + Error .... Exception occurred.
+   + No ....... Not supported.
+   + Depr. .... Deprecated.
+---------------------------------------------------------------------------
+by &lt;Hoshi&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="qurrech_2_2_randomized_measure.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">2.2 Wave Function Overlap by Randomized Measurement</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="qurrent_1_3_classical_shadow.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">1.3 Entanglement Entropy by Classical Shadow</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Huai-Chun Chang
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on 2025-07-07 22:27:02</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/qurrium/qurrium" aria-label="GitHub">
+                <i class="fa-brands fa-solid fa-github fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://github.com/qurrium/qurrium_documentaion" aria-label="GitHub of Documentation">
+                <i class="fa-solid fa-book fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://pypi.org/project/qurrium/" aria-label="PyPI">
+                <i class="fa-brands fa-python fa-2x"></i>
+            </a>
+              <a class="muted-link " href="https://test.pypi.org/project/qurry/" aria-label="Test PyPI">
+                <i class="fa-brands fa-python fa-2x"></i>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">2.1 Wave Function Overlap by Hadamard Test</a><ul>
+<li><a class="reference internal" href="#basic-usage">Basic Usage</a><ul>
+<li><a class="reference internal" href="#a-import-the-instances">a. Import the instances</a></li>
+<li><a class="reference internal" href="#b-preparing-quantum-circuit">b. Preparing quantum circuit</a></li>
+<li><a class="reference internal" href="#c-execute-the-circuit">c. Execute the circuit</a><ul>
+<li><a class="reference internal" href="#i-directly-input-the-circuit">i. Directly input the circuit</a></li>
+<li><a class="reference internal" href="#ii-add-the-circuits-to-container-waves-then-call-them-later">ii. Add the circuits to container <code class="docutils literal notranslate"><span class="pre">.waves</span></code>, then call them later.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#d-export-them-after-all">d. Export them after all</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#post-process-availablities-and-version-info">Post-Process Availablities and Version Info</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/version-switcher.js?v=be75742b"></script>
+    </body>
+</html>

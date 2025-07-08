@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -375,24 +384,24 @@ where the true power of Qurrium as experiment manage toolkit.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WaveContainer({
-  &#39;trivial_paramagnet_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde848980&gt;,
-  &#39;ghz_2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde848ad0&gt;,
-  &#39;neel_2&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d7230&gt;,
-  &#39;trivial_paramagnet_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde95bc50&gt;,
-  &#39;ghz_4&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde95bd90&gt;,
-  &#39;neel_4&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d74d0&gt;,
-  &#39;trivial_paramagnet_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde95bed0&gt;,
-  &#39;ghz_6&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde61c050&gt;,
-  &#39;neel_6&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d7310&gt;,
-  &#39;trivial_paramagnet_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde869350&gt;,
-  &#39;ghz_8&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde869cd0&gt;,
-  &#39;neel_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d73f0&gt;,
-  &#39;trivial_paramagnet_10&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde869e00&gt;,
-  &#39;ghz_10&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde869f30&gt;,
-  &#39;neel_10&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d6cf0&gt;,
-  &#39;trivial_paramagnet_12&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x75dbde831b50&gt;,
-  &#39;ghz_12&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x75dbde831eb0&gt;,
-  &#39;neel_12&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x75dbde8d75b0&gt;})
+  &#39;trivial_paramagnet_2&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5de3e44980&gt;,
+  &#39;ghz_2&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3e44ad0&gt;,
+  &#39;neel_2&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed7230&gt;,
+  &#39;trivial_paramagnet_4&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5de3f57c50&gt;,
+  &#39;ghz_4&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3f57d90&gt;,
+  &#39;neel_4&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed74d0&gt;,
+  &#39;trivial_paramagnet_6&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5de3f57ed0&gt;,
+  &#39;ghz_6&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3efc050&gt;,
+  &#39;neel_6&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed7310&gt;,
+  &#39;trivial_paramagnet_8&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5de3e65ba0&gt;,
+  &#39;ghz_8&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3e65cd0&gt;,
+  &#39;neel_8&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed73f0&gt;,
+  &#39;trivial_paramagnet_10&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5de3e65e00&gt;,
+  &#39;ghz_10&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3e65f30&gt;,
+  &#39;neel_10&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed6cf0&gt;,
+  &#39;trivial_paramagnet_12&#39;: &lt;qurry.recipe.simple.paramagnet.TrivialParamagnet object at 0x7b5e30712c30&gt;,
+  &#39;ghz_12&#39;: &lt;qurry.recipe.simple.cat.GHZ object at 0x7b5de3e2dd90&gt;,
+  &#39;neel_12&#39;: &lt;qiskit.circuit.quantumcircuit.QuantumCircuit object at 0x7b5de3ed75b0&gt;})
 </pre></div>
 </div>
 </div>
@@ -498,17 +507,17 @@ which can also be skipped by setting <code class="docutils literal notranslate">
 | Write &quot;qurshady.qurry.001&quot;, at location &quot;qurshady.qurry.001&quot;
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "c3278254657f4284894753192f154e72"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Export multimanager...
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "a2f63fbdb7b44667b42c953ecd42e592"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| Export multimanager...
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "27fa48cb57a54eaab6f4d394c764a63d"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| No quantity to export.
-| Export multi.config.json for de7f6800-f5c0-4021-9fd6-fcc030eb5597
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "c7beeac27a69471dbb27182cc8d02fe9"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| No quantity to export.
+| Export multi.config.json for d66aa135-9dd0-402f-92a8-012b62b46fc8
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d3a4759a7b89402885f837b25734d74c"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| MultiOutput running...
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "29c9922c0cc040d4a1681fba1c37a269"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| MultiOutput running...
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "648b4c76badf489a82e9832dcd00874e"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "2685288b25924767a077c5fe14250a7e"}</script></div>
 </div>
 <p>You can check the result of <code class="docutils literal notranslate"><span class="pre">multiOutput</span></code> that we just executed by accessing the <code class="docutils literal notranslate"><span class="pre">.multimanagers</span></code></p>
 <div class="cell docutils container">
@@ -970,7 +979,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:32:33</div>
+              Last updated on 2025-07-07 22:19:12</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -1031,6 +1040,6 @@ by &lt;Hoshi&gt;
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>

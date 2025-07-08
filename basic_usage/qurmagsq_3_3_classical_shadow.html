@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=20011430" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=707f2c81" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -63,18 +63,27 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: #D55E00;
+  --color-brand-content: #FDB462;
+  --color-brand-visited: #348ABD;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #8DD3C7;
+  --color-brand-content: #31D4B9;
+  --color-brand-visited: #FEFFB3;
   
       }
     }
@@ -628,7 +637,7 @@ q_3: ───────────────┤ X ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;12473617-bd87-4e2b-9a90-f4a7badc049a&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c3732752-843f-40f7-993d-d5c866544d7a&#39;
 </pre></div>
 </div>
 </div>
@@ -648,7 +657,7 @@ q_3: ───────────────┤ X ├
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;SUAnalysis(
   serial=0,
   SUAnalysisInput(shots=4096, num_qubits=4, selected_qubits=[0, 1, 2, 3], registers_mapping={0: 0, 1: 1, 2: 2, 3: 3}, bitstring_mapping={0: 0, 1: 1, 2: 2, 3: 3}, unitary_located=[0, 1, 2, 3]),
-  SUAnalysisContent(purity=0.8949108415363625, entropy=0.16018413863409925, and others)),
+  SUAnalysisContent(purity=0.9283537819792196, entropy=0.1072533948774619, and others)),
   unused_args_num=3
   )&gt;
 </pre></div>
@@ -688,7 +697,7 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| estimate_of_given_operators:
-[np.complex128(0.9999999999999999+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999998+0j), np.complex128(1.25+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.75+0j)]
+[np.complex128(0.9999999999999999+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(0.9999999999999999+0j), np.complex128(1+0j), np.complex128(0.7500000000000001+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(0.7500000000000001+0j), np.complex128(1+0j)]
 |--------------------------------------------------
 | accuracy_prob_comp_delta: 0.008051103069660285
 | num_of_estimators_k: 16
@@ -735,7 +744,7 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| The magnetization square value is: 1.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| The magnetization square value is: 0.9375
 </pre></div>
 </div>
 </div>
@@ -754,16 +763,16 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| classical_registers_actually : [3, 2, 1, 0]
-| taking_time : 0.3178582191467285
-| purity : 0.8949108415363625
-| entropy : 0.16018413863409925
-| estimate_of_given_operators : [np.complex128(0.9999999999999999+0j), np.complex128(1.25+0j), np.complex128(1+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.9999999999999998+0j), np.complex128(1.25+0j), np.complex128(0.9999999999999999+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(0.9999999999999998+0j), np.complex128(0.75+0j)]
+| taking_time : 0.3567328453063965
+| purity : 0.9283537819792196
+| entropy : 0.1072533948774619
+| estimate_of_given_operators : [np.complex128(0.9999999999999999+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(0.9999999999999999+0j), np.complex128(1+0j), np.complex128(0.7500000000000001+0j), np.complex128(0.75+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j), np.complex128(0.7500000000000001+0j), np.complex128(1+0j)]
 | accuracy_prob_comp_delta : 0.008051103069660285
 | num_of_estimators_k : 16
 | accuracy_predict_epsilon : 5.386402633793108
 | maximum_shadow_norm : nan
 | input : {&#39;shots&#39;: 4096, &#39;num_qubits&#39;: 4, &#39;selected_qubits&#39;: [0, 1, 2, 3], &#39;registers_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3}, &#39;bitstring_mapping&#39;: {0: 0, 1: 1, 2: 2, 3: 3}, &#39;unitary_located&#39;: [0, 1, 2, 3]}
-| header : {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 18:49:50&#39;, &#39;log&#39;: {}}
+| header : {&#39;serial&#39;: 0, &#39;datetime&#39;: &#39;2025-07-07 21:36:18&#39;, &#39;log&#39;: {}}
 </pre></div>
 </div>
 </div>
@@ -796,13 +805,13 @@ dict_keys([&#39;average_classical_snapshots_rho&#39;, &#39;corresponding_rhos&#3
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;folder&#39;: &#39;experiment.N_U_300.qurshady_entropy.001&#39;,
  &#39;qurryinfo&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/qurryinfo.json&#39;,
- &#39;args&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/args/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.args.json&#39;,
- &#39;advent&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/advent/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.advent.json&#39;,
- &#39;legacy&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/legacy/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.legacy.json&#39;,
- &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.random_unitary_ids.json&#39;,
- &#39;reports&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/reports/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.reports.json&#39;,
- &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.average_classical_snapshots_rho.reports.json&#39;,
- &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=12473617-bd87-4e2b-9a90-f4a7badc049a.corresponding_rhos.reports.json&#39;}
+ &#39;args&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/args/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.args.json&#39;,
+ &#39;advent&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/advent/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.advent.json&#39;,
+ &#39;legacy&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/legacy/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.legacy.json&#39;,
+ &#39;tales.random_unitary_ids&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.random_unitary_ids.json&#39;,
+ &#39;reports&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/reports/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.reports.json&#39;,
+ &#39;reports.tales.average_classical_snapshots_rho&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.average_classical_snapshots_rho.reports.json&#39;,
+ &#39;reports.tales.corresponding_rhos&#39;: &#39;experiment.N_U_300.qurshady_entropy.001/tales/experiment.N_U_300.qurshady_entropy.001.id=c3732752-843f-40f7-993d-d5c866544d7a.corresponding_rhos.reports.json&#39;}
 </pre></div>
 </div>
 </div>
@@ -896,7 +905,7 @@ by &lt;Hoshi&gt;
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2025-07-07 19:33:51</div>
+              Last updated on 2025-07-07 22:26:58</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -960,6 +969,6 @@ by &lt;Hoshi&gt;
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../_static/version-switcher.js?v=90ea794c"></script>
+    <script src="../_static/version-switcher.js?v=be75742b"></script>
     </body>
 </html>
