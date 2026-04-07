@@ -16,6 +16,11 @@ wavefunction_overlap/index
 
 ## Purity and Overlap V1 Deprecated
 
+```{warning}
+Do not use these modules. They are deprecated versions of `entangled_entropy` and `wavefunction_overlap` in our very early stage.
+We keep them here for backward compatibility for internal use, and they will be removed in the future.
+```
+
 ```{toctree}
 :maxdepth: 1
 
