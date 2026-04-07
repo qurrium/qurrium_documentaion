@@ -1,13 +1,13 @@
 [
     {
-        "version": "0.13.1",
-        "name": "0.13.1 (dev)",
-        "url": "https://docs.qurrium.org/dev/"
+        "version": "1.0.0.dev2",
+        "name": "1.0.0 (dev)",
+        "url": "https://docs.qurrium.org/"
     },
     {
         "version": "0.13.0",
         "name": "0.13.0 (stable)",
-        "url": "https://docs.qurrium.org/"
+        "url": "https://docs.qurrium.org/0.13.0/"
     },
     {
         "name": "0.12.2",
