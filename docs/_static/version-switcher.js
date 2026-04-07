@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("version-switcher");
+  if (!select) {
+    console.error("Version switcher element not found");
+    return;
+  }
+
   fetch(window.location.origin + "/_static/versions.json")
     .then((response) => response.json())
     .then((versions) => {
@@ -31,19 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
         currentVersion = rootKey;
       }
 
-      const select = document.createElement("select");
-      select.className = "version-switcher";
-      select.id = "version-switcher";
-      select.name = "version";
-
-      Object.entries(versions).forEach(([ver, path], i) => {
-        const option = document.createElement("option");
-        option.value = path;
-        option.textContent = ver;
-        if (ver === currentVersion) {
-          option.selected = true;
+      // Update the select element with current version
+      Array.from(select.options).forEach((option) => {
+        if (option.value === versions[option.textContent]) {
+          // Check if this option matches the current version
+          Object.entries(versions).forEach(([ver, path]) => {
+            if (ver === option.textContent && ver === currentVersion) {
+              option.selected = true;
+            }
+          });
         }
-        select.appendChild(option);
       });
 
       select.addEventListener("change", () => {
@@ -74,12 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = selectedPath;
           });
       });
-
-      const searchbox = document.querySelector("#searchbox");
-      const scrollTarget = document.querySelector(".sidebar-scroll");
-      if (searchbox && scrollTarget) {
-        searchbox.insertAdjacentElement("afterend", select);
-      }
     })
     .catch((error) => {
       console.error("Failed to load versions.json:", error);

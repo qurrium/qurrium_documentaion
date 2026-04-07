@@ -47,16 +47,62 @@ dt span.sig-prename::after {
   margin: 0.5rem 0;
 }
 
+.version-selector-sidebar {
+  padding: 0.5rem 0;
+}
+
+.version-selector-sidebar h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding: 0 0.75rem;
+  color: var(--color-foreground-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .version-switcher {
-  margin: 1rem 1.2rem 0 1.2rem;
-  width: 80%;
-  font-size: 1rem;
-  padding: 0.3rem;
+  margin: 0 0.75rem;
+  width: calc(100% - 1.5rem);
+  font-size: 0.875rem;
+  padding: 0.4rem 0.5rem;
   border: 1px solid var(--color-foreground-border);
+  border-radius: 1rem;
   background: var(--color-background-primary);
   color: var(--color-foreground-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.version-switcher:hover {
+  border-color: var(--color-brand-primary);
+}
+
+.version-switcher:focus {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
 }
 
 .fa-2x {
   padding: 0.2rem;
+}
+
+.dev-icon .dev-icon-text {
+  background-color: color-mix(
+    in srgb,
+    var(--color-background-primary),
+    transparent 40%
+  );
+  position: absolute;
+  padding: 1px;
+  bottom: 0%;
+  right: 0;
+  font-size: 80%;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100%;
+}
+
+.dev-icon {
+  position: relative;
 }
