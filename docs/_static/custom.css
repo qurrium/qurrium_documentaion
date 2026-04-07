@@ -106,3 +106,10 @@ dt span.sig-prename::after {
 .dev-icon {
   position: relative;
 }
+
+body {
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
