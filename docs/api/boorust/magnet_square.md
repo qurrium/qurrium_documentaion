@@ -2,5 +2,7 @@
 
 ```{eval-rst}
 .. automodule:: qurry.boorust.magnet_square
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```

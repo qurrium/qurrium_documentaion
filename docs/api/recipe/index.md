@@ -1,4 +1,6 @@
-# `recipe`
+# Recipe
+
+The pre-defined Quautum Circuits
 
 ```{toctree}
 :maxdepth: 1

@@ -24,13 +24,13 @@ parallelmanager
 
 ```
 
-## Exception
+## Exceptions
 
 ```{toctree}
 :maxdepth: 1
 
 except_decorator
-exception
+exceptions
 
 ```
 

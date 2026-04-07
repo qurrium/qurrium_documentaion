@@ -1,4 +1,4 @@
-# `exceptions`
+# Exceptions
 
 ```{eval-rst}
 .. automodule:: qurry.exceptions

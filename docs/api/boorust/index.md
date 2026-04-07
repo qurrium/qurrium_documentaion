@@ -43,5 +43,7 @@ test
 
 ```{eval-rst}
 .. automodule:: qurry.boorust
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```

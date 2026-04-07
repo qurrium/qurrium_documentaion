@@ -5,7 +5,6 @@
 
 container
 purity_cell_2
-error_mitigation
 entropy_core_2
 entangled_entropy_2
 

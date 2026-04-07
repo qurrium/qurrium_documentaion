@@ -2,5 +2,7 @@
 
 ```{eval-rst}
 .. automodule:: qurry.boorust.counts_process
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```

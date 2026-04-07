@@ -1,6 +1,6 @@
 # `exception`
 
 ```{eval-rst}
-.. automodule:: qurry.tools.exception
+.. automodule:: qurry.tools.exceptions
     :members:
 ```

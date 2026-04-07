@@ -11,9 +11,9 @@ all_observable/index
 
 ```
 
-## Realization
-
 ---
+
+## Realization
 
 ```{toctree}
 :maxdepth: 1
@@ -32,7 +32,7 @@ prediction_process
 :maxdepth: 1
 
 utils/index
-matrix_calcution
+matrix_calculation
 
 ```
 

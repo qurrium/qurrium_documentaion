@@ -15,4 +15,5 @@ writers
 ```{eval-rst}
 .. automodule:: qurry.capsule.mori
     :members:
+    :no-index:
 ```

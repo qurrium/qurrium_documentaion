@@ -2,5 +2,7 @@
 
 ```{eval-rst}
 .. automodule:: qurry.boorust.test
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```

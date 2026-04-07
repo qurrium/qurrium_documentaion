@@ -2,5 +2,7 @@
 
 ```{eval-rst}
 .. automodule:: qurry.boorust.hadamard
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```

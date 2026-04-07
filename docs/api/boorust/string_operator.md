@@ -2,5 +2,7 @@
 
 ```{eval-rst}
 .. automodule:: qurry.boorust.string_operator
-    :members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 ```
