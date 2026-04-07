@@ -46,7 +46,6 @@ Check [Platform Support](./more_info/platform_support.md) for more detail.
 Basic Usage <basic_usage/index>
 Multiple Output <multi_output/index>
 Post-Processing <postprocessing/index>
-Other Features <appendix/index>
 
 ```
 
