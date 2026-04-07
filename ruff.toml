@@ -1,0 +1,30 @@
+line-length = 100
+target-version = "py310"
+# We only support Python 3.10+, this is the minimum version.
+# This will need to be updated when we start to support Python 3.10+ specific syntax.
+
+lint.select = [
+    "E4",
+    "E7",
+    "E9", # pycodestyle errors
+    "F",  # Pyflakes
+]
+lint.ignore = ["F401", "E203", "W291", "F841"]
+lint.extend-select = ["E501"]
+# Ruff is intentionally to ignore the check of line length
+# See: https://github.com/astral-sh/ruff/issues/6424#issuecomment-2079623192
+
+[lint.per-file-ignores]
+# "**/{tests,docs,tools}/*" = ["E402"]
+"__init__.py" = ["E402", "F401"]
+# module level import of this package need before boorust setup
+"qurry/process/utils/dummy.py" = ["E731"]
+# The only file allows lambda assignment for a specific function
+
+# Respecting command line options of ruff
+# This will be useful when you configure ruff in your IDE
+# ruff check 
+# --line-length=100 --target-version=py310 --select=E4,E7,E9,F 
+# --ignore=F401,E203,W291,F841 ./qurry
+# Or with format:
+# ruff format --line-length=100 ./qurry

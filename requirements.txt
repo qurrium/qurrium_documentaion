@@ -3,14 +3,14 @@ ghp-import
 jupyter
 # formatting
 flake8
-black
-black[jupyter]
+ruff
 # sphinx
 sphinx
 sphinx-book-theme
 sphinxext-opengraph
 sphinxcontrib-bibtex
 sphinxcontrib-googleanalytics
+sphinx-autodoc-typehints
 # theme
 myst-nb
 myst-parser
