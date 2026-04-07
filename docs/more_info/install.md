@@ -11,13 +11,13 @@ pip install qurrium
 
 ## By TestPyPI - Nightly Release
 
-- This package can be found in `pip list` as `qurry-x.y.z.devW`
+- This package can be found in `pip list` as `qurrium-x.y.z.devW`
 - This version includes new features and minor bug fixes, but may not be stable.
 
 ```bash
 pip install qiskit tqdm requests
 # the installation from testPyPI can' t find these dependencies
-pip install -i https://test.pypi.org/simple/ qurry
+pip install -i https://test.pypi.org/simple/ qurrium
 ```
 
 ## Maually by Git
@@ -30,11 +30,11 @@ To install rust, run the following command:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Then install `qurry` by the following command:
+Then install `qurrium` by the following command:
 
 ```bash
 git clone https://github.com/harui2019/qurrium.git
-cd qurry
+cd qurrium
 pip install -e .
 ```
 

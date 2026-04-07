@@ -6,10 +6,10 @@ It's basically following [the platform support of Qiskit](https://docs.quantum.i
 
 ## Available Python Version
 
-![Available Python Version](https://img.shields.io/badge/Python-3.9_|_3.10_|_3.11_|_3.12_|_3.13-blue?logo=python&logoColor=white) [![Downloads](https://static.pepy.tech/badge/qurrium)](https://pepy.tech/project/qurrium)
+![Available Python Version](https://img.shields.io/badge/Python-3.10_|_3.11_|_3.12_|_3.13-blue?logo=python&logoColor=white) [![Downloads](https://static.pepy.tech/badge/qurrium)](https://pepy.tech/project/qurrium)
 
-Qurrium 📏 is written in Python 3.9 type annotation.
-It can't and won't support Python 3.8 and below since they are too old.
+Qurrium 📏 is written in Python 3.10 type annotation.
+It can't and won't support Python 3.9 and below since they are too old.
 
 ## Available Operation System and Processor Architecture
 
@@ -22,9 +22,9 @@ We strongly recommend to use Linux based system, due to Python multiprocessing m
 
 |                  | macos<br/>x86_64 | macos<br/>universal2 | macos<br/>ARM64 | windows<br/>amd64 | windows<br/>win32 | windows<br/>arm64 | linux<br/>x86_64 | linux<br/>i686  | linux<br/>aarch64 |
 | ---------------- | ---------------- | -------------------- | --------------- | ----------------- | ----------------- | ----------------- | ---------------- | --------------- | ----------------- |
-| CPython 3.9~3.13 | ℹ️ <sup>4</sup>  | ✅                   | ✅              | ✅                | ✅                | ℹ️ <sup>2</sup>   | ✅ <sup>3</sup>  | ✅ <sup>3</sup> | ✅ <sup>3</sup>   |
+| CPython 3.10~3.13 | ℹ️ <sup>4</sup>  | ✅                   | ✅              | ✅                | ✅                | ℹ️ <sup>2</sup>   | ✅ <sup>3</sup>  | ✅ <sup>3</sup> | ✅ <sup>3</sup>   |
 
-1. All CPython builds are based on the 3.9+ CPython ABI.
+1. All CPython builds are based on the 3.10+ CPython ABI.
 2. `windows_arm64` builds will provide **irregularly**. Also they have not been properly tested, as we do not have access to such a machine for testing. Also this build **is not in platform support** of `qiskit` and `qiskit-aer`.
 3. All Linux builds are based on `manylinux2014`, consistent with Qiskit's approach for their Linux builds.
 4. `macos_x86_64` builds no longer provided since `0.13.0`, as Apple has transitioned to ARM64 architecture a.k.a. Apple Silicon. Consider using `universal2` builds instead, which support both `x86_64` and `arm64` architectures. Usually, your `pip install` will automatically select the appropriate architecture based on your system.
