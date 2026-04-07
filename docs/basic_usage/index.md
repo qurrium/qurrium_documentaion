@@ -12,9 +12,9 @@ All three methods calculate the entropy of a quantum state, but their calculatio
 :maxdepth: 1
 :caption: Entanglement Entropy
 
-qurrent_1_1_hadamard_test
-qurrent_1_2_randomized_measure
-qurrent_1_3_classical_shadow
+basic_1_1_entropy_hadamard
+basic_1_2_entropy_randomized
+basic_1_3_purity_shadow
 
 ```
 
@@ -26,8 +26,8 @@ This part will introduce several methods to compute the wavefuction overlap betw
 :maxdepth: 1
 :caption: WaveFuction Overlap
 
-qurrech_2_1_hadamard_test
-qurrech_2_2_randomized_measure
+basic_2_1_echo_hadamard
+basic_2_2_echo_randomized
 
 ```
 
@@ -39,9 +39,9 @@ This part will introduce several methods to compute the magnetization square of 
 :maxdepth: 1
 :caption: Magnetization Square
 
-qurmagsq_3_1_zdir_magnet_square
-qurmagsq_3_2_magnet_square
-qurmagsq_3_3_classical_shadow
+basic_3_1_zdir_magnet_square
+basic_3_2_magnet_square
+basic_3_3_magnet_shadow
 
 ```
 
@@ -57,7 +57,7 @@ This feature has been implemented. The documentation is coming... -->
 :maxdepth: 1
 :caption: Workflow Tools
 
-qurrium_0_1_waves_executer
+basic_0_1_waves_executer
 ```
 
 ## Reference
